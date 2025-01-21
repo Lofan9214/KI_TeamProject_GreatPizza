@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Confinder
   - Water
   - UI
   - 
@@ -38,6 +38,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 137967243
+    locked: 0
+  - name: Tables
+    uniqueID: 4071211225
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Pizza
+    uniqueID: 369030381
     locked: 0

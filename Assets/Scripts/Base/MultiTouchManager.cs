@@ -23,6 +23,8 @@ public class MultiTouchManager : Singleton<MultiTouchManager>
     public float Pinch { get; private set; }
     public float Rotation { get; private set; }
 
+    public Vector2 TouchPosition { get; private set; }
+
     private float tapTimeThreshold = 0.2f;
     private float doubleTapTimeThreshold = 0.3f;
     private float longPressTimeThreshold = 0.5f;
