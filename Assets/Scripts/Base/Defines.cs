@@ -20,3 +20,13 @@ public static class Variables
 {
     public static Languages currentLanguage = Languages.Korean;
 }
+
+public enum PizzaCommand
+{
+    None,
+    Drag,
+    Source,
+    Cheese,
+    Pepperoni,
+    Topping
+}

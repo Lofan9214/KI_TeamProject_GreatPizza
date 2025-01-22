@@ -1,9 +1,6 @@
-using JetBrains.Annotations;
-using System;
 using System.Collections.Generic;
-using Unity.Burst.CompilerServices;
+using System.Drawing;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class PizzaData
 {
@@ -13,106 +10,113 @@ public class PizzaData
     public Dictionary<string, List<Vector2>> ToppingCount = new Dictionary<string, List<Vector2>>();
 }
 
-public class Pizza : MonoBehaviour, IPointable
+public class Pizza : MonoBehaviour, IPointable, IDragable
 {
-    public enum DoughLayer
-    {
-        None,
-        Source,
-        Cheese,
-        Pepperoni,
-        Topping
-    }
-
     public PizzaData PizzaData { get; private set; }
 
     public DrawIngredient sourceLayer;
     public DrawIngredient cheeseLayer;
     public ToppingLayer topping;
-    public LayerMask layerMask;
 
-    private Collider2D collider2d;
-    private DoughLayer selectedLayer;
+    private Transform currentSocket;
+    private Transform tempSocket;
 
-    private Vector3 lastPosition;
-    private bool baked { get { return PizzaData.bakeCount > 0; } }
+    private GameManager gameManager;
+
+    private bool Baked { get { return PizzaData.bakeCount > 0; } }
 
     private void Awake()
     {
-        collider2d = GetComponent<Collider2D>();
         PizzaData = new PizzaData();
     }
 
     private void Start()
     {
-        SetLayer(DoughLayer.None.ToString());
-        lastPosition = transform.position;
+        gameManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<GameManager>();
     }
 
-    public void OnPressObject(Vector2 point)
+    public void SetSocket(Transform go)
     {
-        if (selectedLayer == DoughLayer.Topping)
-        {
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, float.PositiveInfinity, layerMask);
-
-            if (hit && hit.collider == collider2d)
-            {
-                topping.AddTopping(hit.point);
-            }
-        }
+        currentSocket = go;
     }
 
-    public void DragPizza(Vector2 point, string ingredient, bool down = false)
+    public void Click(Vector2 point, PizzaCommand command)
     {
-        DoughLayer result = DoughLayer.None;
-        if (string.IsNullOrEmpty(ingredient)
-            || !Enum.TryParse(ingredient, out result))
+        switch (command)
         {
-            return;
-        }
-        if (baked)
-        {
-            transform.position = point;
-            lastPosition = point;
-            return;
-        }
-        switch (result)
-        {
-            case DoughLayer.Source:
+            case PizzaCommand.Source:
                 sourceLayer.DrawPoint(point);
                 break;
-            case DoughLayer.Cheese:
+            case PizzaCommand.Cheese:
                 cheeseLayer.DrawPoint(point);
                 break;
-            case DoughLayer.Pepperoni:
-            case DoughLayer.Topping:
-                if (down)
-                {
-                    topping.AddTopping(point);
-                }
+            case PizzaCommand.Pepperoni:
+            case PizzaCommand.Topping:
+                topping.AddTopping(point);
                 break;
         }
     }
 
-    public void SetLayer(string layer)
+    public void OnDragEnd()
     {
-        if (!Enum.TryParse(layer, out DoughLayer result))
+        if (tempSocket != null
+            && tempSocket != currentSocket)
         {
-            return;
+            currentSocket.GetComponent<IPizzaSocket>()?.ClearPizza();
+            currentSocket = tempSocket;
+            currentSocket.GetComponent<IPizzaSocket>()?.SetPizza(transform);
+            tempSocket = null;
         }
-        selectedLayer = result;
-
-        sourceLayer.enabled = false;
-        cheeseLayer.enabled = false;
-
-        switch (result)
+        else
         {
-            case DoughLayer.Source:
-                sourceLayer.enabled = true;
+            transform.position = currentSocket.position;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Socket"))
+        {
+            Debug.Log($"SocketFound{collision.gameObject.name}");
+            tempSocket = collision.transform;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (tempSocket != null)
+        {
+            Debug.Log("SocketExit");
+            tempSocket = null;
+        }
+    }
+
+    public void OnPressObject(Vector2 position)
+    {
+        if (gameManager.PizzaCommand == PizzaCommand.Pepperoni)
+        {
+            topping.AddTopping(position);
+        }
+    }
+
+    public void OnDrag(Vector2 pos, Vector2 deltaPos)
+    {
+        switch (gameManager.PizzaCommand)
+        {
+            case PizzaCommand.Source:
+                sourceLayer.DrawPoint(pos);
                 break;
-            case DoughLayer.Cheese:
-                cheeseLayer.enabled = true;
+            case PizzaCommand.Cheese:
+                cheeseLayer.DrawPoint(pos);
+                break;
+            case PizzaCommand.Drag:
+                transform.position += (Vector3)deltaPos;
                 break;
         }
+    }
+
+    public void SetCurrentSocket(Transform sock)
+    {
+        currentSocket = sock;
     }
 }

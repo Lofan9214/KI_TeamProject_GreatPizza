@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class PlayerData
+public class OvenEnter : MonoBehaviour
 {
+    
 }

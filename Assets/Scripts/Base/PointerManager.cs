@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,15 +8,14 @@ public class PointerManager : MonoBehaviour
     public LayerMask layerMask;
     public Transform virtualCam;
 
-    private string selectedId;
-
     private bool hitPointable;
-    private Pizza pizza;
     private Transform target;
 
-    private void Start()
+    private GameManager gameManager;
+
+    private void Awake()
     {
-        selectedId = string.Empty;
+        gameManager = GetComponent<GameManager>();
     }
 
     private void Update()
@@ -24,58 +24,52 @@ public class PointerManager : MonoBehaviour
 
 #endif
 #if UNITY_ANDROID || UNITY_IOS
-        if (Input.touchCount == 1)
+        RaycastHit2D hit;
+        if (MultiTouchManager.Instance.IsTouchStart)
         {
-            Touch touch = Input.GetTouch(0);
-            RaycastHit2D hit;
-            switch (touch.phase)
+            var touchposition = MultiTouchManager.Instance.TouchPosition;
+            hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(touchposition), Vector2.zero, float.PositiveInfinity, layerMask);
+            hitPointable = hit;
+
+            if (hit)
             {
-                case TouchPhase.Began:
-                    hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(touch.position), Vector2.zero, float.PositiveInfinity, layerMask);
-                    hitPointable = hit;
-                    pizza = null;
-                    target = null;
-                    if (hit)
-                    {
-                        IPointable pointable = hit.collider.GetComponent<IPointable>();
-                        pointable?.OnPressObject(hit.point);
-                        pizza = hit.collider.GetComponent<Pizza>();
-                        if (pizza != null)
-                        {
-                            pizza.DragPizza(hit.point, selectedId, true);
-                        }
-                        if (hit.collider.CompareTag("Tub"))
-                        {
-                            selectedId = hit.collider.gameObject.name;
-                            Debug.Log(selectedId);
-                        }
-                    }
-                    break;
-                case TouchPhase.Moved:
-                    Vector3 deltaWorldPos = Camera.main.ScreenToWorldPoint(touch.position) - Camera.main.ScreenToWorldPoint(touch.position - touch.deltaPosition);
-                    if (hitPointable)
-                    {
-                        hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(touch.position), Vector2.zero, float.PositiveInfinity, layerMask);
-                        if (hit)
-                        {
-                            pizza?.DragPizza(hit.point, selectedId);
-                            if (hit.collider.CompareTag("PizzaBoard"))
-                            {
-                                hit.collider.transform.parent.transform.position += deltaWorldPos;
-                            }
-                        }
-                        break;
-                    }
-                    Vector3 cameraPos = Camera.main.transform.position;
-                    cameraPos -= deltaWorldPos;
-                    virtualCam.position = cameraPos;
-                    break;
-                case TouchPhase.Stationary:
-                    break;
-                case TouchPhase.Ended:
-                    break;
-                case TouchPhase.Canceled:
-                    break;
+                IPointable pointable = hit.collider.GetComponent<IPointable>();
+                pointable?.OnPressObject(hit.point);
+                target = hit.collider.transform;
+                if(hit.collider.CompareTag("PizzaBoard"))
+                {
+                    gameManager.PizzaCommand = PizzaCommand.Drag;
+                }
+            }
+        }
+        else if (MultiTouchManager.Instance.IsMoving)
+        {
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(MultiTouchManager.Instance.TouchPosition);
+            Vector3 deltaWorldPos = worldPos - Camera.main.ScreenToWorldPoint(MultiTouchManager.Instance.TouchPosition - MultiTouchManager.Instance.DeltaPosition);
+            if (hitPointable)
+            {
+                IDragable dragable = target.parent?.GetComponent<IDragable>();
+                if (dragable != null)
+                {
+                    dragable.OnDrag(worldPos, deltaWorldPos);
+                }
+            }
+            else
+            {
+                Vector3 cameraPos = Camera.main.transform.position;
+                cameraPos -= deltaWorldPos;
+                virtualCam.position = cameraPos;
+            }
+        }
+        else if (MultiTouchManager.Instance.IsTouchEnd)
+        {
+            if (hitPointable)
+            {
+                IDragable dragable = target.parent?.GetComponent<IDragable>();
+                if (dragable != null)
+                {
+                    dragable.OnDragEnd();
+                }
             }
         }
 #endif

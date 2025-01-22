@@ -25,6 +25,9 @@ public class MultiTouchManager : Singleton<MultiTouchManager>
 
     public Vector2 TouchPosition { get; private set; }
     public Vector2 DeltaPosition { get; private set; }
+    public bool IsMoving { get; private set; }
+    public bool IsTouchStart { get; private set; }
+    public bool IsTouchEnd { get; private set; }
 
     private float tapTimeThreshold = 0.2f;
     private float doubleTapTimeThreshold = 0.3f;
@@ -52,6 +55,9 @@ public class MultiTouchManager : Singleton<MultiTouchManager>
         Pinch = 0f;
         TouchPosition = Vector2.zero;
         DeltaPosition = Vector2.zero;
+        IsTouchStart = false;
+        IsMoving = false;
+        IsTouchEnd = false;
 
         if (Input.touchCount >= 2)
         {
@@ -140,10 +146,12 @@ public class MultiTouchManager : Singleton<MultiTouchManager>
                     touchStartPos = touch.position;
                     TouchPosition = touch.position;
                     isTouching = true;
+                    IsTouchStart = true;
                     break;
 
                 case TouchPhase.Ended:
                 case TouchPhase.Canceled:
+                    IsTouchEnd = true;
                     isTouching = false;
                     if (touch.phase == TouchPhase.Ended)
                     {
@@ -189,11 +197,10 @@ public class MultiTouchManager : Singleton<MultiTouchManager>
                         }
                     }
                     break;
-
                 case TouchPhase.Moved:
+                    IsMoving = true;
                     TouchPosition = touch.position;
                     DeltaPosition = touch.deltaPosition;
-
                     break;
             }
         }
