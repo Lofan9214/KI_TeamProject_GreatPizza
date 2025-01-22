@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Tub
+  - Pizza
+  - PizzaBoard
+  - Socket
   layers:
   - Default
   - TransparentFX
@@ -11,7 +15,7 @@ TagManager:
   - Confinder
   - Water
   - UI
-  - 
+  - Pointerable
   - 
   - 
   - 
@@ -44,9 +48,9 @@ TagManager:
   - name: Tables
     uniqueID: 4071211225
     locked: 0
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Pizza
     uniqueID: 369030381
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0

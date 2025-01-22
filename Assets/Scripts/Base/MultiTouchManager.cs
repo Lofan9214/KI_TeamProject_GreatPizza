@@ -24,6 +24,7 @@ public class MultiTouchManager : Singleton<MultiTouchManager>
     public float Rotation { get; private set; }
 
     public Vector2 TouchPosition { get; private set; }
+    public Vector2 DeltaPosition { get; private set; }
 
     private float tapTimeThreshold = 0.2f;
     private float doubleTapTimeThreshold = 0.3f;
@@ -49,6 +50,8 @@ public class MultiTouchManager : Singleton<MultiTouchManager>
         CurrentTouchState = TouchState.None;
         SwipeDirection = Vector2.zero;
         Pinch = 0f;
+        TouchPosition = Vector2.zero;
+        DeltaPosition = Vector2.zero;
 
         if (Input.touchCount >= 2)
         {
@@ -135,6 +138,7 @@ public class MultiTouchManager : Singleton<MultiTouchManager>
                 case TouchPhase.Began:
                     touchStartTime = Time.time;
                     touchStartPos = touch.position;
+                    TouchPosition = touch.position;
                     isTouching = true;
                     break;
 
@@ -184,6 +188,12 @@ public class MultiTouchManager : Singleton<MultiTouchManager>
                             isWaitingForDoubleTap = false;
                         }
                     }
+                    break;
+
+                case TouchPhase.Moved:
+                    TouchPosition = touch.position;
+                    DeltaPosition = touch.deltaPosition;
+
                     break;
             }
         }
