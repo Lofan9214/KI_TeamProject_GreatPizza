@@ -33,22 +33,24 @@ public class PointerManager : MonoBehaviour
 
             if (hit)
             {
-                IPointable pointable = hit.collider.GetComponent<IPointable>();
+                IClickable pointable = hit.collider.GetComponent<IClickable>();
                 pointable?.OnPressObject(hit.point);
                 target = hit.collider.transform;
-                if(hit.collider.CompareTag("PizzaBoard"))
-                {
-                    gameManager.PizzaCommand = PizzaCommand.Drag;
-                }
+                //if(hit.collider.CompareTag("PizzaBoard"))
+                //{
+                //    gameManager.PizzaCommand = PizzaCommand.Drag;
+                //}
             }
         }
         else if (MultiTouchManager.Instance.IsMoving)
         {
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(MultiTouchManager.Instance.TouchPosition);
             Vector3 deltaWorldPos = worldPos - Camera.main.ScreenToWorldPoint(MultiTouchManager.Instance.TouchPosition - MultiTouchManager.Instance.DeltaPosition);
+            worldPos.z = 0f;
+            deltaWorldPos.z = 0f;
             if (hitPointable)
             {
-                IDragable dragable = target.parent?.GetComponent<IDragable>();
+                IDragable dragable = target?.GetComponent<IDragable>();
                 if (dragable != null)
                 {
                     dragable.OnDrag(worldPos, deltaWorldPos);
@@ -57,7 +59,7 @@ public class PointerManager : MonoBehaviour
             else
             {
                 Vector3 cameraPos = Camera.main.transform.position;
-                cameraPos -= deltaWorldPos;
+                cameraPos.x -= deltaWorldPos.x;
                 virtualCam.position = cameraPos;
             }
         }
@@ -65,7 +67,7 @@ public class PointerManager : MonoBehaviour
         {
             if (hitPointable)
             {
-                IDragable dragable = target.parent?.GetComponent<IDragable>();
+                IDragable dragable = target?.GetComponent<IDragable>();
                 if (dragable != null)
                 {
                     dragable.OnDragEnd();

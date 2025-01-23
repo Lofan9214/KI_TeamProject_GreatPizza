@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         PizzaCommand = PizzaCommand.None;
+        
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
     }
 
     public void SetPizzaCommand(string command)

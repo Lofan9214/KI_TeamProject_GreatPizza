@@ -1,43 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.U2D;
-using static UnityEditor.PlayerSettings;
 
 public class DrawIngredient : MonoBehaviour
 {
-    public int textureHeight = 256;
-    public int textureWidth = 256;
-    public int brushHeight = 4;
-    public int brushWidth = 4;
-
     public Texture2D brushTexture;
-    public Texture2D maskTexture;
-    private SpriteMask spriteMask;
+    public Texture2D spriteTexture;
 
-    private Color[] maskColorMap;
+    private int textureHeight = 256;
+    private int textureWidth = 256;
+    private int brushHeight = 4;
+    private int brushWidth = 4;
+
     private Color[] brushColorMap;
+    private float[] spriteAlphaMap;
+    private Color[] drawColorMap;
+    private float[] drawAlphaMap;
 
-    private void Awake()
-    {
-        spriteMask = GetComponent<SpriteMask>();
-    }
+    private Texture2D drawTexture;
 
     private void Start()
     {
-        maskColorMap = new Color[textureHeight * textureWidth];
+        textureHeight = spriteTexture.height;
+        textureWidth = spriteTexture.width;
 
-        for (int i = 0; i < maskColorMap.Length; ++i)
+        drawColorMap = spriteTexture.GetPixels();
+        spriteAlphaMap = new float[textureHeight * textureWidth];
+        drawAlphaMap = new float[textureHeight * textureWidth];
+
+        for (int i = 0; i < drawColorMap.Length; ++i)
         {
-            maskColorMap[i] = Color.white;
-            maskColorMap[i].a = 0f;
+            spriteAlphaMap[i] = drawColorMap[i].a;
+            drawColorMap[i].a = 0f;
         }
 
-        maskTexture = new Texture2D(textureWidth, textureHeight, TextureFormat.ARGB32, false);
-        maskTexture.filterMode = FilterMode.Point;
+        drawTexture = new Texture2D(textureWidth, textureHeight, TextureFormat.ARGB32, false);
+
         SetTexture();
-        spriteMask.sprite = Sprite.Create(maskTexture, new Rect(0f, 0f, maskTexture.width, maskTexture.height), Vector2.one * 0.5f, textureHeight);
-        spriteMask.sprite.name = "MaskTexture";
+        var renderer = GetComponent<SpriteRenderer>();
+        renderer.sprite = Sprite.Create(drawTexture, new Rect(0f, 0f, drawTexture.width, drawTexture.height), Vector2.one * 0.5f, textureHeight);
+        renderer.sprite.name = "DrawLayer";
 
         brushHeight = brushTexture.height;
         brushWidth = brushTexture.width;
@@ -46,8 +49,8 @@ public class DrawIngredient : MonoBehaviour
 
     private void SetTexture()
     {
-        maskTexture.SetPixels(maskColorMap);
-        maskTexture.Apply();
+        drawTexture.SetPixels(drawColorMap);
+        drawTexture.Apply();
     }
 
     private void DrawBrush(Vector3 pos)
@@ -66,16 +69,24 @@ public class DrawIngredient : MonoBehaviour
                 {
                     continue;
                 }
-                float alpha = maskColorMap[j * textureWidth + i].a + brushColorMap[jj * brushWidth + ii].a;
-                maskColorMap[j * textureWidth + i].a = Mathf.Min(alpha, 1f);
+                float alpha = drawAlphaMap[j * textureWidth + i] + brushColorMap[jj * brushWidth + ii].a;
+                alpha = Mathf.Min(alpha, spriteAlphaMap[j * textureWidth + i]);
+                drawColorMap[j * textureWidth + i].a = alpha;
+                drawAlphaMap[j * textureWidth + i] = alpha;
             }
         }
     }
+
     public void DrawPoint(Vector2 point)
     {
         var localpos = transform.InverseTransformPoint(point);
         localpos += Vector3.one * 0.5f;
         DrawBrush(localpos);
         SetTexture();
+    }
+
+    public float Ratio()
+    {
+        return drawAlphaMap.Sum() / spriteAlphaMap.Sum();
     }
 }

@@ -6,11 +6,11 @@ public class StringTable : DataTable
 {
     public class Data
     {
-        public string Id { get; set; }
-        public string String { get; set; }
+        public int stringID { get; set; }
+        public string line { get; set; }
     }
 
-    private Dictionary<string, string> dict = new Dictionary<string, string>();
+    private Dictionary<int, string> dict = new Dictionary<int, string>();
 
     public override void Load(string fileName)
     {
@@ -22,20 +22,20 @@ public class StringTable : DataTable
 
         foreach (var item in list)
         {
-            if (!dict.ContainsKey(item.Id))
+            if (!dict.ContainsKey(item.stringID))
             {
-                dict.Add(item.Id, item.String);
+                dict.Add(item.stringID, item.line);
             }
             else
             {
-                Debug.Log($"Key Duplicated: {item.Id}");
+                Debug.Log($"Key Duplicated: {item.stringID}");
             }
         }
     }
 
-    public string Get(string key)
+    public string Get(int key)
     {
-        if (string.IsNullOrEmpty(key) || !dict.ContainsKey(key))
+        if (!dict.ContainsKey(key))
         {
             return "NULL";
         }

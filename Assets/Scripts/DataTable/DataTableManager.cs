@@ -21,8 +21,14 @@ public static class DataTableManager
         table.Load(stringTableId);
         tables.Add(stringTableId, table);
 #endif
-        
 
+        var recipeTable = new RecipeTable();
+        recipeTable.Load(DataTableIds.Recipe);
+        tables.Add(DataTableIds.Recipe, recipeTable);
+
+        var ingredientTable = new IngredientTable();
+        ingredientTable.Load(DataTableIds.Ingredient);
+        tables.Add(DataTableIds.Ingredient, ingredientTable);
     }
 
     public static T Get<T>(string id) where T : DataTable
@@ -40,6 +46,22 @@ public static class DataTableManager
         get
         {
             return Get<StringTable>(DataTableIds.String[(int)Variables.currentLanguage]);
+        }
+    }
+
+    public static RecipeTable RecipeTable
+    {
+        get
+        {
+            return Get<RecipeTable>(DataTableIds.Recipe);
+        }
+    }
+
+    public static IngredientTable IngredientTable
+    {
+        get
+        {
+            return Get<IngredientTable>(DataTableIds.Ingredient);
         }
     }
 }

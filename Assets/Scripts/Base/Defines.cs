@@ -11,9 +11,13 @@ public static class DataTableIds
     public static readonly string[] String =
     {
         "StringTableKr",
-        "StringTableEn",
-        "StringTableJp",
+        //"StringTableEn",
+        //"StringTableJp",
     };
+
+    public static readonly string Recipe = "RecipeTable";
+
+    public static readonly string Ingredient = "IngredientTable";
 }
 
 public static class Variables
@@ -24,7 +28,6 @@ public static class Variables
 public enum PizzaCommand
 {
     None,
-    Drag,
     Source,
     Cheese,
     Pepperoni,
