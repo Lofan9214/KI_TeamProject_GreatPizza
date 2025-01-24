@@ -31,5 +31,6 @@ public enum PizzaCommand
     Source,
     Cheese,
     Pepperoni,
+    Sausage,
     Topping
 }

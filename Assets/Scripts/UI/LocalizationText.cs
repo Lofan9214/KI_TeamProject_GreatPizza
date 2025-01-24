@@ -27,10 +27,12 @@ public class LocalizationText : MonoBehaviour
         {
             OnChangedLanguage(Variables.currentLanguage);
         }
+#if UNITY_EDITOR
         else
         {
             OnChangedLanguage(editorLang);
         }
+#endif
     }
 
     public void OnChangedLanguage(Languages lang)

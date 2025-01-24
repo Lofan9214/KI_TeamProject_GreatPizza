@@ -9,10 +9,16 @@ public class ToppingLayer : MonoBehaviour
 
     private List<Topping> toppings = new List<Topping>();
 
-    public void AddTopping(Vector2 position)
+    public void AddTopping(Vector2 position, string toppingId)
     {
         var topping = Instantiate(toppingPrefab, position, Quaternion.identity, transform);
-        topping.SetData(toppingData[0]);
+        foreach (var datum in toppingData)
+        {
+            if (datum.toppingId == toppingId)
+            {
+                topping.SetData(datum);
+            }
+        }
         topping.AddOrderOffset(toppings.Count);
         toppings.Add(topping);
     }

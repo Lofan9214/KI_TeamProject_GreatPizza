@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,8 @@ public class DrawIngredient : MonoBehaviour
     private float[] drawAlphaMap;
 
     private Texture2D drawTexture;
+
+    private bool drawn = false;
 
     private void Start()
     {
@@ -79,6 +82,7 @@ public class DrawIngredient : MonoBehaviour
 
     public void DrawPoint(Vector2 point)
     {
+        drawn = true;
         var localpos = transform.InverseTransformPoint(point);
         localpos += Vector3.one * 0.5f;
         DrawBrush(localpos);
@@ -87,6 +91,11 @@ public class DrawIngredient : MonoBehaviour
 
     public float Ratio()
     {
-        return drawAlphaMap.Sum() / spriteAlphaMap.Sum();
+        if (drawn)
+        {
+            return drawAlphaMap.Sum() / spriteAlphaMap.Sum();
+        }
+
+        return -1f;
     }
 }

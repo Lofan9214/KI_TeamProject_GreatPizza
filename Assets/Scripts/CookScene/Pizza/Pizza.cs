@@ -2,10 +2,11 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PizzaData
 {
-    public string doughID = string.Empty;
+    public string doughID = "dough";
     public int bakeCount = 0;
     public List<quaternion> cutData = new List<quaternion>();
     public List<string> toppingData = new List<string>();
@@ -26,6 +27,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     public PizzaData PizzaData { get; private set; } = new PizzaData();
 
+    public SpriteRenderer dough;
     public GameObject pizzaBoard;
     public DrawIngredient sourceLayer;
     public DrawIngredient cheeseLayer;
@@ -38,10 +40,12 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     private GameManager gameManager;
 
-    private Vector3 lastDrawPos;
+    private Vector3? lastDrawPos = null;
+    private CircleCollider2D circleCollider;
 
     private void Start()
     {
+        circleCollider = GetComponent<CircleCollider2D>();
         gameManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<GameManager>();
     }
 
@@ -75,6 +79,8 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
         PizzaData.sourceRatio = sourceLayer.Ratio();
         PizzaData.cheeseRatio = cheeseLayer.Ratio();
+
+        lastDrawPos = null;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -98,12 +104,17 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     public void OnPressObject(Vector2 position)
     {
-        if (PizzaState == State.AddingTopping)
+        if (PizzaState == State.AddingTopping
+            && Vector2.Distance(position, transform.position) < circleCollider.radius)
         {
-            if (gameManager.PizzaCommand == PizzaCommand.Pepperoni)
+            switch (gameManager.PizzaCommand)
             {
-                PizzaData.toppingData.Add(gameManager.PizzaCommand.ToString());
-                toppingLayer.AddTopping(position);
+                case PizzaCommand.Pepperoni:
+                case PizzaCommand.Sausage:
+                    string toppingId = gameManager.PizzaCommand.ToString().ToLower();
+                    PizzaData.toppingData.Add(toppingId);
+                    toppingLayer.AddTopping(position, toppingId);
+                    break;
             }
         }
     }
@@ -118,6 +129,12 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         switch (PizzaState)
         {
             case State.AddingTopping:
+                if (lastDrawPos != null
+                    && Vector2.Distance(pos, (Vector2)lastDrawPos) < 0.5f)
+                {
+
+                }
+
                 switch (gameManager.PizzaCommand)
                 {
                     case PizzaCommand.Source:
@@ -127,11 +144,23 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                         cheeseLayer.DrawPoint(pos);
                         break;
                 }
+                lastDrawPos = pos;
                 break;
             case State.Movable:
                 Move(deltaPos);
                 break;
         }
+    }
+
+    public void OnDragFromBoard(Vector3 pos, Vector3 deltaPos)
+    {
+        if (Vector2.Distance(pos, transform.position) < circleCollider.radius)
+        {
+            OnDrag(pos, deltaPos);
+            return;
+        }
+        if(lastDrawPos==null)
+        Move(deltaPos);
     }
 
     public void Bake()
@@ -162,7 +191,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 CutCount: {PizzaData.cutData.Count}
 sourceLayer:{sourceLayer.Ratio() * 100f:F0}
 cheeseLayer:{cheeseLayer.Ratio() * 100f:F0}
-topping:{PizzaData.toppingData.Where(p => p == "Pepperoni").Count()}");
+topping:{PizzaData.toppingData.Where(p => p == "pepperoni").Count()}");
         }
     }
 }

@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using UnityEditor.Experimental.Rendering;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -35,7 +34,13 @@ public class TempOrderPlacer : MonoBehaviour
         Func<RecipeTable.RecipeData, bool> filter =
             p =>
             {
-                return true;
+                bool contains = true;
+                foreach(var id in p.ingredientIds)
+                {
+                    if (!PlayerData.unlocks.Contains(id))
+                        contains = false;
+                }
+                return contains;
             };
 
         List<RecipeTable.RecipeData> filtered = DataTableManager.RecipeTable.GetList().Where(filter).ToList();
@@ -71,14 +76,19 @@ public class TempOrderPlacer : MonoBehaviour
                         judges.Add(pizzaData.cheeseRatio > 0.7f ? 2 : 0);
                         break;
                     case "dough":
+                        judges.Add(pizzaData.doughID == RecipeData.ingredientIds[i] ? 2 : 0);
                         break;
                     default:
                         int successTH = DataTableManager.IngredientTable.Get(RecipeData.ingredientIds[i]).success;
-                        judges.Add(pizzaData.toppingData.Count >= successTH ? 2 : 0);
+                        judges.Add(pizzaData.toppingData.Where(p => p == RecipeData.ingredientIds[i]).Count() >= successTH ? 2 : 0);
                         break;
                 }
             }
-            int totaljudge = (int)Mathf.Min(MathF.Min(cutJudges, roastJudges), judges.Min());
+            int totaljudge = Mathf.Min(cutJudges, roastJudges);
+            if (judges.Count > 0)
+            {
+                totaljudge = Mathf.Min(totaljudge, judges.Min());
+            }
             roastJudge.text = $"Roast: {(roastJudges == 2 ? "OK" : "NG")}";
             cuttingJudge.text = $"Cutting: {(cutJudges == 2 ? "OK" : "NG")}";
             ingredientJudge.text = $"Ingredient:{(judges.Min() == 2 ? "OK" : "NG")}";
