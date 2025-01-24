@@ -1,0 +1,14 @@
+recipeID,stringID,roastcutting,ingredientID
+0301,110201,10,dough
+0302,110202,13,dough_tomato_cheese
+0303,110203,13,dough_cheese
+0304,110204,13,dough_tomato_cheese_pepperoni
+0305,110205,13,dough_tomato_cheese_sausage
+0306,110206,13,dough_tomato_cheese_mushroom
+0307,110207,23,dough_tomato_cheese_mushroom
+0308,110208,13,dough_tomato_cheese_olive
+0309,110209,13,dough_tomato_cheese_onion
+0310,110210,23,dough_tomato_cheese_onion
+0311,110211,13,dough_tomato_cheese_pepperoni
+0312,110212,13,dough_tomato_cheese_onion
+0313,110213,13,dough_tomato_cheese_pepperoni_sausage_mushroom

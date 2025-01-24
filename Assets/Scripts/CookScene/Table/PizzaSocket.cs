@@ -2,18 +2,23 @@ using UnityEngine;
 
 public class PizzaSocket : MonoBehaviour, IPizzaSocket
 {
-    public Transform pizza;
+    public bool Settable = false;
 
-    public bool IsEmpty => pizza == null;
+    public bool IsSettable => Settable;
+
+    public bool IsEmpty => CurrentPizza == null;
+
+    public Pizza CurrentPizza { get; private set; }
 
     public void ClearPizza()
     {
-        pizza = null;
+        CurrentPizza = null;
     }
 
-    public void SetPizza(Transform go)
+    public void SetPizza(Pizza go)
     {
-        pizza = go;
-        pizza.position = transform.position;
+        Debug.Log($"SetPizzaToSocket{name}");
+        CurrentPizza = go;
+        CurrentPizza.transform.position = transform.position;
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoughTub : MonoBehaviour, IPointable
+public class DoughTub : MonoBehaviour, IClickable
 {
     public PizzaSocket target;
     public Pizza pizzaPrefab;
@@ -13,7 +13,7 @@ public class DoughTub : MonoBehaviour, IPointable
         {
             var ps = Instantiate(pizzaPrefab);
             ps.SetCurrentSocket(target.transform);
-            target.SetPizza(ps.transform);
+            target.SetPizza(ps);
         }
     }
 }

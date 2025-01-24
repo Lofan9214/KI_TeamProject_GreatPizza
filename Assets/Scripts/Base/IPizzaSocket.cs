@@ -4,7 +4,12 @@ using UnityEngine;
 
 public interface IPizzaSocket
 {
+    public bool IsSettable { get; }
+    public bool IsEmpty { get; }
+
+    public Pizza CurrentPizza { get; }
+
     public void ClearPizza();
 
-    public void SetPizza(Transform go);
+    public void SetPizza(Pizza go);
 }
