@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -64,7 +65,7 @@ public class TempOrderPlacer : MonoBehaviour
             int cutJudges = RecipeData.cutting == pizzaData.cutData.Count ? 2 : 0;
 
             List<int> judges = new List<int>();
-
+            StringBuilder sb = new StringBuilder();
             for (int i = 0; i < RecipeData.ingredientIds.Length; ++i)
             {
                 switch (RecipeData.ingredientIds[i])
@@ -80,7 +81,9 @@ public class TempOrderPlacer : MonoBehaviour
                         break;
                     default:
                         int successTH = DataTableManager.IngredientTable.Get(RecipeData.ingredientIds[i]).success;
-                        judges.Add(pizzaData.toppingData.Where(p => p == RecipeData.ingredientIds[i]).Count() >= successTH ? 2 : 0);
+                        int cnt = pizzaData.toppingData.Where(p => p == RecipeData.ingredientIds[i]).Count();
+                        judges.Add(cnt >= successTH ? 2 : 0);
+                        sb.Append($"{RecipeData.ingredientIds[i]}:{cnt}_{(cnt >= successTH ?"OK":"NG")}, ");
                         break;
                 }
             }
@@ -89,9 +92,9 @@ public class TempOrderPlacer : MonoBehaviour
             {
                 totaljudge = Mathf.Min(totaljudge, judges.Min());
             }
-            roastJudge.text = $"Roast: {(roastJudges == 2 ? "OK" : "NG")}";
-            cuttingJudge.text = $"Cutting: {(cutJudges == 2 ? "OK" : "NG")}";
-            ingredientJudge.text = $"Ingredient:{(judges.Min() == 2 ? "OK" : "NG")}";
+            roastJudge.text = $"Roast: {RecipeData.roast} {(roastJudges == 2 ? "OK" : "NG")}";
+            cuttingJudge.text = $"Cutting: {RecipeData.cutting} {(cutJudges == 2 ? "OK" : "NG")}";
+            ingredientJudge.text = $"Ingredient: {sb} Total - {(judges.Min() == 2 ? "OK" : "NG")}";
             totalJudge.text = $"TotalJudge: {(totaljudge == 2 ? "OK" : "NG")}";
         }
     }
