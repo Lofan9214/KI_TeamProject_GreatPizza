@@ -45,6 +45,9 @@ public class IngameGameManager : MonoBehaviour
         }
 
         confinder.m_BoundingShape2D = kitchenCollider;
+        var campos = confinder.gameObject.transform.position;
+        campos.y = kitchenCollider.gameObject.transform.position.y;
+        confinder.gameObject.transform.position = campos;
     }
 
     public IEnumerator Spawn()
