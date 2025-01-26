@@ -13,11 +13,16 @@ public class IngredientTable : DataTable
     public class Data
     {
         public string ingredientID { get; set; }
+        public int type { get; set; }
         public int stringID { get; set; }
         public float price { get; set; }
         public float profit { get; set; }
         public int success { get; set; }
         public int fail { get; set; }
+        public float happy_min { get; set; }
+        public float happy_max { get; set; }
+        public float normal_min { get; set; }
+        public float normal_max { get; set; }
         public string image { get; set; }
     }
 

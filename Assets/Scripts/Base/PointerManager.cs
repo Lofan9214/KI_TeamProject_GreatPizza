@@ -11,11 +11,13 @@ public class PointerManager : MonoBehaviour
     private bool hitPointable;
     private Transform target;
 
-    private GameManager gameManager;
+    private IngameGameManager gameManager;
+
+    
 
     private void Awake()
     {
-        gameManager = GetComponent<GameManager>();
+        gameManager = GetComponent<IngameGameManager>();
     }
 
     private void Update()

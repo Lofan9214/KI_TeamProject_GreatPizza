@@ -20,6 +20,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         public List<quaternion> cutData = new List<quaternion>();
         public List<string> toppingData = new List<string>();
         public float sourceRatio = 0f;
+        public string sourceId = "tomato";
         public float cheeseRatio = 0f;
     }
 
@@ -38,7 +39,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     private Transform currentSocket;
     private Transform tempSocket;
 
-    private GameManager gameManager;
+    private IngameGameManager gameManager;
 
     private Vector3? lastDrawPos = null;
     private CircleCollider2D circleCollider;
@@ -46,7 +47,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     private void Start()
     {
         circleCollider = GetComponent<CircleCollider2D>();
-        gameManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<GameManager>();
+        gameManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<IngameGameManager>();
     }
 
     public void SetSocket(Transform go)

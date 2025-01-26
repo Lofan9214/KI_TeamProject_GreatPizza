@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using TMPro;
 using UnityEngine;
+using static NPCBehaviour.JudgeData;
 using Random = UnityEngine.Random;
 
 public class TempOrderPlacer : MonoBehaviour
@@ -36,7 +37,7 @@ public class TempOrderPlacer : MonoBehaviour
             p =>
             {
                 bool contains = true;
-                foreach(var id in p.ingredientIds)
+                foreach (var id in p.ingredientIds)
                 {
                     if (!PlayerData.unlocks.Contains(id))
                         contains = false;
@@ -60,42 +61,56 @@ public class TempOrderPlacer : MonoBehaviour
         if (!sellingCounter.IsEmpty
             && RecipeData != null)
         {
-            var pizzaData = sellingCounter.CurrentPizza.PizzaData;
-            int roastJudges = RecipeData.roast == pizzaData.roastCount ? 2 : 0;
-            int cutJudges = RecipeData.cutting == pizzaData.cutData.Count ? 2 : 0;
+            var judgeData = NPCBehaviour.GetJudgeData(RecipeData, sellingCounter.CurrentPizza.PizzaData);
 
-            List<int> judges = new List<int>();
             StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < RecipeData.ingredientIds.Length; ++i)
+
+            foreach (var ing in judgeData.ingredientsJudge)
             {
-                switch (RecipeData.ingredientIds[i])
-                {
-                    case "tomato":
-                        judges.Add(pizzaData.sourceRatio > 0.7f ? 2 : 0);
-                        break;
-                    case "cheese":
-                        judges.Add(pizzaData.cheeseRatio > 0.7f ? 2 : 0);
-                        break;
-                    case "dough":
-                        judges.Add(pizzaData.doughID == RecipeData.ingredientIds[i] ? 2 : 0);
-                        break;
-                    default:
-                        int successTH = DataTableManager.IngredientTable.Get(RecipeData.ingredientIds[i]).success;
-                        int cnt = pizzaData.toppingData.Where(p => p == RecipeData.ingredientIds[i]).Count();
-                        judges.Add(cnt >= successTH ? 2 : 0);
-                        sb.Append($"{RecipeData.ingredientIds[i]}:{cnt}_{(cnt >= successTH ?"OK":"NG")}, ");
-                        break;
-                }
+                sb.Append($"{ing.id}:{ing.judge}, ");
             }
-            int totaljudge = Mathf.Min(cutJudges, roastJudges);
-            if (judges.Count > 0)
-            {
-                totaljudge = Mathf.Min(totaljudge, judges.Min());
-            }
-            roastJudge.text = $"Roast: {RecipeData.roast} {(roastJudges == 2 ? "OK" : "NG")}";
-            cuttingJudge.text = $"Cutting: {RecipeData.cutting} {(cutJudges == 2 ? "OK" : "NG")}";
-            ingredientJudge.text = $"Ingredient: {sb} Total - {(judges.Min() == 2 ? "OK" : "NG")}";
-            totalJudge.text = $"TotalJudge: {(totaljudge == 2 ? "OK" : "NG")}";
+
+            roastJudge.text = $"Roast: {RecipeData.roast} {judgeData.roasting}";
+            cuttingJudge.text = $"Cutting: {RecipeData.cutting} {judgeData.cutting}";
+            ingredientJudge.text = $"Ingredient: {sb} Total - {(judgeData.ingredientsJudge.Count > 0 ? (NPCBehaviour.JudgeData.Judge)judgeData.ingredientsJudge.Min(p => (int)p.judge) : NPCBehaviour.JudgeData.Judge.Success)}";
+            totalJudge.text = $"TotalJudge: {judgeData.FinalJudge}";
+
+            //var pizzaData = sellingCounter.CurrentPizza.PizzaData;
+            //int roastJudges = RecipeData.roast == pizzaData.roastCount ? 2 : 0;
+            //int cutJudges = RecipeData.cutting == pizzaData.cutData.Count ? 2 : 0;
+            //
+            //List<int> judges = new List<int>();
+            //StringBuilder sb = new StringBuilder();
+            //for (int i = 0; i < RecipeData.ingredientIds.Length; ++i)
+            //{
+            //    switch (RecipeData.ingredientIds[i])
+            //    {
+            //        case "tomato":
+            //            judges.Add(pizzaData.sourceRatio > 0.7f ? 2 : 0);
+            //            break;
+            //        case "cheese":
+            //            judges.Add(pizzaData.cheeseRatio > 0.7f ? 2 : 0);
+            //            break;
+            //        case "dough":
+            //            judges.Add(pizzaData.doughID == RecipeData.ingredientIds[i] ? 2 : 0);
+            //            break;
+            //        default:
+            //            int successTH = DataTableManager.IngredientTable.Get(RecipeData.ingredientIds[i]).success;
+            //            int cnt = pizzaData.toppingData.Where(p => p == RecipeData.ingredientIds[i]).Count();
+            //            judges.Add(cnt >= successTH ? 2 : 0);
+            //            sb.Append($"{RecipeData.ingredientIds[i]}:{cnt}_{(cnt >= successTH ?"OK":"NG")}, ");
+            //            break;
+            //    }
+            //}
+            //int totaljudge = Mathf.Min(cutJudges, roastJudges);
+            //if (judges.Count > 0)
+            //{
+            //    totaljudge = Mathf.Min(totaljudge, judges.Min());
+            //}
+            //roastJudge.text = $"Roast: {RecipeData.roast} {(roastJudges == 2 ? "OK" : "NG")}";
+            //cuttingJudge.text = $"Cutting: {RecipeData.cutting} {(cutJudges == 2 ? "OK" : "NG")}";
+            //ingredientJudge.text = $"Ingredient: {sb} Total - {(judges.Min() == 2 ? "OK" : "NG")}";
+            //totalJudge.text = $"TotalJudge: {(totaljudge == 2 ? "OK" : "NG")}";
         }
     }
 }

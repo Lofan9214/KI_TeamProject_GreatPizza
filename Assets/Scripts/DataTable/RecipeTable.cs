@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 //recipeID,stringID,roastcutting,ingredientID
 //0301,110201,10,dough
@@ -15,14 +17,16 @@ public class RecipeTable : DataTable
         public int stringID;
         public int roast;
         public int cutting;
+        public string dough;
         public string[] ingredientIds;
     }
 
-    public class Data
+    private class Data
     {
         public int recipeID { get; set; }
         public int stringID { get; set; }
         public int roastcutting { get; set; }
+        public string dough { get; set; }
         public string ingredientID { get; set; }
     }
 
@@ -46,6 +50,7 @@ public class RecipeTable : DataTable
                     stringID = item.stringID,
                     roast = item.roastcutting / 10 % 10,
                     cutting = item.roastcutting % 10,
+                    dough = item.dough,
                     ingredientIds = item.ingredientID.Split('_')
                 };
 
@@ -66,6 +71,33 @@ public class RecipeTable : DataTable
         }
 
         return dict[key];
+    }
+
+    public RecipeData RandomGet()
+    {
+        Func<RecipeData, bool> filter =
+            p =>
+            {
+                bool contains = true;
+                foreach (var id in p.ingredientIds)
+                {
+                    if (string.IsNullOrEmpty(id))
+                    {
+                        continue;
+                    }
+                    if (!PlayerData.unlocks.Contains(id))
+                    {
+                        contains = false;
+                        break;
+                    }
+                }
+                return contains;
+            };
+
+        List<RecipeData> filtered = dict.Values.Where(filter).ToList();
+
+        int randomindex = Random.Range(0, filtered.Count);
+        return filtered[randomindex];
     }
 
     public List<RecipeData> GetList()

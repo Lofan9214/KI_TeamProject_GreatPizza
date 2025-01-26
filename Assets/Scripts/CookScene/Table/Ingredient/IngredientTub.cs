@@ -5,19 +5,15 @@ using UnityEngine;
 
 public class IngredientTub : MonoBehaviour, IClickable
 {
-    GameManager gameManager;
+    IngameGameManager gameManager;
 
     public void Start()
     {
-        gameManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<GameManager>();
+        gameManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<IngameGameManager>();
     }
 
     public void OnPressObject(Vector2 position)
     {
-        if (Enum.TryParse(gameObject.name, out PizzaCommand result))
-        {
-            Debug.Log(result);
-            gameManager.PizzaCommand = result;
-        }
+        gameManager.SetPizzaCommand(gameObject.name);
     }
 }
