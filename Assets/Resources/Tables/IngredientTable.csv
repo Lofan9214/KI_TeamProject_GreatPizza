@@ -1,6 +1,6 @@
 ingredientID,stringID,price,profit,success,fail,image
-tomato,110101,0.6,1.0,0,0,
-cheese,110102,0.6,1.0,0,0,
+tomato,110101,0.6,1.90,50,0,
+cheese,110102,0.6,1.90,50,0,
 pepperoni,110103,0.16,3.0,12,8,
 sausage,110104,0.16,3.0,12,8,
 mushroom,110105,0.08,1.6,12,8,

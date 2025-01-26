@@ -4,16 +4,6 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class PizzaData
-{
-    public string doughID = "dough";
-    public int bakeCount = 0;
-    public List<quaternion> cutData = new List<quaternion>();
-    public List<string> toppingData = new List<string>();
-    public float sourceRatio = 0f;
-    public float cheeseRatio = 0f;
-}
-
 public class Pizza : MonoBehaviour, IClickable, IDragable
 {
     public enum State
@@ -23,16 +13,26 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         Immovable,
     }
 
+    public class Data
+    {
+        public string doughID = "dough";
+        public int roastCount = 0;
+        public List<quaternion> cutData = new List<quaternion>();
+        public List<string> toppingData = new List<string>();
+        public float sourceRatio = 0f;
+        public float cheeseRatio = 0f;
+    }
+
     public State PizzaState { get; set; } = State.AddingTopping;
 
-    public PizzaData PizzaData { get; private set; } = new PizzaData();
+    public Data PizzaData { get; private set; } = new Data();
 
     public SpriteRenderer dough;
     public GameObject pizzaBoard;
     public DrawIngredient sourceLayer;
     public DrawIngredient cheeseLayer;
     public ToppingLayer toppingLayer;
-    public SpriteRenderer bakeLayer;
+    public SpriteRenderer roastLayer;
     public Cut cutLayer;
 
     private Transform currentSocket;
@@ -77,8 +77,8 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         }
         transform.position = currentSocket.position;
 
-        PizzaData.sourceRatio = sourceLayer.Ratio();
-        PizzaData.cheeseRatio = cheeseLayer.Ratio();
+        PizzaData.sourceRatio = sourceLayer.Ratio;
+        PizzaData.cheeseRatio = cheeseLayer.Ratio;
 
         lastDrawPos = null;
     }
@@ -159,16 +159,16 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
             OnDrag(pos, deltaPos);
             return;
         }
-        if(lastDrawPos==null)
-        Move(deltaPos);
+        if (lastDrawPos == null)
+            Move(deltaPos);
     }
 
-    public void Bake()
+    public void Roast()
     {
-        PizzaData.bakeCount++;
-        Color color = bakeLayer.color;
+        PizzaData.roastCount++;
+        Color color = roastLayer.color;
         color.a += (1f - color.a) * 0.2f;
-        bakeLayer.color = color;
+        roastLayer.color = color;
     }
 
     public void Cut(quaternion rotation)
@@ -187,11 +187,13 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         if (MultiTouchManager.Instance.DoubleTap)
         {
             Debug.Log(
-@$"BakeCount: {PizzaData.bakeCount}
+@$"RoastCount: {PizzaData.roastCount}
 CutCount: {PizzaData.cutData.Count}
-sourceLayer:{sourceLayer.Ratio() * 100f:F0}
-cheeseLayer:{cheeseLayer.Ratio() * 100f:F0}
+sourceLayer:{sourceLayer.Ratio * 100f:F0}
+cheeseLayer:{cheeseLayer.Ratio * 100f:F0}
 topping:{PizzaData.toppingData.Where(p => p == "pepperoni").Count()}");
         }
     }
+
+
 }

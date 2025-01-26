@@ -61,7 +61,7 @@ public class TempOrderPlacer : MonoBehaviour
             && RecipeData != null)
         {
             var pizzaData = sellingCounter.CurrentPizza.PizzaData;
-            int roastJudges = RecipeData.roast == pizzaData.bakeCount ? 2 : 0;
+            int roastJudges = RecipeData.roast == pizzaData.roastCount ? 2 : 0;
             int cutJudges = RecipeData.cutting == pizzaData.cutData.Count ? 2 : 0;
 
             List<int> judges = new List<int>();

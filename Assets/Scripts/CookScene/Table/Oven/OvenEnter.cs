@@ -31,7 +31,7 @@ public class OvenEnter : MonoBehaviour, IPizzaSocket
             yield return new WaitForSeconds(0.5f);
         } while (!ovenExit.IsEmpty);
         CurrentPizza.PizzaState = Pizza.State.Movable;
-        CurrentPizza.Bake();
+        CurrentPizza.Roast();
         ovenExit.SetPizza(CurrentPizza);
         ClearPizza();
     }
