@@ -7,8 +7,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
-public class NPCBehaviour : MonoBehaviour
+public class NPCBehaviour : MonoBehaviour, IPizzaSlot
 {
+    private const string cheese = "cheese";
+
     public enum HintState
     {
         None,
@@ -16,11 +18,17 @@ public class NPCBehaviour : MonoBehaviour
         Hint2,
     }
 
-    private const string cheese = "cheese";
-
     public RecipeTable.RecipeData Recipe { get; private set; }
 
-    private SpriteRenderer spriteRenderer;
+    public bool IsSettable => true;
+
+    public bool IsEmpty => true;
+
+    public Pizza CurrentPizza { get; private set; }
+
+    public SpriteRenderer spriteRenderer;
+    public ChatWindow chatWindow;
+    public IngameGameManager gameManager;
 
     public class JudgeData
     {
@@ -36,7 +44,7 @@ public class NPCBehaviour : MonoBehaviour
             get
             {
                 return (Judge)Mathf.Min((int)dough, (int)source, (int)cheese, (int)cutting, (int)roasting,
-                    ingredientsJudge.Count > 0 ? (int)Judge.Success : ingredientsJudge.Min(p => (int)p.judge));
+                    ingredientsJudge.Count > 0 ? ingredientsJudge.Min(p => (int)p.judge) : (int)Judge.Success);
             }
         }
 
@@ -74,12 +82,7 @@ public class NPCBehaviour : MonoBehaviour
         spriteRenderer.sprite = data.Sprite;
     }
 
-    private void Awake()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
-    public static JudgeData GetJudgeData(RecipeTable.RecipeData recipe, Pizza.Data pizzaData)
+    public JudgeData GetJudgeData(RecipeTable.RecipeData recipe, Pizza.Data pizzaData)
     {
         int diffRoast = Mathf.Abs(recipe.roast - pizzaData.roastCount);
         int diffCutting = Mathf.Abs(recipe.cutting - pizzaData.cutData.Count);
@@ -151,5 +154,37 @@ public class NPCBehaviour : MonoBehaviour
             judgeData.cutting = JudgeData.Judge.Normal;
 
         return judgeData;
+    }
+
+    public void ClearPizza()
+    {
+    }
+
+    public void SetPizza(Pizza go)
+    {
+        CurrentPizza = go;
+        CurrentPizza.gameObject.SetActive(false);
+        StartCoroutine(EndOrder());
+    }
+
+    private IEnumerator EndOrder()
+    {
+        var judgeData = GetJudgeData(Recipe, CurrentPizza.PizzaData);
+        switch (judgeData.FinalJudge)
+        {
+            case JudgeData.Judge.Fail:
+                chatWindow.NextTalk(ChatWindow.Talks.Fail);
+                break;
+            case JudgeData.Judge.Normal:
+                chatWindow.NextTalk(ChatWindow.Talks.Normal);
+                break;
+            case JudgeData.Judge.Success:
+                chatWindow.NextTalk(ChatWindow.Talks.Success);
+                break;
+        }
+        yield return new WaitUntil(() => chatWindow.TalkingState == ChatWindow.State.Talkend);
+        yield return new WaitForSeconds(0.5f);
+        chatWindow.gameObject.SetActive(false);
+        StartCoroutine(gameManager.Spawn());
     }
 }

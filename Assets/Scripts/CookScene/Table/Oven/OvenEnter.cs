@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OvenEnter : MonoBehaviour, IPizzaSocket
+public class OvenEnter : MonoBehaviour, IPizzaSlot
 {
     public OvenExit ovenExit;
 

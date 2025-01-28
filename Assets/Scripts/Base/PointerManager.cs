@@ -13,10 +13,11 @@ public class PointerManager : MonoBehaviour
 
     private IngameGameManager gameManager;
 
-    
+    public bool enableCamDrag;
 
     private void Awake()
     {
+        enableCamDrag = false;
         gameManager = GetComponent<IngameGameManager>();
     }
 
@@ -58,7 +59,7 @@ public class PointerManager : MonoBehaviour
                     dragable.OnDrag(worldPos, deltaWorldPos);
                 }
             }
-            else
+            else if(enableCamDrag)
             {
                 Vector3 cameraPos = Camera.main.transform.position;
                 cameraPos.x -= deltaWorldPos.x;

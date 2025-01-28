@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoughTub : MonoBehaviour, IClickable
 {
-    public PizzaSocket target;
+    public PizzaSlot target;
     public Pizza pizzaPrefab;
 
     public void OnPressObject(Vector2 position)
@@ -12,7 +12,7 @@ public class DoughTub : MonoBehaviour, IClickable
         if (target.IsEmpty)
         {
             var ps = Instantiate(pizzaPrefab);
-            ps.SetCurrentSocket(target.transform);
+            ps.SetCurrentSlot(target.transform);
             target.SetPizza(ps);
         }
     }

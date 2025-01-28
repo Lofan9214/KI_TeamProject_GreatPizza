@@ -3,12 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using UnityEditor.PackageManager.UI;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ChatWindow : MonoBehaviour
+public class ChatWindow : MonoBehaviour, IPointerDownHandler
 {
     public enum State
     {
@@ -22,7 +21,7 @@ public class ChatWindow : MonoBehaviour
         Order,
         Hint1,
         Hint2,
-        Good,
+        Success,
         Normal,
         Fail,
     }
@@ -35,7 +34,7 @@ public class ChatWindow : MonoBehaviour
 
     public LocalizationText hintText;
 
-    private State state;
+    public State TalkingState { get;private set; }
     private Talks talkIndex;
 
     private int charLength;
@@ -59,25 +58,55 @@ public class ChatWindow : MonoBehaviour
     public void SetStrings(int[] Ids)
     {
         stringIds = Ids.ToArray();
+        yesButton.gameObject.SetActive(true);
+        hintButton.gameObject.SetActive(true);
         NextTalk(0);
     }
 
     public IEnumerator Talk()
     {
-        while (charLength < script.Length)
+        TalkingState = State.Talking;
+        while (TalkingState == State.Talking && charLength < script.Length)
         {
             ++charLength;
             text.text = script.Substring(0, charLength);
+            if (charLength == script.Length)
+            {
+                TalkingState = State.Talkend;
+                break;
+            }
             yield return wait;
         }
-        state = State.Talkend;
+        if (TalkingState == State.Talkend && charLength < script.Length)
+        {
+            text.text = script;
+        }
     }
 
     public void NextTalk(Talks index)
     {
         talkIndex = index;
+        switch (talkIndex)
+        {
+            case Talks.Order:
+            case Talks.Hint1:
+                yesButton.gameObject.SetActive(true);
+                hintButton.gameObject.SetActive(true);
+                break;
+            case Talks.Hint2:
+                yesButton.gameObject.SetActive(true);
+                break;
+            case Talks.Success:
+            case Talks.Normal:
+            case Talks.Fail:
+                yesButton.gameObject.SetActive(false);
+                hintButton.gameObject.SetActive(false);
+                break;
+        }
+
+        gameObject.SetActive(true);
         charLength = 0;
-        state = State.Talking;
+        TalkingState = State.Talking;
         script = DataTableManager.StringTable.Get(stringIds[(int)index]);
         StartCoroutine(Talk());
     }
@@ -100,6 +129,14 @@ public class ChatWindow : MonoBehaviour
                 NextTalk((Talks)((int)talkIndex + 1));
                 hintButton.gameObject.SetActive(false);
                 break;
+        }
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (TalkingState == State.Talking)
+        {
+            TalkingState = State.Talkend;
         }
     }
 }

@@ -12,17 +12,20 @@ public class IngameGameManager : MonoBehaviour
     public NPCBehaviour npc;
     public IngameUIManager uiManager;
 
-    public CinemachineConfiner2D confinder;
+    public CinemachineConfiner2D confiner;
 
-    public PolygonCollider2D hallCollider;
-    public PolygonCollider2D kitchenCollider;
+    public PackingTable packingTable;
+
+    public Hall hall;
+    public Kitchen kitchen;
 
     public PizzaCommand PizzaCommand { get; set; }
 
     private void Start()
     {
         PizzaCommand = PizzaCommand.None;
-        confinder.m_BoundingShape2D = hallCollider;
+
+        hall.Set(confiner);
 
         StartCoroutine(Spawn());
     }
@@ -35,19 +38,21 @@ public class IngameGameManager : MonoBehaviour
         }
     }
 
-    public void ChangePlace(bool hall)
+    public void ChangePlace(bool isHall)
     {
-        if(hall)
+        pointerManager.enableCamDrag = !isHall;
+        if (isHall)
         {
-            confinder.m_BoundingShape2D = hallCollider;
-            StartCoroutine(Spawn());
+            hall.Set(confiner);
+            if (!npc.gameObject.activeSelf)
+            {
+                StartCoroutine(Spawn());
+            }
             return;
         }
 
-        confinder.m_BoundingShape2D = kitchenCollider;
-        var campos = confinder.gameObject.transform.position;
-        campos.y = kitchenCollider.gameObject.transform.position.y;
-        confinder.gameObject.transform.position = campos;
+        kitchen.Set(confiner);
+        packingTable.SetPizzaBox(1);
     }
 
     public IEnumerator Spawn()

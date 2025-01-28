@@ -35,9 +35,10 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     public ToppingLayer toppingLayer;
     public SpriteRenderer roastLayer;
     public Cut cutLayer;
+    public PizzaBox box;
 
-    private Transform currentSocket;
-    private Transform tempSocket;
+    private Transform currentSlot;
+    private Transform tempSlot;
 
     private IngameGameManager gameManager;
 
@@ -50,25 +51,20 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         gameManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<IngameGameManager>();
     }
 
-    public void SetSocket(Transform go)
-    {
-        currentSocket = go;
-    }
-
     public void OnDragEnd()
     {
-        if (tempSocket != null
-            && tempSocket != currentSocket)
+        if (tempSlot != null
+            && tempSlot != currentSlot)
         {
-            var targetSocket = tempSocket.GetComponent<IPizzaSocket>();
+            var targetSocket = tempSlot.GetComponent<IPizzaSlot>();
             if (targetSocket != null
                 && targetSocket.IsSettable
                 && targetSocket.IsEmpty)
             {
-                currentSocket?.GetComponent<IPizzaSocket>()?.ClearPizza();
+                currentSlot?.GetComponent<IPizzaSlot>()?.ClearPizza();
                 targetSocket.SetPizza(this);
-                currentSocket = tempSocket;
-                tempSocket = null;
+                SetCurrentSlot(tempSlot);
+                tempSlot = null;
                 if (pizzaBoard.activeSelf)
                 {
                     pizzaBoard.SetActive(false);
@@ -76,7 +72,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                 return;
             }
         }
-        transform.position = currentSocket.position;
+        transform.position = currentSlot.position;
 
         PizzaData.sourceRatio = sourceLayer.Ratio;
         PizzaData.cheeseRatio = cheeseLayer.Ratio;
@@ -86,20 +82,20 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Socket"))
+        if (collision.CompareTag("Slot"))
         {
-            Debug.Log($"SocketFound{collision.gameObject.name}");
-            tempSocket = collision.transform;
+            Debug.Log($"SlotFound: {collision.gameObject.name}");
+            tempSlot = collision.transform;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (tempSocket != null
-            && tempSocket == collision.transform)
+        if (tempSlot != null
+            && tempSlot == collision.transform)
         {
-            Debug.Log("SocketExit");
-            tempSocket = null;
+            Debug.Log("SlotExit");
+            tempSlot = null;
         }
     }
 
@@ -178,9 +174,9 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         cutLayer.AddCut(rotation);
     }
 
-    public void SetCurrentSocket(Transform sock)
+    public void SetCurrentSlot(Transform slot)
     {
-        currentSocket = sock;
+        currentSlot = slot;
     }
 
     public void Update()

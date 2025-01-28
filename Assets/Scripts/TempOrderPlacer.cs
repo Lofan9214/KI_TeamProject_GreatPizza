@@ -24,7 +24,7 @@ public class TempOrderPlacer : MonoBehaviour
     public TextMeshProUGUI cuttingJudge;
     public TextMeshProUGUI ingredientJudge;
 
-    public PizzaSocket sellingCounter;
+    public PizzaSlot sellingCounter;
 
     private void Start()
     {
@@ -61,7 +61,7 @@ public class TempOrderPlacer : MonoBehaviour
         if (!sellingCounter.IsEmpty
             && RecipeData != null)
         {
-            var judgeData = NPCBehaviour.GetJudgeData(RecipeData, sellingCounter.CurrentPizza.PizzaData);
+            var judgeData = new NPCBehaviour().GetJudgeData(RecipeData, sellingCounter.CurrentPizza.PizzaData);
 
             StringBuilder sb = new StringBuilder();
 

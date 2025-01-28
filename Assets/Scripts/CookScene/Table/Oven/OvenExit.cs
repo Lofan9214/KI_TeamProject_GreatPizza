@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OvenExit : MonoBehaviour, IPizzaSocket
+public class OvenExit : MonoBehaviour, IPizzaSlot
 {
     public bool IsSettable => false;
 
@@ -17,7 +17,7 @@ public class OvenExit : MonoBehaviour, IPizzaSocket
 
     public void SetPizza(Pizza go)
     {
-        go.SetCurrentSocket(transform);
+        go.SetCurrentSlot(transform);
         CurrentPizza = go;
         CurrentPizza.transform.position = transform.position;
     }
