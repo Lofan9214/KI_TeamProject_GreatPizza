@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.U2D;
 using static RecipeTable;
 
 //ingredientID, stringID, price, profit, success, fail, image
@@ -24,7 +25,30 @@ public class IngredientTable : DataTable
         public float normal_min { get; set; }
         public float normal_max { get; set; }
         public string image { get; set; }
+
+        public Sprite Sprite
+        {
+            get
+            {
+                return Resources.Load<Sprite>(string.Format(spriteFormat, image));
+            }
+        }
+
+        public Sprite SpriteLoaf
+        {
+            get
+            {
+                if (type == 1)
+                {
+                    return Resources.Load<Sprite>(string.Format(loafFormat, image));
+                }
+                return null;
+            }
+        }
     }
+
+    private const string spriteFormat = "Sprite/Pizza/{0}";
+    private const string loafFormat = "Sprite/Pizza/{0}loaf";
 
     private Dictionary<string, Data> dict = new Dictionary<string, Data>();
 
@@ -58,6 +82,7 @@ public class IngredientTable : DataTable
 
         return dict[key];
     }
+
 
     public List<Data> GetList()
     {

@@ -1,15 +1,12 @@
 using Cinemachine;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class IngameGameManager : MonoBehaviour
 {
     public PointerManager pointerManager;
-    public NPCBehaviour npc;
+    public NPC npc;
     public IngameUIManager uiManager;
 
     public CinemachineConfiner2D confiner;
@@ -25,6 +22,15 @@ public class IngameGameManager : MonoBehaviour
     {
         PizzaCommand = PizzaCommand.None;
 
+        var ingredientData = DataTableManager.IngredientTable.GetList();
+        foreach (var ing in ingredientData)
+        {
+            if (!SaveLoadManager.Data.unlocks.ContainsKey(ing.ingredientID))
+            {
+                SaveLoadManager.Data.unlocks.Add(ing.ingredientID, true);
+            }
+        }
+
         hall.Set(confiner);
 
         StartCoroutine(Spawn());
@@ -38,21 +44,29 @@ public class IngameGameManager : MonoBehaviour
         }
     }
 
-    public void ChangePlace(bool isHall)
+    public void ChangePlace(InGamePlace place)
     {
-        pointerManager.enableCamDrag = !isHall;
-        if (isHall)
+        switch (place)
         {
-            hall.Set(confiner);
-            if (!npc.gameObject.activeSelf)
-            {
-                StartCoroutine(Spawn());
-            }
-            return;
+            case InGamePlace.Hall:
+                pointerManager.enableCamDrag = false;
+                hall.Set(confiner);
+                if (!npc.gameObject.activeSelf)
+                {
+                    StartSpawn();
+                }
+                break;
+            case InGamePlace.Kitchen:
+                pointerManager.enableCamDrag = true;
+                kitchen.Set(confiner);
+                packingTable.SetPizzaBox(1);
+                break;
         }
+    }
 
-        kitchen.Set(confiner);
-        packingTable.SetPizzaBox(1);
+    public void StartSpawn()
+    {
+        StartCoroutine(Spawn());
     }
 
     public IEnumerator Spawn()

@@ -11,7 +11,8 @@ public abstract class SaveData
 
 public class SaveDataV1 : SaveData
 {
-    public int gold;
+    public int successes = 0;
+    public Dictionary<string, bool> unlocks = new Dictionary<string, bool>();
 
 
     public SaveDataV1()

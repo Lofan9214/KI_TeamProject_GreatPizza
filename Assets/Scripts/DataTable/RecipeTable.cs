@@ -78,16 +78,16 @@ public class RecipeTable : DataTable
         Func<RecipeData, bool> filter =
             p =>
             {
-                bool contains = true;
+                bool contains = false;
                 foreach (var id in p.ingredientIds)
                 {
                     if (string.IsNullOrEmpty(id))
                     {
                         continue;
                     }
-                    if (!PlayerData.unlocks.Contains(id))
+                    if (SaveLoadManager.Data.unlocks.TryGetValue(id, out bool unlocked))
                     {
-                        contains = false;
+                        contains = unlocked;
                         break;
                     }
                 }

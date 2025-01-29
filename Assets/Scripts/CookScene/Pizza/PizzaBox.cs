@@ -55,10 +55,8 @@ public class PizzaBox : MonoBehaviour, IPizzaSlot
 
     private void Hall()
     {
-        boxPosition.position = Vector3.zero;
-
         gameManager.hall.SetSlot(this);
-        gameManager.ChangePlace(true);
+        gameManager.ChangePlace(InGamePlace.Hall);
     }
 
     public void SetCurrentSlot(Transform slot)
@@ -89,7 +87,7 @@ public class PizzaBox : MonoBehaviour, IPizzaSlot
     {
         if (tempSlot == null)
             return;
-        tempSlot.GetComponent<NPCBehaviour>().SetPizza(CurrentPizza);
+        tempSlot.GetComponent<NPC>().SetPizza(CurrentPizza);
         DestroyThis();
     }
 }

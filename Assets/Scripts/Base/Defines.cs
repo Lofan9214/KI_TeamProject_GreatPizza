@@ -6,7 +6,7 @@ public enum Languages
     Japanese,
 }
 
-public static class DataTableIds
+public class DataTableIds
 {
     public static readonly string[] String =
     {
@@ -24,7 +24,7 @@ public static class DataTableIds
     public static readonly string NPC = "NPCTable";
 }
 
-public static class Variables
+public class Variables
 {
     public static Languages currentLanguage = Languages.Korean;
 }
@@ -37,4 +37,10 @@ public enum PizzaCommand
     Pepperoni,
     Sausage,
     Topping
+}
+
+public enum InGamePlace
+{
+    Hall,
+    Kitchen
 }

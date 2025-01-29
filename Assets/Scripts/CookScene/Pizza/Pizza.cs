@@ -51,6 +51,25 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         gameManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<IngameGameManager>();
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Slot"))
+        {
+            Debug.Log($"SlotFound: {collision.gameObject.name}");
+            tempSlot = collision.transform;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (tempSlot != null
+            && tempSlot == collision.transform)
+        {
+            Debug.Log("SlotExit");
+            tempSlot = null;
+        }
+    }
+
     public void OnDragEnd()
     {
         if (tempSlot != null
@@ -80,24 +99,6 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         lastDrawPos = null;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Slot"))
-        {
-            Debug.Log($"SlotFound: {collision.gameObject.name}");
-            tempSlot = collision.transform;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (tempSlot != null
-            && tempSlot == collision.transform)
-        {
-            Debug.Log("SlotExit");
-            tempSlot = null;
-        }
-    }
 
     public void OnPressObject(Vector2 position)
     {
@@ -179,18 +180,8 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         currentSlot = slot;
     }
 
-    public void Update()
+    public void SetDough(string doughId)
     {
-        if (MultiTouchManager.Instance.DoubleTap)
-        {
-            Debug.Log(
-@$"RoastCount: {PizzaData.roastCount}
-CutCount: {PizzaData.cutData.Count}
-sourceLayer:{sourceLayer.Ratio * 100f:F0}
-cheeseLayer:{cheeseLayer.Ratio * 100f:F0}
-topping:{PizzaData.toppingData.Where(p => p == "pepperoni").Count()}");
-        }
+        dough.sprite = DataTableManager.IngredientTable.Get(doughId).Sprite;
     }
-
-
 }

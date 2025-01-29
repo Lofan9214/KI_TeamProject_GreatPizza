@@ -113,7 +113,7 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
 
     public void Yes()
     {
-        gm.ChangePlace(false);
+        gm.ChangePlace(InGamePlace.Kitchen);
         gameObject.SetActive(false);
     }
 

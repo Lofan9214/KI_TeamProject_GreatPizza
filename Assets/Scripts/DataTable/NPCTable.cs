@@ -60,9 +60,4 @@ public class NPCTable : DataTable
 
         return list[Random.Range(0, list.Count)];
     }
-
-    public Sprite GetSprite(Data data)
-    {
-        return Resources.Load<Sprite>(string.Format(sprite, data.Image));
-    }
 }

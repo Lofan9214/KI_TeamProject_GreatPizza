@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: -100
   m_Sprite: {fileID: -2413806693520163455, guid: 83cc9d29571ef0a4aa81cb4c23701c0c, type: 3}
-  m_Color: {r: 0.98823535, g: 0.90196085, b: 0.7176471, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -272,9 +272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f35c04aa575cfbe4d8b37dce695c443d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toppingData:
-  - {fileID: 11400000, guid: e2b9e5c2dd0080a49ab099d90264aefe, type: 2}
-  - {fileID: 11400000, guid: b011b451de0d1a5429b86f7cdec1239b, type: 2}
   toppingPrefab: {fileID: 4066891530028751505, guid: f73a5907ec3b1ca4d99d3a0e723d8abf, type: 3}
 --- !u!1 &5817467926193144800
 GameObject:
@@ -414,13 +411,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c5d38dc968d08440b0edb9ef09b3250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dough: {fileID: 0}
+  dough: {fileID: 2446361685606605467}
   pizzaBoard: {fileID: 3343134377277053798}
   sourceLayer: {fileID: 7482552253347031963}
   cheeseLayer: {fileID: 7234064688052802793}
   toppingLayer: {fileID: 2203670332768220289}
   roastLayer: {fileID: 3258451741765220700}
   cutLayer: {fileID: 4359489715482309041}
+  box: {fileID: 0}
 --- !u!58 &6847809133884912937
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using TMPro;
 using UnityEngine;
-using static NPCBehaviour.JudgeData;
+using static NPC.JudgeData;
 using Random = UnityEngine.Random;
 
 public class TempOrderPlacer : MonoBehaviour
@@ -39,8 +39,8 @@ public class TempOrderPlacer : MonoBehaviour
                 bool contains = true;
                 foreach (var id in p.ingredientIds)
                 {
-                    if (!PlayerData.unlocks.Contains(id))
-                        contains = false;
+                    if (SaveLoadManager.Data.unlocks.TryGetValue(id, out bool unlocked))
+                        contains = unlocked;
                 }
                 return contains;
             };
@@ -61,7 +61,7 @@ public class TempOrderPlacer : MonoBehaviour
         if (!sellingCounter.IsEmpty
             && RecipeData != null)
         {
-            var judgeData = new NPCBehaviour().GetJudgeData(RecipeData, sellingCounter.CurrentPizza.PizzaData);
+            var judgeData = new NPC().GetJudgeData(RecipeData, sellingCounter.CurrentPizza.PizzaData);
 
             StringBuilder sb = new StringBuilder();
 
@@ -72,7 +72,7 @@ public class TempOrderPlacer : MonoBehaviour
 
             roastJudge.text = $"Roast: {RecipeData.roast} {judgeData.roasting}";
             cuttingJudge.text = $"Cutting: {RecipeData.cutting} {judgeData.cutting}";
-            ingredientJudge.text = $"Ingredient: {sb} Total - {(judgeData.ingredientsJudge.Count > 0 ? (NPCBehaviour.JudgeData.Judge)judgeData.ingredientsJudge.Min(p => (int)p.judge) : NPCBehaviour.JudgeData.Judge.Success)}";
+            ingredientJudge.text = $"Ingredient: {sb} Total - {(judgeData.ingredientsJudge.Count > 0 ? (NPC.JudgeData.Judge)judgeData.ingredientsJudge.Min(p => (int)p.judge) : NPC.JudgeData.Judge.Success)}";
             totalJudge.text = $"TotalJudge: {judgeData.FinalJudge}";
 
             //var pizzaData = sellingCounter.CurrentPizza.PizzaData;
