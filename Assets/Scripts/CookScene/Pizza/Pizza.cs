@@ -72,6 +72,11 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     public void OnDragEnd()
     {
+        if (PizzaState == State.Immovable)
+        {
+            return;
+        }
+
         if (tempSlot != null
             && tempSlot != currentSlot)
         {
@@ -103,17 +108,11 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     public void OnPressObject(Vector2 position)
     {
         if (PizzaState == State.AddingTopping
+            && gameManager.IngredientType == 3
             && Vector2.Distance(position, transform.position) < circleCollider.radius)
         {
-            switch (gameManager.PizzaCommand)
-            {
-                case PizzaCommand.Pepperoni:
-                case PizzaCommand.Sausage:
-                    string toppingId = gameManager.PizzaCommand.ToString().ToLower();
-                    PizzaData.toppingData.Add(toppingId);
-                    toppingLayer.AddTopping(position, toppingId);
-                    break;
-            }
+            PizzaData.toppingData.Add(gameManager.PizzaCommand);
+            toppingLayer.AddTopping(position, gameManager.PizzaCommand);
         }
     }
 
@@ -135,10 +134,10 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
                 switch (gameManager.PizzaCommand)
                 {
-                    case PizzaCommand.Source:
+                    case "tomato":
                         sourceLayer.DrawPoint(pos);
                         break;
-                    case PizzaCommand.Cheese:
+                    case "cheese":
                         cheeseLayer.DrawPoint(pos);
                         break;
                 }

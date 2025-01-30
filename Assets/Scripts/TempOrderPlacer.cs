@@ -10,9 +10,9 @@ using Random = UnityEngine.Random;
 
 public class TempOrderPlacer : MonoBehaviour
 {
-    private List<RecipeTable.RecipeData> recipeDatas;
+    private List<RecipeTable.Data> recipeDatas;
 
-    public RecipeTable.RecipeData RecipeData { get; private set; }
+    public RecipeTable.Data RecipeData { get; private set; }
 
     public TextMeshProUGUI recipeId;
     public TextMeshProUGUI roast;
@@ -33,7 +33,7 @@ public class TempOrderPlacer : MonoBehaviour
 
     public void RandomPlace()
     {
-        Func<RecipeTable.RecipeData, bool> filter =
+        Func<RecipeTable.Data, bool> filter =
             p =>
             {
                 bool contains = true;
@@ -45,7 +45,7 @@ public class TempOrderPlacer : MonoBehaviour
                 return contains;
             };
 
-        List<RecipeTable.RecipeData> filtered = DataTableManager.RecipeTable.GetList().Where(filter).ToList();
+        List<RecipeTable.Data> filtered = DataTableManager.RecipeTable.GetList().Where(filter).ToList();
 
         int randomindex = Random.Range(0, filtered.Count);
         RecipeData = filtered[randomindex];

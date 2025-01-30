@@ -34,9 +34,7 @@ public enum PizzaCommand
     None,
     Source,
     Cheese,
-    Pepperoni,
-    Sausage,
-    Topping
+    Topping,
 }
 
 public enum InGamePlace

@@ -16,32 +16,39 @@ public class IngameGameManager : MonoBehaviour
     public Hall hall;
     public Kitchen kitchen;
 
-    public PizzaCommand PizzaCommand { get; set; }
+    public string PizzaCommand { get; private set; }
+    public int IngredientType { get; private set; }
 
     private void Start()
     {
-        PizzaCommand = PizzaCommand.None;
+        PizzaCommand = string.Empty;
+
+        kitchen.Init();
 
         var ingredientData = DataTableManager.IngredientTable.GetList();
+
+        bool added = false;
+
         foreach (var ing in ingredientData)
         {
             if (!SaveLoadManager.Data.unlocks.ContainsKey(ing.ingredientID))
             {
                 SaveLoadManager.Data.unlocks.Add(ing.ingredientID, true);
+                added = true;
             }
         }
+        if (added)
+            SaveLoadManager.Save();
 
         hall.Set(confiner);
 
         StartCoroutine(Spawn());
     }
 
-    public void SetPizzaCommand(string command)
+    public void SetPizzaCommand(string command, int type)
     {
-        if (Enum.TryParse(command, true, out PizzaCommand result))
-        {
-            PizzaCommand = result;
-        }
+        PizzaCommand = command;
+        IngredientType = type;
     }
 
     public void ChangePlace(InGamePlace place)

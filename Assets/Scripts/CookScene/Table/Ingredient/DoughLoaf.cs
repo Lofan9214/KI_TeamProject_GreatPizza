@@ -11,17 +11,17 @@ public class DoughLoaf : MonoBehaviour, IClickable
 
     public string DoughId { get; private set; }
 
-    private SpriteRenderer renderer;
+    private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
-        renderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public void Set(string id)
     {
         DoughId = id;
-        renderer.sprite = DataTableManager.IngredientTable.Get(id).SpriteLoaf;
+        spriteRenderer.sprite = DataTableManager.IngredientTable.Get(id).SpriteLoaf;
     }
 
     public void OnPressObject(Vector2 position)

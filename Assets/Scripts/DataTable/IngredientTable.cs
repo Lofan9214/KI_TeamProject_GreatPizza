@@ -45,10 +45,23 @@ public class IngredientTable : DataTable
                 return null;
             }
         }
+
+        public Sprite SpriteTub
+        {
+            get
+            {
+                if (type == 2 || type == 3)
+                {
+                    return Resources.Load<Sprite>(string.Format(tubFormat, image));
+                }
+                return null;
+            }
+        }
     }
 
     private const string spriteFormat = "Sprite/Pizza/{0}";
-    private const string loafFormat = "Sprite/Pizza/{0}loaf";
+    private const string loafFormat = "Sprite/Pizza/Loaf/{0}";
+    private const string tubFormat = "Sprite/Pizza/Tub/{0}";
 
     private Dictionary<string, Data> dict = new Dictionary<string, Data>();
 

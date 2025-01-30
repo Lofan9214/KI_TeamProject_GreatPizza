@@ -16,7 +16,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         Hint2,
     }
 
-    public RecipeTable.RecipeData Recipe { get; private set; }
+    public RecipeTable.Data Recipe { get; private set; }
 
     public bool IsSettable => true;
 
@@ -75,7 +75,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         }
     }
 
-    public void Order(RecipeTable.RecipeData recipe)
+    public void Order(RecipeTable.Data recipe)
     {
         Recipe = recipe;
     }
@@ -85,7 +85,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         spriteRenderer.sprite = data.Sprite;
     }
 
-    public JudgeData GetJudgeData(RecipeTable.RecipeData recipe, Pizza.Data pizzaData)
+    public JudgeData GetJudgeData(RecipeTable.Data recipe, Pizza.Data pizzaData)
     {
         int diffRoast = Mathf.Abs(recipe.roast - pizzaData.roastCount);
         int diffCutting = Mathf.Abs(recipe.cutting - pizzaData.cutData.Count);
