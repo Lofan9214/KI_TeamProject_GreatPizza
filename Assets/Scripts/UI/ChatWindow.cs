@@ -89,12 +89,17 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
         switch (talkIndex)
         {
             case Talks.Order:
-            case Talks.Hint1:
                 yesButton.gameObject.SetActive(true);
                 hintButton.gameObject.SetActive(true);
                 break;
+            case Talks.Hint1:
+                yesButton.gameObject.SetActive(true);
+                hintButton.gameObject.SetActive(true);
+                gm.timeManager.UsedHint(Talks.Hint1);
+                break;
             case Talks.Hint2:
                 yesButton.gameObject.SetActive(true);
+                gm.timeManager.UsedHint(Talks.Hint2);
                 break;
             case Talks.Success:
             case Talks.Normal:
@@ -114,6 +119,7 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
     public void Yes()
     {
         gm.ChangePlace(InGamePlace.Kitchen);
+        gm.timeManager.SetState(IngameTimeManager.State.Ordering);
         gameObject.SetActive(false);
     }
 

@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class IngameGameManager : MonoBehaviour
 {
-    public PointerManager pointerManager;
+    public PointerManager pointerManager { get; private set; }
+    public IngameTimeManager timeManager { get; private set; }
     public NPC npc;
     public IngameUIManager uiManager;
 
@@ -18,6 +19,12 @@ public class IngameGameManager : MonoBehaviour
 
     public string PizzaCommand { get; private set; }
     public int IngredientType { get; private set; }
+
+    private void Awake()
+    {
+        pointerManager = GetComponent<PointerManager>();
+        timeManager = GetComponent<IngameTimeManager>();
+    }
 
     private void Start()
     {
@@ -45,6 +52,7 @@ public class IngameGameManager : MonoBehaviour
         StartCoroutine(Spawn());
     }
 
+    
     public void SetPizzaCommand(string command, int type)
     {
         PizzaCommand = command;
@@ -79,13 +87,17 @@ public class IngameGameManager : MonoBehaviour
     public IEnumerator Spawn()
     {
         yield return new WaitForSeconds(2f);
+        if (timeManager.CurrentState != IngameTimeManager.State.DayEnd)
+        {
+            var data = DataTableManager.RecipeTable.RandomGet();
 
-        var data = DataTableManager.RecipeTable.RandomGet();
+            npc.gameObject.SetActive(true);
+            npc.SetSprite(DataTableManager.NPCTable.GetRandom(1));
+            npc.Order(data);
 
-        npc.gameObject.SetActive(true);
-        npc.SetSprite(DataTableManager.NPCTable.GetRandom(1));
-        npc.Order(data);
+            timeManager.ResetSatisfaction();
 
-        uiManager.ShowChatWindow(DataTableManager.TalkTable.GetRandomData(data.recipeID));
+            uiManager.ShowChatWindow(DataTableManager.TalkTable.GetRandomData(data.recipeID));
+        }
     }
 }

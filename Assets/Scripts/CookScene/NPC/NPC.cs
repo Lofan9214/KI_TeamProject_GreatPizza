@@ -9,13 +9,6 @@ public class NPC : MonoBehaviour, IPizzaSlot
     private WaitForSeconds wait = new WaitForSeconds(0.5f);
     private WaitUntil waitChatEnd;
 
-    public enum HintState
-    {
-        None,
-        Hint1,
-        Hint2,
-    }
-
     public RecipeTable.Data Recipe { get; private set; }
 
     public bool IsSettable => true;
@@ -177,7 +170,10 @@ public class NPC : MonoBehaviour, IPizzaSlot
 
     private IEnumerator EndOrder()
     {
+        gameManager.timeManager.SetState(IngameTimeManager.State.OrderEnd);
+        int satisfaction = gameManager.timeManager.Satisfaction;
         var judgeData = GetJudgeData(Recipe, CurrentPizza.PizzaData);
+        
         switch (judgeData.FinalJudge)
         {
             case JudgeData.Judge.Fail:
