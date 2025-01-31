@@ -11,6 +11,11 @@ public abstract class SaveData
 
 public class SaveDataV1 : SaveData
 {
+    public int currency = 0;
+    public int slotusage = 1;
+    public Dictionary<string, bool> unlocks = new Dictionary<string, bool>();
+
+
     public SaveDataV1()
     {
         Version = 1;

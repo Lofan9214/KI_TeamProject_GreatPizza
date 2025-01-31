@@ -1,32 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
-//recipeID,stringID,roastcutting,ingredientID
-//0301,110201,10,dough
-//0302,110202,13, dough_tomato_cheese
+using static UnityEditor.Progress;
+using Random = UnityEngine.Random;
 
 public class RecipeTable : DataTable
 {
-    public class RecipeData
-    {
-        public int recipeID;
-        public int stringID;
-        public int roast;
-        public int cutting;
-        public string[] ingredientIds;
-    }
-
     public class Data
     {
         public int recipeID { get; set; }
         public int stringID { get; set; }
         public int roastcutting { get; set; }
+        public string dough { get; set; }
         public string ingredientID { get; set; }
+        public string[] ingredientIds => ingredientID.Split('_');
+        public int roast => roastcutting / 10 % 10;
+        public int cutting => roastcutting % 10;
     }
 
-    private Dictionary<int, RecipeData> dict = new Dictionary<int, RecipeData>();
+    private Dictionary<int, Data> dict = new Dictionary<int, Data>();
+
+    private Func<Data, bool> randomFilter;
 
     public override void Load(string fileName)
     {
@@ -40,16 +36,8 @@ public class RecipeTable : DataTable
         {
             if (!dict.ContainsKey(item.recipeID))
             {
-                RecipeData recipeData = new RecipeData()
-                {
-                    recipeID = item.recipeID,
-                    stringID = item.stringID,
-                    roast = item.roastcutting / 10 % 10,
-                    cutting = item.roastcutting % 10,
-                    ingredientIds = item.ingredientID.Split('_')
-                };
 
-                dict.Add(item.recipeID, recipeData);
+                dict.Add(item.recipeID, item);
             }
             else
             {
@@ -58,7 +46,7 @@ public class RecipeTable : DataTable
         }
     }
 
-    public RecipeData Get(int key)
+    public Data Get(int key)
     {
         if (!dict.ContainsKey(key))
         {
@@ -68,7 +56,33 @@ public class RecipeTable : DataTable
         return dict[key];
     }
 
-    public List<RecipeData> GetList()
+    public Data RandomGet()
+    {
+        randomFilter ??= p =>
+            {
+                bool contains = true;
+                foreach (var id in p.ingredientIds)
+                {
+                    if (string.IsNullOrEmpty(id))
+                    {
+                        continue;
+                    }
+                    if (!SaveLoadManager.Data.unlocks.TryGetValue(id, out bool unlocked) || !unlocked)
+                    {
+                        contains = false;
+                        break;
+                    }
+                }
+                return contains;
+            };
+
+        List<Data> filtered = dict.Values.Where(randomFilter).ToList();
+
+        int randomindex = Random.Range(0, filtered.Count);
+        return filtered[randomindex];
+    }
+
+    public List<Data> GetList()
     {
         return dict.Values.ToList();
     }

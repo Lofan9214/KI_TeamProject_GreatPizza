@@ -4,12 +4,12 @@ using UnityEngine;
 
 public static class DataTableManager
 {
-    private static readonly Dictionary<string,DataTable> tables = new Dictionary<string, DataTable>();
+    private static readonly Dictionary<string, DataTable> tables = new Dictionary<string, DataTable>();
 
     static DataTableManager()
     {
 #if UNITY_EDITOR
-        foreach(var id in DataTableIds.String)
+        foreach (var id in DataTableIds.String)
         {
             var table = new StringTable();
             table.Load(id);
@@ -29,6 +29,14 @@ public static class DataTableManager
         var ingredientTable = new IngredientTable();
         ingredientTable.Load(DataTableIds.Ingredient);
         tables.Add(DataTableIds.Ingredient, ingredientTable);
+
+        var talkTable = new TalkTable();
+        talkTable.Load(DataTableIds.Talk);
+        tables.Add(DataTableIds.Talk, talkTable);
+
+        var npcTable = new NPCTable();
+        npcTable.Load(DataTableIds.NPC);
+        tables.Add(DataTableIds.NPC, npcTable);
     }
 
     public static T Get<T>(string id) where T : DataTable
@@ -62,6 +70,22 @@ public static class DataTableManager
         get
         {
             return Get<IngredientTable>(DataTableIds.Ingredient);
+        }
+    }
+
+    public static TalkTable TalkTable
+    {
+        get
+        {
+            return Get<TalkTable>(DataTableIds.Talk);
+        }
+    }
+
+    public static NPCTable NPCTable
+    {
+        get
+        {
+            return Get<NPCTable>(DataTableIds.NPC);
         }
     }
 }

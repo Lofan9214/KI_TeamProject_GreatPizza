@@ -11,11 +11,14 @@ public class PointerManager : MonoBehaviour
     private bool hitPointable;
     private Transform target;
 
-    private GameManager gameManager;
+    private IngameGameManager gameManager;
+
+    public bool enableCamDrag;
 
     private void Awake()
     {
-        gameManager = GetComponent<GameManager>();
+        enableCamDrag = false;
+        gameManager = GetComponent<IngameGameManager>();
     }
 
     private void Update()
@@ -56,7 +59,7 @@ public class PointerManager : MonoBehaviour
                     dragable.OnDrag(worldPos, deltaWorldPos);
                 }
             }
-            else
+            else if(enableCamDrag)
             {
                 Vector3 cameraPos = Camera.main.transform.position;
                 cameraPos.x -= deltaWorldPos.x;

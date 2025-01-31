@@ -21,7 +21,8 @@ public class DrawIngredient : MonoBehaviour
 
     private Texture2D drawTexture;
 
-    private bool drawn = false;
+    public float Ratio => drawAlphaMap.Sum() / spriteAlphaMap.Sum();
+
 
     private void Start()
     {
@@ -82,20 +83,9 @@ public class DrawIngredient : MonoBehaviour
 
     public void DrawPoint(Vector2 point)
     {
-        drawn = true;
         var localpos = transform.InverseTransformPoint(point);
         localpos += Vector3.one * 0.5f;
         DrawBrush(localpos);
         SetTexture();
-    }
-
-    public float Ratio()
-    {
-        if (drawn)
-        {
-            return drawAlphaMap.Sum() / spriteAlphaMap.Sum();
-        }
-
-        return -1f;
     }
 }

@@ -5,19 +5,30 @@ using UnityEngine;
 
 public class IngredientTub : MonoBehaviour, IClickable
 {
-    GameManager gameManager;
+    private IngameGameManager gameManager;
 
-    public void Start()
+    private string ingredient;
+    private int type;
+    private SpriteRenderer spriteRenderer;
+
+    private void Start()
     {
-        gameManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<GameManager>();
+        gameManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<IngameGameManager>();
+    }
+
+    public void Init(IngredientTable.Data data)
+    {
+        ingredient = data.ingredientID;
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+        }
+        spriteRenderer.sprite = data.SpriteTub;
+        type = data.type;
     }
 
     public void OnPressObject(Vector2 position)
     {
-        if (Enum.TryParse(gameObject.name, out PizzaCommand result))
-        {
-            Debug.Log(result);
-            gameManager.PizzaCommand = result;
-        }
+        gameManager.SetPizzaCommand(ingredient, type);
     }
 }

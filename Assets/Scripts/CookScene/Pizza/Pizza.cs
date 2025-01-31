@@ -4,16 +4,6 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class PizzaData
-{
-    public string doughID = "dough";
-    public int bakeCount = 0;
-    public List<quaternion> cutData = new List<quaternion>();
-    public List<string> toppingData = new List<string>();
-    public float sourceRatio = 0f;
-    public float cheeseRatio = 0f;
-}
-
 public class Pizza : MonoBehaviour, IClickable, IDragable
 {
     public enum State
@@ -23,22 +13,34 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         Immovable,
     }
 
+    public class Data
+    {
+        public string doughID = "dough";
+        public int roastCount = 0;
+        public List<quaternion> cutData = new List<quaternion>();
+        public List<string> toppingData = new List<string>();
+        public float sourceRatio = 0f;
+        public string sourceId = "tomato";
+        public float cheeseRatio = 0f;
+    }
+
     public State PizzaState { get; set; } = State.AddingTopping;
 
-    public PizzaData PizzaData { get; private set; } = new PizzaData();
+    public Data PizzaData { get; private set; } = new Data();
 
     public SpriteRenderer dough;
     public GameObject pizzaBoard;
     public DrawIngredient sourceLayer;
     public DrawIngredient cheeseLayer;
     public ToppingLayer toppingLayer;
-    public SpriteRenderer bakeLayer;
+    public SpriteRenderer roastLayer;
     public Cut cutLayer;
+    public PizzaBox box;
 
-    private Transform currentSocket;
-    private Transform tempSocket;
+    private Transform currentSlot;
+    private Transform tempSlot;
 
-    private GameManager gameManager;
+    private IngameGameManager gameManager;
 
     private Vector3? lastDrawPos = null;
     private CircleCollider2D circleCollider;
@@ -46,28 +48,47 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     private void Start()
     {
         circleCollider = GetComponent<CircleCollider2D>();
-        gameManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<GameManager>();
+        gameManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<IngameGameManager>();
     }
 
-    public void SetSocket(Transform go)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        currentSocket = go;
+        if (collision.CompareTag("Slot"))
+        {
+            Debug.Log($"SlotFound: {collision.gameObject.name}");
+            tempSlot = collision.transform;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (tempSlot != null
+            && tempSlot == collision.transform)
+        {
+            Debug.Log("SlotExit");
+            tempSlot = null;
+        }
     }
 
     public void OnDragEnd()
     {
-        if (tempSocket != null
-            && tempSocket != currentSocket)
+        if (PizzaState == State.Immovable)
         {
-            var targetSocket = tempSocket.GetComponent<IPizzaSocket>();
+            return;
+        }
+
+        if (tempSlot != null
+            && tempSlot != currentSlot)
+        {
+            var targetSocket = tempSlot.GetComponent<IPizzaSlot>();
             if (targetSocket != null
                 && targetSocket.IsSettable
                 && targetSocket.IsEmpty)
             {
-                currentSocket?.GetComponent<IPizzaSocket>()?.ClearPizza();
+                currentSlot?.GetComponent<IPizzaSlot>()?.ClearPizza();
                 targetSocket.SetPizza(this);
-                currentSocket = tempSocket;
-                tempSocket = null;
+                SetCurrentSlot(tempSlot);
+                tempSlot = null;
                 if (pizzaBoard.activeSelf)
                 {
                     pizzaBoard.SetActive(false);
@@ -75,47 +96,23 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                 return;
             }
         }
-        transform.position = currentSocket.position;
+        transform.position = currentSlot.position;
 
-        PizzaData.sourceRatio = sourceLayer.Ratio();
-        PizzaData.cheeseRatio = cheeseLayer.Ratio();
+        PizzaData.sourceRatio = sourceLayer.Ratio;
+        PizzaData.cheeseRatio = cheeseLayer.Ratio;
 
         lastDrawPos = null;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Socket"))
-        {
-            Debug.Log($"SocketFound{collision.gameObject.name}");
-            tempSocket = collision.transform;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (tempSocket != null
-            && tempSocket == collision.transform)
-        {
-            Debug.Log("SocketExit");
-            tempSocket = null;
-        }
-    }
 
     public void OnPressObject(Vector2 position)
     {
         if (PizzaState == State.AddingTopping
+            && gameManager.IngredientType == 3
             && Vector2.Distance(position, transform.position) < circleCollider.radius)
         {
-            switch (gameManager.PizzaCommand)
-            {
-                case PizzaCommand.Pepperoni:
-                case PizzaCommand.Sausage:
-                    string toppingId = gameManager.PizzaCommand.ToString().ToLower();
-                    PizzaData.toppingData.Add(toppingId);
-                    toppingLayer.AddTopping(position, toppingId);
-                    break;
-            }
+            PizzaData.toppingData.Add(gameManager.PizzaCommand);
+            toppingLayer.AddTopping(position, gameManager.PizzaCommand);
         }
     }
 
@@ -137,10 +134,10 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
                 switch (gameManager.PizzaCommand)
                 {
-                    case PizzaCommand.Source:
+                    case "tomato":
                         sourceLayer.DrawPoint(pos);
                         break;
-                    case PizzaCommand.Cheese:
+                    case "cheese":
                         cheeseLayer.DrawPoint(pos);
                         break;
                 }
@@ -159,16 +156,16 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
             OnDrag(pos, deltaPos);
             return;
         }
-        if(lastDrawPos==null)
-        Move(deltaPos);
+        if (lastDrawPos == null)
+            Move(deltaPos);
     }
 
-    public void Bake()
+    public void Roast()
     {
-        PizzaData.bakeCount++;
-        Color color = bakeLayer.color;
+        PizzaData.roastCount++;
+        Color color = roastLayer.color;
         color.a += (1f - color.a) * 0.2f;
-        bakeLayer.color = color;
+        roastLayer.color = color;
     }
 
     public void Cut(quaternion rotation)
@@ -177,21 +174,13 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         cutLayer.AddCut(rotation);
     }
 
-    public void SetCurrentSocket(Transform sock)
+    public void SetCurrentSlot(Transform slot)
     {
-        currentSocket = sock;
+        currentSlot = slot;
     }
 
-    public void Update()
+    public void SetDough(string doughId)
     {
-        if (MultiTouchManager.Instance.DoubleTap)
-        {
-            Debug.Log(
-@$"BakeCount: {PizzaData.bakeCount}
-CutCount: {PizzaData.cutData.Count}
-sourceLayer:{sourceLayer.Ratio() * 100f:F0}
-cheeseLayer:{cheeseLayer.Ratio() * 100f:F0}
-topping:{PizzaData.toppingData.Where(p => p == "pepperoni").Count()}");
-        }
+        dough.sprite = DataTableManager.IngredientTable.Get(doughId).Sprite;
     }
 }

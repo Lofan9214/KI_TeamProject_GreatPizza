@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cutter : MonoBehaviour, IClickable, IDragable
 {
-    public PizzaSocket currentTable;
+    public PizzaSlot currentTable;
     public Transform cutterObject;
 
     private bool isCutting = false;

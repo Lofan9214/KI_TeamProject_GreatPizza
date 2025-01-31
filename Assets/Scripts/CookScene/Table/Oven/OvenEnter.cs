@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OvenEnter : MonoBehaviour, IPizzaSocket
+public class OvenEnter : MonoBehaviour, IPizzaSlot
 {
-    public OvenExit ovenExit;
+    public OvenMid nextTarget;
 
     public bool IsSettable => true;
     public bool IsEmpty => CurrentPizza == null;
@@ -26,13 +26,21 @@ public class OvenEnter : MonoBehaviour, IPizzaSocket
     private IEnumerator Cooking()
     {
         CurrentPizza.PizzaState = Pizza.State.Immovable;
-        do
+        yield return new WaitUntil(() => nextTarget.IsEmpty);
+
+        WaitForEndOfFrame waitframe = new WaitForEndOfFrame();
+
+        float timer = 0f;
+
+        while (timer < 5f)
         {
-            yield return new WaitForSeconds(0.5f);
-        } while (!ovenExit.IsEmpty);
-        CurrentPizza.PizzaState = Pizza.State.Movable;
-        CurrentPizza.Bake();
-        ovenExit.SetPizza(CurrentPizza);
+            timer += Time.deltaTime;
+            CurrentPizza.transform.position = Vector3.Lerp(transform.position, nextTarget.transform.position, timer * 0.2f);
+            yield return waitframe;
+        }
+
+        CurrentPizza.Roast();
+        nextTarget.SetPizza(CurrentPizza);
         ClearPizza();
     }
 }

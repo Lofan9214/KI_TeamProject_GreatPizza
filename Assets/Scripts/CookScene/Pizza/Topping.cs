@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Topping : MonoBehaviour
 {
-    public ToppingData toppingData;
+    public IngredientTable.Data toppingData;
     private SpriteRenderer spriteRenderer;
 
     private void Awake()
@@ -12,10 +12,10 @@ public class Topping : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public void SetData(ToppingData data)
+    public void SetData(string dataId)
     {
-        toppingData = data;
-        spriteRenderer.sprite = toppingData.sprite;
+        toppingData = DataTableManager.IngredientTable.Get(dataId);
+        spriteRenderer.sprite = toppingData.Sprite;
     }
 
     public void AddOrderOffset(int offset)
