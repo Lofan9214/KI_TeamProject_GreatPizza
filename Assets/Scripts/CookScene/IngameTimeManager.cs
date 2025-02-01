@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class IngameTimeManager : MonoBehaviour
 {
     public enum State
     {
-        BeforeCook,
         Ordering,
         OrderEnd,
         DayEnd,
@@ -19,20 +19,31 @@ public class IngameTimeManager : MonoBehaviour
 
     public GameObject endWindow;
 
+    public float watchTimeInterval = 10f;
+    public float satisfactionInterval = 3f;
+
     public State CurrentState { get; private set; }
 
     public int WatchTime { get; private set; }
     private float watchTimeTimer;
+    private int WatchTimeEnd;
+
     public int Satisfaction { get; private set; }
     private float satisfactionTimer;
 
-
+    public UnityEvent OnUnsatisfied;
 
     private void Start()
     {
         WatchTime = 0;
         watchTimeTimer = 0f;
         satisfactionTimer = 0f;
+        WatchTimeEnd = 36;
+        //todo 업그레이드 수정 필요
+        //if (SaveLoadManager.Data.upgrades.TryGetValue(001, out bool value) && value)
+        //{
+        //    WatchTimeEnd += 4;
+        //}
         ResetSatisfaction();
         SetWatchTimeText();
     }
@@ -40,22 +51,23 @@ public class IngameTimeManager : MonoBehaviour
     private void Update()
     {
         if (CurrentState == State.OrderEnd
-            && WatchTime == 36)
+            && WatchTime == WatchTimeEnd)
         {
             SetState(State.DayEnd);
-            WatchTime = 40;
+            WatchTime = WatchTimeEnd + 4;
             SetWatchTimeText();
 
             endWindow.SetActive(true);
         }
 
-        if (CurrentState != State.Pause)
+        if (CurrentState != State.Pause
+            && WatchTime <= WatchTimeEnd)
         {
             watchTimeTimer += Time.deltaTime;
-            if (watchTimeTimer > 10f)
+            if (watchTimeTimer > watchTimeInterval)
             {
-                watchTimeTimer -= 10f;
-                WatchTime = Mathf.Min(36, ++WatchTime);
+                watchTimeTimer -= watchTimeInterval;
+                WatchTime = Mathf.Min(WatchTimeEnd, ++WatchTime);
 
                 SetWatchTimeText();
             }
@@ -63,13 +75,14 @@ public class IngameTimeManager : MonoBehaviour
             if (CurrentState == State.Ordering)
             {
                 satisfactionTimer += Time.deltaTime;
-                if (satisfactionTimer > 3f)
+                if (satisfactionTimer > satisfactionInterval)
                 {
-                    satisfactionTimer -= 3f;
+                    satisfactionTimer -= satisfactionInterval;
                     Satisfaction = Mathf.Max(0, --Satisfaction);
                     if (Satisfaction == 0)
                     {
-
+                        CurrentState = State.OrderEnd;
+                        OnUnsatisfied?.Invoke();
                     }
                     SetSatisfactionText();
                 }
@@ -85,7 +98,7 @@ public class IngameTimeManager : MonoBehaviour
     public void ResetSatisfaction()
     {
         Satisfaction = 100;
-        CurrentState = State.BeforeCook;
+        CurrentState = State.OrderEnd;
         SetSatisfactionText();
     }
 
@@ -106,7 +119,7 @@ public class IngameTimeManager : MonoBehaviour
 
     public void SetState(State state)
     {
-        this.CurrentState = state;
+        CurrentState = state;
     }
 
     private void SetSatisfactionText()
@@ -116,6 +129,6 @@ public class IngameTimeManager : MonoBehaviour
 
     private void SetWatchTimeText()
     {
-        watchText.text = $"{(12 + WatchTime / 4):D2}:{(WatchTime % 4) * 15:D2}";
+        watchText.text = $"{12 + WatchTime / 4:D2}:{WatchTime % 4 * 15:D2}";
     }
 }

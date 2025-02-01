@@ -6,7 +6,7 @@ using UnityEngine;
 public class NPC : MonoBehaviour, IPizzaSlot
 {
     private const string cheese = "cheese";
-    private WaitForSeconds wait = new WaitForSeconds(0.5f);
+    private WaitForSeconds wait = new WaitForSeconds(2f);
     private WaitUntil waitChatEnd;
 
     public RecipeTable.Data Recipe { get; private set; }
@@ -20,10 +20,13 @@ public class NPC : MonoBehaviour, IPizzaSlot
     public SpriteRenderer spriteRenderer;
     public ChatWindow chatWindow;
     public IngameGameManager gameManager;
+    private float payment;
 
     private void Start()
     {
         waitChatEnd = new WaitUntil(() => chatWindow.TalkingState == ChatWindow.State.Talkend);
+        chatWindow.OnYes.AddListener(Pay);
+        gameManager.timeManager.OnUnsatisfied.AddListener(CutOrder);
     }
 
     public class JudgeData
@@ -98,33 +101,30 @@ public class NPC : MonoBehaviour, IPizzaSlot
         foreach (var ingredientId in recipe.ingredientIds)
         {
             var datum = DataTableManager.IngredientTable.Get(ingredientId);
-            
+
             if (datum == null)
             {
                 continue;
             }
 
-            if (datum.type == 3)
+            switch (datum.type)
             {
-                count = pizzaData.toppingData.Where(p => string.Compare(p, ingredientId, true) == 0).Count();
-                ingredientdata = DataTableManager.IngredientTable.Get(ingredientId);
-                judge = JudgeValue(count, ingredientdata.fail, ingredientdata.success);
-                judgeData.ingredientsJudge.Add((ingredientId, judge));
-            }
-            else if (datum.type == 2)
-            {
-                if (datum.ingredientID == cheese)
-                {
-                    cheeseExists = true;
-                    ratio = Mathf.RoundToInt(pizzaData.cheeseRatio * 100f);
-                    judgeData.cheese = JudgeValue(ratio, datum.fail, datum.success);
-                }
-                else
-                {
+                case IngredientTable.Type.Source:
                     sourceExists = true;
                     ratio = Mathf.RoundToInt(pizzaData.sourceRatio * 100f);
                     judgeData.source = JudgeValue(ratio, datum.fail, datum.success);
-                }
+                    break;
+                case IngredientTable.Type.Cheese:
+                    cheeseExists = true;
+                    ratio = Mathf.RoundToInt(pizzaData.cheeseRatio * 100f);
+                    judgeData.cheese = JudgeValue(ratio, datum.fail, datum.success);
+                    break;
+                case IngredientTable.Type.Ingredient:
+                    count = pizzaData.toppingData.Where(p => string.Compare(p, ingredientId, true) == 0).Count();
+                    ingredientdata = DataTableManager.IngredientTable.Get(ingredientId);
+                    judge = JudgeValue(count, ingredientdata.fail, ingredientdata.success);
+                    judgeData.ingredientsJudge.Add((ingredientId, judge));
+                    break;
             }
         }
 
@@ -173,7 +173,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         gameManager.timeManager.SetState(IngameTimeManager.State.OrderEnd);
         int satisfaction = gameManager.timeManager.Satisfaction;
         var judgeData = GetJudgeData(Recipe, CurrentPizza.PizzaData);
-        
+
         switch (judgeData.FinalJudge)
         {
             case JudgeData.Judge.Fail:
@@ -191,5 +191,32 @@ public class NPC : MonoBehaviour, IPizzaSlot
         chatWindow.gameObject.SetActive(false);
         gameObject.SetActive(false);
         gameManager.StartSpawn();
+    }
+
+    public void CutOrder()
+    {
+        chatWindow.gameObject.SetActive(false);
+        gameObject.SetActive(false);
+        gameManager.AddCurrency(-payment);
+        gameManager.ChangePlace(InGamePlace.Hall);
+        gameManager.StartSpawn();
+    }
+
+    public void Pay()
+    {
+        payment = 0f;
+
+        payment += DataTableManager.IngredientTable.Get(Recipe.dough).profit;
+
+        foreach (var ing in Recipe.ingredientIds)
+        {
+            if (string.IsNullOrEmpty(ing))
+            {
+                break;
+            }
+            payment += DataTableManager.IngredientTable.Get(ing).profit;
+        }
+
+        gameManager.AddCurrency(payment);
     }
 }

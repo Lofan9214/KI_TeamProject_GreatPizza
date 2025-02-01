@@ -18,19 +18,18 @@ public class IngameGameManager : MonoBehaviour
     public Kitchen kitchen;
 
     public string PizzaCommand { get; private set; }
-    public int IngredientType { get; private set; }
+    public IngredientTable.Type IngredientType { get; private set; }
 
     private void Awake()
     {
         pointerManager = GetComponent<PointerManager>();
         timeManager = GetComponent<IngameTimeManager>();
+        timeManager.OnUnsatisfied.AddListener(Unsatisfied);
     }
 
     private void Start()
     {
         PizzaCommand = string.Empty;
-
-        kitchen.Init();
 
         var ingredientData = DataTableManager.IngredientTable.GetList();
 
@@ -44,16 +43,21 @@ public class IngameGameManager : MonoBehaviour
                 added = true;
             }
         }
+
         if (added)
             SaveLoadManager.Save();
 
+        kitchen.Init();
+
         hall.Set(confiner);
+
+        uiManager.UpdateCurrentCurrency();
 
         StartCoroutine(Spawn());
     }
 
-    
-    public void SetPizzaCommand(string command, int type)
+
+    public void SetPizzaCommand(string command, IngredientTable.Type type)
     {
         PizzaCommand = command;
         IngredientType = type;
@@ -99,5 +103,16 @@ public class IngameGameManager : MonoBehaviour
 
             uiManager.ShowChatWindow(DataTableManager.TalkTable.GetRandomData(data.recipeID));
         }
+    }
+
+    public void Unsatisfied()
+    {
+        ChangePlace(InGamePlace.Hall);
+    }
+
+    public void AddCurrency(float add)
+    {
+        SaveLoadManager.Data.currency += add;
+        uiManager.UpdateCurrentCurrency();
     }
 }

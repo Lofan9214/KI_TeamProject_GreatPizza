@@ -3,6 +3,7 @@ using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static UnityEditor.PlayerSettings;
 
 public class Pizza : MonoBehaviour, IClickable, IDragable
 {
@@ -35,7 +36,6 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     public ToppingLayer toppingLayer;
     public SpriteRenderer roastLayer;
     public Cut cutLayer;
-    public PizzaBox box;
 
     private Transform currentSlot;
     private Transform tempSlot;
@@ -44,6 +44,10 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     private Vector3? lastDrawPos = null;
     private CircleCollider2D circleCollider;
+
+    public float sourceMax = 1.5f;
+    private float cheeseCurrent = 0f;
+    private float sourceCurrent = 0f;
 
     private void Start()
     {
@@ -70,8 +74,25 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         }
     }
 
-    public void OnDragEnd()
+    public void OnDragEnd(Vector3 pos, Vector3 deltaPos)
     {
+        lastDrawPos = null;
+        if (PizzaState == State.AddingTopping
+            && (gameManager.IngredientType == IngredientTable.Type.Source
+                || gameManager.IngredientType == IngredientTable.Type.Cheese))
+        {
+            switch (gameManager.PizzaCommand)
+            {
+                case "tomato":
+                    DrawSource(pos);
+                    break;
+                case "cheese":
+                    DrawCheese(pos);
+                    break;
+            }
+            return;
+        }
+
         if (PizzaState == State.Immovable)
         {
             return;
@@ -100,20 +121,36 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
         PizzaData.sourceRatio = sourceLayer.Ratio;
         PizzaData.cheeseRatio = cheeseLayer.Ratio;
-
-        lastDrawPos = null;
     }
 
 
     public void OnPressObject(Vector2 position)
     {
         if (PizzaState == State.AddingTopping
-            && gameManager.IngredientType == 3
             && Vector2.Distance(position, transform.position) < circleCollider.radius)
         {
-            PizzaData.toppingData.Add(gameManager.PizzaCommand);
-            toppingLayer.AddTopping(position, gameManager.PizzaCommand);
+            if (gameManager.IngredientType == IngredientTable.Type.Source
+                || gameManager.IngredientType == IngredientTable.Type.Cheese)
+            {
+                switch (gameManager.PizzaCommand)
+                {
+                    case "tomato":
+                        DrawSource(position);
+                        break;
+                    case "cheese":
+                        DrawCheese(position);
+                        break;
+                }
+                lastDrawPos = position;
+            }
+            else if (gameManager.IngredientType == IngredientTable.Type.Ingredient)
+            {
+                gameManager.AddCurrency(-DataTableManager.IngredientTable.Get(gameManager.PizzaCommand).price);
+                PizzaData.toppingData.Add(gameManager.PizzaCommand);
+                toppingLayer.AddTopping(position, gameManager.PizzaCommand);
+            }
         }
+
     }
 
     public void Move(Vector3 deltaPos)
@@ -121,27 +158,28 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         transform.position += deltaPos;
     }
 
-    public void OnDrag(Vector3 pos, Vector3 deltaPos)
+    public void OnDrag(Vector3 position, Vector3 deltaPos)
     {
         switch (PizzaState)
         {
             case State.AddingTopping:
                 if (lastDrawPos != null
-                    && Vector2.Distance(pos, (Vector2)lastDrawPos) < 0.5f)
+                   && (Vector2.Distance(position, (Vector2)lastDrawPos) < 0.25f
+                      || Vector2.Distance(position, transform.position) > circleCollider.radius))
                 {
-
+                    break;
                 }
 
                 switch (gameManager.PizzaCommand)
                 {
                     case "tomato":
-                        sourceLayer.DrawPoint(pos);
+                        DrawSource(position);
                         break;
                     case "cheese":
-                        cheeseLayer.DrawPoint(pos);
+                        DrawCheese(position);
                         break;
                 }
-                lastDrawPos = pos;
+                lastDrawPos = position;
                 break;
             case State.Movable:
                 Move(deltaPos);
@@ -182,5 +220,25 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     public void SetDough(string doughId)
     {
         dough.sprite = DataTableManager.IngredientTable.Get(doughId).Sprite;
+    }
+
+    public void DrawSource(Vector2 position)
+    {
+        sourceLayer.DrawPoint(position);
+        if (sourceCurrent < 1.5f)
+        {
+            sourceCurrent += 0.01f;
+            gameManager.AddCurrency(-0.01f);
+        }
+    }
+
+    public void DrawCheese(Vector2 position)
+    {
+        cheeseLayer.DrawPoint(position);
+        if (cheeseCurrent < 1.5f)
+        {
+            cheeseCurrent += 0.01f;
+            gameManager.AddCurrency(-0.01f);
+        }
     }
 }

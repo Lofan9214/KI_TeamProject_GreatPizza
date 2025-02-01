@@ -37,7 +37,6 @@ public class PizzaBox : MonoBehaviour, IPizzaSlot
     {
         CurrentPizza = go;
         CurrentPizza.transform.parent = boxPosition;
-        CurrentPizza.box = this;
         CurrentPizza.transform.localPosition = Vector3.zero;
         animator.SetTrigger(CloseTop);
         CookComplete();
@@ -48,10 +47,6 @@ public class PizzaBox : MonoBehaviour, IPizzaSlot
         animator.SetTrigger(Complete);
     }
 
-    private void DestroyThis()
-    {
-        Destroy(gameObject);
-    }
 
     private void Hall()
     {
@@ -88,6 +83,6 @@ public class PizzaBox : MonoBehaviour, IPizzaSlot
         if (tempSlot == null)
             return;
         tempSlot.GetComponent<NPC>().SetPizza(CurrentPizza);
-        DestroyThis();
+        Destroy(gameObject);
     }
 }

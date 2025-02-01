@@ -11,9 +11,9 @@ public class Board : MonoBehaviour, IClickable, IDragable
         parent.OnDragFromBoard(pos, deltaPos);
     }
 
-    public void OnDragEnd()
+    public void OnDragEnd(Vector3 pos, Vector3 deltaPos)
     {
-        parent.OnDragEnd();
+        parent.OnDragEnd(pos, deltaPos);
     }
 
     public void OnPressObject(Vector2 position)

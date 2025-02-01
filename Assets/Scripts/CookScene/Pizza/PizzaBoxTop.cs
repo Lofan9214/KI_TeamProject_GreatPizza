@@ -19,7 +19,7 @@ public class PizzaBoxTop : MonoBehaviour, IDragable
         }
     }
 
-    public void OnDragEnd()
+    public void OnDragEnd(Vector3 pos, Vector3 deltaPos)
     {
         box.DragEnd();
     }

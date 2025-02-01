@@ -36,7 +36,7 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
         }
     }
 
-    public void OnDragEnd()
+    public void OnDragEnd(Vector3 pos, Vector3 deltaPos)
     {
         if (!isCutting)
         {

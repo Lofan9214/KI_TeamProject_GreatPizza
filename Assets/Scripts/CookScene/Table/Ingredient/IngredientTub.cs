@@ -8,7 +8,7 @@ public class IngredientTub : MonoBehaviour, IClickable
     private IngameGameManager gameManager;
 
     private string ingredient;
-    private int type;
+    private IngredientTable.Type type;
     private SpriteRenderer spriteRenderer;
 
     private void Start()

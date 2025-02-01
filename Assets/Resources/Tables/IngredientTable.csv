@@ -1,10 +1,10 @@
 ingredientID,type,stringID,price,profit,success,fail,happy_min,happy_max,normal_min,normal_max,image
 tomato,2,110101,0.6,1.0,90,50,0.5,1,0.25,0.5,tomato
-cheese,2,110102,0.6,1.0,90,50,0.5,1,0.25,0.5,cheese
-pepperoni,3,110103,0.16,3.0,12,8,0.3,0.8,0.15,0.4,pepperoni
-sausage,3,110104,0.16,3.0,12,8,0.3,0.8,0.15,0.4,sausage
-mushroom,3,110105,0.08,1.6,12,8,0.2,0.4,0.1,0.2,mushroom
-olive,3,110106,0.08,1.6,12,8,0.2,0.4,0.1,0.2,olive
-onion,3,110107,0.08,1.6,12,8,0.2,0.4,0.1,0.2,onion
+cheese,3,110102,0.6,1.0,90,50,0.5,1,0.25,0.5,cheese
+pepperoni,4,110103,0.16,3.0,12,8,0.3,0.8,0.15,0.4,pepperoni
+sausage,4,110104,0.16,3.0,12,8,0.3,0.8,0.15,0.4,sausage
+mushroom,4,110105,0.08,1.6,12,8,0.2,0.4,0.1,0.2,mushroom
+olive,4,110106,0.08,1.6,12,8,0.2,0.4,0.1,0.2,olive
+onion,4,110107,0.08,1.6,12,8,0.2,0.4,0.1,0.2,onion
 dough,1,110108,2.0,5.0,0,0,0.5,0.7,0.2,0.5,dough
 w.dough,1,110109,2.0,5.0,0,0,0.5,0.7,0.2,0.5,w.dough

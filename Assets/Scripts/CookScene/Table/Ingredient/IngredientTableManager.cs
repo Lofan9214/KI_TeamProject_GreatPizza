@@ -18,28 +18,38 @@ public class IngredientTableManager : MonoBehaviour
         var unlockdata = SaveLoadManager.Data.unlocks;
         doughTub.Init(true, new string[] { "dough" }); // ToDo юс╫ц
 
-        foreach (var data in dicttype[2])
+        pizzaSlots[0].gameObject.SetActive(true);
+        pizzaSlots[1].gameObject.SetActive(true);
+
+        foreach (var data in dicttype[IngredientTable.Type.Source])
         {
             switch (data.ingredientID)
             {
-                case "cheese":
-                    cheeseTub.Init(data);
-                    break;
                 case "tomato":
                     sourceTubs[0].Init(data);
                     break;
             }
         }
 
-        int length = dicttype[3].Length;
+        foreach (var data in dicttype[IngredientTable.Type.Cheese])
+        {
+            switch (data.ingredientID)
+            {
+                case "cheese":
+                    cheeseTub.Init(data);
+                    break;
+            }
+        }
+
+        int length = dicttype[IngredientTable.Type.Ingredient].Length;
         int cnt = 0;
         for (int i = 0; i < length; ++i)
         {
-            if (unlockdata.ContainsKey(dicttype[3][i].ingredientID)
-                && unlockdata[dicttype[3][i].ingredientID])
+            if (unlockdata.ContainsKey(dicttype[IngredientTable.Type.Ingredient][i].ingredientID)
+                && unlockdata[dicttype[IngredientTable.Type.Ingredient][i].ingredientID])
             {
                 var tub = Instantiate(tubPrefab, ingredientTubs[cnt]);
-                tub.Init(dicttype[3][i]);
+                tub.Init(dicttype[IngredientTable.Type.Ingredient][i]);
                 ++cnt;
             }
         }

@@ -11,10 +11,19 @@ using static RecipeTable;
 
 public class IngredientTable : DataTable
 {
+    public enum Type
+    {
+        None,
+        Dough,
+        Source,
+        Cheese,
+        Ingredient
+    }
+
     public class Data
     {
         public string ingredientID { get; set; }
-        public int type { get; set; }
+        public Type type { get; set; }
         public int stringID { get; set; }
         public float price { get; set; }
         public float profit { get; set; }
@@ -38,7 +47,7 @@ public class IngredientTable : DataTable
         {
             get
             {
-                if (type == 1)
+                if (type == Type.Dough)
                 {
                     return Resources.Load<Sprite>(string.Format(loafFormat, image));
                 }
@@ -50,7 +59,7 @@ public class IngredientTable : DataTable
         {
             get
             {
-                if (type == 2 || type == 3)
+                if (type == Type.Source || type == Type.Cheese || type == Type.Ingredient)
                 {
                     return Resources.Load<Sprite>(string.Format(tubFormat, image));
                 }

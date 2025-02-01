@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -42,6 +43,8 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
     private WaitForSeconds wait;
 
     private IngameGameManager gm;
+
+    public UnityEvent OnYes;
 
     private void Awake()
     {
@@ -120,6 +123,7 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
     {
         gm.ChangePlace(InGamePlace.Kitchen);
         gm.timeManager.SetState(IngameTimeManager.State.Ordering);
+        OnYes?.Invoke();
         gameObject.SetActive(false);
     }
 

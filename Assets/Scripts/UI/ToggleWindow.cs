@@ -21,7 +21,7 @@ public class ToggleWindow : MonoBehaviour
         {
             if (SaveLoadManager.Data.unlocks.TryGetValue(ing.ingredientID, out bool val))
             {
-                var tog = Instantiate(prefab, contents[ing.type - 1]);
+                var tog = Instantiate(prefab, contents[(int)ing.type - 1]);
                 tog.Init(ing.ingredientID, val);
             }
         }
