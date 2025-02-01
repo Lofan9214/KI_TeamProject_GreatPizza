@@ -67,7 +67,7 @@ public class RecipeTable : DataTable
                     {
                         continue;
                     }
-                    if (!SaveLoadManager.Data.unlocks.TryGetValue(id, out bool unlocked) || !unlocked)
+                    if (!SaveLoadManager.Data.ingredients.TryGetValue(id, out bool unlocked) || !unlocked)
                     {
                         contains = false;
                         break;

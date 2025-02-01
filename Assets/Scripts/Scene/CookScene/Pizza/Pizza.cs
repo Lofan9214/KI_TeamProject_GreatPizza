@@ -1,0 +1,249 @@
+using System.Collections.Generic;
+using System.Linq;
+using Unity.Mathematics;
+using UnityEngine;
+using UnityEngine.UIElements;
+using static UnityEditor.PlayerSettings;
+
+public class Pizza : MonoBehaviour, IClickable, IDragable
+{
+    public enum State
+    {
+        AddingTopping,
+        Movable,
+        Immovable,
+    }
+
+    public class Data
+    {
+        public string doughID = "dough";
+        public int roastCount = 0;
+        public List<quaternion> cutData = new List<quaternion>();
+        public List<string> toppingData = new List<string>();
+        public float sourceRatio = 0f;
+        public string sourceId = "tomato";
+        public float cheeseRatio = 0f;
+    }
+
+    public State PizzaState { get; set; } = State.AddingTopping;
+
+    public Data PizzaData { get; private set; } = new Data();
+
+    public SpriteRenderer dough;
+    public GameObject pizzaBoard;
+    public DrawIngredient sourceLayer;
+    public DrawIngredient cheeseLayer;
+    public ToppingLayer toppingLayer;
+    public SpriteRenderer roastLayer;
+    public Cut cutLayer;
+
+    private Transform currentSlot;
+    private Transform tempSlot;
+
+    private IngameGameManager gameManager;
+
+    private Vector3? lastDrawPos = null;
+    private CircleCollider2D circleCollider;
+
+    public float sourceMax = 1.5f;
+    private float cheeseCurrent = 0f;
+    private float sourceCurrent = 0f;
+    private bool addingTopping = false;
+
+    private void Start()
+    {
+        circleCollider = GetComponent<CircleCollider2D>();
+        gameManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<IngameGameManager>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Slot"))
+        {
+            Debug.Log($"SlotFound: {collision.gameObject.name}");
+            tempSlot = collision.transform;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (tempSlot != null
+            && tempSlot == collision.transform)
+        {
+            Debug.Log("SlotExit");
+            tempSlot = null;
+        }
+    }
+
+    public void OnDragEnd(Vector3 pos, Vector3 deltaPos)
+    {
+        lastDrawPos = null;
+        if (PizzaState == State.AddingTopping
+            && addingTopping
+            && (gameManager.IngredientType == IngredientTable.Type.Source
+                || gameManager.IngredientType == IngredientTable.Type.Cheese))
+        {
+            addingTopping = false;
+            switch (gameManager.PizzaCommand)
+            {
+                case "tomato":
+                    DrawSource(pos);
+                    break;
+                case "cheese":
+                    DrawCheese(pos);
+                    break;
+            }
+            return;
+        }
+
+        if (PizzaState == State.Immovable)
+        {
+            return;
+        }
+
+        if (tempSlot != null
+            && tempSlot != currentSlot)
+        {
+            var targetSocket = tempSlot.GetComponent<IPizzaSlot>();
+            if (targetSocket != null
+                && targetSocket.IsSettable
+                && targetSocket.IsEmpty)
+            {
+                currentSlot?.GetComponent<IPizzaSlot>()?.ClearPizza();
+                targetSocket.SetPizza(this);
+                SetCurrentSlot(tempSlot);
+                tempSlot = null;
+                if (pizzaBoard.activeSelf)
+                {
+                    pizzaBoard.SetActive(false);
+                }
+                return;
+            }
+        }
+        transform.position = currentSlot.position;
+
+        PizzaData.sourceRatio = sourceLayer.Ratio;
+        PizzaData.cheeseRatio = cheeseLayer.Ratio;
+    }
+
+
+    public void OnPressObject(Vector2 position)
+    {
+        if (PizzaState == State.AddingTopping
+            && Vector2.Distance(position, transform.position) < circleCollider.radius)
+        {
+            if (gameManager.IngredientType == IngredientTable.Type.Source
+                || gameManager.IngredientType == IngredientTable.Type.Cheese)
+            {
+                switch (gameManager.PizzaCommand)
+                {
+                    case "tomato":
+                        DrawSource(position);
+                        addingTopping = true;
+                        break;
+                    case "cheese":
+                        DrawCheese(position);
+                        addingTopping = true;
+                        break;
+                }
+                lastDrawPos = position;
+            }
+            else if (gameManager.IngredientType == IngredientTable.Type.Ingredient)
+            {
+                gameManager.AddCurrency(-DataTableManager.IngredientTable.Get(gameManager.PizzaCommand).price);
+                PizzaData.toppingData.Add(gameManager.PizzaCommand);
+                toppingLayer.AddTopping(position, gameManager.PizzaCommand);
+            }
+        }
+
+    }
+
+    public void Move(Vector3 deltaPos)
+    {
+        transform.position += deltaPos;
+    }
+
+    public void OnDrag(Vector3 position, Vector3 deltaPos)
+    {
+        switch (PizzaState)
+        {
+            case State.AddingTopping:
+                if (lastDrawPos != null
+                   && (Vector2.Distance(position, (Vector2)lastDrawPos) < 0.25f
+                      || Vector2.Distance(position, transform.position) > circleCollider.radius))
+                {
+                    break;
+                }
+
+                switch (gameManager.PizzaCommand)
+                {
+                    case "tomato":
+                        DrawSource(position);
+                        break;
+                    case "cheese":
+                        DrawCheese(position);
+                        break;
+                }
+                lastDrawPos = position;
+                break;
+            case State.Movable:
+                Move(deltaPos);
+                break;
+        }
+    }
+
+    public void OnDragFromBoard(Vector3 pos, Vector3 deltaPos)
+    {
+        if (Vector2.Distance(pos, transform.position) < circleCollider.radius)
+        {
+            OnDrag(pos, deltaPos);
+            return;
+        }
+        if (lastDrawPos == null)
+            Move(deltaPos);
+    }
+
+    public void Roast()
+    {
+        PizzaData.roastCount++;
+        Color color = roastLayer.color;
+        color.a += (1f - color.a) * 0.2f;
+        roastLayer.color = color;
+    }
+
+    public void Cut(quaternion rotation)
+    {
+        PizzaData.cutData.Add(rotation);
+        cutLayer.AddCut(rotation);
+    }
+
+    public void SetCurrentSlot(Transform slot)
+    {
+        currentSlot = slot;
+    }
+
+    public void SetDough(string doughId)
+    {
+        dough.sprite = DataTableManager.IngredientTable.Get(doughId).Sprite;
+    }
+
+    public void DrawSource(Vector2 position)
+    {
+        sourceLayer.DrawPoint(position);
+        if (sourceCurrent < 1.5f)
+        {
+            sourceCurrent += 0.01f;
+            gameManager.AddCurrency(-0.01f);
+        }
+    }
+
+    public void DrawCheese(Vector2 position)
+    {
+        cheeseLayer.DrawPoint(position);
+        if (cheeseCurrent < 1.5f)
+        {
+            cheeseCurrent += 0.01f;
+            gameManager.AddCurrency(-0.01f);
+        }
+    }
+}

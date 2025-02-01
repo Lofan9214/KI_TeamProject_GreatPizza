@@ -39,7 +39,7 @@ public class TempOrderPlacer : MonoBehaviour
                 bool contains = true;
                 foreach (var id in p.ingredientIds)
                 {
-                    if (SaveLoadManager.Data.unlocks.TryGetValue(id, out bool unlocked))
+                    if (SaveLoadManager.Data.ingredients.TryGetValue(id, out bool unlocked))
                         contains = unlocked;
                 }
                 return contains;

@@ -331,6 +331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxPosition: {fileID: 3449679652855210438}
   gameManager: {fileID: 0}
+  boxTop: {fileID: 4246741952272903196}
 --- !u!61 &6639943872126887824
 BoxCollider2D:
   m_ObjectHideFlags: 0

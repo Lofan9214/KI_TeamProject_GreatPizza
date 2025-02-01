@@ -34,6 +34,8 @@ public class IngredientTable : DataTable
         public float normal_min { get; set; }
         public float normal_max { get; set; }
         public string image { get; set; }
+        public float shopprice { get; set; }
+        public int unlockday { get; set; }
 
         public Sprite Sprite
         {

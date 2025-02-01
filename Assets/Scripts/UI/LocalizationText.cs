@@ -8,23 +8,19 @@ using UnityEngine;
 public class LocalizationText : MonoBehaviour
 {
     public string stringId;
-    public bool formatted;
-    public string stringFormat;
-    private string unFormatedString;
 
 #if UNITY_EDITOR
     public Languages editorLang;
 #endif
 
-    private TextMeshProUGUI text;
+    protected TextMeshProUGUI text;
 
-
-    private void Awake()
+    protected void Awake()
     {
         text = GetComponent<TextMeshProUGUI>();
     }
 
-    private void OnEnable()
+    protected void OnEnable()
     {
         if (Application.isPlaying)
         {
@@ -44,20 +40,13 @@ public class LocalizationText : MonoBehaviour
         var stringTable = DataTableManager.Get<StringTable>(stringTableId);
         if (int.TryParse(stringId, out int id))
         {
-            if (formatted)
-            {
-                text.text = string.Format(stringFormat, stringTable.Get(id), unFormatedString);
-            }
-            else
-            {
-                text.text = stringTable.Get(id);
-            }
+            text.text = stringTable.Get(id);
         }
     }
 
-    public void OnSetString(string str)
+    public void SetString(string stringId)
     {
-        unFormatedString = str;
-        OnChangedLanguage(Variables.currentLanguage);
+        this.stringId = stringId;
+        OnEnable();
     }
 }
