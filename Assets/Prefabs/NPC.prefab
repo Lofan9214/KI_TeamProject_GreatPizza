@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100197426243450092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9203402405185321073}
+  m_Layer: 0
+  m_Name: TipTextPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9203402405185321073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100197426243450092}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2242013660818918687}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3129112023554011294
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2242013660818918687
 Transform:
   m_ObjectHideFlags: 0
@@ -148,6 +179,7 @@ Transform:
   m_Children:
   - {fileID: 4835539999562412235}
   - {fileID: 2518798904440332568}
+  - {fileID: 9203402405185321073}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3803409578879754231
@@ -162,6 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55b01c2e47669d408c4e539b15a5763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tipText: {fileID: 0}
+  tipTextPosition: {fileID: 9203402405185321073}
   spriteRenderer: {fileID: 1950158109173088732}
   chatWindow: {fileID: 0}
   gameManager: {fileID: 0}

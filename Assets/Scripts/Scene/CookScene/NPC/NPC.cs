@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.NetworkInformation;
+using TMPro;
 using UnityEngine;
 
 public class NPC : MonoBehaviour, IPizzaSlot
@@ -9,6 +10,9 @@ public class NPC : MonoBehaviour, IPizzaSlot
     private const string cheese = "cheese";
     private WaitForSeconds wait = new WaitForSeconds(2f);
     private WaitUntil waitChatEnd;
+
+    public TextMeshProUGUI tipText;
+    public Transform tipTextPosition;
 
     public RecipeTable.Data Recipe { get; private set; }
 
@@ -208,10 +212,17 @@ public class NPC : MonoBehaviour, IPizzaSlot
         {
             tip += Random.Range(0f, 0.05f);
         }
-        gameManager.AddCurrency(tip);
+        if (tip > 0f)
+        {
+            gameManager.AddCurrency(tip);
+            tipText.transform.position = Camera.main.WorldToScreenPoint(tipTextPosition.position);
+            tipText.text = tip.ToString("F2");
+            tipText.gameObject.SetActive(true);
+        }
         yield return waitChatEnd;
         yield return wait;
         chatWindow.gameObject.SetActive(false);
+        tipText.gameObject.SetActive(false);
         gameObject.SetActive(false);
         gameManager.StartSpawn();
     }
