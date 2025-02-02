@@ -83,7 +83,10 @@ public class PizzaBox : MonoBehaviour, IPizzaSlot
     public void DragEnd()
     {
         if (tempSlot == null)
+        {
+            transform.position = currentSlot.position;
             return;
+        }
         tempSlot.GetComponent<NPC>().SetPizza(CurrentPizza);
         Destroy(gameObject);
     }
