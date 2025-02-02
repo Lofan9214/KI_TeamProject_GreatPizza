@@ -12409,7 +12409,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1471950239
 MonoBehaviour:
@@ -15049,6 +15049,7 @@ MonoBehaviour:
   chatWindow: {fileID: 5239408128481919215}
   budgetText: {fileID: 1344271463}
   gameManager: {fileID: 414256882}
+  tipText: {fileID: 1471950239}
 --- !u!1 &2114361484
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,7 +27,6 @@ public class IngameGameManager : MonoBehaviour
     {
         pointerManager = GetComponent<PointerManager>();
         timeManager = GetComponent<IngameTimeManager>();
-        timeManager.OnUnsatisfied.AddListener(Unsatisfied);
 
         tempSaveData = SaveLoadManager.Data.DeepCopy();
         ++tempSaveData.days;
@@ -92,11 +91,6 @@ public class IngameGameManager : MonoBehaviour
 
             uiManager.ShowChatWindow(DataTableManager.TalkTable.GetRandomData(data.recipeID));
         }
-    }
-
-    public void Unsatisfied()
-    {
-        ChangePlace(InGamePlace.Hall);
     }
 
     public void AddBudget(float add)

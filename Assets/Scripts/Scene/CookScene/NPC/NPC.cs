@@ -30,7 +30,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
     {
         waitChatEnd = new WaitUntil(() => chatWindow.TalkingState == ChatWindow.State.Talkend);
         chatWindow.OnYes.AddListener(Pay);
-        gameManager.timeManager.OnUnsatisfied.AddListener(CutOrder);
+        gameManager.timeManager.OnUnsatisfied.AddListener(() => StartCoroutine(CutOrder()));
         tipText.transform.position = Camera.main.WorldToScreenPoint(tipTextPosition.position);
     }
 
@@ -185,6 +185,8 @@ public class NPC : MonoBehaviour, IPizzaSlot
             case JudgeData.Judge.Fail:
                 chatWindow.NextTalk(ChatWindow.Talks.Fail);
                 gameManager.AddBudget(-payment);
+                gameManager.uiManager.ShowTipMessage(-payment, 1f);
+                StartCoroutine(TipShow(-payment));
                 break;
             case JudgeData.Judge.Normal:
                 chatWindow.NextTalk(ChatWindow.Talks.Normal);
@@ -226,12 +228,17 @@ public class NPC : MonoBehaviour, IPizzaSlot
         gameManager.StartSpawn();
     }
 
-    public void CutOrder()
+    public IEnumerator CutOrder()
     {
+        gameManager.ChangePlace(InGamePlace.Hall);
+        chatWindow.NextTalk(ChatWindow.Talks.Fail);
+        gameManager.uiManager.ShowTipMessage(-payment, 1f);
+        gameManager.AddBudget(-payment);
+        gameManager.packingTable.DestroyPizzaBox();
+        yield return waitChatEnd;
+        yield return new WaitForSeconds(0.5f);
         chatWindow.gameObject.SetActive(false);
         gameObject.SetActive(false);
-        gameManager.AddBudget(-payment);
-        gameManager.ChangePlace(InGamePlace.Hall);
         gameManager.StartSpawn();
     }
 
@@ -251,14 +258,14 @@ public class NPC : MonoBehaviour, IPizzaSlot
         }
 
         gameManager.AddBudget(payment);
-        tipText.text = payment.ToString("F2");
-        tipText.gameObject.SetActive(true);
 
-        StartCoroutine(TipClose());
+        StartCoroutine(TipShow(payment));
     }
 
-    private IEnumerator TipClose()
+    private IEnumerator TipShow(float amount)
     {
+        tipText.text = amount.ToString("F2");
+        tipText.gameObject.SetActive(true);
         yield return new WaitForSeconds(1f);
         tipText.gameObject.SetActive(false);
     }

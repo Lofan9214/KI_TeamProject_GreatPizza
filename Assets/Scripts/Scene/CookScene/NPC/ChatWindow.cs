@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Linq;
 using TMPro;
@@ -114,6 +115,7 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
         charLength = 0;
         TalkingState = State.Talking;
         script = DataTableManager.StringTable.Get(stringIds[(int)index]);
+
         StartCoroutine(Talk());
     }
 
