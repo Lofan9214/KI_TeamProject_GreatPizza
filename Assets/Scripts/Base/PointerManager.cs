@@ -70,10 +70,13 @@ public class PointerManager : MonoBehaviour
         {
             if (hitPointable)
             {
+                Vector3 worldPos = Camera.main.ScreenToWorldPoint(MultiTouchManager.Instance.TouchPosition);
+                Vector3 deltaWorldPos = worldPos - Camera.main.ScreenToWorldPoint(MultiTouchManager.Instance.TouchPosition - MultiTouchManager.Instance.DeltaPosition);
+
                 IDragable dragable = target?.GetComponent<IDragable>();
                 if (dragable != null)
                 {
-                    dragable.OnDragEnd();
+                    dragable.OnDragEnd(worldPos, deltaWorldPos);
                 }
             }
         }
