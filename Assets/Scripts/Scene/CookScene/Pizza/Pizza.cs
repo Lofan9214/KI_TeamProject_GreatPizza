@@ -85,9 +85,11 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
             {
                 case "tomato":
                     DrawSource(pos);
+                    PizzaData.sourceRatio = sourceLayer.Ratio;
                     break;
                 case "cheese":
                     DrawCheese(pos);
+                    PizzaData.cheeseRatio = cheeseLayer.Ratio;
                     break;
             }
             return;
@@ -119,8 +121,6 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         }
         transform.position = currentSlot.position;
 
-        PizzaData.sourceRatio = sourceLayer.Ratio;
-        PizzaData.cheeseRatio = cheeseLayer.Ratio;
     }
 
 
