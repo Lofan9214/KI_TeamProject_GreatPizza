@@ -1,9 +1,6 @@
 using System.Collections.Generic;
-using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.UIElements;
-using static UnityEditor.PlayerSettings;
 
 public class Pizza : MonoBehaviour, IClickable, IDragable
 {

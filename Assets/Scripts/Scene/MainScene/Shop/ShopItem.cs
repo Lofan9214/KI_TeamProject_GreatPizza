@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.U2D.Aseprite;
@@ -24,6 +25,8 @@ public class ShopItem : MonoBehaviour
                 SaveLoadManager.Data.currency -= ingdata.shopprice;
                 SaveLoadManager.Data.ingredients[ingdata.ingredientID] = true;
                 SaveLoadManager.Save();
+                price.text = "Bought";
+
                 toggle.interactable = false;
             }
             else
@@ -41,10 +44,19 @@ public class ShopItem : MonoBehaviour
         itemDescription.SetString(ingdata.stringID.ToString());
         toggle.isOn = bought;
 
-        price.text = data.shopprice.ToString();
-        if (bought || day < ingdata.unlockday)
+        if (bought)
         {
+            price.text = "Bought";
             toggle.interactable = false;
+        }
+        else if (day < ingdata.unlockday)
+        {
+            price.text = "Can't Buy";
+            toggle.interactable = false;
+        }
+        else
+        {
+            price.text = data.shopprice.ToString();
         }
     }
 }
