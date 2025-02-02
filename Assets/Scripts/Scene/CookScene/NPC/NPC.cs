@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using UnityEngine;
 
 public class NPC : MonoBehaviour, IPizzaSlot
@@ -173,19 +174,41 @@ public class NPC : MonoBehaviour, IPizzaSlot
         gameManager.timeManager.SetState(IngameTimeManager.State.OrderEnd);
         int satisfaction = gameManager.timeManager.Satisfaction;
         var judgeData = GetJudgeData(Recipe, CurrentPizza.PizzaData);
+        float tip = 0f;
 
         switch (judgeData.FinalJudge)
         {
             case JudgeData.Judge.Fail:
                 chatWindow.NextTalk(ChatWindow.Talks.Fail);
+                gameManager.AddCurrency(-payment);
                 break;
             case JudgeData.Judge.Normal:
                 chatWindow.NextTalk(ChatWindow.Talks.Normal);
+
                 break;
             case JudgeData.Judge.Success:
                 chatWindow.NextTalk(ChatWindow.Talks.Success);
                 break;
         }
+        if (satisfaction > 50 && judgeData.FinalJudge == JudgeData.Judge.Success)
+        {
+            tip += GoodTip();
+        }
+        else if ((satisfaction > 50 && judgeData.FinalJudge == JudgeData.Judge.Normal)
+                 || (satisfaction <= 50 && satisfaction > 20 && judgeData.FinalJudge == JudgeData.Judge.Success))
+        {
+            tip += NormalTip();
+        }
+        else if ((judgeData.FinalJudge == JudgeData.Judge.Success && satisfaction <= 20)
+                || (judgeData.FinalJudge == JudgeData.Judge.Normal && satisfaction >= 50 && satisfaction > 20))
+        {
+            tip += Random.Range(0.2f, 0.7f);
+        }
+        else if (judgeData.FinalJudge == JudgeData.Judge.Normal && satisfaction <= 20)
+        {
+            tip += Random.Range(0f, 0.05f);
+        }
+        gameManager.AddCurrency(tip);
         yield return waitChatEnd;
         yield return wait;
         chatWindow.gameObject.SetActive(false);
@@ -218,5 +241,40 @@ public class NPC : MonoBehaviour, IPizzaSlot
         }
 
         gameManager.AddCurrency(payment);
+    }
+
+    public float GoodTip()
+    {
+        float result = 0f;
+        var data = DataTableManager.IngredientTable.Get(Recipe.dough);
+        result += Random.Range(data.happy_min, data.happy_max);
+
+        foreach (var ing in Recipe.ingredientIds)
+        {
+            if (string.IsNullOrEmpty(ing))
+            {
+                break;
+            }
+            data = DataTableManager.IngredientTable.Get(ing);
+            result += Random.Range(data.happy_min, data.happy_max);
+        }
+        return result;
+    }
+    public float NormalTip()
+    {
+        float result = 0f;
+        var data = DataTableManager.IngredientTable.Get(Recipe.dough);
+        result += Random.Range(data.normal_min, data.normal_max);
+
+        foreach (var ing in Recipe.ingredientIds)
+        {
+            if (string.IsNullOrEmpty(ing))
+            {
+                break;
+            }
+            data = DataTableManager.IngredientTable.Get(ing);
+            result += Random.Range(data.normal_min, data.normal_max);
+        }
+        return result;
     }
 }

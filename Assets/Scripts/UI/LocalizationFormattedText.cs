@@ -8,7 +8,7 @@ using UnityEngine;
 public class FormattedLocalizationText : LocalizationText
 {
     public string stringFormat;
-    private string unFormatedString;
+    public string unFormatedString;
 
     new public void OnChangedLanguage(Languages lang)
     {
