@@ -6,7 +6,7 @@ using UnityEngine;
 public class IngameUIManager : MonoBehaviour
 {
     public ChatWindow chatWindow;
-    public TextMeshProUGUI currencyText;
+    public TextMeshProUGUI budgetText;
     public IngameGameManager gameManager;
 
     public void ShowChatWindow(int[] Ids)
@@ -15,8 +15,8 @@ public class IngameUIManager : MonoBehaviour
         chatWindow.SetStrings(Ids);
     }
 
-    public void UpdateCurrentCurrency()
+    public void UpdateCurrentBudget()
     {
-        currencyText.text = gameManager.tempSaveData.currency.ToString("F2");
+        budgetText.text = gameManager.tempSaveData.budget.ToString("F2");
     }
 }

@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ShopItem : MonoBehaviour
@@ -10,17 +11,19 @@ public class ShopItem : MonoBehaviour
     public TextMeshProUGUI price;
     public Toggle toggle;
     private IngredientTable.Data ingdata;
+    public UnityEvent OnBought;
 
     public void OnToggleChanged(bool isOn)
     {
         if (isOn)
         {
-            if (SaveLoadManager.Data.currency > ingdata.shopprice)
+            if (SaveLoadManager.Data.budget > ingdata.shopprice)
             {
-                SaveLoadManager.Data.currency -= ingdata.shopprice;
+                SaveLoadManager.Data.budget -= ingdata.shopprice;
                 SaveLoadManager.Data.ingredients[ingdata.ingredientID] = true;
                 SaveLoadManager.Save();
                 price.text = "Bought";
+                OnBought?.Invoke();
 
                 toggle.interactable = false;
             }

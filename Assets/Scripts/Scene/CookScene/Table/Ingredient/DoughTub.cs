@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DoughTub : MonoBehaviour
@@ -17,6 +18,13 @@ public class DoughTub : MonoBehaviour
     public Vector3 fullposition;
     public Vector3 halfscale;
     public Vector3 halfposition;
+
+    private IngameGameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<IngameGameManager>();
+    }
 
     public void Init(bool fullSize, string[] doughs)
     {
@@ -73,7 +81,9 @@ public class DoughTub : MonoBehaviour
         if (target.IsEmpty)
         {
             var ps = Instantiate(pizzaPrefab);
-            ps.SetDough("dough");
+            ps.SetDough(sender.DoughId);
+            gameManager.tempSaveData.budget -= DataTableManager.IngredientTable.Get(sender.DoughId).price;
+            gameManager.uiManager.UpdateCurrentBudget();
             ps.SetCurrentSlot(target.transform);
             target.SetPizza(ps);
             sender.gameObject.SetActive(false);

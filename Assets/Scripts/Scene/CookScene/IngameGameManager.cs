@@ -42,7 +42,7 @@ public class IngameGameManager : MonoBehaviour
 
         hall.Set(confiner);
 
-        uiManager.UpdateCurrentCurrency();
+        uiManager.UpdateCurrentBudget();
 
         StartCoroutine(Spawn());
     }
@@ -100,10 +100,10 @@ public class IngameGameManager : MonoBehaviour
         ChangePlace(InGamePlace.Hall);
     }
 
-    public void AddCurrency(float add)
+    public void AddBudget(float add)
     {
-        tempSaveData.currency += add;
-        uiManager.UpdateCurrentCurrency();
+        tempSaveData.budget += add;
+        uiManager.UpdateCurrentBudget();
     }
 
     public void StopGame()
