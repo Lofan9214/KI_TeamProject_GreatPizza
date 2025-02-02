@@ -184,7 +184,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         {
             case JudgeData.Judge.Fail:
                 chatWindow.NextTalk(ChatWindow.Talks.Fail);
-                gameManager.AddCurrency(-payment);
+                gameManager.AddBudget(-payment);
                 break;
             case JudgeData.Judge.Normal:
                 chatWindow.NextTalk(ChatWindow.Talks.Normal);
@@ -214,7 +214,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         }
         if (tip > 0f)
         {
-            gameManager.AddCurrency(tip);
+            gameManager.AddBudget(tip);
             tipText.transform.position = Camera.main.WorldToScreenPoint(tipTextPosition.position);
             tipText.text = tip.ToString("F2");
             tipText.gameObject.SetActive(true);
@@ -231,7 +231,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
     {
         chatWindow.gameObject.SetActive(false);
         gameObject.SetActive(false);
-        gameManager.AddCurrency(-payment);
+        gameManager.AddBudget(-payment);
         gameManager.ChangePlace(InGamePlace.Hall);
         gameManager.StartSpawn();
     }
@@ -251,7 +251,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
             payment += DataTableManager.IngredientTable.Get(ing).profit;
         }
 
-        gameManager.AddCurrency(payment);
+        gameManager.AddBudget(payment);
     }
 
     public float GoodTip()

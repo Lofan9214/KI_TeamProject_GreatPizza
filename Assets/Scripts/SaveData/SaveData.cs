@@ -13,7 +13,7 @@ public abstract class SaveData
 
 public class SaveDataV1 : SaveData
 {
-    public float currency = 100f;
+    public float budget = 100f;
     public int slotusage = 1;
     public int days = 0;
     public Dictionary<string, bool> ingredients = new Dictionary<string, bool>();
@@ -33,7 +33,7 @@ public class SaveDataV1 : SaveData
     {
         var saveData = new SaveDataV1();
 
-        saveData.currency = currency;
+        saveData.budget = budget;
         saveData.slotusage = slotusage;
         saveData.days = days;
         saveData.ingredients = ingredients.ToDictionary(p => p.Key, p => p.Value);
@@ -44,7 +44,7 @@ public class SaveDataV1 : SaveData
 
     public void Set(SaveDataV1 data)
     {
-        currency = data.currency;
+        budget = data.budget;
         slotusage = data.slotusage;
         days = data.days;
         ingredients = data.ingredients.ToDictionary(p => p.Key, p => p.Value);

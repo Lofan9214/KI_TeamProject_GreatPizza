@@ -18,8 +18,8 @@ public class EndWindow : MonoBehaviour
         gameObject.SetActive(true);
         gameManager ??= GameObject.FindGameObjectWithTag("GameController").GetComponent<IngameGameManager>();
         dayName.text = $"Days : {gameManager.tempSaveData.days}";
-        dayStart.text = $"day start : {SaveLoadManager.Data.currency:F2}";
-        dayEnd.text = $"day end : {gameManager.tempSaveData.currency:F2}";
+        dayStart.text = $"day start : {SaveLoadManager.Data.budget:F2}";
+        dayEnd.text = $"day end : {gameManager.tempSaveData.budget:F2}";
     }
 
     public void Exit()

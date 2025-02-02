@@ -1035,7 +1035,7 @@ GameObject:
   m_Component:
   - component: {fileID: 295549044}
   m_Layer: 5
-  m_Name: Currency
+  m_Name: Budget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12391,7 +12391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1471950238
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15047,7 +15047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chatWindow: {fileID: 5239408128481919215}
-  currencyText: {fileID: 1344271463}
+  budgetText: {fileID: 1344271463}
   gameManager: {fileID: 414256882}
 --- !u!1 &2114361484
 GameObject:
