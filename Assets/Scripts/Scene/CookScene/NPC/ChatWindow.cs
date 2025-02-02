@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -35,7 +33,7 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
 
     public LocalizationText hintText;
 
-    public State TalkingState { get;private set; }
+    public State TalkingState { get; private set; }
     private Talks talkIndex;
 
     private int charLength;
@@ -54,7 +52,7 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
 
     private void Start()
     {
-        yesButton.onClick.AddListener(Yes);
+        yesButton.onClick.AddListener(() => StartCoroutine(YesCoroutine()));
         hintButton.onClick.AddListener(NeedHint);
     }
 
@@ -119,11 +117,12 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
         StartCoroutine(Talk());
     }
 
-    public void Yes()
+    private IEnumerator YesCoroutine()
     {
+        OnYes?.Invoke();
+        yield return new WaitForSeconds(1f);
         gm.ChangePlace(InGamePlace.Kitchen);
         gm.timeManager.SetState(IngameTimeManager.State.Ordering);
-        OnYes?.Invoke();
         gameObject.SetActive(false);
     }
 

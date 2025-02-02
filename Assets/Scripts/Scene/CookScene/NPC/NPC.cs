@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.NetworkInformation;
 using TMPro;
 using UnityEngine;
 
@@ -32,6 +31,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         waitChatEnd = new WaitUntil(() => chatWindow.TalkingState == ChatWindow.State.Talkend);
         chatWindow.OnYes.AddListener(Pay);
         gameManager.timeManager.OnUnsatisfied.AddListener(CutOrder);
+        tipText.transform.position = Camera.main.WorldToScreenPoint(tipTextPosition.position);
     }
 
     public class JudgeData
@@ -215,7 +215,6 @@ public class NPC : MonoBehaviour, IPizzaSlot
         if (tip > 0f)
         {
             gameManager.AddBudget(tip);
-            tipText.transform.position = Camera.main.WorldToScreenPoint(tipTextPosition.position);
             tipText.text = tip.ToString("F2");
             tipText.gameObject.SetActive(true);
         }
@@ -252,6 +251,16 @@ public class NPC : MonoBehaviour, IPizzaSlot
         }
 
         gameManager.AddBudget(payment);
+        tipText.text = payment.ToString("F2");
+        tipText.gameObject.SetActive(true);
+
+        StartCoroutine(TipClose());
+    }
+
+    private IEnumerator TipClose()
+    {
+        yield return new WaitForSeconds(1f);
+        tipText.gameObject.SetActive(false);
     }
 
     public float GoodTip()

@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -68,7 +65,7 @@ public class TalkTable : DataTable
     public int[] GetResultTalk()
     {
         int[] result = new int[3];
-        var talks = GetValueList().GroupBy(p => p.state).ToDictionary(p=>p.Key,p=>p.ToList());
+        var talks = GetValueList().GroupBy(p => p.state).ToDictionary(p => p.Key, p => p.ToList());
         for (int i = 4, j = 0; j < result.Length; ++i, ++j)
         {
             int sss = talks[i].Count();
