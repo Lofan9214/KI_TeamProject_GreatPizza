@@ -22,7 +22,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         public float cheeseRatio = 0f;
     }
 
-    public State PizzaState { get; set; } = State.AddingTopping;
+    public State CurrentState { get; set; } = State.AddingTopping;
 
     public Data PizzaData { get; private set; } = new Data();
 
@@ -40,6 +40,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     private IngameGameManager gameManager;
 
     private Vector3? lastDrawPos = null;
+    private Vector3? lastMovePos = null;
     private CircleCollider2D circleCollider;
 
     public float sourceMax = 1.5f;
@@ -75,7 +76,8 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     public void OnDragEnd(Vector3 pos, Vector3 deltaPos)
     {
         lastDrawPos = null;
-        if (PizzaState == State.AddingTopping
+        lastMovePos = null;
+        if (CurrentState == State.AddingTopping
             && addingTopping
             && (gameManager.IngredientType == IngredientTable.Type.Source
                 || gameManager.IngredientType == IngredientTable.Type.Cheese))
@@ -95,7 +97,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
             return;
         }
 
-        if (PizzaState == State.Immovable)
+        if (CurrentState == State.Immovable)
         {
             return;
         }
@@ -111,22 +113,20 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                 currentSlot?.GetComponent<IPizzaSlot>()?.ClearPizza();
                 targetSocket.SetPizza(this);
                 SetCurrentSlot(tempSlot);
-                tempSlot = null;
                 if (pizzaBoard.activeSelf)
                 {
                     pizzaBoard.SetActive(false);
                 }
+                tempSlot = null;
                 return;
             }
         }
         transform.position = currentSlot.position;
-
     }
-
 
     public void OnPressObject(Vector2 position)
     {
-        if (PizzaState == State.AddingTopping
+        if (CurrentState == State.AddingTopping
             && Vector2.Distance(position, transform.position) < circleCollider.radius)
         {
             if (gameManager.IngredientType == IngredientTable.Type.Source
@@ -155,14 +155,23 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     }
 
-    public void Move(Vector3 deltaPos)
+    public void Move(Vector3 Pos)
     {
-        transform.position += deltaPos;
+        if (lastMovePos == null)
+        {
+            lastMovePos = Pos;
+        }
+        else
+        {
+            gameManager.ScrollScreen();
+            transform.position += Pos - lastMovePos.Value;
+            lastMovePos = Pos;
+        }
     }
 
     public void OnDrag(Vector3 position, Vector3 deltaPos)
     {
-        switch (PizzaState)
+        switch (CurrentState)
         {
             case State.AddingTopping:
                 if (lastDrawPos != null
@@ -184,20 +193,20 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                 lastDrawPos = position;
                 break;
             case State.Movable:
-                Move(deltaPos);
+                Move(position);
                 break;
         }
     }
 
-    public void OnDragFromBoard(Vector3 pos, Vector3 deltaPos)
+    public void OnDragFromBoard(Vector3 position, Vector3 deltaPos)
     {
-        if (Vector2.Distance(pos, transform.position) < circleCollider.radius)
+        if (Vector2.Distance(position, transform.position) < circleCollider.radius)
         {
-            OnDrag(pos, deltaPos);
+            OnDrag(position, deltaPos);
             return;
         }
         if (lastDrawPos == null)
-            Move(deltaPos);
+            Move(position);
     }
 
     public void Roast()

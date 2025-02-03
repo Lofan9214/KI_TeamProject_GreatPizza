@@ -12,24 +12,24 @@ public class IngameGameManager : MonoBehaviour
     public IngameUIManager uiManager;
 
     public CinemachineConfiner2D confiner;
+    public Transform virtualCam;
 
     public PackingTable packingTable;
 
     public Hall hall;
     public Kitchen kitchen;
 
+    public float screenScrollSpeed = 10f;
+
     public SaveDataVC tempSaveData { get; private set; }
 
     public string PizzaCommand { get; private set; }
     public IngredientTable.Type IngredientType { get; private set; }
 
-    private FpsCounter fpsCounter;
-
     private void Awake()
     {
         pointerManager = GetComponent<PointerManager>();
         timeManager = GetComponent<IngameTimeManager>();
-        fpsCounter = GetComponent<FpsCounter>();
 
         tempSaveData = SaveLoadManager.Data.DeepCopy();
         ++tempSaveData.days;
@@ -65,11 +65,13 @@ public class IngameGameManager : MonoBehaviour
                 {
                     StartSpawn();
                 }
+                uiManager.SetOrderButtonActive(false);
                 break;
             case InGamePlace.Kitchen:
                 pointerManager.enableCamDrag = true;
                 kitchen.Set(confiner);
                 packingTable.SetPizzaBox(1);
+                uiManager.SetOrderButtonActive(true);
                 break;
         }
     }
@@ -107,11 +109,15 @@ public class IngameGameManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    private void Update()
+    public void ScrollScreen()
     {
-        if(MultiTouchManager.Instance.DoubleTap)
+        Vector3 viewPortPos = Camera.main.ScreenToViewportPoint(MultiTouchManager.Instance.TouchPosition);
+        if (Mathf.Abs(viewPortPos.x - 0.5f) > 0.25f)
         {
-            fpsCounter.enabled = !fpsCounter.enabled;
+            float mul = (viewPortPos.x - 0.5f) * 2f;
+            Vector3 cameraPos = Camera.main.transform.position;
+            cameraPos.x += screenScrollSpeed * Time.deltaTime * mul;
+            virtualCam.position = cameraPos;
         }
     }
 }

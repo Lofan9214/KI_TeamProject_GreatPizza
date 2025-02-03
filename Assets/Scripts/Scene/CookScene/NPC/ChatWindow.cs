@@ -30,16 +30,16 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
     public TextMeshProUGUI text;
     public Button yesButton;
     public Button hintButton;
-    public float chatSpeed = 0.05f;
+    public float chatSpeed = 45f;
 
     public LocalizationText hintText;
 
     public State TalkingState { get; private set; }
-    private Talks talkIndex;
+    public Talks talkIndex { get; private set; }
 
-    private int charLength;
+    private float charLength;
     private string script;
-    private WaitForSeconds wait;
+    private WaitForEndOfFrame wait;
 
     private IngameGameManager gm;
 
@@ -48,7 +48,7 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
     private void Awake()
     {
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<IngameGameManager>();
-        wait = new WaitForSeconds(chatSpeed);
+        wait = new WaitForEndOfFrame();
     }
 
     private void Start()
@@ -68,11 +68,11 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
     public IEnumerator Talk()
     {
         TalkingState = State.Talking;
-        while (TalkingState == State.Talking && charLength < script.Length)
+        while (TalkingState == State.Talking && charLength <= script.Length)
         {
-            ++charLength;
-            text.text = script.Substring(0, charLength);
-            if (charLength == script.Length)
+            charLength += Time.deltaTime * chatSpeed;
+            text.text = script.Substring(0, (int)charLength);
+            if ((int)charLength == script.Length)
             {
                 TalkingState = State.Talkend;
                 break;
@@ -122,7 +122,7 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
     private IEnumerator YesCoroutine()
     {
         OnYes?.Invoke();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.75f);
         gm.ChangePlace(InGamePlace.Kitchen);
         gm.timeManager.SetState(IngameTimeManager.State.Ordering);
         gameObject.SetActive(false);

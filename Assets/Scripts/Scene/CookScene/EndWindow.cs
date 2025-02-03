@@ -21,8 +21,11 @@ public class EndWindow : MonoBehaviour
 
     public void Exit()
     {
-        SaveLoadManager.Data.Set(gameManager.tempSaveData);
-        SaveLoadManager.Save();
+        if (gameManager.tempSaveData.budget >= 0f)
+        {
+            SaveLoadManager.Data.Set(gameManager.tempSaveData);
+            SaveLoadManager.Save();
+        }
         SceneManager.LoadScene(0);
     }
 }

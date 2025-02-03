@@ -25,7 +25,7 @@ public class OvenEnter : MonoBehaviour, IPizzaSlot
 
     private IEnumerator Cooking()
     {
-        CurrentPizza.PizzaState = Pizza.State.Immovable;
+        CurrentPizza.CurrentState = Pizza.State.Immovable;
         yield return new WaitUntil(() => nextTarget.IsEmpty);
 
         WaitForEndOfFrame waitframe = new WaitForEndOfFrame();

@@ -59,7 +59,7 @@ public class PointerManager : MonoBehaviour
                     dragable.OnDrag(worldPos, deltaWorldPos);
                 }
             }
-            else if(enableCamDrag)
+            else if (enableCamDrag)
             {
                 Vector3 cameraPos = Camera.main.transform.position;
                 cameraPos.x -= deltaWorldPos.x;

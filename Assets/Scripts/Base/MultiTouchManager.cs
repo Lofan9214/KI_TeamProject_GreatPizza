@@ -184,6 +184,10 @@ public class MultiTouchManager : Singleton<MultiTouchManager>
                     break;
 
                 case TouchPhase.Stationary:
+                    IsMoving = true;
+                    TouchPosition = touch.position;
+                    DeltaPosition = Vector2.zero;
+
                     if (isTouching && previousState != TouchState.LongPress)
                     {
                         float currentDuration = Time.time - touchStartTime;
