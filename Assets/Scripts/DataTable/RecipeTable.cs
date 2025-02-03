@@ -1,9 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using static UnityEditor.Progress;
 using Random = UnityEngine.Random;
 
 public class RecipeTable : DataTable
@@ -67,7 +65,7 @@ public class RecipeTable : DataTable
                     {
                         continue;
                     }
-                    if (!SaveLoadManager.Data.unlocks.TryGetValue(id, out bool unlocked) || !unlocked)
+                    if (!SaveLoadManager.Data.ingredients.TryGetValue(id, out bool unlocked) || !unlocked)
                     {
                         contains = false;
                         break;

@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IDragable
 {
-    void OnDrag(Vector3 pos,Vector3 deltaPos);
-    void OnDragEnd();
+    void OnDrag(Vector3 pos, Vector3 deltaPos);
+    void OnDragEnd(Vector3 pos, Vector3 deltaPos);
 }

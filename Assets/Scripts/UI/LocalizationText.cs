@@ -13,15 +13,14 @@ public class LocalizationText : MonoBehaviour
     public Languages editorLang;
 #endif
 
-    private TextMeshProUGUI text;
+    protected TextMeshProUGUI text;
 
-
-    private void Awake()
+    protected void Awake()
     {
         text = GetComponent<TextMeshProUGUI>();
     }
 
-    private void OnEnable()
+    protected void OnEnable()
     {
         if (Application.isPlaying)
         {
@@ -43,5 +42,11 @@ public class LocalizationText : MonoBehaviour
         {
             text.text = stringTable.Get(id);
         }
+    }
+
+    public void SetString(string stringId)
+    {
+        this.stringId = stringId;
+        OnEnable();
     }
 }
