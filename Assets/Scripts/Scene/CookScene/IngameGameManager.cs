@@ -23,10 +23,13 @@ public class IngameGameManager : MonoBehaviour
     public string PizzaCommand { get; private set; }
     public IngredientTable.Type IngredientType { get; private set; }
 
+    private FpsCounter fpsCounter;
+
     private void Awake()
     {
         pointerManager = GetComponent<PointerManager>();
         timeManager = GetComponent<IngameTimeManager>();
+        fpsCounter = GetComponent<FpsCounter>();
 
         tempSaveData = SaveLoadManager.Data.DeepCopy();
         ++tempSaveData.days;
@@ -102,5 +105,13 @@ public class IngameGameManager : MonoBehaviour
     public void StopGame()
     {
         SceneManager.LoadScene(0);
+    }
+
+    private void Update()
+    {
+        if(MultiTouchManager.Instance.DoubleTap)
+        {
+            fpsCounter.enabled = !fpsCounter.enabled;
+        }
     }
 }
