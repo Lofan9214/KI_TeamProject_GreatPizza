@@ -17,9 +17,9 @@ public class ShopItem : MonoBehaviour
     {
         if (isOn)
         {
-            if (SaveLoadManager.Data.budget > ingdata.shopprice)
+            if (SaveLoadManager.Data.budget > ingdata.store_price)
             {
-                SaveLoadManager.Data.budget -= ingdata.shopprice;
+                SaveLoadManager.Data.budget -= ingdata.store_price;
                 SaveLoadManager.Data.ingredients[ingdata.ingredientID] = true;
                 SaveLoadManager.Save();
                 price.text = "Bought";
@@ -47,14 +47,14 @@ public class ShopItem : MonoBehaviour
             price.text = "Bought";
             toggle.interactable = false;
         }
-        else if (day < ingdata.unlockday)
+        else if (day < ingdata.day)
         {
             price.text = "Can't Buy";
             toggle.interactable = false;
         }
         else
         {
-            price.text = data.shopprice.ToString();
+            price.text = data.store_price.ToString();
         }
     }
 }

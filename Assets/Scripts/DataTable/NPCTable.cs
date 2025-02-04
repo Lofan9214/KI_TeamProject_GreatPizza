@@ -18,10 +18,19 @@ public class NPCTable : DataTable
                 return Resources.Load<Sprite>(string.Format(sprite, Image));
             }
         }
+
+        public GameObject Prefab
+        {
+            get
+            {
+                return Resources.Load<GameObject>(string.Format(prefab, Image));
+            }
+        }
     }
 
     private Dictionary<int, Data> dict = new Dictionary<int, Data>();
     private const string sprite = "Sprite/NPC/{0}";
+    private const string prefab = "Prefabs/{0}";
 
     public override void Load(string fileName)
     {

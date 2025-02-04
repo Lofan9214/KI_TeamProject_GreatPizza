@@ -14,7 +14,7 @@ public class ShopWindow : MonoBehaviour
         foreach (var ing in SaveLoadManager.Data.ingredients)
         {
             var data = DataTableManager.IngredientTable.Get(ing.Key);
-            if (data.shopprice < 0f)
+            if (data.store_price < 0f)
             {
                 continue;
             }

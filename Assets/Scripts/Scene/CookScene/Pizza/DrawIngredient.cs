@@ -2,12 +2,16 @@ using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 
 public class DrawIngredient : MonoBehaviour
 {
     public Texture2D brushTexture;
     public Texture2D spriteTexture;
+
+    public Sprite spriteSprite;
+    public Sprite brushSprite;
 
     private int textureHeight = 256;
     private int textureWidth = 256;
