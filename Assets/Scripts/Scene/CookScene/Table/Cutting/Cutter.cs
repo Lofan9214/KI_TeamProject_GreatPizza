@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class Cutter : MonoBehaviour, IClickable, IDragable
 {
@@ -17,6 +18,9 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
         }
         isCutting = true;
         cutterObject.gameObject.SetActive(true);
+        Vector2 offset = position - (Vector2)cutterObject.transform.position;
+        var dir = offset.normalized;
+        cutterObject.transform.up = dir;
     }
 
     public void OnDrag(Vector3 pos, Vector3 deltaPos)

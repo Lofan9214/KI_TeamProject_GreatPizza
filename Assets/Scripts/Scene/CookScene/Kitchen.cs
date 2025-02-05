@@ -11,6 +11,7 @@ public class Kitchen : MonoBehaviour
     public TrashBin trashBin;
     private PolygonCollider2D confineCollider;
 
+
     private void Awake()
     {
         confineCollider = GetComponent<PolygonCollider2D>();
@@ -20,6 +21,11 @@ public class Kitchen : MonoBehaviour
     {
         confiner.m_BoundingShape2D = confineCollider;
         confiner.gameObject.transform.position = cameraStartPosition.position;
+    }
+
+    public void SetPizzaBox()
+    {
+        packingTable.SetPizzaBox(1);
     }
 
     public void Init()

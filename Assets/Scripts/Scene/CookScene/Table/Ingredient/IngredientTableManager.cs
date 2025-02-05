@@ -11,6 +11,8 @@ public class IngredientTableManager : MonoBehaviour
     public IngredientTub cheeseTub;
     public DoughTub doughTub;
     public Transform[] ingredientTubs;
+    public SpriteRenderer[] tableSprites;
+    public float[] tablesLengthes;
 
     public void Init()
     {
@@ -19,7 +21,6 @@ public class IngredientTableManager : MonoBehaviour
         doughTub.Init(true, new string[] { "dough" }); // ToDo юс╫ц
 
         pizzaSlots[0].gameObject.SetActive(true);
-        pizzaSlots[1].gameObject.SetActive(true);
 
         foreach (var data in dicttype[IngredientTable.Type.Source])
         {
@@ -52,6 +53,19 @@ public class IngredientTableManager : MonoBehaviour
                 tub.Init(dicttype[IngredientTable.Type.Ingredient][i]);
                 ++cnt;
             }
+        }
+
+        if (cnt < 2)
+        {
+
+        }
+        else if (cnt < 5)
+        {
+
+        }
+        else if (cnt < 8)
+        {
+
         }
     }
 }

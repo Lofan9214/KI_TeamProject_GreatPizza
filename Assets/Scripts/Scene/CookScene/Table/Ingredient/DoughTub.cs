@@ -17,6 +17,8 @@ public class DoughTub : MonoBehaviour
     public Vector3 halfscale;
     public Vector3 halfposition;
 
+    public Sprite[] doughs;
+
     private IngameGameManager gameManager;
 
     private void Start()
@@ -32,14 +34,14 @@ public class DoughTub : MonoBehaviour
         if (fullSize)
         {
             start = 0;
-            tray.localScale = fullscale;
-            tray.localPosition = fullposition;
+            //tray.localScale = fullscale;
+            //tray.localPosition = fullposition;
         }
         else
         {
             start = end / 2;
-            tray.localScale = halfscale;
-            tray.localPosition = halfposition;
+            //tray.localScale = halfscale;
+            //tray.localPosition = halfposition;
         }
 
         for (int i = 0; i < end / 2; ++i)

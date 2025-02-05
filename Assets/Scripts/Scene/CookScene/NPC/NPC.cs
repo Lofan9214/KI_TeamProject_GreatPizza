@@ -241,7 +241,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         chatWindow.NextTalk(ChatWindow.Talks.Fail);
         gameManager.uiManager.ShowTipMessage(-payment, 1f);
         gameManager.AddBudget(-payment);
-        gameManager.packingTable.DestroyPizzaBox();
+        gameManager.kitchen.packingTable.DestroyPizzaBox();
         yield return waitChatEnd;
         yield return new WaitForSeconds(0.5f);
         chatWindow.gameObject.SetActive(false);
