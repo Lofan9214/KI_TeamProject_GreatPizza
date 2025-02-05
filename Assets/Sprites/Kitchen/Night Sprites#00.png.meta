@@ -1,0 +1,4747 @@
+fileFormatVersion: 2
+guid: 6728e35a3195968478b75fc979ea38d7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Night Sprites#00_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1694
+        width: 876
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e0281710484cf488edaa849013c67f
+      internalID: 861446428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_1
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1905
+        width: 913
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0619ee23916044fa404f6b55bd7be9
+      internalID: -948537866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_2
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 1873
+        width: 123
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7e1a741a50a544d820dbd9f6f2e1d6
+      internalID: -1891633419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_3
+      rect:
+        serializedVersion: 2
+        x: 1917
+        y: 1917
+        width: 74
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553fd341bdeef2049a87e88a0098a600
+      internalID: -1074784081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_4
+      rect:
+        serializedVersion: 2
+        x: 1999
+        y: 1869
+        width: 27
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9158366f05442b54486168254c425d4d
+      internalID: -1217487915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_5
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1788
+        width: 909
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58120d49e4308c64d8994f2fe1e0c7f2
+      internalID: -1334840472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_6
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1737
+        width: 187
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a9f7da23cc8454ab975b00f5590c6a
+      internalID: -208325884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_7
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 1750
+        width: 42
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8390cc8e06a9fc84685c132966915530
+      internalID: -1419587040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_8
+      rect:
+        serializedVersion: 2
+        x: 1991
+        y: 1813
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fbe99b9d821bcd43b3de96f03f78caa
+      internalID: -662736297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_9
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 1807
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc643db05d29e04db29a5bd3754ecef
+      internalID: 259918004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_10
+      rect:
+        serializedVersion: 2
+        x: 1997
+        y: 1793
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4047141822941e4a86f0671f42fce6b
+      internalID: -19748333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_11
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1730
+        width: 873
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64415bb1c4680a44c851a34b37c2f4bc
+      internalID: -1587309523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_12
+      rect:
+        serializedVersion: 2
+        x: 1994
+        y: 1774
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4c004e0320c1c409a64e9fa6f9d646
+      internalID: 844962395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_13
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 1737
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a1062a0eb32c946abec823087e49b6
+      internalID: 2099829885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_14
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1401
+        width: 502
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909b4d78e48de7349a32a3ee68155b20
+      internalID: -2077477672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_15
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1519
+        width: 216
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc72b0e5648f0347bbb4dd24026cf4c
+      internalID: 1116689484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_16
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 1644
+        width: 119
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e6f0c2a52684f4ea25e47cfcb9f51f
+      internalID: -1501335689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_17
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 1714
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53d30e6631ad534b9c68baad7815f78
+      internalID: -1412489400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_18
+      rect:
+        serializedVersion: 2
+        x: 1934
+        y: 1680
+        width: 101
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb064f9052d15eb4382023947bea7aa3
+      internalID: 1359470286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1340
+        width: 1142
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9c496a72f2248748b98a3abe16cecf9
+      internalID: 256928853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_20
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 1519
+        width: 169
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45140e93902adad4b8e499cd6493b9f8
+      internalID: -784569028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_21
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 1541
+        width: 152
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228843f3cdb310a409af085a1188f9b4
+      internalID: -1056987721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_22
+      rect:
+        serializedVersion: 2
+        x: 1934
+        y: 1624
+        width: 109
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ac47b21fec6fc4b887c6c9545a2a6c
+      internalID: -252845979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_23
+      rect:
+        serializedVersion: 2
+        x: 1934
+        y: 1569
+        width: 106
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a3e24ffca66ffe47b8aa42ce2109d26
+      internalID: -983924037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_24
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1350
+        width: 117
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c017589adef814882e47218ed88651
+      internalID: 275966147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_25
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 1368
+        width: 83
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d31520ddb95fc94bb643ac9ac23646e
+      internalID: 1906508907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_26
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1346
+        width: 138
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: babc69dc7bcd4de43923ed8ca7b1c003
+      internalID: -1454370603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_27
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 1382
+        width: 82
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38434e08c0192284dad2fe965629e91b
+      internalID: 1121408639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_28
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 1345
+        width: 157
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46333715b3f123b40b79690fe54f0811
+      internalID: -86557975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_29
+      rect:
+        serializedVersion: 2
+        x: 1938
+        y: 1411
+        width: 105
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36ff6f1bad3d6b429596e11f339d3e0
+      internalID: -1031791971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_30
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 1338
+        width: 194
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06ace5c1834e324bbca6eeafbbcdd58
+      internalID: 1025585875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_31
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 1379
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7f6d18d04d5b24ab73cc97f303795b
+      internalID: -371732434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_32
+      rect:
+        serializedVersion: 2
+        x: 1938
+        y: 1254
+        width: 105
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68fe2aa1811f0544b21b92b8cd8ec6b
+      internalID: -671885861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_33
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 1360
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed7bfc83820227742a943a3e93b5fc07
+      internalID: -2003905635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_34
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 1260
+        width: 116
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485860e2b7e3fe84299607d44e323c68
+      internalID: 1944976953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_35
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 1341
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ec8ca5886850945abc0568d13925e2
+      internalID: 1156417104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_36
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 1185
+        width: 164
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85e948ba53d91345b870503e7a9b394
+      internalID: 1626535146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_37
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 1190
+        width: 170
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4614d158a5c6c043bbfc801750eb5c6
+      internalID: -598308676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_38
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 424
+        width: 132
+        height: 913
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5d52ed39b108a48be5e96ea9b04290
+      internalID: -964410194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_39
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 272
+        width: 193
+        height: 1066
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 074ca453427c4a645b96b13842b77f63
+      internalID: -2019817767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_40
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1010
+        width: 502
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5004ba1f21922ae4bba62d813749c564
+      internalID: -1584582545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_41
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 1089
+        width: 85
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7fe81f9c6c2c94491f8d5afcd6d92f
+      internalID: -124631266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_42
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 1152
+        width: 175
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d051976aea69804d990dad133ef4a0b
+      internalID: -1313120363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_43
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 1170
+        width: 170
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d989448509292654d8e820562096d473
+      internalID: 971827194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_44
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 1164
+        width: 136
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d57b80fae423d2047aebf6d2221f36d6
+      internalID: 31042078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_45
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 1262
+        width: 184
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7ec5aec900d6847ab94a23a7eef806
+      internalID: -2067079978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_46
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 1086
+        width: 68
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93aa663a6f538624d8335610cc9c58fe
+      internalID: -1428436994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_47
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 1110
+        width: 80
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b4b4f190120ab940a44291683aab6af
+      internalID: -456893360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_48
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 1066
+        width: 164
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5643f481cb7d76043bb71824d2e68ea5
+      internalID: -525549329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_49
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 1080
+        width: 174
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f780f3fcff938438b09ba19c3f8c4b
+      internalID: 1739987260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_50
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 1149
+        width: 182
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82dfb7febf8760f4295bf41f7ea59d26
+      internalID: -1357046810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_51
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 1080
+        width: 111
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64201b234cd8d60488f320fe0ce265d7
+      internalID: -1383516670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_52
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 844
+        width: 84
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ea63a21a2ee444b82d2c21cc7128f7
+      internalID: -1628091663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_53
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 960
+        width: 172
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85664bd972fc3f24c996eccd839b33a2
+      internalID: -247830725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_54
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 1074
+        width: 133
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e9e4407773ccd43a7bd908a8ac26bd
+      internalID: 874651582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_55
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 1034
+        width: 112
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9756146dc8b8c44a9ef277d51cf3238
+      internalID: 605477299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_56
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1058
+        width: 88
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5574d6ca3b1e62458a526ad4fe7e338
+      internalID: -1606213792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_57
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 994
+        width: 174
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bba29a0fa410564a8e7b1a43d9bde39
+      internalID: 1068122898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_58
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 1049
+        width: 184
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60cbcb4521114b40a6be058ac4102ad
+      internalID: -1728592090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_59
+      rect:
+        serializedVersion: 2
+        x: 1934
+        y: 918
+        width: 110
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b52cbcef00feaf46838bf952a141d00
+      internalID: -1066755736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_60
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 918
+        width: 118
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd2077cf3640364990d22a5e0a93a33
+      internalID: -1381194833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_61
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 1021
+        width: 86
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ae881388953704baf5e17a9607d752
+      internalID: -1154342473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_62
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 906
+        width: 156
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c718a1def24fb4eb12f31a8eeddd39
+      internalID: 1687513388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_63
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 912
+        width: 186
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4df8840fd66657499254ec890409ec1
+      internalID: -1458378820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_64
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 682
+        width: 502
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9d9b2847a3f5447bc429fefd870613
+      internalID: -1823211773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_65
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 884
+        width: 115
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96522ce25d6a0ba4eac1c3929f8419e7
+      internalID: 1480404527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_66
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 879
+        width: 80
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dca8786a02187c4d843ea75071ef82c
+      internalID: -2122874234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_67
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 864
+        width: 89
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c97af57207fa1fc4c87918191b3b5e71
+      internalID: 168862801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_68
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 900
+        width: 115
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5964ebeb0fe1fad4c815f3a18155dd3b
+      internalID: 186236277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_69
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 774
+        width: 150
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4b4c875d79d644b8e0ceab83cc168b
+      internalID: -1035547839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_70
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 861
+        width: 71
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c8c33ea951cbb459c93dd5e8ef4f79
+      internalID: 485264221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_71
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 882
+        width: 133
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad69667ca51d2c94c83949e897f925bf
+      internalID: 11920813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_72
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 846
+        width: 182
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63dfc4fb4d8324b4ea9e17ee4a1d0b25
+      internalID: 1572690168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_73
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 764
+        width: 107
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda8b7c27c40c4646830a1ce5602388a
+      internalID: -1612043984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_74
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 768
+        width: 172
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40952970760d6a44f8f8d14afb2fc0f2
+      internalID: 141186151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_75
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 768
+        width: 151
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9633f072521484faacfa8cb04fb25f
+      internalID: -1086418756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_76
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 870
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f67fad9ffcbdf9549bf88ceef6d27424
+      internalID: -193219474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_77
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 678
+        width: 81
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243e2493e9db8f64396c8ca45ca44c0e
+      internalID: 726208126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_78
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 782
+        width: 68
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a115a6fbf17d5040bad1423155c79b9
+      internalID: -1317921016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_79
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 726
+        width: 112
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3763afdae49de4aa2fbd594962501a
+      internalID: 1987720087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_80
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 776
+        width: 160
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3294c2324d4a5849b94eaf31cd5cd46
+      internalID: -1312005496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_81
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 616
+        width: 213
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3837af8662a38428a7401b5096204a
+      internalID: -1290401676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_82
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 702
+        width: 88
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4d3699ecd40e2489929a873c62b381
+      internalID: -580760036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_83
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 606
+        width: 108
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f349c0dcaa0604dbbbb27e6f6d81dd
+      internalID: -1838514386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_84
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 744
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 360af6d2e82de3141b40911a140e645f
+      internalID: -254615243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_85
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 604
+        width: 129
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511e85e3e3372f94eb1984723b647e64
+      internalID: 1393208330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_86
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 616
+        width: 152
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a0aab6b33eb984db2d50e870b7b1f7
+      internalID: -1772902368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_87
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 594
+        width: 114
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c220b96f093024b87f10219bc1538a
+      internalID: -1313347584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_88
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 606
+        width: 113
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b2c3e0ec0a2c1446bffe53780b35585
+      internalID: -2115284926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_89
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 607
+        width: 103
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd8ef0ae8650eb41b5ce3fd2b990afe
+      internalID: -1282034086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_90
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 607
+        width: 98
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a544ce9b2bee96e47aae0b84b0889fe3
+      internalID: -837773616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_91
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 509
+        width: 59
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a997f76edae64e54b84138a98786d3e0
+      internalID: -1408186528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_92
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 594
+        width: 173
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 781ae1dc82579bc4dbd03d134ff85781
+      internalID: 1382762774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_93
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 595
+        width: 173
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fee2ae7709173249982597fb2dce224
+      internalID: 1900421545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_94
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 615
+        width: 37
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9308a9b036ee56444943a8c274ba58aa
+      internalID: -1326611883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_95
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 468
+        width: 173
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357d649182dfea842b84e374f63b5937
+      internalID: 1537567810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_96
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 468
+        width: 174
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1fb1438f1484974c8fdbfe0217927ab
+      internalID: 466155432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_97
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 289
+        width: 169
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10ee8264d963aa45b6ed0e7a06258a3
+      internalID: 2074240582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_98
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 468
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8613734d0b823fd4b808f5e504ef5d8a
+      internalID: -54149833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_99
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 444
+        width: 135
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b710860a9955fc4cb85ef5b9cca7bc1
+      internalID: -2071439938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_100
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 449
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2891b0cb63ff904f982787088700d85
+      internalID: 1763549482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_101
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 448
+        width: 132
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaad02e46ac027f488f7cd8d9b00a95e
+      internalID: 2063758689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_102
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 440
+        width: 158
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409707b1562beac4ab8e58c5f12fd424
+      internalID: 1117596772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_103
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 439
+        width: 127
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ba8e21c8c339742b7a0e9b67bc2954
+      internalID: 1298712176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_104
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 438
+        width: 132
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75241e0f287e5644813e5f5bef0a93c
+      internalID: 1117141091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_105
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 468
+        width: 164
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ac0b0a7c7f40047a9af6c410742eb8
+      internalID: -754857437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_106
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 468
+        width: 98
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a6da0771e3068b4f9ff4f3c2f8919b1
+      internalID: 2040419611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_107
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 426
+        width: 130
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf04760c9ff8a064c8218ac1635391be
+      internalID: -1802304721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_108
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 448
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78687853c61892d4d8dfe08c1c3ff278
+      internalID: -286928177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_109
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 390
+        width: 115
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f660faa3618df024884607e96e19c38c
+      internalID: 180549379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_110
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 447
+        width: 37
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c1f794f0c8d4ac48b28910737838c82
+      internalID: -673728826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_111
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 270
+        width: 236
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00094a1d41510b74aaa7a269d478334d
+      internalID: -1109976933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_112
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 291
+        width: 73
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab75c594b39b7c243bb55e040b9b7466
+      internalID: -1766861186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_113
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 335
+        width: 106
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8395422dcfd529349ad8eb2a4c2437cc
+      internalID: 1860135709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_114
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 275
+        width: 155
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64efebeb0325c1049a1c81baf57adab2
+      internalID: 2087384348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_115
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 281
+        width: 178
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7754948f9ebb047a045100741c1110
+      internalID: 769293320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_116
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 306
+        width: 141
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7779efe94b05b46ba0e2314ddc0b94
+      internalID: -1063214747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_117
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 387
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c505c574c362d949961d95de7bc7840
+      internalID: 928592237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_118
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 411
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d72ea9ad98dbc4ca8579a6f9b8789f
+      internalID: 139310786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_119
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 384
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d647150ca0b356e4db4b8acd04b69c05
+      internalID: -1940730606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_120
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 273
+        width: 115
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fda2437baa068a044b1ae35454fb675e
+      internalID: 43460120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_121
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 272
+        width: 120
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e4855c13328a3409478bc913fec4fc
+      internalID: -64409122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_122
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 289
+        width: 148
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7960e8077e5fd489161440d687bb00
+      internalID: 1435518603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_123
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 276
+        width: 174
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84aa3fc324e442040acb9c1222f8c5cb
+      internalID: 521108600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_124
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 344
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0280ccfa5ee15a54e872d97de0816f25
+      internalID: -902901043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_125
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 300
+        width: 107
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b3df3fcc876824a8f71856cedf5d87
+      internalID: 1327003955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_126
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 343
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92ed7f0f8242554bbe6d99ea9b75c94
+      internalID: 314478080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_127
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 222
+        width: 170
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35bd92c0b4c6bd442908c81709b626e6
+      internalID: -261119658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_128
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 282
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ea1bb9651edbd4e811a41b2f2e2132
+      internalID: 2101288350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_129
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 304
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9302ea9bf0c0ec4408a621610b400b0c
+      internalID: -538747702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_130
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 126
+        width: 138
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e34cd71f1481f48a755a325bcfad39
+      internalID: 873712581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_131
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 126
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1d3b9cbf2c6c644b50611c0db081ff
+      internalID: 1449440148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_132
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 126
+        width: 171
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521a75b13c3a8a84b9d8d94160da7212
+      internalID: 1810209707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_133
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 267
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0429319f34e1fc6498b220cae26b7073
+      internalID: -2091671176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_134
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 116
+        width: 144
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09490f4b89d53f04ab5a687e30c06e10
+      internalID: 1263602537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_135
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 264
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0246a74035cfa34bbfe6b1307898e70
+      internalID: 208645398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_136
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 125
+        width: 147
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fda0996391773844b80a8ed09bbafc4
+      internalID: 1616803693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_137
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 124
+        width: 133
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e58d9caae45134cab1b4c95e578900
+      internalID: -1583914019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_138
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 126
+        width: 138
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107296427e3ce5a4b9bc91e54f3b9df0
+      internalID: -638624303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_139
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 250
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 385486b38ee8f474998ba6ecc516d915
+      internalID: -140422002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_140
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 244
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e7c9ac47abcc04395ab5b06e26008e
+      internalID: 1684141710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_141
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 249
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66c6a089aeafbd429e7a95015cc2392
+      internalID: -750209189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_142
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 258
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6284c496b9ccff469a1c41e4cfb4943
+      internalID: -374288347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_143
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 102
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6732e689487814f44b14c2cc8066d66f
+      internalID: 1304282054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_144
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 125
+        width: 64
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1927ea41f5effbf46ab31e5283ec946d
+      internalID: 126866740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_145
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 124
+        width: 146
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22406a18950acb4a952e66f11af5955
+      internalID: 684758730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_146
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 124
+        width: 144
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d7dabf3100161438162ff2225c8cab
+      internalID: 254469931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_147
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 236
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5a3683221decd4db08a60f89098b81
+      internalID: 879366538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_148
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 243
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7e917f437dfb14d914dcf255a9e35d
+      internalID: -413396294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_149
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 240
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74aa8290ebe2fb4ba66c2a952bafe2a
+      internalID: 1119706756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_150
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 234
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 957da1614e776ca46afb96c9037f6efe
+      internalID: 188309119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_151
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 241
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c1a69dba56fdb40b4d04738c80170a
+      internalID: 1760619623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_152
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 224
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e099ff08a87f22f4eb37b1ebeda1911f
+      internalID: 37584852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_153
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 223
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff2b58b53712e2545b38f61e130e37e0
+      internalID: 2100818816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_154
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 210
+        width: 36
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efdd183c9eafb354e99d021d123a91fb
+      internalID: 1721448344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_155
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 231
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828eff5c626155049b7d524863cf07bb
+      internalID: 1241370261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_156
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 150
+        width: 115
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0ecf4d44a62fb49aa5b7fe32a4b187
+      internalID: -7109713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_157
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 195
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1896a1b1a0d502f44952134db9abb2eb
+      internalID: 1323935512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_158
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 213
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67bdf1d7aa8971c4cb55006fc4f6b97b
+      internalID: 82627028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_159
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 206
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4317773ee5090b04ca34d61d05aa468c
+      internalID: 603868118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_160
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 210
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb650f536ad6c5428cbf0c937d7470c
+      internalID: -444264219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_161
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 203
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f782091ec20a1924ba8881fc8c45ae3c
+      internalID: -776099888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_162
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 132
+        width: 54
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c4cec067eb71c48bf1cc186a209291
+      internalID: -2143691788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_163
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 197
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74d798650e3afa4b9c063ae21c3c731
+      internalID: -73133517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_164
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 205
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49591f45b50edb248837b3d98fb8a6e7
+      internalID: -262714649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_165
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 202
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e48e6377a9fa78c49aecbf1f5d673329
+      internalID: 1885309060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_166
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 194
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c78af796d2e5c8947b240b30a933285f
+      internalID: 373220232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_167
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 186
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022fada198c4df147b69dc3476cc9434
+      internalID: -892965667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_168
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 197
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faac9d64acf62894794d8e6d012e62af
+      internalID: -984775798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_169
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 191
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c48b90b66c4b14db7240cc83c0e978
+      internalID: 1025335746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_170
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 196
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49c104aba03bac7428525d2262ecac36
+      internalID: 2015469570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_171
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 191
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ce93628b7774b46a68232b2ccb43b5
+      internalID: 2083525413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_172
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 195
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1862d0d13d80ff469ecb69c6a68a6a6
+      internalID: 1981750054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_173
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 177
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed245835a082074fa4a64ecb31527b5
+      internalID: 1956414254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_174
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 168
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8868a8afdcb0f3044a51e474d2bb9041
+      internalID: 1021751724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_175
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 185
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ce5fcc5e6cad741801f0843e986e4e
+      internalID: -1666978570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_176
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 173
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9fb1f9dca369c4396a38a022dfde5e
+      internalID: -2099083766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_177
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 182
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07b22547f63ad141808bf4939050594
+      internalID: 1296649842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_178
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 163
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949e3b432c65e0143af36f8f15c99c86
+      internalID: 1855760601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_179
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 168
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f5517fa6da96de40a544dc2d8db04e0
+      internalID: 1517114927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_180
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 157
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4602bb1a18c91684796531eafc2fe4f0
+      internalID: -262602495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_181
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 156
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5202a5b9b5a87724db659b8815b0f215
+      internalID: -2013920302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_182
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 168
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71fa70f64f7de0e4e87d853f189d1166
+      internalID: -1757919176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_183
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 162
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844edbc21dde54c45825f45002237ff5
+      internalID: 104098432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_184
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 126
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795a603d665649540849eeaab4792824
+      internalID: 1262844190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_185
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 150
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7650282782abf4689c57b138a2e0d1
+      internalID: 406625871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_186
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 149
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb6d7d7505a8ee409a0dc4c81ea6eed
+      internalID: -2113110229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_187
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 147
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9045998797b19b645995dd6d768c25cc
+      internalID: -1624021486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_188
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 148
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa6f0bf102ae974dbd5fcc1e308e42c
+      internalID: -1322657012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_189
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 150
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ec8cb1bfd22984aa0104777956dd30
+      internalID: -1315510077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_190
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 126
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4987b1a8b5be19b4eb2e5c3d290bd4ad
+      internalID: -1483732325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_191
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 12
+        width: 170
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90af4e70445a526439bc182e3549b06d
+      internalID: 2140225605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_192
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 6
+        width: 176
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e468c6bad4f6846a9bbf4484e60f6f
+      internalID: 624074518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_193
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 162
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac86bb71a7791c0408e1dcac7473ef93
+      internalID: -1671832257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_194
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 6
+        width: 150
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e167925f6413545a8d19909a941465
+      internalID: -1711193583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_195
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 94
+        width: 136
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4030869bf38096944937ac28f718c9c2
+      internalID: 402029600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_196
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 5
+        width: 159
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d676f716b9b6b44a61c07ab635e0da
+      internalID: 243237516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_197
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 8
+        width: 182
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf21f79fa25dd644a8a7c45d28827ff
+      internalID: 1590666233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_198
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 0
+        width: 159
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90965305b368b404fa14bdc43c341945
+      internalID: -344884922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_199
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0
+        width: 150
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9368e04851c163c4c8501e2b1aa9ba69
+      internalID: -2051689043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_200
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 75
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0fa44b174f89f4385ce34cb2a66ad4
+      internalID: -1079138587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_201
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 70
+        width: 101
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b797589d8797b9a4fb8a06e68adaa75c
+      internalID: -1142415236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_202
+      rect:
+        serializedVersion: 2
+        x: 1745
+        y: 12
+        width: 127
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f5226dab5412141b47d58c89906db5
+      internalID: -36090333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_203
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 0
+        width: 161
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04b23c1fa6dddc42990b365219c28e5
+      internalID: -85356551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_204
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 53
+        width: 138
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c83139bd7c6b44f8c08d35ef79bf32
+      internalID: -1435167645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_205
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 46
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a4241117c30344e986c1a887cddbfb
+      internalID: -1807125027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_206
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 30
+        width: 99
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8c2943bdd68d04b931b0f23167cb74
+      internalID: -664423380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_207
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 10
+        width: 142
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cafe892575125424ab4cb84bb16c9adf
+      internalID: 1344266314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_208
+      rect:
+        serializedVersion: 2
+        x: 1531
+        y: 0
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c074b0291c7fb541ad6c750d812ebd0
+      internalID: 1583183602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night Sprites#00_209
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 6
+        width: 72
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eeffb4126931dc4198029078c8c7a94
+      internalID: -902706206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Night Sprites#00_0: 861446428
+      Night Sprites#00_1: -948537866
+      Night Sprites#00_10: -19748333
+      Night Sprites#00_100: 1763549482
+      Night Sprites#00_101: 2063758689
+      Night Sprites#00_102: 1117596772
+      Night Sprites#00_103: 1298712176
+      Night Sprites#00_104: 1117141091
+      Night Sprites#00_105: -754857437
+      Night Sprites#00_106: 2040419611
+      Night Sprites#00_107: -1802304721
+      Night Sprites#00_108: -286928177
+      Night Sprites#00_109: 180549379
+      Night Sprites#00_11: -1587309523
+      Night Sprites#00_110: -673728826
+      Night Sprites#00_111: -1109976933
+      Night Sprites#00_112: -1766861186
+      Night Sprites#00_113: 1860135709
+      Night Sprites#00_114: 2087384348
+      Night Sprites#00_115: 769293320
+      Night Sprites#00_116: -1063214747
+      Night Sprites#00_117: 928592237
+      Night Sprites#00_118: 139310786
+      Night Sprites#00_119: -1940730606
+      Night Sprites#00_12: 844962395
+      Night Sprites#00_120: 43460120
+      Night Sprites#00_121: -64409122
+      Night Sprites#00_122: 1435518603
+      Night Sprites#00_123: 521108600
+      Night Sprites#00_124: -902901043
+      Night Sprites#00_125: 1327003955
+      Night Sprites#00_126: 314478080
+      Night Sprites#00_127: -261119658
+      Night Sprites#00_128: 2101288350
+      Night Sprites#00_129: -538747702
+      Night Sprites#00_13: 2099829885
+      Night Sprites#00_130: 873712581
+      Night Sprites#00_131: 1449440148
+      Night Sprites#00_132: 1810209707
+      Night Sprites#00_133: -2091671176
+      Night Sprites#00_134: 1263602537
+      Night Sprites#00_135: 208645398
+      Night Sprites#00_136: 1616803693
+      Night Sprites#00_137: -1583914019
+      Night Sprites#00_138: -638624303
+      Night Sprites#00_139: -140422002
+      Night Sprites#00_14: -2077477672
+      Night Sprites#00_140: 1684141710
+      Night Sprites#00_141: -750209189
+      Night Sprites#00_142: -374288347
+      Night Sprites#00_143: 1304282054
+      Night Sprites#00_144: 126866740
+      Night Sprites#00_145: 684758730
+      Night Sprites#00_146: 254469931
+      Night Sprites#00_147: 879366538
+      Night Sprites#00_148: -413396294
+      Night Sprites#00_149: 1119706756
+      Night Sprites#00_15: 1116689484
+      Night Sprites#00_150: 188309119
+      Night Sprites#00_151: 1760619623
+      Night Sprites#00_152: 37584852
+      Night Sprites#00_153: 2100818816
+      Night Sprites#00_154: 1721448344
+      Night Sprites#00_155: 1241370261
+      Night Sprites#00_156: -7109713
+      Night Sprites#00_157: 1323935512
+      Night Sprites#00_158: 82627028
+      Night Sprites#00_159: 603868118
+      Night Sprites#00_16: -1501335689
+      Night Sprites#00_160: -444264219
+      Night Sprites#00_161: -776099888
+      Night Sprites#00_162: -2143691788
+      Night Sprites#00_163: -73133517
+      Night Sprites#00_164: -262714649
+      Night Sprites#00_165: 1885309060
+      Night Sprites#00_166: 373220232
+      Night Sprites#00_167: -892965667
+      Night Sprites#00_168: -984775798
+      Night Sprites#00_169: 1025335746
+      Night Sprites#00_17: -1412489400
+      Night Sprites#00_170: 2015469570
+      Night Sprites#00_171: 2083525413
+      Night Sprites#00_172: 1981750054
+      Night Sprites#00_173: 1956414254
+      Night Sprites#00_174: 1021751724
+      Night Sprites#00_175: -1666978570
+      Night Sprites#00_176: -2099083766
+      Night Sprites#00_177: 1296649842
+      Night Sprites#00_178: 1855760601
+      Night Sprites#00_179: 1517114927
+      Night Sprites#00_18: 1359470286
+      Night Sprites#00_180: -262602495
+      Night Sprites#00_181: -2013920302
+      Night Sprites#00_182: -1757919176
+      Night Sprites#00_183: 104098432
+      Night Sprites#00_184: 1262844190
+      Night Sprites#00_185: 406625871
+      Night Sprites#00_186: -2113110229
+      Night Sprites#00_187: -1624021486
+      Night Sprites#00_188: -1322657012
+      Night Sprites#00_189: -1315510077
+      Night Sprites#00_19: 256928853
+      Night Sprites#00_190: -1483732325
+      Night Sprites#00_191: 2140225605
+      Night Sprites#00_192: 624074518
+      Night Sprites#00_193: -1671832257
+      Night Sprites#00_194: -1711193583
+      Night Sprites#00_195: 402029600
+      Night Sprites#00_196: 243237516
+      Night Sprites#00_197: 1590666233
+      Night Sprites#00_198: -344884922
+      Night Sprites#00_199: -2051689043
+      Night Sprites#00_2: -1891633419
+      Night Sprites#00_20: -784569028
+      Night Sprites#00_200: -1079138587
+      Night Sprites#00_201: -1142415236
+      Night Sprites#00_202: -36090333
+      Night Sprites#00_203: -85356551
+      Night Sprites#00_204: -1435167645
+      Night Sprites#00_205: -1807125027
+      Night Sprites#00_206: -664423380
+      Night Sprites#00_207: 1344266314
+      Night Sprites#00_208: 1583183602
+      Night Sprites#00_209: -902706206
+      Night Sprites#00_21: -1056987721
+      Night Sprites#00_22: -252845979
+      Night Sprites#00_23: -983924037
+      Night Sprites#00_24: 275966147
+      Night Sprites#00_25: 1906508907
+      Night Sprites#00_26: -1454370603
+      Night Sprites#00_27: 1121408639
+      Night Sprites#00_28: -86557975
+      Night Sprites#00_29: -1031791971
+      Night Sprites#00_3: -1074784081
+      Night Sprites#00_30: 1025585875
+      Night Sprites#00_31: -371732434
+      Night Sprites#00_32: -671885861
+      Night Sprites#00_33: -2003905635
+      Night Sprites#00_34: 1944976953
+      Night Sprites#00_35: 1156417104
+      Night Sprites#00_36: 1626535146
+      Night Sprites#00_37: -598308676
+      Night Sprites#00_38: -964410194
+      Night Sprites#00_39: -2019817767
+      Night Sprites#00_4: -1217487915
+      Night Sprites#00_40: -1584582545
+      Night Sprites#00_41: -124631266
+      Night Sprites#00_42: -1313120363
+      Night Sprites#00_43: 971827194
+      Night Sprites#00_44: 31042078
+      Night Sprites#00_45: -2067079978
+      Night Sprites#00_46: -1428436994
+      Night Sprites#00_47: -456893360
+      Night Sprites#00_48: -525549329
+      Night Sprites#00_49: 1739987260
+      Night Sprites#00_5: -1334840472
+      Night Sprites#00_50: -1357046810
+      Night Sprites#00_51: -1383516670
+      Night Sprites#00_52: -1628091663
+      Night Sprites#00_53: -247830725
+      Night Sprites#00_54: 874651582
+      Night Sprites#00_55: 605477299
+      Night Sprites#00_56: -1606213792
+      Night Sprites#00_57: 1068122898
+      Night Sprites#00_58: -1728592090
+      Night Sprites#00_59: -1066755736
+      Night Sprites#00_6: -208325884
+      Night Sprites#00_60: -1381194833
+      Night Sprites#00_61: -1154342473
+      Night Sprites#00_62: 1687513388
+      Night Sprites#00_63: -1458378820
+      Night Sprites#00_64: -1823211773
+      Night Sprites#00_65: 1480404527
+      Night Sprites#00_66: -2122874234
+      Night Sprites#00_67: 168862801
+      Night Sprites#00_68: 186236277
+      Night Sprites#00_69: -1035547839
+      Night Sprites#00_7: -1419587040
+      Night Sprites#00_70: 485264221
+      Night Sprites#00_71: 11920813
+      Night Sprites#00_72: 1572690168
+      Night Sprites#00_73: -1612043984
+      Night Sprites#00_74: 141186151
+      Night Sprites#00_75: -1086418756
+      Night Sprites#00_76: -193219474
+      Night Sprites#00_77: 726208126
+      Night Sprites#00_78: -1317921016
+      Night Sprites#00_79: 1987720087
+      Night Sprites#00_8: -662736297
+      Night Sprites#00_80: -1312005496
+      Night Sprites#00_81: -1290401676
+      Night Sprites#00_82: -580760036
+      Night Sprites#00_83: -1838514386
+      Night Sprites#00_84: -254615243
+      Night Sprites#00_85: 1393208330
+      Night Sprites#00_86: -1772902368
+      Night Sprites#00_87: -1313347584
+      Night Sprites#00_88: -2115284926
+      Night Sprites#00_89: -1282034086
+      Night Sprites#00_9: 259918004
+      Night Sprites#00_90: -837773616
+      Night Sprites#00_91: -1408186528
+      Night Sprites#00_92: 1382762774
+      Night Sprites#00_93: 1900421545
+      Night Sprites#00_94: -1326611883
+      Night Sprites#00_95: 1537567810
+      Night Sprites#00_96: 466155432
+      Night Sprites#00_97: 2074240582
+      Night Sprites#00_98: -54149833
+      Night Sprites#00_99: -2071439938
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

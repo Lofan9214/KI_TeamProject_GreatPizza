@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 02851135b5339bb42b6fb924b64de19f
+guid: 7b67a4802a4567348a27a25b4dccf875
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 75
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,19 +72,6 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -94,7 +81,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,3613 +110,3865 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kitchen Sprites#00_0
+      name: Kitchen Sprites#02_0
       rect:
         serializedVersion: 2
         x: 3
-        y: 2017
-        width: 785
-        height: 29
+        y: 1972
+        width: 321
+        height: 74
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9c080c66e917f0468e78b2fa60c4039
-      internalID: -558605872
+      spriteID: a0bf209f38701a54ca1b706d9663f217
+      internalID: 319731780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_1
+      name: Kitchen Sprites#02_1
       rect:
         serializedVersion: 2
-        x: 793
-        y: 1491
-        width: 775
-        height: 554
+        x: 114
+        y: 1863
+        width: 246
+        height: 132
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db7ffd7a410cbde42be0545cce91431a
-      internalID: 2097982387
+      spriteID: db59bcdb01559684e92f20a47a331847
+      internalID: -103358392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_2
+      name: Kitchen Sprites#02_2
       rect:
         serializedVersion: 2
-        x: 1571
-        y: 2028
-        width: 466
-        height: 17
+        x: 365
+        y: 1971
+        width: 325
+        height: 75
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7674895e5635dc8439be4ae79c4813c5
-      internalID: -831038312
+      spriteID: 29db4c5977e581844b3d99a9bf5d8a6b
+      internalID: 284453010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_3
+      name: Kitchen Sprites#02_3
       rect:
         serializedVersion: 2
-        x: 3
-        y: 1412
-        width: 715
-        height: 601
+        x: 474
+        y: 1860
+        width: 248
+        height: 135
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b972c3515fde992408aa8359d1219012
-      internalID: -902548057
+      spriteID: 01fc81ed50ed8fb42a526e2fffb5171a
+      internalID: 780588328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_4
+      name: Kitchen Sprites#02_4
       rect:
         serializedVersion: 2
-        x: 724
-        y: 1911
-        width: 62
-        height: 101
+        x: 726
+        y: 1713
+        width: 339
+        height: 333
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70d049d56fc49f142b7bf1f28b4956cd
-      internalID: 465704199
+      spriteID: 807d07746d9f440459bf64efeb52401f
+      internalID: -558665815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_5
+      name: Kitchen Sprites#02_5
       rect:
         serializedVersion: 2
-        x: 1571
-        y: 2004
-        width: 466
-        height: 21
+        x: 1068
+        y: 1812
+        width: 294
+        height: 234
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 812920515511c964385c16d0d6e864e0
-      internalID: -1349536145
+      spriteID: 2991d63a58c5c544681978fd84537fb9
+      internalID: -1551504343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_6
+      name: Kitchen Sprites#02_6
       rect:
         serializedVersion: 2
-        x: 1571
-        y: 1976
-        width: 464
-        height: 25
+        x: 1362
+        y: 1838
+        width: 582
+        height: 208
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cfcddaa155152c44b699600daef2556
-      internalID: 1960501459
+      spriteID: c8c07588efd98d147bf40ef259c7f35a
+      internalID: 693137020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_7
+      name: Kitchen Sprites#02_7
       rect:
         serializedVersion: 2
-        x: 1571
-        y: 1954
-        width: 464
-        height: 20
+        x: 0
+        y: 1527
+        width: 342
+        height: 330
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f29842930067a548b50fe04966de246
-      internalID: 2123646499
+      spriteID: c31e05b7218855342b7a0e867ab7e79c
+      internalID: 1649330179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_8
+      name: Kitchen Sprites#02_8
       rect:
         serializedVersion: 2
-        x: 1570
-        y: 1510
-        width: 464
-        height: 442
+        x: 346
+        y: 1728
+        width: 338
+        height: 132
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2d9bd436f6322f46bc89296a69c59d7
-      internalID: -301313036
+      spriteID: 21b7f17eb7e3a5a4590fb4f5bb85f7fa
+      internalID: 473987859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_9
+      name: Kitchen Sprites#02_9
       rect:
         serializedVersion: 2
-        x: 2039
-        y: 1940
-        width: 5
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a938915aa07695a449ce4817b53c0c4b
-      internalID: 880920615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_10
-      rect:
-        serializedVersion: 2
-        x: 762
-        y: 1887
-        width: 23
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9816820c8a684ee43b8e9ee58bf3648c
-      internalID: 576318266
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_11
-      rect:
-        serializedVersion: 2
-        x: 723
-        y: 1851
-        width: 21
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0908b6c94c41dba419e5b9e29e99fa9e
-      internalID: 1108876152
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_12
-      rect:
-        serializedVersion: 2
-        x: 723
-        y: 1836
-        width: 13
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df29c97aa934de7479d2aa185cfb0c6e
-      internalID: 407698933
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_13
-      rect:
-        serializedVersion: 2
-        x: 767
-        y: 1772
-        width: 14
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db8e3d7400f3db34eb4f45805e9eecac
-      internalID: 145324890
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_14
-      rect:
-        serializedVersion: 2
-        x: 723
-        y: 1739
-        width: 36
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 422d33be24f21a743b33e69ebc2f438d
-      internalID: 2139143170
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_15
-      rect:
-        serializedVersion: 2
-        x: 759
-        y: 1744
-        width: 20
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 91b6e79af078c994f89fd913f189681b
-      internalID: 719607798
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_16
-      rect:
-        serializedVersion: 2
-        x: 724
-        y: 1706
-        width: 53
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b91737887e09c64fa07f8f0407b2d8a
-      internalID: -2080420833
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_17
-      rect:
-        serializedVersion: 2
-        x: 723
-        y: 1659
-        width: 49
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b35113c50dc359b4a81831473c426d2e
-      internalID: -1999516778
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_18
-      rect:
-        serializedVersion: 2
-        x: 777
-        y: 1676
-        width: 9
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b97106b416b6044ca219e96ce23caad
-      internalID: -1900415201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_19
-      rect:
-        serializedVersion: 2
-        x: 777
-        y: 1656
-        width: 10
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2abf7fd4fdb655f4f8f0664c49b5a641
-      internalID: -1497167038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_20
-      rect:
-        serializedVersion: 2
-        x: 723
-        y: 1612
-        width: 49
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3bbeb0a9fa342934db3597b6395fb171
-      internalID: -1995889870
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_21
-      rect:
-        serializedVersion: 2
-        x: 778
-        y: 1635
-        width: 8
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 59e6314911744bf409b98b3329a5a953
-      internalID: -524489022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_22
-      rect:
-        serializedVersion: 2
-        x: 776
-        y: 1617
-        width: 12
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c457d8abf2c7a840b23e80b6ad9dbb7
-      internalID: 38381116
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_23
-      rect:
-        serializedVersion: 2
-        x: 723
-        y: 1360
-        width: 47
-        height: 247
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba75656d23e7c904abe2c4c3cb456379
-      internalID: -1619184805
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_24
-      rect:
-        serializedVersion: 2
-        x: 776
-        y: 1573
-        width: 8
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ea604be950183d4388e3b026864e27f
-      internalID: 1189004146
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_25
-      rect:
-        serializedVersion: 2
-        x: 777
-        y: 1529
-        width: 7
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2629292c70bc464b9ccc6e86a4243a2
-      internalID: -596889533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_26
-      rect:
-        serializedVersion: 2
-        x: 777
-        y: 1487
-        width: 7
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 522d7f620db6b7f489c26b8d445d7fe0
-      internalID: -687434651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_27
-      rect:
-        serializedVersion: 2
-        x: 1574
-        y: 951
-        width: 444
-        height: 545
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3aee448088f2c6c49b59d0dfda041308
-      internalID: 1434281823
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_28
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 1451
-        width: 22
-        height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 920204887693a9546b8ddebc593b816e
-      internalID: -965120935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_29
-      rect:
-        serializedVersion: 2
-        x: 776
-        y: 1446
-        width: 8
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 209bcb092c085d146b311499a149426f
-      internalID: -1699336724
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_30
-      rect:
-        serializedVersion: 2
-        x: 789
-        y: 1304
-        width: 667
-        height: 182
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab919c9dade3c684ab49bec789ba17f3
-      internalID: -1362545902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_31
-      rect:
-        serializedVersion: 2
-        x: 1459
-        y: 1475
-        width: 106
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e7391427df4579246ad269a69a467064
-      internalID: 650466700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_32
-      rect:
-        serializedVersion: 2
-        x: 1501
-        y: 1444
-        width: 24
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eefb9c9e621a6a542af30299ad9ba4a3
-      internalID: -2061807504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_33
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 1384
-        width: 22
-        height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d8c321f9f2174564e81f46f3e715cf68
-      internalID: 1697522494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_34
-      rect:
-        serializedVersion: 2
-        x: 777
-        y: 1387
-        width: 7
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2300711055879a47bf755a308aab6d5
-      internalID: -1495500891
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_35
-      rect:
-        serializedVersion: 2
-        x: 791
-        y: 1433
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1be032a8b16c6bd488a28df1339c6a60
-      internalID: 1817947741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_36
-      rect:
-        serializedVersion: 2
-        x: 797
-        y: 1420
-        width: 8
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c652e3e86806e3e47a537c58c982aed4
-      internalID: 503787021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_37
-      rect:
-        serializedVersion: 2
-        x: 1460
-        y: 1395
-        width: 31
-        height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 290d0cdbcd775a94a885366ff7f4da77
-      internalID: 988836187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_38
-      rect:
-        serializedVersion: 2
-        x: 1532
-        y: 1389
-        width: 33
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7203e3b573097aa4c8491c1d32139320
-      internalID: 1932475443
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_39
-      rect:
-        serializedVersion: 2
-        x: 791
-        y: 1407
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2882524d78efad5448f8ec18f39cfe27
-      internalID: 1435797734
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_40
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 806
-        width: 715
-        height: 601
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83103966cd64cce4f8599fc036fa3825
-      internalID: 1187005596
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_41
-      rect:
-        serializedVersion: 2
-        x: 791
-        y: 1391
-        width: 5
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e97081b6b48a5494a9d4a96b2c2d4a26
-      internalID: -1237549035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_42
-      rect:
-        serializedVersion: 2
-        x: 797
-        y: 1361
-        width: 5
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 23f9de713cd6bcf458de4950b026c555
-      internalID: 942897659
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_43
-      rect:
-        serializedVersion: 2
-        x: 1458
-        y: 1317
-        width: 108
-        height: 69
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb664500befed1a4d8f7f73a073396d3
-      internalID: -1135774002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_44
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 1349
-        width: 20
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 566cbf17cd06cb04e9b54672fd1aab20
-      internalID: -1946794044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_45
-      rect:
-        serializedVersion: 2
-        x: 777
-        y: 1309
-        width: 8
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d024b0b4e0632a42ad913ad917831ad
-      internalID: -398516984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_46
-      rect:
-        serializedVersion: 2
-        x: 789
-        y: 1357
-        width: 5
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4725917aa9693204baa52bfbd17be30e
-      internalID: -885763340
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_47
-      rect:
-        serializedVersion: 2
-        x: 723
-        y: 1341
-        width: 47
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 724fcf4221180384e9ab24966f78b083
-      internalID: 1694982841
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_48
-      rect:
-        serializedVersion: 2
-        x: 797
-        y: 1345
-        width: 10
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17f56e58d63d48840bf1806a49269643
-      internalID: -1140087628
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_49
-      rect:
-        serializedVersion: 2
-        x: 722
-        y: 1187
-        width: 48
-        height: 150
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ca6e6d00e2aa2a4fa245b768dcaa641
-      internalID: 1366955016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_50
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 1319
-        width: 19
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92606fd87f9f2324d8d24b27a4cfaef3
-      internalID: -1471550783
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_51
-      rect:
-        serializedVersion: 2
-        x: 777
-        y: 1264
-        width: 7
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5157e9c531c658642be71b986a2cb1fd
-      internalID: 521087150
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_52
-      rect:
-        serializedVersion: 2
-        x: 790
-        y: 1118
-        width: 664
-        height: 183
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f97e598cb17985f4ca86ac93e3fd7821
-      internalID: 1057074762
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_53
-      rect:
-        serializedVersion: 2
-        x: 1458
-        y: 1245
-        width: 108
-        height: 69
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0af30bdb7f82d942a7768525f1b7d66
-      internalID: 994813358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_54
-      rect:
-        serializedVersion: 2
-        x: 2021
-        y: 1299
-        width: 21
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 202a933fdc245d24993dd64d7080d130
-      internalID: 1999267405
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_55
-      rect:
-        serializedVersion: 2
-        x: 792
-        y: 1269
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3766a713313522498918e5cf9f2f370
-      internalID: -1370534096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_56
-      rect:
-        serializedVersion: 2
-        x: 2021
-        y: 1248
-        width: 21
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8662fb7a40ffaeb44a2f00a0ae32a2ee
-      internalID: 1113720562
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_57
-      rect:
-        serializedVersion: 2
-        x: 777
-        y: 1222
-        width: 7
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9b981b46a703df499173b5ed4f17a8e
-      internalID: 753307279
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_58
-      rect:
-        serializedVersion: 2
-        x: 799
-        y: 1252
-        width: 8
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 40ae704ad8d61ca43a1358f33149229f
-      internalID: 1625003677
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_59
-      rect:
-        serializedVersion: 2
-        x: 793
-        y: 1235
-        width: 4
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 746d9f509fe3034498f4e9406eeb4960
-      internalID: -870675151
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_60
-      rect:
-        serializedVersion: 2
-        x: 1458
-        y: 1171
-        width: 107
-        height: 71
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1163a32c186fc6d42a4a9607e6c34c0d
-      internalID: 1274553176
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_61
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 1231
-        width: 17
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc085a33c2e2517469837dac7009a564
-      internalID: -185113684
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_62
-      rect:
-        serializedVersion: 2
-        x: 777
-        y: 1182
-        width: 7
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd71de904ea27054eaa07cea2f4f2757
-      internalID: 767364412
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_63
-      rect:
-        serializedVersion: 2
-        x: 793
-        y: 1215
-        width: 5
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 575db91e97ad29848825b5b36609c330
-      internalID: -1549849338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_64
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 1039
-        width: 16
-        height: 186
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85d331af3479a5441ac915f18d903075
-      internalID: -892923746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_65
-      rect:
-        serializedVersion: 2
-        x: 799
-        y: 1199
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac0c69d5912bd5c45a653b1da608090e
-      internalID: -268066280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_66
-      rect:
-        serializedVersion: 2
-        x: 723
-        y: 1175
-        width: 42
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8bbc54a860f0dbc4d9b7dd54dea05eb8
-      internalID: -1414160654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_67
-      rect:
-        serializedVersion: 2
-        x: 799
-        y: 1178
-        width: 5
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e288ffaa6dbcd24d861685bc10e04f0
-      internalID: -1926442253
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_68
-      rect:
-        serializedVersion: 2
-        x: 777
-        y: 1135
-        width: 7
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e3a8b4cdf1218e40b035b67c3b34a28
-      internalID: -1875851036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_69
-      rect:
-        serializedVersion: 2
-        x: 790
-        y: 1174
-        width: 5
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb1d76f90c9ae3d4e8ae1736695d0967
-      internalID: -1953132618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_70
-      rect:
-        serializedVersion: 2
-        x: 723
-        y: 1131
-        width: 39
-        height: 39
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 30120a9a3d924504b8d7f28cb1e61e5e
-      internalID: 808264760
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_71
-      rect:
-        serializedVersion: 2
-        x: 790
-        y: 1161
-        width: 4
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12868c8424ade46449b2880a5f3575e1
-      internalID: 1732097598
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_72
-      rect:
-        serializedVersion: 2
-        x: 799
-        y: 1158
-        width: 10
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a68a88fac94f1c4ab0cfb5a820c9929
-      internalID: 1321778739
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_73
-      rect:
-        serializedVersion: 2
-        x: 1458
-        y: 1097
-        width: 107
-        height: 71
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4139d675fbd68be468ab53fa64a9df38
-      internalID: -426715165
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_74
-      rect:
-        serializedVersion: 2
-        x: 723
-        y: 1103
-        width: 39
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c650fc0d7f708964da9be1de7c2d6653
-      internalID: -1427650179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_75
-      rect:
-        serializedVersion: 2
-        x: 766
-        y: 1060
-        width: 14
-        height: 72
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2112b3b40cab35d4c92ac8198f3196dc
-      internalID: 492939358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_76
-      rect:
-        serializedVersion: 2
-        x: 783
-        y: 930
-        width: 667
-        height: 182
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c302da5bda7a784cbc0bba34217c76e
-      internalID: -463934247
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_77
-      rect:
-        serializedVersion: 2
-        x: 722
-        y: 1064
-        width: 31
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d4564c59d18d254384c2e10b2be7f8a
-      internalID: 1028419865
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_78
-      rect:
-        serializedVersion: 2
-        x: 1453
-        y: 825
-        width: 114
-        height: 268
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 788b3c7cc0a4f4242adeea311b1d4eaf
-      internalID: -960429948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_79
-      rect:
-        serializedVersion: 2
-        x: 785
-        y: 1059
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbb59e2760094e846bf7c310c58b181c
-      internalID: -1183755093
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_80
-      rect:
-        serializedVersion: 2
-        x: 722
-        y: 1020
-        width: 31
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 29e65e0046a8b6f4ca19e8b7acaa0f1f
-      internalID: -151309160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_81
-      rect:
-        serializedVersion: 2
-        x: 791
-        y: 1046
-        width: 9
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a22906183f7a4741a873dbd4eb09f4e
-      internalID: -43603284
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_82
-      rect:
-        serializedVersion: 2
-        x: 785
-        y: 1033
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b7d552df645932469b3c3cc824b99ae
-      internalID: -1804889683
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_83
-      rect:
-        serializedVersion: 2
-        x: 785
-        y: 1017
-        width: 5
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a670e4b9e9626b34481c3bc9f94eed87
-      internalID: -431303369
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_84
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 989
-        width: 14
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c3b39c09f041534fb1a67448a7b8638
-      internalID: -1032621655
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_85
-      rect:
-        serializedVersion: 2
-        x: 723
-        y: 979
-        width: 7
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad659f9fd919a144b85c2023fcc68848
-      internalID: 1095769703
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_86
-      rect:
-        serializedVersion: 2
-        x: 791
-        y: 987
-        width: 5
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 774440e5f4e47ee4aa2c6e1d5a068c35
-      internalID: -122855325
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_87
-      rect:
-        serializedVersion: 2
-        x: 783
-        y: 983
-        width: 5
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 083de1a016f9e384ca119a95aa8116e2
-      internalID: -980261017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_88
-      rect:
-        serializedVersion: 2
-        x: 723
-        y: 932
-        width: 7
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e753357cfbd23c40b1e1f6fb4051863
-      internalID: 787217892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_89
-      rect:
-        serializedVersion: 2
-        x: 791
-        y: 971
-        width: 10
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73a1c9a77ef536141838aee89ee8b37f
-      internalID: 1121584496
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_90
-      rect:
-        serializedVersion: 2
-        x: 2023
-        y: 960
-        width: 15
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 75b269650bb5e7448915b00ea3e4214a
-      internalID: -1410280095
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_91
-      rect:
-        serializedVersion: 2
-        x: 2023
-        y: 940
-        width: 15
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9c0fe35080bd3f4ea2bc1d112437ff4
-      internalID: -13255797
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_92
-      rect:
-        serializedVersion: 2
-        x: 723
-        y: 808
-        width: 86
-        height: 118
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e91e2c6591c9f54c9af7d84948a51e4
-      internalID: 1030536000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_93
-      rect:
-        serializedVersion: 2
-        x: 813
-        y: 505
-        width: 635
-        height: 421
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 422c38e653359f148b2ed6931ff7709c
-      internalID: 1883027488
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_94
-      rect:
-        serializedVersion: 2
-        x: 1574
-        y: 400
-        width: 444
-        height: 537
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70ec660206684bb41b4322d16b3c5f11
-      internalID: -1339861952
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_95
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 894
-        width: 7
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 91f032445d130604a897d33552190fe4
-      internalID: 210792887
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_96
-      rect:
-        serializedVersion: 2
-        x: 2035
-        y: 898
-        width: 7
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2b25a70c08cc4245a16a5941ac61a68
-      internalID: 713854837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_97
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 853
-        width: 7
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05851aa5076978f4e9055bc703aa830f
-      internalID: -264461482
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_98
-      rect:
-        serializedVersion: 2
-        x: 2035
-        y: 839
-        width: 7
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01f94a1e1e6b5a84f9d122cf71f5a679
-      internalID: -21052435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_99
-      rect:
-        serializedVersion: 2
-        x: 1453
-        y: 552
-        width: 114
-        height: 268
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0019870896dc10c449125131ee96fea9
-      internalID: -1595968989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_100
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 812
-        width: 7
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a380054a36ef5a6438b75fc5c677588d
-      internalID: -621334870
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_101
-      rect:
-        serializedVersion: 2
-        x: 2035
-        y: 761
-        width: 8
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c5b3aa552fa06847b2993f044c1a0ae
-      internalID: 235385471
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_102
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 399
-        width: 406
-        height: 403
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78e20bb30cda18d46aa1aa8802294fff
-      internalID: -734865403
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_103
-      rect:
-        serializedVersion: 2
-        x: 413
-        y: 399
-        width: 397
-        height: 403
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22d45790bc8edfc4f8a62bc824504cdf
-      internalID: -1633627320
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_104
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 753
-        width: 7
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a1a8134b37a82445b6f85963d1a7d90
-      internalID: -311633708
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_105
-      rect:
-        serializedVersion: 2
-        x: 2035
-        y: 716
-        width: 7
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 525db94925b170d45b001b40e85caf9c
-      internalID: 1248457396
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_106
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 675
-        width: 7
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd7112a63ca0434458e01cfd7e61ef9f
-      internalID: 1493760521
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_107
-      rect:
-        serializedVersion: 2
-        x: 2035
-        y: 674
-        width: 7
-        height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2bbf6c823e2ee4f489786a0ee9ee0250
-      internalID: -2002893705
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_108
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 630
-        width: 7
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6146d7f8e24bd04a9d99b95701f7701
-      internalID: -1829329194
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_109
-      rect:
-        serializedVersion: 2
-        x: 2035
-        y: 634
-        width: 7
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58d9cbc7a0a66cc46ac65a1d783007ad
-      internalID: 516687314
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_110
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 589
-        width: 7
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22229b970f39ae443876b3675d7eddff
-      internalID: 1101219608
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_111
-      rect:
-        serializedVersion: 2
-        x: 2035
-        y: 587
-        width: 7
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 663ba272e88c2ab44800ebb8585f789e
-      internalID: 1830317777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_112
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 548
-        width: 7
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cbbb993290dc6cf419d390b237368e35
-      internalID: -1772126749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_113
-      rect:
-        serializedVersion: 2
-        x: 2035
-        y: 528
-        width: 7
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47dc695d1cf09b24eb5fe2eaeb34a203
-      internalID: -649356947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_114
-      rect:
-        serializedVersion: 2
-        x: 1453
-        y: 279
-        width: 114
-        height: 268
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96658878af9af8343a905d81e51d4884
-      internalID: -369854946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_115
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 501
-        width: 7
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6aefe163a0002e74d8bdb2131340e2a7
-      internalID: 106566260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_116
-      rect:
-        serializedVersion: 2
-        x: 2035
-        y: 450
-        width: 7
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 945e969274bce914d8a421dca113fb8a
-      internalID: -1731014655
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_117
-      rect:
-        serializedVersion: 2
-        x: 814
-        y: 4
-        width: 411
-        height: 494
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3519215c49cd98d4b988b95b82d7863b
-      internalID: -917939964
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_118
-      rect:
-        serializedVersion: 2
-        x: 1232
-        y: 4
-        width: 71
-        height: 495
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 232e5205eda014d4bbc1b1163cfc888c
-      internalID: -169485904
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_119
-      rect:
-        serializedVersion: 2
-        x: 1308
-        y: 327
-        width: 140
-        height: 172
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 292cfb1b07de67645b70147357b90ca5
-      internalID: 1585503054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_120
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 444
-        width: 7
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eacda111f08c40e4fa9f713940269ef5
-      internalID: 1806157606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_121
-      rect:
-        serializedVersion: 2
-        x: 2035
-        y: 405
-        width: 7
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3dab16ca19e8c1445bb07b23519d0a39
-      internalID: 2019211146
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_122
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 399
-        width: 7
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32d2b0c9cee74a3459cc7b21ac827345
-      internalID: -1233249608
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_123
-      rect:
-        serializedVersion: 2
-        x: 2035
-        y: 363
-        width: 7
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed56522d254ae074aab86eef0d444f26
-      internalID: -1732116474
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_124
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 357
-        width: 8
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99d9b2ab30a4a7a46b6510a3aa7ee7da
-      internalID: -238232718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_125
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 358
-        width: 7
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b45ccbc7198ea5b4bb6bc59a50f0b636
-      internalID: 1291045980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_126
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 273
-        width: 171
-        height: 121
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7a0ab864d5dc854684a05900226addd
-      internalID: -1995765754
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_127
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 273
-        width: 169
-        height: 122
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32f577c39ec4e5a4a8fa06d9bc8bf514
-      internalID: -817757337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_128
-      rect:
-        serializedVersion: 2
-        x: 385
-        y: 274
-        width: 70
-        height: 115
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dfdbe244611c33d4bb8bffa106f18b0b
-      internalID: -1860055112
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_129
-      rect:
-        serializedVersion: 2
-        x: 489
-        y: 288
-        width: 89
-        height: 107
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4feca776996a234087f67ce03afb48d
-      internalID: 1906123882
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_130
-      rect:
-        serializedVersion: 2
-        x: 586
-        y: 283
-        width: 70
-        height: 106
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 508a737dc0328cc4ebd9ad9767cb5f7f
-      internalID: -908974435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_131
-      rect:
-        serializedVersion: 2
-        x: 690
-        y: 288
-        width: 89
-        height: 107
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6569bb02b19915419bb4c8ddf00d09e
-      internalID: 1797462640
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_132
-      rect:
-        serializedVersion: 2
-        x: 783
-        y: 249
-        width: 25
-        height: 147
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3256b07d662033c43a92e0da0fd45cc5
-      internalID: 527198406
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_133
-      rect:
-        serializedVersion: 2
-        x: 1572
-        y: 281
+        x: 1070
+        y: 1695
         width: 268
         height: 114
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffd3c43ad17dddd48bac53bb0a6f4ca9
-      internalID: -1460707082
+      spriteID: ed6e7314f5f83c644a259f0b8aa34dd1
+      internalID: 120025541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_134
+      name: Kitchen Sprites#02_10
       rect:
         serializedVersion: 2
-        x: 1885
-        y: 322
-        width: 122
-        height: 72
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0df65658518b51143a0c750d63e7add8
-      internalID: 2101741388
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_135
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 357
-        width: 7
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e777ebd2947d824dbba2a0b1748acf0
-      internalID: -212023942
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_136
-      rect:
-        serializedVersion: 2
-        x: 2035
-        y: 323
-        width: 7
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bdafd02c7e424804c9f976e45833d844
-      internalID: 1959384881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_137
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 316
-        width: 7
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 37fb80822b9a40d4b906b1eb9d490bfd
-      internalID: -1119557717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_138
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 318
-        width: 7
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 08c9c7132cba82d42ab3745186a0b3f3
-      internalID: -1072735504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_139
-      rect:
-        serializedVersion: 2
-        x: 1309
-        y: 148
-        width: 138
-        height: 171
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02e4d6330a20f084d8efc0e962576edd
-      internalID: -1008002929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_140
-      rect:
-        serializedVersion: 2
-        x: 2022
-        y: 317
-        width: 7
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84a1c4c5bc0211a45b9cf0f225ebee8b
-      internalID: 1401515736
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_141
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 257
-        width: 7
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0d152a0ef689344ab96e53d292ed55b
-      internalID: -2144397425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_142
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 271
-        width: 7
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85e19c4d430b74a4d957ea6115ad9327
-      internalID: -1378672484
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_143
-      rect:
-        serializedVersion: 2
-        x: 588
-        y: 86
-        width: 191
-        height: 191
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b82ab9780c965384c91bfb64c7eabbb1
-      internalID: -1402807953
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_144
-      rect:
-        serializedVersion: 2
-        x: 1846
-        y: 193
-        width: 171
+        x: 1363
+        y: 1722
+        width: 268
         height: 114
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2114f670311971a41936d1c8488a7cf6
-      internalID: 1979524000
+      spriteID: 08dfcdcc1a7993c4b97c3b3c78e7c8d0
+      internalID: -779208519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_145
+      name: Kitchen Sprites#02_11
       rect:
         serializedVersion: 2
-        x: 2022
-        y: 270
-        width: 8
-        height: 42
+        x: 1636
+        y: 1722
+        width: 271
+        height: 114
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 266b55ac4da132b47a8740124cbc0bb0
-      internalID: -35179399
+      spriteID: 84987c6d316c7444f8dd3e01c841d888
+      internalID: 901967676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_146
+      name: Kitchen Sprites#02_12
       rect:
         serializedVersion: 2
-        x: 2035
-        y: 276
-        width: 7
-        height: 42
+        x: 1908
+        y: 1664
+        width: 135
+        height: 171
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d249a1d93629f24b8431eb41c92beb7
-      internalID: -2016902037
+      spriteID: b22036995dc6f5c4e9907736f1be8f37
+      internalID: -1537264221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_147
+      name: Kitchen Sprites#02_13
       rect:
         serializedVersion: 2
-        x: 50
-        y: 4
-        width: 263
-        height: 263
+        x: 347
+        y: 1590
+        width: 337
+        height: 132
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51da26a40cf5bed4cb2b8d4747ebca02
-      internalID: 221845081
+      spriteID: 829ecdaace5f4f744868c6acd396cfd6
+      internalID: -116235027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_148
+      name: Kitchen Sprites#02_14
       rect:
         serializedVersion: 2
-        x: 318
-        y: 4
-        width: 263
-        height: 263
+        x: 686
+        y: 1590
+        width: 268
+        height: 117
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7e7c01822b0ce64286114349853679e
-      internalID: 1133901197
+      spriteID: 0dd7b963bab296d4db4bfd0c78004e51
+      internalID: -693100707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_149
+      name: Kitchen Sprites#02_15
       rect:
         serializedVersion: 2
-        x: 1452
-        y: 147
-        width: 186
-        height: 128
+        x: 958
+        y: 1576
+        width: 269
+        height: 114
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7974e812093d3b84d856dcd377b55df4
-      internalID: -1556096579
+      spriteID: 56be565064edf2748b833063b9a9d03b
+      internalID: -493873988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_150
+      name: Kitchen Sprites#02_16
       rect:
         serializedVersion: 2
-        x: 1706
-        y: 264
-        width: 9
-        height: 11
+        x: 1343
+        y: 1603
+        width: 268
+        height: 115
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 810820c8d8fa1814490d6e79e5fac7e6
-      internalID: -777169857
+      spriteID: 90fb836f5fea04643b588fe7ce120f3b
+      internalID: 132787579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_151
+      name: Kitchen Sprites#02_17
       rect:
         serializedVersion: 2
-        x: 2035
-        y: 230
-        width: 7
-        height: 41
+        x: 1616
+        y: 1602
+        width: 268
+        height: 115
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c09ed24a0540d5649873a1432373af9a
-      internalID: 143432035
+      spriteID: 83ec77ff717db40499c5dc1173eedb60
+      internalID: 1259328741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cutGuide
+      name: Kitchen Sprites#02_18
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 1314
+        width: 148
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41b62b9c783fba4abc65ec5eb0aa615
+      internalID: 2142434551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_19
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 1590
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd61db91078a68f4c8f312149bb5d2a2
+      internalID: 1736065049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_20
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 1591
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99da8123b0e32a94aa8a774278071abd
+      internalID: 1983989291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_21
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 1392
+        width: 333
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56084dc46d42d24438df15b0dd4344e5
+      internalID: -647421515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_22
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 1472
+        width: 268
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 789bc7710bcd59e409788fd1d1147b91
+      internalID: -1367441042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_23
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1470
+        width: 270
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d826d4c92aadf5042b9ae94319f1d079
+      internalID: -1616796536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_24
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 1578
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde07d07d3db78241bb6f4aa4adb8809
+      internalID: 1524002655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_25
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 1554
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78fcd7ca97c273446915daf19fb841b3
+      internalID: -594331963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_26
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 1398
+        width: 124
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32c472ad502238848b6b82f82c614830
+      internalID: 237381816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_27
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 1569
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ccde22c40ecd2547bbd4e01655a6163
+      internalID: 272201676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_28
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 1554
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac8038ee76434c4caefc68a8c7ab439
+      internalID: -2050926027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_29
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 1539
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29330eed3096f8344a67bcd6a1ac5c04
+      internalID: 607430951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_30
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 1436
+        width: 74
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c31c4f82faa5b46a3902135be4efce
+      internalID: 135487196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_31
       rect:
         serializedVersion: 2
         x: 4
-        y: 5
-        width: 7
-        height: 226
+        y: 1407
+        width: 268
+        height: 114
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1ed4c1af46c50942b7ebce218061b3c
-      internalID: 1149847920
+      spriteID: 96842cd5d68810e428723cc3a2293149
+      internalID: 1650815032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_153
+      name: Kitchen Sprites#02_32
       rect:
         serializedVersion: 2
-        x: 18
-        y: 9
-        width: 26
-        height: 255
+        x: 1104
+        y: 1407
+        width: 72
+        height: 115
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a88fd85d6da7b647838005fe3b9e882
-      internalID: 78396923
+      spriteID: ce0e180a5aaf7f049b3e35c3a2be068b
+      internalID: 1927023270
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_154
+      name: Kitchen Sprites#02_33
       rect:
         serializedVersion: 2
-        x: 1644
-        y: 194
-        width: 15
-        height: 12
+        x: 1273
+        y: 1518
+        width: 17
+        height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ba7706fee3cff347ad57be0be9bee46
-      internalID: -750311222
+      spriteID: 031dc36f9dcfc6143be8c4e71ddb13a3
+      internalID: -1579430465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_155
+      name: Kitchen Sprites#02_34
       rect:
         serializedVersion: 2
-        x: 1728
-        y: 195
-        width: 15
-        height: 15
+        x: 1321
+        y: 1501
+        width: 29
+        height: 23
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff934416b6dc0dd4c8e0d45eca94c29b
-      internalID: 1195921032
+      spriteID: 913f489bdd2ca49459fbbaade20d3455
+      internalID: 1865881447
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_156
+      name: Kitchen Sprites#02_35
       rect:
         serializedVersion: 2
-        x: 2035
-        y: 189
-        width: 7
-        height: 37
+        x: 1416
+        y: 1509
+        width: 36
+        height: 35
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b020584dfe9b014baccde261d2ab652
-      internalID: -1560905178
+      spriteID: 64e5648544450014ba41f4ad41e3571c
+      internalID: -1692991935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_158
+      name: Kitchen Sprites#02_36
       rect:
         serializedVersion: 2
-        x: 1644
-        y: 5
-        width: 191
-        height: 183
+        x: 1453
+        y: 1512
+        width: 9
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48c19933f153e2040adaafcfe82dffe4
-      internalID: 1822335565
+      spriteID: c0a41448c49f1b3468307e725b7de7e6
+      internalID: 1302355371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_159
+      name: Kitchen Sprites#02_37
       rect:
         serializedVersion: 2
-        x: 1839
-        y: 3
-        width: 128
-        height: 186
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1862be547597b6f4fbdb51173723ffd3
-      internalID: 642870970
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_160
-      rect:
-        serializedVersion: 2
-        x: 2035
-        y: 148
-        width: 8
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d249951987a017409fef3f15db0e7b8
-      internalID: -1183073941
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_162
-      rect:
-        serializedVersion: 2
-        x: 1309
-        y: 4
-        width: 169
-        height: 137
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e176ea84b8bf6843ab32b3914b2f40d
-      internalID: 1351613946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_163
-      rect:
-        serializedVersion: 2
-        x: 1485
-        y: 48
-        width: 31
-        height: 75
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76f9dd307ae4a4b4cb3628130b9da3f0
-      internalID: -1486184672
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_164
-      rect:
-        serializedVersion: 2
-        x: 1524
-        y: 33
-        width: 69
-        height: 108
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f544c607f5042f0428ac5f712635e29c
-      internalID: 1122974436
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#00_165
-      rect:
-        serializedVersion: 2
-        x: 2035
-        y: 101
-        width: 7
+        x: 1218
+        y: 1470
+        width: 60
         height: 42
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8de68174676cd34418451b80043b189a
-      internalID: 1206797963
+      spriteID: 8f97c74dd5a350e4e8d540721f704f31
+      internalID: 1445977010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_166
+      name: Kitchen Sprites#02_38
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 1480
+        width: 37
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ea730b27c7eda41b8d7c4c85e35b9b
+      internalID: 150701541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_39
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 1496
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab542f515014c2c4a99aaa65ca9eca45
+      internalID: 999948017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_40
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1494
+        width: 40
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf24c74005395049b9e5a5e2546af68
+      internalID: 1438658556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_41
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 1452
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d23b35d8c13574db51ce3c814e3300
+      internalID: 1091992124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_42
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 1470
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cd0f1d2ee0248d4884811f18b08a035
+      internalID: 1648290302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_43
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 1471
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77ac0d08e3fa4e4aaaf7fcbf96baa10
+      internalID: -719222073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_44
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 1471
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855088c88bf3eeb49bd38c6a9287c0df
+      internalID: 1185641868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_45
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1296
+        width: 206
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e978d371c5d82845b92f6ded7e1c534
+      internalID: 11685567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_46
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 1296
+        width: 129
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8997b4b3da00e97489334550beac1056
+      internalID: -658883042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_47
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 1398
+        width: 108
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0882ea3c9c618904aa83462633281e56
+      internalID: -1994387040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_48
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 1230
+        width: 248
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e181ebbda0f0f499170facee85476d
+      internalID: 63340166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_49
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 1440
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c842bba5dd833c439e5f22501aebf1c
+      internalID: -529567818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_50
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1230
+        width: 131
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae21475e1b286004ab45f47d2945abfe
+      internalID: 216908475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_51
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1302
+        width: 73
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efdede30467ef9e49bc52732a6cc93f7
+      internalID: 1388193837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_52
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 1356
+        width: 77
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea8e217126b41c4fa73efe995542a11
+      internalID: -668618273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_53
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 1182
+        width: 216
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775675d970fb23b4cbcf7f8cba04e6f0
+      internalID: -2060322933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_54
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 1216
+        width: 114
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee37a56df7b9ac47a2a8ba8a8d807ae
+      internalID: -2043156627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_55
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1248
+        width: 129
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e956b6c2264fb854bb4ae42e13fb1faf
+      internalID: 135770962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_56
+      rect:
+        serializedVersion: 2
+        x: 1813
+        y: 1259
+        width: 70
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc4c0900a67cb264180783b4b7ee94ec
+      internalID: -2586603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_57
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1240
+        width: 72
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458a8dfac8d69f649a1670a8a34a8371
+      internalID: -1087390665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_58
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1290
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abbd9b76e1bc9ac41ab05eea2a0eb9fd
+      internalID: -516999653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_59
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 1226
+        width: 78
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4f510e43d44684fb829a0537cd1561
+      internalID: -1434786903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_60
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1138
+        width: 140
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4ea624a15186b4dbc635ff51080de9
+      internalID: 1760630009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_61
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1047
+        width: 128
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f31590d0c47bd4f90445d22bf9ff01
+      internalID: -1139615688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_62
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1110
+        width: 126
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c08dab69b4cb07748814eae546859319
+      internalID: -725484957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_63
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1140
+        width: 72
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b55d32cc6cfb64bb0f8b61d940f4bd
+      internalID: 1425506806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_64
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1110
+        width: 111
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45eb4a6ece6b13148a1f2cb9105d5b1a
+      internalID: -2096978527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_65
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 1121
+        width: 79
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b173a8662373240a44ecd28ae6a4ea
+      internalID: 461131660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_66
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 1110
+        width: 113
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae1f650127e16bc4c8185a0790b3f965
+      internalID: -1649611483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_67
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 1198
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137843a6a6049b24b9e8fba388701f08
+      internalID: 58206584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_68
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 1120
+        width: 74
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1cdae6a39e0686438e5c1031e26ceb7
+      internalID: -1383239925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_69
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1050
+        width: 138
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8bf00b6e3e43a74c9d40a60afe970e2
+      internalID: -1533850319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_70
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1036
+        width: 115
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e3ade4239083b419561991ea5fe874
+      internalID: 1832091945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_71
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 1068
+        width: 117
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f53358bd1248346ab44597f705a2a7
+      internalID: 1179423853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_72
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1074
+        width: 82
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c740c727e374e341a45b8b5311d2433
+      internalID: 553018827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_73
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 900
+        width: 199
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 306ba43b95a270346a29c4bcecebf9ce
+      internalID: -2112949106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_74
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 918
+        width: 123
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe09653083704b41a818cb896b347f0
+      internalID: -1165453562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_75
       rect:
         serializedVersion: 2
         x: 636
-        y: 93
-        width: 4
-        height: 6
+        y: 923
+        width: 112
+        height: 169
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e6675b09ae0ae0418d42f9b4ad3e2c9
-      internalID: 984882688
+      spriteID: 93d769db8dc987542aee5eaa5b1e3d3c
+      internalID: -1540079542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_168
+      name: Kitchen Sprites#02_76
       rect:
         serializedVersion: 2
-        x: 585
-        y: 47
-        width: 31
-        height: 34
+        x: 918
+        y: 1008
+        width: 113
+        height: 174
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2539bcbc00709f4193872e791482e51
-      internalID: -1739931404
+      spriteID: 9bee59102b3881741ac05e24942c74e0
+      internalID: 1423010187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_169
+      name: Kitchen Sprites#02_77
       rect:
         serializedVersion: 2
-        x: 619
-        y: 47
-        width: 31
-        height: 34
+        x: 1051
+        y: 1015
+        width: 75
+        height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e3321431991379459b77358e37f8576
-      internalID: 1851682719
+      spriteID: 5f59217c381a59945b00f0c2c94ba486
+      internalID: -1424433809
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_170
+      name: Kitchen Sprites#02_78
       rect:
         serializedVersion: 2
-        x: 653
-        y: 47
-        width: 31
-        height: 34
+        x: 1309
+        y: 1064
+        width: 77
+        height: 113
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35a533ee0f53fad48a44259e44452265
-      internalID: -131265837
+      spriteID: b8267cb3da741d746a66e7a8cdee91a8
+      internalID: 848994736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_172
+      name: Kitchen Sprites#02_79
       rect:
         serializedVersion: 2
-        x: 585
-        y: 3
-        width: 31
-        height: 34
+        x: 1522
+        y: 1047
+        width: 74
+        height: 113
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdac465a3262eda44b3315159bfb24de
-      internalID: 1700623457
+      spriteID: e92b0a761278bac4291245355b164788
+      internalID: -619725856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_173
+      name: Kitchen Sprites#02_80
       rect:
         serializedVersion: 2
-        x: 619
-        y: 3
-        width: 31
-        height: 34
+        x: 1746
+        y: 1081
+        width: 78
+        height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ac527ad7efe7ee4594c12c3bca96bef
-      internalID: -1462326659
+      spriteID: bf626b7f9ce995a47b3e30ce5866ee47
+      internalID: 361578032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_174
+      name: Kitchen Sprites#02_81
       rect:
         serializedVersion: 2
-        x: 653
-        y: 3
-        width: 31
-        height: 34
+        x: 1824
+        y: 960
+        width: 114
+        height: 176
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 515951d8e61699e459584f234cc0a5db
-      internalID: -2123372950
+      spriteID: 178b86220a6a7fb42a68fe48c62ecceb
+      internalID: 30974963
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_175
+      name: Kitchen Sprites#02_82
       rect:
         serializedVersion: 2
-        x: 1692
+        x: 1959
+        y: 970
+        width: 75
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd68532181863446a6a11316ddf0b10
+      internalID: -186516862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_83
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 872
+        width: 127
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec484475cb8ea54bb4d04db547b168a
+      internalID: -942386811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_84
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1023
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859f90f90ab324c478c05f2016bc96af
+      internalID: -1734938734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_85
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 960
+        width: 70
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3bb4960b3c2702499d14fb0cef57747
+      internalID: 1375082961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_86
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 951
+        width: 70
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eecb97a2be1eac244a2aa86a64302ce7
+      internalID: -1773542113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_87
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 942
+        width: 88
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 330fc8d16f7320c4382c7759c27ff50c
+      internalID: -1414508614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_88
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 876
+        width: 114
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29b49ae608f91c42a69979208b20c26
+      internalID: 1822357392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_89
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 858
+        width: 135
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17910dd8f99440c4eb9194dbd7b95993
+      internalID: 1268510409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_90
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 889
+        width: 120
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b33590a2aefc3409af1b3191eeac2d
+      internalID: 1501353841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_91
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 970
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40003b17ddb46394196abafcf9481d32
+      internalID: -650471573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_92
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 817
+        width: 120
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02572aea9345c83459933fc57d99d7e0
+      internalID: -1937509049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_93
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 882
+        width: 74
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae2dc885c2530640b80abfb14a7a451
+      internalID: -1529090744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_94
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 869
+        width: 78
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0043ed38d78f32429cd27c3b7ab1a32
+      internalID: 767334779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_95
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 902
+        width: 73
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0639d8a244bf1d49a2fe216509639e3
+      internalID: -1675095642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_96
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 984
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8a29ee3a9fcaf4db294262d69bf1b5
+      internalID: -1153897968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_97
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 696
+        width: 115
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2708f371f540e394c8a1337c92a1896e
+      internalID: 919063120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_98
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 762
+        width: 128
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec5d28e8d48a5548bd916e04509852e
+      internalID: -65703371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_99
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 790
+        width: 72
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd5970dde004a645bfde46d03c61abc
+      internalID: -1987801576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_100
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 836
+        width: 110
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc934e64e8f26243af7c6451e550c77
+      internalID: 814904623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_101
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 744
+        width: 132
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2957b66c163cea458e32667ccb57c90
+      internalID: 205425416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_102
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 836
+        width: 77
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ddd50e8644f7ab4495e514a6853a3a7
+      internalID: -444981318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_103
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 688
+        width: 116
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c21246e6cfa764eae5bbcb0de0e5b6
+      internalID: -664270411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_104
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 670
+        width: 116
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba7d60bbf26a964c9ca8d75cf8b072d
+      internalID: 1978587875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_105
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 714
+        width: 114
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b82c7577d22f6cd408a926a1d6cfde32
+      internalID: 1392165919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_106
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 723
+        width: 79
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d2973ed80549164b95d08bf5a6dec10
+      internalID: 2024052618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_107
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 780
+        width: 111
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df034df016d6a75478dae6d1da724b0f
+      internalID: -1572605186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_108
+      rect:
+        serializedVersion: 2
+        x: 1938
+        y: 792
+        width: 80
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a588c1ac175fae41bc58bc1a94c2ddd
+      internalID: -1198287930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_109
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 716
+        width: 82
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b7766e181028e4f88fabca90f25abe
+      internalID: 1895749304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_110
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 680
+        width: 110
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c199ba4e8e16c4cbce6aa9c8ab730b
+      internalID: 1672028556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_111
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 721
+        width: 170
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dddb6634f31cff645a955cdf4db85344
+      internalID: -1993672133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_112
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 564
+        width: 124
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6baef4b8b1c55f4cb21782d1f39e5ee
+      internalID: -320454724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_113
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 642
+        width: 128
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e1c5df9c102e9a44b1d918797d49087
+      internalID: 513338313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_114
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 680
+        width: 73
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27696fd884b7d094c82d6be784355151
+      internalID: 1649244502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_115
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 702
+        width: 77
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 237a4d00af44b434996f3252ac94e935
+      internalID: 710556511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_116
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 690
+        width: 82
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32925e4c72d98084cb1ebc712919939d
+      internalID: 156603454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_117
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 594
+        width: 126
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ba32bdb5f108442817cba1c49d74f0
+      internalID: -1647819209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_118
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 621
+        width: 75
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725c77716406a60419ac7f6a2db1147c
+      internalID: 1316085434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_119
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 592
+        width: 124
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c4fa887cd356f4c8c4347f71926f37
+      internalID: -1043191845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_120
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 595
+        width: 119
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762cc1f566d7c1e42a04218877619df2
+      internalID: 1544715688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_121
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 564
+        width: 358
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f63f169055e55bd4b931ec74602f1a43
+      internalID: 639703719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_122
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 552
+        width: 108
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25dae24eb2db77343bedbb1d1baf5668
+      internalID: -1409161577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_123
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 513
+        width: 127
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3626a35ea0065245a47e4c652dd79b9
+      internalID: 89702838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_124
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 556
+        width: 81
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203c3bfd15cb7bb4fbc0aa09878d1313
+      internalID: 1093591624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_125
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 493
+        width: 132
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41ba06a3f664e142b9d82cce2cfc9ed
+      internalID: -1921006675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_126
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 539
+        width: 75
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21fa75f953e260747aba11f40e4c40c1
+      internalID: 1352747268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_127
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 525
+        width: 114
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086e483cc415a324f945642635c1dba3
+      internalID: -965804236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_128
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 544
+        width: 76
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8abed3a89c8124429c5493f041f9137
+      internalID: 2100691237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_129
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 462
+        width: 180
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d19692748a7d3447b39f3ad82fffd09
+      internalID: 1245361114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_130
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 462
+        width: 174
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5e0d82414c9aa4d819ed49d4d2b5de
+      internalID: 1754688331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_131
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 432
+        width: 174
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002fb6e2504064040b41896a0acc89f5
+      internalID: 259180701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_132
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 560
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4be6fe41702964192df5895f3ab69c
+      internalID: -165976669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_133
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 418
+        width: 114
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c38228a2ce5c640aadf679e3af66a9
+      internalID: -971947585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_134
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 414
+        width: 140
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e68f264ad5a96f4fbc1da4892ac1c7e
+      internalID: 144250816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_135
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 414
+        width: 169
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b6753720fa3cf45afb8cd9bce12487
+      internalID: 1413250980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_136
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 420
+        width: 175
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1dda8a8ff0b1dc4099468514a016f36
+      internalID: -1749196830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_137
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 444
+        width: 168
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02775d15438b732489d48219535dead5
+      internalID: -1561478567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_138
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 338
+        width: 128
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2c9bc5c3cea4c4ca8565ff66bc1d24
+      internalID: 501046980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_139
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 381
+        width: 75
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0461a8b94423b44b799f7550a78b8c
+      internalID: -1835757769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_140
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 321
+        width: 127
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2005b44816bfcdb43825030403449eea
+      internalID: -1652988612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_141
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 364
+        width: 74
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 178f55dc4ef9618439871536c97a06a4
+      internalID: 742077826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_142
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 349
+        width: 133
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d31b50719eea8244a0b3e6242b70ae3
+      internalID: 994502425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_143
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 393
+        width: 75
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7873949a86c05914d8c10632cf8066fc
+      internalID: -1575051986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_144
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 438
+        width: 79
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d033491f015655843acf67a35c5aaf48
+      internalID: -1310156597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_145
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 336
+        width: 124
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4752ab39fd954645a1aeeefc564e967
+      internalID: 1834571506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_146
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 340
+        width: 118
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1273b6de603ef449b55c374fc4daa9
+      internalID: -1024350599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_147
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 327
+        width: 106
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d398055831403409c3e478f43baf88
+      internalID: 1062959111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_148
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 316
+        width: 97
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f348b8c83f1913f4bbb0264fb086f8fb
+      internalID: 2095028532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_149
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 210
+        width: 169
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8536fe31fbe36584085f8d6ad87fc02f
+      internalID: 46721618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_150
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 336
+        width: 100
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0ca0eea0ae4784585cce8d930ec121
+      internalID: 1766056667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_151
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 336
+        width: 90
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d40b2f6a59ed34ea297782e8947546
+      internalID: -506981899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_152
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 174
+        width: 133
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e7567b3785b9c4bae6c6f24de7530a
+      internalID: 1239741603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_153
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 244
+        width: 133
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17d1b6d74289ba478376585985ee054
+      internalID: -662125916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_154
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 277
+        width: 72
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70b1e8556cc68b48a88724686249f79
+      internalID: 1257527740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_155
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 217
+        width: 174
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9565f0c12217607439d299b2aa146c77
+      internalID: -528981406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_156
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 180
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a786ab41f2e9ef4b913ac578a9b619f
+      internalID: 133242092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_157
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 210
+        width: 174
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3464ba4314c860d479eb820b3e018008
+      internalID: 1092070086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_158
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 214
+        width: 172
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64288cc9bc0dd8441bc3228c7abb16f3
+      internalID: 114178647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_159
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 212
+        width: 174
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c424eb89f44b146b4085a9b425e056
+      internalID: 1355895790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_160
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 210
+        width: 173
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d05eeed9d3a0f449fc6e23594a8be4
+      internalID: 99409161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_161
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 180
+        width: 174
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1e01202bd0e9894aaba495fd00bff2d
+      internalID: 1074694621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_162
+      rect:
+        serializedVersion: 2
+        x: 1595
+        y: 208
+        width: 73
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c941dfce9cb25d04dbe3197bc2e13888
+      internalID: 5585920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_163
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 66
+        width: 133
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84808215e435d44a9313d354339f5aa
+      internalID: 1906542800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_164
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 114
+        width: 105
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdedb2e48ad861d469857d7a648a0db5
+      internalID: 400004860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_165
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 116
+        width: 105
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fda5d883dda8214a9f218967528ab16
+      internalID: -724794322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_166
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 132
+        width: 96
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290ac024e4fee1a4195d7c3a1f712f08
+      internalID: 142076912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_167
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 130
+        width: 97
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f8972067d8ccb64e8dfe0d81878f9a6
+      internalID: -1183661443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_168
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 130
+        width: 102
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4906919b9dcb2124f9d2ca4ce1e173da
+      internalID: -579262608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_169
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 136
+        width: 102
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28bf604a7b25bd48bd26105c4092785
+      internalID: 1607650444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_170
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 126
+        width: 93
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d3d2e0e790d4c042b048597aa007f7c
+      internalID: 1541478098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_171
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 4
+        width: 168
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44d83b8019afcc4dbd3c6b15caaac7a
+      internalID: -1373966738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_172
+      rect:
+        serializedVersion: 2
+        x: 1402
         y: 12
-        width: 4
-        height: 6
+        width: 176
+        height: 156
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2709d8610ef0cd24cac1df9fb1866df1
-      internalID: -5506003
+      spriteID: 2a529684e532a124bb55b5c7c1a92485
+      internalID: 792671359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_173
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 102
+        width: 72
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68662e69153d7fa49a6d1b5c65a7b673
+      internalID: 334123428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_174
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 130
+        width: 110
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edb77227a6f1b044a3ee87c90d095d2
+      internalID: 817151393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_175
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 6
+        width: 171
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5871129251d9f6a4a991df4d0ef8287c
+      internalID: 1594561702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_176
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 6
+        width: 172
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7afc349d02ba59b4f8ed771547ba1be3
+      internalID: -1916106588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_177
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 99
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f962948878095545a468978776d337c
+      internalID: -1283237282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_178
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 8
+        width: 169
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067801c2f71091347a95b45cf4cbd246
+      internalID: -1984127509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_179
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 0
+        width: 169
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04be7f627e27014c8e86a49b630977b
+      internalID: 281804147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_180
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 9
+        width: 177
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a20a3ed3e634444298c8630221a2abe
+      internalID: -863540352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_181
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 9
+        width: 172
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4b647c3f2ec414dae19190e4d7ba09
+      internalID: -1100646600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_182
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 6
+        width: 173
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de41b449c7cb95459e956b83e50afdb
+      internalID: 1236809086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_183
+      rect:
+        serializedVersion: 2
+        x: 1877
+        y: 18
+        width: 169
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ab20ba7ddf22b42a8def5f732ac6eb
+      internalID: 1789750333
       vertices: []
       indices: 
       edges: []
@@ -3745,182 +3984,190 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Kitchen Sprites#00_0: -558605872
-      Kitchen Sprites#00_1: 2097982387
-      Kitchen Sprites#00_10: 576318266
-      Kitchen Sprites#00_100: -621334870
-      Kitchen Sprites#00_101: 235385471
-      Kitchen Sprites#00_102: -734865403
-      Kitchen Sprites#00_103: -1633627320
-      Kitchen Sprites#00_104: -311633708
-      Kitchen Sprites#00_105: 1248457396
-      Kitchen Sprites#00_106: 1493760521
-      Kitchen Sprites#00_107: -2002893705
-      Kitchen Sprites#00_108: -1829329194
-      Kitchen Sprites#00_109: 516687314
-      Kitchen Sprites#00_11: 1108876152
-      Kitchen Sprites#00_110: 1101219608
-      Kitchen Sprites#00_111: 1830317777
-      Kitchen Sprites#00_112: -1772126749
-      Kitchen Sprites#00_113: -649356947
-      Kitchen Sprites#00_114: -369854946
-      Kitchen Sprites#00_115: 106566260
-      Kitchen Sprites#00_116: -1731014655
-      Kitchen Sprites#00_117: -917939964
-      Kitchen Sprites#00_118: -169485904
-      Kitchen Sprites#00_119: 1585503054
-      Kitchen Sprites#00_12: 407698933
-      Kitchen Sprites#00_120: 1806157606
-      Kitchen Sprites#00_121: 2019211146
-      Kitchen Sprites#00_122: -1233249608
-      Kitchen Sprites#00_123: -1732116474
-      Kitchen Sprites#00_124: -238232718
-      Kitchen Sprites#00_125: 1291045980
-      Kitchen Sprites#00_126: -1995765754
-      Kitchen Sprites#00_127: -817757337
-      Kitchen Sprites#00_128: -1860055112
-      Kitchen Sprites#00_129: 1906123882
-      Kitchen Sprites#00_13: 145324890
-      Kitchen Sprites#00_130: -908974435
-      Kitchen Sprites#00_131: 1797462640
-      Kitchen Sprites#00_132: 527198406
-      Kitchen Sprites#00_133: -1460707082
-      Kitchen Sprites#00_134: 2101741388
-      Kitchen Sprites#00_135: -212023942
-      Kitchen Sprites#00_136: 1959384881
-      Kitchen Sprites#00_137: -1119557717
-      Kitchen Sprites#00_138: -1072735504
-      Kitchen Sprites#00_139: -1008002929
-      Kitchen Sprites#00_14: 2139143170
-      Kitchen Sprites#00_140: 1401515736
-      Kitchen Sprites#00_141: -2144397425
-      Kitchen Sprites#00_142: -1378672484
-      Kitchen Sprites#00_143: -1402807953
-      Kitchen Sprites#00_144: 1979524000
-      Kitchen Sprites#00_145: -35179399
-      Kitchen Sprites#00_146: -2016902037
-      Kitchen Sprites#00_147: 221845081
-      Kitchen Sprites#00_148: 1133901197
-      Kitchen Sprites#00_149: -1556096579
-      Kitchen Sprites#00_15: 719607798
-      Kitchen Sprites#00_150: -777169857
-      Kitchen Sprites#00_151: 143432035
-      Kitchen Sprites#00_153: 78396923
-      Kitchen Sprites#00_154: -750311222
-      Kitchen Sprites#00_155: 1195921032
-      Kitchen Sprites#00_156: -1560905178
-      Kitchen Sprites#00_157: 1331639880
-      Kitchen Sprites#00_158: 1822335565
-      Kitchen Sprites#00_159: 642870970
-      Kitchen Sprites#00_16: -2080420833
-      Kitchen Sprites#00_160: -1183073941
-      Kitchen Sprites#00_161: -1284685360
-      Kitchen Sprites#00_162: 1351613946
-      Kitchen Sprites#00_163: -1486184672
-      Kitchen Sprites#00_164: 1122974436
-      Kitchen Sprites#00_165: 1206797963
-      Kitchen Sprites#00_166: 984882688
-      Kitchen Sprites#00_167: -390408673
-      Kitchen Sprites#00_168: -1739931404
-      Kitchen Sprites#00_169: 1851682719
-      Kitchen Sprites#00_17: -1999516778
-      Kitchen Sprites#00_170: -131265837
-      Kitchen Sprites#00_171: -273221829
-      Kitchen Sprites#00_172: 1700623457
-      Kitchen Sprites#00_173: -1462326659
-      Kitchen Sprites#00_174: -2123372950
-      Kitchen Sprites#00_175: -5506003
-      Kitchen Sprites#00_18: -1900415201
-      Kitchen Sprites#00_19: -1497167038
-      Kitchen Sprites#00_2: -831038312
-      Kitchen Sprites#00_20: -1995889870
-      Kitchen Sprites#00_21: -524489022
-      Kitchen Sprites#00_22: 38381116
-      Kitchen Sprites#00_23: -1619184805
-      Kitchen Sprites#00_24: 1189004146
-      Kitchen Sprites#00_25: -596889533
-      Kitchen Sprites#00_26: -687434651
-      Kitchen Sprites#00_27: 1434281823
-      Kitchen Sprites#00_28: -965120935
-      Kitchen Sprites#00_29: -1699336724
-      Kitchen Sprites#00_3: -902548057
-      Kitchen Sprites#00_30: -1362545902
-      Kitchen Sprites#00_31: 650466700
-      Kitchen Sprites#00_32: -2061807504
-      Kitchen Sprites#00_33: 1697522494
-      Kitchen Sprites#00_34: -1495500891
-      Kitchen Sprites#00_35: 1817947741
-      Kitchen Sprites#00_36: 503787021
-      Kitchen Sprites#00_37: 988836187
-      Kitchen Sprites#00_38: 1932475443
-      Kitchen Sprites#00_39: 1435797734
-      Kitchen Sprites#00_4: 465704199
-      Kitchen Sprites#00_40: 1187005596
-      Kitchen Sprites#00_41: -1237549035
-      Kitchen Sprites#00_42: 942897659
-      Kitchen Sprites#00_43: -1135774002
-      Kitchen Sprites#00_44: -1946794044
-      Kitchen Sprites#00_45: -398516984
-      Kitchen Sprites#00_46: -885763340
-      Kitchen Sprites#00_47: 1694982841
-      Kitchen Sprites#00_48: -1140087628
-      Kitchen Sprites#00_49: 1366955016
-      Kitchen Sprites#00_5: -1349536145
-      Kitchen Sprites#00_50: -1471550783
-      Kitchen Sprites#00_51: 521087150
-      Kitchen Sprites#00_52: 1057074762
-      Kitchen Sprites#00_53: 994813358
-      Kitchen Sprites#00_54: 1999267405
-      Kitchen Sprites#00_55: -1370534096
-      Kitchen Sprites#00_56: 1113720562
-      Kitchen Sprites#00_57: 753307279
-      Kitchen Sprites#00_58: 1625003677
-      Kitchen Sprites#00_59: -870675151
-      Kitchen Sprites#00_6: 1960501459
-      Kitchen Sprites#00_60: 1274553176
-      Kitchen Sprites#00_61: -185113684
-      Kitchen Sprites#00_62: 767364412
-      Kitchen Sprites#00_63: -1549849338
-      Kitchen Sprites#00_64: -892923746
-      Kitchen Sprites#00_65: -268066280
-      Kitchen Sprites#00_66: -1414160654
-      Kitchen Sprites#00_67: -1926442253
-      Kitchen Sprites#00_68: -1875851036
-      Kitchen Sprites#00_69: -1953132618
-      Kitchen Sprites#00_7: 2123646499
-      Kitchen Sprites#00_70: 808264760
-      Kitchen Sprites#00_71: 1732097598
-      Kitchen Sprites#00_72: 1321778739
-      Kitchen Sprites#00_73: -426715165
-      Kitchen Sprites#00_74: -1427650179
-      Kitchen Sprites#00_75: 492939358
-      Kitchen Sprites#00_76: -463934247
-      Kitchen Sprites#00_77: 1028419865
-      Kitchen Sprites#00_78: -960429948
-      Kitchen Sprites#00_79: -1183755093
-      Kitchen Sprites#00_8: -301313036
-      Kitchen Sprites#00_80: -151309160
-      Kitchen Sprites#00_81: -43603284
-      Kitchen Sprites#00_82: -1804889683
-      Kitchen Sprites#00_83: -431303369
-      Kitchen Sprites#00_84: -1032621655
-      Kitchen Sprites#00_85: 1095769703
-      Kitchen Sprites#00_86: -122855325
-      Kitchen Sprites#00_87: -980261017
-      Kitchen Sprites#00_88: 787217892
-      Kitchen Sprites#00_89: 1121584496
-      Kitchen Sprites#00_9: 880920615
-      Kitchen Sprites#00_90: -1410280095
-      Kitchen Sprites#00_91: -13255797
-      Kitchen Sprites#00_92: 1030536000
-      Kitchen Sprites#00_93: 1883027488
-      Kitchen Sprites#00_94: -1339861952
-      Kitchen Sprites#00_95: 210792887
-      Kitchen Sprites#00_96: 713854837
-      Kitchen Sprites#00_97: -264461482
-      Kitchen Sprites#00_98: -21052435
-      Kitchen Sprites#00_99: -1595968989
-      cutGuide: 1149847920
+      Kitchen Sprites#02_0: 319731780
+      Kitchen Sprites#02_1: -103358392
+      Kitchen Sprites#02_10: -779208519
+      Kitchen Sprites#02_100: 814904623
+      Kitchen Sprites#02_101: 205425416
+      Kitchen Sprites#02_102: -444981318
+      Kitchen Sprites#02_103: -664270411
+      Kitchen Sprites#02_104: 1978587875
+      Kitchen Sprites#02_105: 1392165919
+      Kitchen Sprites#02_106: 2024052618
+      Kitchen Sprites#02_107: -1572605186
+      Kitchen Sprites#02_108: -1198287930
+      Kitchen Sprites#02_109: 1895749304
+      Kitchen Sprites#02_11: 901967676
+      Kitchen Sprites#02_110: 1672028556
+      Kitchen Sprites#02_111: -1993672133
+      Kitchen Sprites#02_112: -320454724
+      Kitchen Sprites#02_113: 513338313
+      Kitchen Sprites#02_114: 1649244502
+      Kitchen Sprites#02_115: 710556511
+      Kitchen Sprites#02_116: 156603454
+      Kitchen Sprites#02_117: -1647819209
+      Kitchen Sprites#02_118: 1316085434
+      Kitchen Sprites#02_119: -1043191845
+      Kitchen Sprites#02_12: -1537264221
+      Kitchen Sprites#02_120: 1544715688
+      Kitchen Sprites#02_121: 639703719
+      Kitchen Sprites#02_122: -1409161577
+      Kitchen Sprites#02_123: 89702838
+      Kitchen Sprites#02_124: 1093591624
+      Kitchen Sprites#02_125: -1921006675
+      Kitchen Sprites#02_126: 1352747268
+      Kitchen Sprites#02_127: -965804236
+      Kitchen Sprites#02_128: 2100691237
+      Kitchen Sprites#02_129: 1245361114
+      Kitchen Sprites#02_13: -116235027
+      Kitchen Sprites#02_130: 1754688331
+      Kitchen Sprites#02_131: 259180701
+      Kitchen Sprites#02_132: -165976669
+      Kitchen Sprites#02_133: -971947585
+      Kitchen Sprites#02_134: 144250816
+      Kitchen Sprites#02_135: 1413250980
+      Kitchen Sprites#02_136: -1749196830
+      Kitchen Sprites#02_137: -1561478567
+      Kitchen Sprites#02_138: 501046980
+      Kitchen Sprites#02_139: -1835757769
+      Kitchen Sprites#02_14: -693100707
+      Kitchen Sprites#02_140: -1652988612
+      Kitchen Sprites#02_141: 742077826
+      Kitchen Sprites#02_142: 994502425
+      Kitchen Sprites#02_143: -1575051986
+      Kitchen Sprites#02_144: -1310156597
+      Kitchen Sprites#02_145: 1834571506
+      Kitchen Sprites#02_146: -1024350599
+      Kitchen Sprites#02_147: 1062959111
+      Kitchen Sprites#02_148: 2095028532
+      Kitchen Sprites#02_149: 46721618
+      Kitchen Sprites#02_15: -493873988
+      Kitchen Sprites#02_150: 1766056667
+      Kitchen Sprites#02_151: -506981899
+      Kitchen Sprites#02_152: 1239741603
+      Kitchen Sprites#02_153: -662125916
+      Kitchen Sprites#02_154: 1257527740
+      Kitchen Sprites#02_155: -528981406
+      Kitchen Sprites#02_156: 133242092
+      Kitchen Sprites#02_157: 1092070086
+      Kitchen Sprites#02_158: 114178647
+      Kitchen Sprites#02_159: 1355895790
+      Kitchen Sprites#02_16: 132787579
+      Kitchen Sprites#02_160: 99409161
+      Kitchen Sprites#02_161: 1074694621
+      Kitchen Sprites#02_162: 5585920
+      Kitchen Sprites#02_163: 1906542800
+      Kitchen Sprites#02_164: 400004860
+      Kitchen Sprites#02_165: -724794322
+      Kitchen Sprites#02_166: 142076912
+      Kitchen Sprites#02_167: -1183661443
+      Kitchen Sprites#02_168: -579262608
+      Kitchen Sprites#02_169: 1607650444
+      Kitchen Sprites#02_17: 1259328741
+      Kitchen Sprites#02_170: 1541478098
+      Kitchen Sprites#02_171: -1373966738
+      Kitchen Sprites#02_172: 792671359
+      Kitchen Sprites#02_173: 334123428
+      Kitchen Sprites#02_174: 817151393
+      Kitchen Sprites#02_175: 1594561702
+      Kitchen Sprites#02_176: -1916106588
+      Kitchen Sprites#02_177: -1283237282
+      Kitchen Sprites#02_178: -1984127509
+      Kitchen Sprites#02_179: 281804147
+      Kitchen Sprites#02_18: 2142434551
+      Kitchen Sprites#02_180: -863540352
+      Kitchen Sprites#02_181: -1100646600
+      Kitchen Sprites#02_182: 1236809086
+      Kitchen Sprites#02_183: 1789750333
+      Kitchen Sprites#02_19: 1736065049
+      Kitchen Sprites#02_2: 284453010
+      Kitchen Sprites#02_20: 1983989291
+      Kitchen Sprites#02_21: -647421515
+      Kitchen Sprites#02_22: -1367441042
+      Kitchen Sprites#02_23: -1616796536
+      Kitchen Sprites#02_24: 1524002655
+      Kitchen Sprites#02_25: -594331963
+      Kitchen Sprites#02_26: 237381816
+      Kitchen Sprites#02_27: 272201676
+      Kitchen Sprites#02_28: -2050926027
+      Kitchen Sprites#02_29: 607430951
+      Kitchen Sprites#02_3: 780588328
+      Kitchen Sprites#02_30: 135487196
+      Kitchen Sprites#02_31: 1650815032
+      Kitchen Sprites#02_32: 1927023270
+      Kitchen Sprites#02_33: -1579430465
+      Kitchen Sprites#02_34: 1865881447
+      Kitchen Sprites#02_35: -1692991935
+      Kitchen Sprites#02_36: 1302355371
+      Kitchen Sprites#02_37: 1445977010
+      Kitchen Sprites#02_38: 150701541
+      Kitchen Sprites#02_39: 999948017
+      Kitchen Sprites#02_4: -558665815
+      Kitchen Sprites#02_40: 1438658556
+      Kitchen Sprites#02_41: 1091992124
+      Kitchen Sprites#02_42: 1648290302
+      Kitchen Sprites#02_43: -719222073
+      Kitchen Sprites#02_44: 1185641868
+      Kitchen Sprites#02_45: 11685567
+      Kitchen Sprites#02_46: -658883042
+      Kitchen Sprites#02_47: -1994387040
+      Kitchen Sprites#02_48: 63340166
+      Kitchen Sprites#02_49: -529567818
+      Kitchen Sprites#02_5: -1551504343
+      Kitchen Sprites#02_50: 216908475
+      Kitchen Sprites#02_51: 1388193837
+      Kitchen Sprites#02_52: -668618273
+      Kitchen Sprites#02_53: -2060322933
+      Kitchen Sprites#02_54: -2043156627
+      Kitchen Sprites#02_55: 135770962
+      Kitchen Sprites#02_56: -2586603
+      Kitchen Sprites#02_57: -1087390665
+      Kitchen Sprites#02_58: -516999653
+      Kitchen Sprites#02_59: -1434786903
+      Kitchen Sprites#02_6: 693137020
+      Kitchen Sprites#02_60: 1760630009
+      Kitchen Sprites#02_61: -1139615688
+      Kitchen Sprites#02_62: -725484957
+      Kitchen Sprites#02_63: 1425506806
+      Kitchen Sprites#02_64: -2096978527
+      Kitchen Sprites#02_65: 461131660
+      Kitchen Sprites#02_66: -1649611483
+      Kitchen Sprites#02_67: 58206584
+      Kitchen Sprites#02_68: -1383239925
+      Kitchen Sprites#02_69: -1533850319
+      Kitchen Sprites#02_7: 1649330179
+      Kitchen Sprites#02_70: 1832091945
+      Kitchen Sprites#02_71: 1179423853
+      Kitchen Sprites#02_72: 553018827
+      Kitchen Sprites#02_73: -2112949106
+      Kitchen Sprites#02_74: -1165453562
+      Kitchen Sprites#02_75: -1540079542
+      Kitchen Sprites#02_76: 1423010187
+      Kitchen Sprites#02_77: -1424433809
+      Kitchen Sprites#02_78: 848994736
+      Kitchen Sprites#02_79: -619725856
+      Kitchen Sprites#02_8: 473987859
+      Kitchen Sprites#02_80: 361578032
+      Kitchen Sprites#02_81: 30974963
+      Kitchen Sprites#02_82: -186516862
+      Kitchen Sprites#02_83: -942386811
+      Kitchen Sprites#02_84: -1734938734
+      Kitchen Sprites#02_85: 1375082961
+      Kitchen Sprites#02_86: -1773542113
+      Kitchen Sprites#02_87: -1414508614
+      Kitchen Sprites#02_88: 1822357392
+      Kitchen Sprites#02_89: 1268510409
+      Kitchen Sprites#02_9: 120025541
+      Kitchen Sprites#02_90: 1501353841
+      Kitchen Sprites#02_91: -650471573
+      Kitchen Sprites#02_92: -1937509049
+      Kitchen Sprites#02_93: -1529090744
+      Kitchen Sprites#02_94: 767334779
+      Kitchen Sprites#02_95: -1675095642
+      Kitchen Sprites#02_96: -1153897968
+      Kitchen Sprites#02_97: 919063120
+      Kitchen Sprites#02_98: -65703371
+      Kitchen Sprites#02_99: -1987801576
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
