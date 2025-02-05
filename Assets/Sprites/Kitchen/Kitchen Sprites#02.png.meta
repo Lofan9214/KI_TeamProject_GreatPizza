@@ -106,19 +106,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kitchen Sprites#02_0
+      name: tomato2
       rect:
         serializedVersion: 2
         x: 3
-        y: 1972
-        width: 321
-        height: 74
+        y: 1864
+        width: 357
+        height: 182
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,36 +144,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_1
-      rect:
-        serializedVersion: 2
-        x: 114
-        y: 1863
-        width: 246
-        height: 132
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db59bcdb01559684e92f20a47a331847
-      internalID: -103358392
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Kitchen Sprites#02_2
       rect:
         serializedVersion: 2
         x: 365
-        y: 1971
-        width: 325
-        height: 75
+        y: 1864
+        width: 358
+        height: 182
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,27 +160,6 @@ TextureImporter:
       bones: []
       spriteID: 29db4c5977e581844b3d99a9bf5d8a6b
       internalID: 284453010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_3
-      rect:
-        serializedVersion: 2
-        x: 474
-        y: 1860
-        width: 248
-        height: 135
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01fc81ed50ed8fb42a526e2fffb5171a
-      internalID: 780588328
       vertices: []
       indices: 
       edges: []
@@ -202,7 +173,7 @@ TextureImporter:
         width: 339
         height: 333
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,12 +189,12 @@ TextureImporter:
       name: Kitchen Sprites#02_5
       rect:
         serializedVersion: 2
-        x: 1068
+        x: 1069
         y: 1812
-        width: 294
+        width: 290
         height: 234
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -241,10 +212,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1362
         y: 1838
-        width: 582
+        width: 290
         height: 208
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,7 +236,7 @@ TextureImporter:
         width: 342
         height: 330
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,7 +257,7 @@ TextureImporter:
         width: 338
         height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -307,7 +278,7 @@ TextureImporter:
         width: 268
         height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,7 +299,7 @@ TextureImporter:
         width: 268
         height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -349,7 +320,7 @@ TextureImporter:
         width: 271
         height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -370,7 +341,7 @@ TextureImporter:
         width: 135
         height: 171
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -391,7 +362,7 @@ TextureImporter:
         width: 337
         height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -412,7 +383,7 @@ TextureImporter:
         width: 268
         height: 117
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -433,7 +404,7 @@ TextureImporter:
         width: 269
         height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -454,7 +425,7 @@ TextureImporter:
         width: 268
         height: 115
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -475,7 +446,7 @@ TextureImporter:
         width: 268
         height: 115
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -491,12 +462,12 @@ TextureImporter:
       name: Kitchen Sprites#02_18
       rect:
         serializedVersion: 2
-        x: 1884
-        y: 1314
-        width: 148
-        height: 348
+        x: 1889
+        y: 1491
+        width: 143
+        height: 170
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -512,12 +483,12 @@ TextureImporter:
       name: Kitchen Sprites#02_19
       rect:
         serializedVersion: 2
-        x: 1248
-        y: 1590
-        width: 12
-        height: 6
+        x: 537
+        y: 567
+        width: 173
+        height: 122
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -530,36 +501,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_20
-      rect:
-        serializedVersion: 2
-        x: 1426
-        y: 1591
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99da8123b0e32a94aa8a774278071abd
-      internalID: 1983989291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Kitchen Sprites#02_21
       rect:
         serializedVersion: 2
         x: 1464
         y: 1392
-        width: 333
+        width: 215
         height: 210
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -580,7 +530,7 @@ TextureImporter:
         width: 268
         height: 115
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -601,7 +551,7 @@ TextureImporter:
         width: 270
         height: 118
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -609,48 +559,6 @@ TextureImporter:
       bones: []
       spriteID: d826d4c92aadf5042b9ae94319f1d079
       internalID: -1616796536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_24
-      rect:
-        serializedVersion: 2
-        x: 1284
-        y: 1578
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fde07d07d3db78241bb6f4aa4adb8809
-      internalID: 1524002655
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_25
-      rect:
-        serializedVersion: 2
-        x: 1302
-        y: 1554
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78fcd7ca97c273446915daf19fb841b3
-      internalID: -594331963
       vertices: []
       indices: 
       edges: []
@@ -664,7 +572,7 @@ TextureImporter:
         width: 124
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -672,69 +580,6 @@ TextureImporter:
       bones: []
       spriteID: 32c472ad502238848b6b82f82c614830
       internalID: 237381816
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_27
-      rect:
-        serializedVersion: 2
-        x: 1368
-        y: 1569
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1ccde22c40ecd2547bbd4e01655a6163
-      internalID: 272201676
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_28
-      rect:
-        serializedVersion: 2
-        x: 1278
-        y: 1554
-        width: 11
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bac8038ee76434c4caefc68a8c7ab439
-      internalID: -2050926027
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_29
-      rect:
-        serializedVersion: 2
-        x: 1392
-        y: 1539
-        width: 18
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 29330eed3096f8344a67bcd6a1ac5c04
-      internalID: 607430951
       vertices: []
       indices: 
       edges: []
@@ -748,7 +593,7 @@ TextureImporter:
         width: 74
         height: 124
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -769,7 +614,7 @@ TextureImporter:
         width: 268
         height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -790,7 +635,7 @@ TextureImporter:
         width: 72
         height: 115
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -798,258 +643,6 @@ TextureImporter:
       bones: []
       spriteID: ce0e180a5aaf7f049b3e35c3a2be068b
       internalID: 1927023270
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_33
-      rect:
-        serializedVersion: 2
-        x: 1273
-        y: 1518
-        width: 17
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 031dc36f9dcfc6143be8c4e71ddb13a3
-      internalID: -1579430465
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_34
-      rect:
-        serializedVersion: 2
-        x: 1321
-        y: 1501
-        width: 29
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 913f489bdd2ca49459fbbaade20d3455
-      internalID: 1865881447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_35
-      rect:
-        serializedVersion: 2
-        x: 1416
-        y: 1509
-        width: 36
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64e5648544450014ba41f4ad41e3571c
-      internalID: -1692991935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_36
-      rect:
-        serializedVersion: 2
-        x: 1453
-        y: 1512
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0a41448c49f1b3468307e725b7de7e6
-      internalID: 1302355371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_37
-      rect:
-        serializedVersion: 2
-        x: 1218
-        y: 1470
-        width: 60
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f97c74dd5a350e4e8d540721f704f31
-      internalID: 1445977010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_38
-      rect:
-        serializedVersion: 2
-        x: 1283
-        y: 1480
-        width: 37
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7ea730b27c7eda41b8d7c4c85e35b9b
-      internalID: 150701541
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_39
-      rect:
-        serializedVersion: 2
-        x: 1351
-        y: 1496
-        width: 17
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab542f515014c2c4a99aaa65ca9eca45
-      internalID: 999948017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_40
-      rect:
-        serializedVersion: 2
-        x: 1380
-        y: 1494
-        width: 40
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cf24c74005395049b9e5a5e2546af68
-      internalID: 1438658556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_41
-      rect:
-        serializedVersion: 2
-        x: 1245
-        y: 1452
-        width: 18
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06d23b35d8c13574db51ce3c814e3300
-      internalID: 1091992124
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_42
-      rect:
-        serializedVersion: 2
-        x: 1308
-        y: 1470
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0cd0f1d2ee0248d4884811f18b08a035
-      internalID: 1648290302
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_43
-      rect:
-        serializedVersion: 2
-        x: 1341
-        y: 1471
-        width: 20
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a77ac0d08e3fa4e4aaaf7fcbf96baa10
-      internalID: -719222073
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_44
-      rect:
-        serializedVersion: 2
-        x: 1425
-        y: 1471
-        width: 6
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 855088c88bf3eeb49bd38c6a9287c0df
-      internalID: 1185641868
       vertices: []
       indices: 
       edges: []
@@ -1063,7 +656,7 @@ TextureImporter:
         width: 206
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1084,7 +677,7 @@ TextureImporter:
         width: 129
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1105,7 +698,7 @@ TextureImporter:
         width: 108
         height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1123,10 +716,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1177
         y: 1230
-        width: 248
-        height: 219
+        width: 219
+        height: 209
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1139,36 +732,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_49
-      rect:
-        serializedVersion: 2
-        x: 1370
-        y: 1440
-        width: 20
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c842bba5dd833c439e5f22501aebf1c
-      internalID: -529567818
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Kitchen Sprites#02_50
       rect:
         serializedVersion: 2
         x: 19
         y: 1230
-        width: 131
+        width: 201
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1189,7 +761,7 @@ TextureImporter:
         width: 73
         height: 118
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1210,7 +782,7 @@ TextureImporter:
         width: 77
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1231,7 +803,7 @@ TextureImporter:
         width: 216
         height: 210
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1244,15 +816,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_54
+      name: pepperoni
       rect:
         serializedVersion: 2
         x: 1398
         y: 1216
-        width: 114
-        height: 175
+        width: 210
+        height: 172
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1273,7 +845,7 @@ TextureImporter:
         width: 129
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1294,7 +866,7 @@ TextureImporter:
         width: 70
         height: 121
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1302,27 +874,6 @@ TextureImporter:
       bones: []
       spriteID: dc4c0900a67cb264180783b4b7ee94ec
       internalID: -2586603
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_57
-      rect:
-        serializedVersion: 2
-        x: 150
-        y: 1240
-        width: 72
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 458a8dfac8d69f649a1670a8a34a8371
-      internalID: -1087390665
       vertices: []
       indices: 
       edges: []
@@ -1336,7 +887,7 @@ TextureImporter:
         width: 6
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1349,36 +900,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_59
-      rect:
-        serializedVersion: 2
-        x: 1530
-        y: 1226
-        width: 78
-        height: 114
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d4f510e43d44684fb829a0537cd1561
-      internalID: -1434786903
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Kitchen Sprites#02_60
       rect:
         serializedVersion: 2
         x: 1890
         y: 1138
         width: 140
-        height: 176
+        height: 171
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1399,7 +929,7 @@ TextureImporter:
         width: 128
         height: 171
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1420,7 +950,7 @@ TextureImporter:
         width: 126
         height: 171
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1441,7 +971,7 @@ TextureImporter:
         width: 72
         height: 108
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1462,7 +992,7 @@ TextureImporter:
         width: 111
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1483,7 +1013,7 @@ TextureImporter:
         width: 79
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1504,7 +1034,7 @@ TextureImporter:
         width: 113
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1525,7 +1055,7 @@ TextureImporter:
         width: 35
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1546,7 +1076,7 @@ TextureImporter:
         width: 74
         height: 122
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1562,12 +1092,12 @@ TextureImporter:
       name: Kitchen Sprites#02_69
       rect:
         serializedVersion: 2
-        x: 1170
-        y: 1050
-        width: 138
-        height: 179
+        x: 1175
+        y: 1055
+        width: 207
+        height: 171
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1580,15 +1110,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_70
+      name: pepperoni7
       rect:
         serializedVersion: 2
-        x: 1386
-        y: 1036
-        width: 115
-        height: 178
+        x: 1389
+        y: 1038
+        width: 207
+        height: 170
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1601,15 +1131,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_71
+      name: pepperoni3
       rect:
         serializedVersion: 2
-        x: 1608
-        y: 1068
-        width: 117
-        height: 175
+        x: 1611
+        y: 1071
+        width: 210
+        height: 171
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1630,7 +1160,7 @@ TextureImporter:
         width: 82
         height: 104
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1651,7 +1181,7 @@ TextureImporter:
         width: 199
         height: 210
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1672,7 +1202,7 @@ TextureImporter:
         width: 123
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1693,7 +1223,7 @@ TextureImporter:
         width: 112
         height: 169
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1714,7 +1244,7 @@ TextureImporter:
         width: 113
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1735,7 +1265,7 @@ TextureImporter:
         width: 75
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1748,78 +1278,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_78
-      rect:
-        serializedVersion: 2
-        x: 1309
-        y: 1064
-        width: 77
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b8267cb3da741d746a66e7a8cdee91a8
-      internalID: 848994736
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_79
-      rect:
-        serializedVersion: 2
-        x: 1522
-        y: 1047
-        width: 74
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e92b0a761278bac4291245355b164788
-      internalID: -619725856
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_80
-      rect:
-        serializedVersion: 2
-        x: 1746
-        y: 1081
-        width: 78
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf626b7f9ce995a47b3e30ce5866ee47
-      internalID: 361578032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_81
+      name: pepperoni5
       rect:
         serializedVersion: 2
         x: 1824
         y: 960
-        width: 114
+        width: 209
         height: 176
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1827,27 +1294,6 @@ TextureImporter:
       bones: []
       spriteID: 178b86220a6a7fb42a68fe48c62ecceb
       internalID: 30974963
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_82
-      rect:
-        serializedVersion: 2
-        x: 1959
-        y: 970
-        width: 75
-        height: 116
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7fd68532181863446a6a11316ddf0b10
-      internalID: -186516862
       vertices: []
       indices: 
       edges: []
@@ -1861,7 +1307,7 @@ TextureImporter:
         width: 127
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1882,7 +1328,7 @@ TextureImporter:
         width: 28
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1903,7 +1349,7 @@ TextureImporter:
         width: 70
         height: 108
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1924,7 +1370,7 @@ TextureImporter:
         width: 70
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1945,7 +1391,7 @@ TextureImporter:
         width: 88
         height: 118
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1966,7 +1412,7 @@ TextureImporter:
         width: 114
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1987,7 +1433,7 @@ TextureImporter:
         width: 135
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2000,15 +1446,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_90
+      name: pepperoni4
       rect:
         serializedVersion: 2
-        x: 1596
+        x: 1600
         y: 889
-        width: 120
+        width: 210
         height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2029,7 +1475,7 @@ TextureImporter:
         width: 25
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2050,7 +1496,7 @@ TextureImporter:
         width: 120
         height: 169
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2071,7 +1517,7 @@ TextureImporter:
         width: 74
         height: 124
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2092,7 +1538,7 @@ TextureImporter:
         width: 78
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2100,48 +1546,6 @@ TextureImporter:
       bones: []
       spriteID: a0043ed38d78f32429cd27c3b7ab1a32
       internalID: 767334779
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_95
-      rect:
-        serializedVersion: 2
-        x: 1735
-        y: 902
-        width: 73
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0639d8a244bf1d49a2fe216509639e3
-      internalID: -1675095642
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_96
-      rect:
-        serializedVersion: 2
-        x: 1924
-        y: 984
-        width: 29
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd8a29ee3a9fcaf4db294262d69bf1b5
-      internalID: -1153897968
       vertices: []
       indices: 
       edges: []
@@ -2155,7 +1559,7 @@ TextureImporter:
         width: 115
         height: 170
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2176,7 +1580,7 @@ TextureImporter:
         width: 128
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2197,7 +1601,7 @@ TextureImporter:
         width: 72
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2218,7 +1622,7 @@ TextureImporter:
         width: 110
         height: 83
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2239,7 +1643,7 @@ TextureImporter:
         width: 132
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2260,7 +1664,7 @@ TextureImporter:
         width: 77
         height: 118
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2281,7 +1685,7 @@ TextureImporter:
         width: 116
         height: 169
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2302,7 +1706,7 @@ TextureImporter:
         width: 116
         height: 170
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2323,7 +1727,7 @@ TextureImporter:
         width: 114
         height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2344,7 +1748,7 @@ TextureImporter:
         width: 79
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2365,7 +1769,7 @@ TextureImporter:
         width: 111
         height: 180
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2386,7 +1790,7 @@ TextureImporter:
         width: 80
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2407,7 +1811,7 @@ TextureImporter:
         width: 82
         height: 118
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2415,27 +1819,6 @@ TextureImporter:
       bones: []
       spriteID: f6b7766e181028e4f88fabca90f25abe
       internalID: 1895749304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_110
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 680
-        width: 110
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86c199ba4e8e16c4cbce6aa9c8ab730b
-      internalID: 1672028556
       vertices: []
       indices: 
       edges: []
@@ -2449,7 +1832,7 @@ TextureImporter:
         width: 170
         height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2470,7 +1853,7 @@ TextureImporter:
         width: 124
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2491,7 +1874,7 @@ TextureImporter:
         width: 128
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2512,7 +1895,7 @@ TextureImporter:
         width: 73
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2533,7 +1916,7 @@ TextureImporter:
         width: 77
         height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2554,7 +1937,7 @@ TextureImporter:
         width: 82
         height: 118
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2575,7 +1958,7 @@ TextureImporter:
         width: 126
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2596,7 +1979,7 @@ TextureImporter:
         width: 75
         height: 104
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2617,7 +2000,7 @@ TextureImporter:
         width: 124
         height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2638,7 +2021,7 @@ TextureImporter:
         width: 119
         height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2654,12 +2037,12 @@ TextureImporter:
       name: Kitchen Sprites#02_121
       rect:
         serializedVersion: 2
-        x: 354
-        y: 564
-        width: 358
-        height: 139
+        x: 359
+        y: 568
+        width: 170
+        height: 191
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2680,7 +2063,7 @@ TextureImporter:
         width: 108
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2701,7 +2084,7 @@ TextureImporter:
         width: 127
         height: 171
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2722,7 +2105,7 @@ TextureImporter:
         width: 81
         height: 89
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2743,7 +2126,7 @@ TextureImporter:
         width: 132
         height: 173
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2764,7 +2147,7 @@ TextureImporter:
         width: 75
         height: 89
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2785,7 +2168,7 @@ TextureImporter:
         width: 114
         height: 171
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2806,7 +2189,7 @@ TextureImporter:
         width: 76
         height: 122
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2827,7 +2210,7 @@ TextureImporter:
         width: 180
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2848,7 +2231,7 @@ TextureImporter:
         width: 174
         height: 118
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2869,7 +2252,7 @@ TextureImporter:
         width: 174
         height: 131
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2890,7 +2273,7 @@ TextureImporter:
         width: 36
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2911,7 +2294,7 @@ TextureImporter:
         width: 114
         height: 170
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2924,15 +2307,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_134
+      name: sausage0
       rect:
         serializedVersion: 2
-        x: 1890
-        y: 414
-        width: 140
-        height: 180
+        x: 1891
+        y: 419
+        width: 139
+        height: 169
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2953,7 +2336,7 @@ TextureImporter:
         width: 169
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2974,7 +2357,7 @@ TextureImporter:
         width: 175
         height: 138
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2995,7 +2378,7 @@ TextureImporter:
         width: 168
         height: 115
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3016,7 +2399,7 @@ TextureImporter:
         width: 128
         height: 172
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3037,7 +2420,7 @@ TextureImporter:
         width: 75
         height: 89
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3058,7 +2441,7 @@ TextureImporter:
         width: 127
         height: 171
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3079,7 +2462,7 @@ TextureImporter:
         width: 74
         height: 89
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3100,7 +2483,7 @@ TextureImporter:
         width: 133
         height: 173
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3121,7 +2504,7 @@ TextureImporter:
         width: 75
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3142,7 +2525,7 @@ TextureImporter:
         width: 79
         height: 118
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3163,7 +2546,7 @@ TextureImporter:
         width: 124
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3184,7 +2567,7 @@ TextureImporter:
         width: 118
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3192,27 +2575,6 @@ TextureImporter:
       bones: []
       spriteID: 4d1273b6de603ef449b55c374fc4daa9
       internalID: -1024350599
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_147
-      rect:
-        serializedVersion: 2
-        x: 390
-        y: 327
-        width: 106
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 11d398055831403409c3e478f43baf88
-      internalID: 1062959111
       vertices: []
       indices: 
       edges: []
@@ -3226,7 +2588,7 @@ TextureImporter:
         width: 97
         height: 97
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3247,7 +2609,7 @@ TextureImporter:
         width: 169
         height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3268,7 +2630,7 @@ TextureImporter:
         width: 100
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3289,7 +2651,7 @@ TextureImporter:
         width: 90
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3302,15 +2664,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_152
+      name: cheese2
       rect:
         serializedVersion: 2
         x: 1469
         y: 174
-        width: 133
+        width: 200
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3323,15 +2685,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_153
+      name: cheese3
       rect:
         serializedVersion: 2
         x: 1673
         y: 244
-        width: 133
+        width: 200
         height: 170
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3339,27 +2701,6 @@ TextureImporter:
       bones: []
       spriteID: d17d1b6d74289ba478376585985ee054
       internalID: -662125916
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_154
-      rect:
-        serializedVersion: 2
-        x: 1800
-        y: 277
-        width: 72
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d70b1e8556cc68b48a88724686249f79
-      internalID: 1257527740
       vertices: []
       indices: 
       edges: []
@@ -3373,7 +2714,7 @@ TextureImporter:
         width: 174
         height: 196
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3394,7 +2735,7 @@ TextureImporter:
         width: 180
         height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3415,7 +2756,7 @@ TextureImporter:
         width: 174
         height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3434,9 +2775,9 @@ TextureImporter:
         x: 357
         y: 214
         width: 172
-        height: 110
+        height: 199
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3457,7 +2798,7 @@ TextureImporter:
         width: 174
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3478,7 +2819,7 @@ TextureImporter:
         width: 173
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3499,7 +2840,7 @@ TextureImporter:
         width: 174
         height: 137
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3512,36 +2853,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_162
-      rect:
-        serializedVersion: 2
-        x: 1595
-        y: 208
-        width: 73
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c941dfce9cb25d04dbe3197bc2e13888
-      internalID: 5585920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_163
+      name: cheese4
       rect:
         serializedVersion: 2
         x: 1673
         y: 66
-        width: 133
+        width: 200
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3549,48 +2869,6 @@ TextureImporter:
       bones: []
       spriteID: f84808215e435d44a9313d354339f5aa
       internalID: 1906542800
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_164
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 114
-        width: 105
-        height: 94
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdedb2e48ad861d469857d7a648a0db5
-      internalID: 400004860
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_165
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 116
-        width: 105
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0fda5d883dda8214a9f218967528ab16
-      internalID: -724794322
       vertices: []
       indices: 
       edges: []
@@ -3604,7 +2882,7 @@ TextureImporter:
         width: 96
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3625,7 +2903,7 @@ TextureImporter:
         width: 97
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3646,7 +2924,7 @@ TextureImporter:
         width: 102
         height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3667,7 +2945,7 @@ TextureImporter:
         width: 102
         height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3688,7 +2966,7 @@ TextureImporter:
         width: 93
         height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3709,7 +2987,7 @@ TextureImporter:
         width: 168
         height: 170
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3730,7 +3008,7 @@ TextureImporter:
         width: 176
         height: 156
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3738,27 +3016,6 @@ TextureImporter:
       bones: []
       spriteID: 2a529684e532a124bb55b5c7c1a92485
       internalID: 792671359
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_173
-      rect:
-        serializedVersion: 2
-        x: 1800
-        y: 102
-        width: 72
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68662e69153d7fa49a6d1b5c65a7b673
-      internalID: 334123428
       vertices: []
       indices: 
       edges: []
@@ -3772,7 +3029,7 @@ TextureImporter:
         width: 110
         height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3791,9 +3048,9 @@ TextureImporter:
         x: 5
         y: 6
         width: 171
-        height: 108
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3812,9 +3069,9 @@ TextureImporter:
         x: 180
         y: 6
         width: 172
-        height: 108
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3822,27 +3079,6 @@ TextureImporter:
       bones: []
       spriteID: 7afc349d02ba59b4f8ed771547ba1be3
       internalID: -1916106588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_177
-      rect:
-        serializedVersion: 2
-        x: 276
-        y: 99
-        width: 24
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f962948878095545a468978776d337c
-      internalID: -1283237282
       vertices: []
       indices: 
       edges: []
@@ -3856,7 +3092,7 @@ TextureImporter:
         width: 169
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3877,7 +3113,7 @@ TextureImporter:
         width: 169
         height: 136
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3898,7 +3134,7 @@ TextureImporter:
         width: 177
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3919,7 +3155,7 @@ TextureImporter:
         width: 172
         height: 127
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3940,7 +3176,7 @@ TextureImporter:
         width: 173
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3961,7 +3197,7 @@ TextureImporter:
         width: 169
         height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3969,6 +3205,69 @@ TextureImporter:
       bones: []
       spriteID: 36ab20ba7ddf22b42a8def5f732ac6eb
       internalID: 1789750333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_0
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 1837
+        width: 290
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13af4d1df52ded844ab7f4135b2f6dcb
+      internalID: -1516559181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_1
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 1445
+        width: 221
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c39528624a50148a8463a2876aafcf
+      internalID: -103358392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitchen Sprites#02_3
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1315
+        width: 139
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9e16e346ff6ba4c906d00e41d00a98
+      internalID: 780588328
       vertices: []
       indices: 
       edges: []
@@ -3984,7 +3283,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Kitchen Sprites#02_0: 319731780
+      Kitchen Sprites#02_0: -1516559181
       Kitchen Sprites#02_1: -103358392
       Kitchen Sprites#02_10: -779208519
       Kitchen Sprites#02_100: 814904623
@@ -4024,7 +3323,6 @@ TextureImporter:
       Kitchen Sprites#02_131: 259180701
       Kitchen Sprites#02_132: -165976669
       Kitchen Sprites#02_133: -971947585
-      Kitchen Sprites#02_134: 144250816
       Kitchen Sprites#02_135: 1413250980
       Kitchen Sprites#02_136: -1749196830
       Kitchen Sprites#02_137: -1561478567
@@ -4044,8 +3342,6 @@ TextureImporter:
       Kitchen Sprites#02_15: -493873988
       Kitchen Sprites#02_150: 1766056667
       Kitchen Sprites#02_151: -506981899
-      Kitchen Sprites#02_152: 1239741603
-      Kitchen Sprites#02_153: -662125916
       Kitchen Sprites#02_154: 1257527740
       Kitchen Sprites#02_155: -528981406
       Kitchen Sprites#02_156: 133242092
@@ -4056,7 +3352,6 @@ TextureImporter:
       Kitchen Sprites#02_160: 99409161
       Kitchen Sprites#02_161: 1074694621
       Kitchen Sprites#02_162: 5585920
-      Kitchen Sprites#02_163: 1906542800
       Kitchen Sprites#02_164: 400004860
       Kitchen Sprites#02_165: -724794322
       Kitchen Sprites#02_166: 142076912
@@ -4118,7 +3413,6 @@ TextureImporter:
       Kitchen Sprites#02_51: 1388193837
       Kitchen Sprites#02_52: -668618273
       Kitchen Sprites#02_53: -2060322933
-      Kitchen Sprites#02_54: -2043156627
       Kitchen Sprites#02_55: 135770962
       Kitchen Sprites#02_56: -2586603
       Kitchen Sprites#02_57: -1087390665
@@ -4136,8 +3430,6 @@ TextureImporter:
       Kitchen Sprites#02_68: -1383239925
       Kitchen Sprites#02_69: -1533850319
       Kitchen Sprites#02_7: 1649330179
-      Kitchen Sprites#02_70: 1832091945
-      Kitchen Sprites#02_71: 1179423853
       Kitchen Sprites#02_72: 553018827
       Kitchen Sprites#02_73: -2112949106
       Kitchen Sprites#02_74: -1165453562
@@ -4148,7 +3440,6 @@ TextureImporter:
       Kitchen Sprites#02_79: -619725856
       Kitchen Sprites#02_8: 473987859
       Kitchen Sprites#02_80: 361578032
-      Kitchen Sprites#02_81: 30974963
       Kitchen Sprites#02_82: -186516862
       Kitchen Sprites#02_83: -942386811
       Kitchen Sprites#02_84: -1734938734
@@ -4158,7 +3449,6 @@ TextureImporter:
       Kitchen Sprites#02_88: 1822357392
       Kitchen Sprites#02_89: 1268510409
       Kitchen Sprites#02_9: 120025541
-      Kitchen Sprites#02_90: 1501353841
       Kitchen Sprites#02_91: -650471573
       Kitchen Sprites#02_92: -1937509049
       Kitchen Sprites#02_93: -1529090744
@@ -4168,6 +3458,16 @@ TextureImporter:
       Kitchen Sprites#02_97: 919063120
       Kitchen Sprites#02_98: -65703371
       Kitchen Sprites#02_99: -1987801576
+      cheese2: 1239741603
+      cheese3: -662125916
+      cheese4: 1906542800
+      pepperoni: -2043156627
+      pepperoni3: 1179423853
+      pepperoni4: 1501353841
+      pepperoni5: 30974963
+      pepperoni7: 1832091945
+      sausage0: 144250816
+      tomato2: 319731780
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
