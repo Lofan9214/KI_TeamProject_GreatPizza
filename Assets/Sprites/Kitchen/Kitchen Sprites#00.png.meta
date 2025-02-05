@@ -134,12 +134,12 @@ TextureImporter:
       name: Kitchen Sprites#00_1
       rect:
         serializedVersion: 2
-        x: 795
-        y: 1465
-        width: 1241
-        height: 558
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 792
+        y: 1490
+        width: 776
+        height: 552
+      alignment: 9
+      pivot: {x: 0.46861702, y: 0.59136575}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,7 +152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_2
+      name: ovenrail1
       rect:
         serializedVersion: 2
         x: 1571
@@ -173,10 +173,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_3
+      name: ovencenter
       rect:
         serializedVersion: 2
-        x: 3
+        x: 1
         y: 1410
         width: 717
         height: 603
@@ -198,9 +198,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 724
-        y: 1961
+        y: 1910
         width: 62
-        height: 50
+        height: 101
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,13 +236,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_6
+      name: ovenrail2
       rect:
         serializedVersion: 2
-        x: 735
-        y: 1909
-        width: 39
-        height: 65
+        x: 1570
+        y: 1978
+        width: 468
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -635,7 +635,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_25
+      name: bin2
       rect:
         serializedVersion: 2
         x: 792
@@ -656,7 +656,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_26
+      name: ovenparts2
       rect:
         serializedVersion: 2
         x: 1580
@@ -787,7 +787,7 @@ TextureImporter:
         serializedVersion: 2
         x: 3
         y: 804
-        width: 750
+        width: 715
         height: 606
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -908,7 +908,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_38
+      name: dough1
       rect:
         serializedVersion: 2
         x: 1458
@@ -971,7 +971,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_41
+      name: bin1
       rect:
         serializedVersion: 2
         x: 792
@@ -1034,7 +1034,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_44
+      name: dough2
       rect:
         serializedVersion: 2
         x: 1458
@@ -1205,10 +1205,10 @@ TextureImporter:
       name: Kitchen Sprites#00_52
       rect:
         serializedVersion: 2
-        x: 786
-        y: 825
-        width: 781
-        height: 291
+        x: 918
+        y: 930
+        width: 532
+        height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1286,13 +1286,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_56
+      name: 1
       rect:
         serializedVersion: 2
         x: 723
-        y: 804
+        y: 806
         width: 87
-        height: 126
+        height: 121
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1307,13 +1307,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_57
+      name: ovenparts1
       rect:
         serializedVersion: 2
-        x: 810
-        y: 504
-        width: 642
-        height: 426
+        x: 853
+        y: 502
+        width: 596
+        height: 420
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1496,13 +1496,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_66
+      name: dough
       rect:
         serializedVersion: 2
         x: 6
-        y: 396
+        y: 399
         width: 402
-        height: 406
+        height: 403
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1730,10 +1730,10 @@ TextureImporter:
       name: Kitchen Sprites#00_77
       rect:
         serializedVersion: 2
-        x: 815
+        x: 810
         y: 0
         width: 418
-        height: 528
+        height: 501
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1751,10 +1751,10 @@ TextureImporter:
       name: Kitchen Sprites#00_78
       rect:
         serializedVersion: 2
-        x: 1233
+        x: 1230
         y: 4
-        width: 73
-        height: 530
+        width: 76
+        height: 498
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2021,7 +2021,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_91
+      name: dough3
       rect:
         serializedVersion: 2
         x: 489
@@ -2273,7 +2273,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_103
+      name: pepperoni2
       rect:
         serializedVersion: 2
         x: 1308
@@ -2336,7 +2336,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_106
+      name: cutting knife
       rect:
         serializedVersion: 2
         x: 1452
@@ -2483,7 +2483,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_113
+      name: dough4
       rect:
         serializedVersion: 2
         x: 51
@@ -3039,16 +3039,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      1: -2143770699
       Kitchen Sprites#00_0: -1839685452
       Kitchen Sprites#00_1: -571580565
       Kitchen Sprites#00_10: -773108422
       Kitchen Sprites#00_100: -1437463605
       Kitchen Sprites#00_101: 1789729052
       Kitchen Sprites#00_102: -510561123
-      Kitchen Sprites#00_103: -2095551441
       Kitchen Sprites#00_104: -1867208422
       Kitchen Sprites#00_105: -877336079
-      Kitchen Sprites#00_106: 1175489390
       Kitchen Sprites#00_107: 836332620
       Kitchen Sprites#00_108: -1002984023
       Kitchen Sprites#00_109: -1311660399
@@ -3056,7 +3055,6 @@ TextureImporter:
       Kitchen Sprites#00_110: 140449519
       Kitchen Sprites#00_111: -359770456
       Kitchen Sprites#00_112: -1433663854
-      Kitchen Sprites#00_113: -1371485475
       Kitchen Sprites#00_114: -619257221
       Kitchen Sprites#00_115: 1529143106
       Kitchen Sprites#00_116: 451354383
@@ -3090,18 +3088,14 @@ TextureImporter:
       Kitchen Sprites#00_17: 94522989
       Kitchen Sprites#00_18: -2010238131
       Kitchen Sprites#00_19: 1399644429
-      Kitchen Sprites#00_2: -458711062
       Kitchen Sprites#00_20: -108217020
       Kitchen Sprites#00_21: -1922444700
       Kitchen Sprites#00_22: -1868004142
       Kitchen Sprites#00_23: 1566550876
       Kitchen Sprites#00_24: -1882733755
-      Kitchen Sprites#00_25: 723887708
-      Kitchen Sprites#00_26: -1896143636
       Kitchen Sprites#00_27: -907645048
       Kitchen Sprites#00_28: -868521841
       Kitchen Sprites#00_29: 632503401
-      Kitchen Sprites#00_3: -433294957
       Kitchen Sprites#00_30: 1732470423
       Kitchen Sprites#00_31: -1392745019
       Kitchen Sprites#00_32: 775696857
@@ -3110,14 +3104,11 @@ TextureImporter:
       Kitchen Sprites#00_35: 395394846
       Kitchen Sprites#00_36: 562748902
       Kitchen Sprites#00_37: 1217388627
-      Kitchen Sprites#00_38: 1876192828
       Kitchen Sprites#00_39: -507615871
       Kitchen Sprites#00_4: 1211629738
       Kitchen Sprites#00_40: -1256544101
-      Kitchen Sprites#00_41: -155014751
       Kitchen Sprites#00_42: -1687188524
       Kitchen Sprites#00_43: 960813663
-      Kitchen Sprites#00_44: 1082859714
       Kitchen Sprites#00_45: -2087818826
       Kitchen Sprites#00_46: -1143920069
       Kitchen Sprites#00_47: -340496304
@@ -3130,18 +3121,14 @@ TextureImporter:
       Kitchen Sprites#00_53: 126227129
       Kitchen Sprites#00_54: -1009797751
       Kitchen Sprites#00_55: -464226715
-      Kitchen Sprites#00_56: -2143770699
-      Kitchen Sprites#00_57: 113423503
       Kitchen Sprites#00_58: 358376193
       Kitchen Sprites#00_59: 2126999574
-      Kitchen Sprites#00_6: -284457129
       Kitchen Sprites#00_60: 462002599
       Kitchen Sprites#00_61: -468720133
       Kitchen Sprites#00_62: 1807330070
       Kitchen Sprites#00_63: -1122433174
       Kitchen Sprites#00_64: -1885560265
       Kitchen Sprites#00_65: 1627525690
-      Kitchen Sprites#00_66: 1966798556
       Kitchen Sprites#00_67: -589194262
       Kitchen Sprites#00_68: -1895675329
       Kitchen Sprites#00_69: -496072835
@@ -3169,7 +3156,6 @@ TextureImporter:
       Kitchen Sprites#00_89: 660232264
       Kitchen Sprites#00_9: -1604345558
       Kitchen Sprites#00_90: 1856908874
-      Kitchen Sprites#00_91: 1389269420
       Kitchen Sprites#00_92: 1503419409
       Kitchen Sprites#00_93: -1587115531
       Kitchen Sprites#00_94: 27001368
@@ -3178,6 +3164,20 @@ TextureImporter:
       Kitchen Sprites#00_97: -1279084391
       Kitchen Sprites#00_98: -310999130
       Kitchen Sprites#00_99: -1713021852
+      bin1: -155014751
+      bin2: 723887708
+      cutting knife: 1175489390
+      dough: 1966798556
+      dough1: 1876192828
+      dough2: 1082859714
+      dough3: 1389269420
+      dough4: -1371485475
+      ovencenter: -433294957
+      ovenparts1: 113423503
+      ovenparts2: -1896143636
+      ovenrail1: -458711062
+      ovenrail2: -284457129
+      pepperoni2: -2095551441
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
