@@ -14,8 +14,6 @@ public class IngameGameManager : MonoBehaviour
     public CinemachineConfiner2D confiner;
     public Transform virtualCam;
 
-    public PackingTable packingTable;
-
     public Hall hall;
     public Kitchen kitchen;
 
@@ -73,7 +71,7 @@ public class IngameGameManager : MonoBehaviour
             case InGamePlace.Kitchen:
                 pointerManager.enableCamDrag = true;
                 kitchen.Set(confiner);
-                packingTable.SetPizzaBox(1);
+                kitchen.SetPizzaBox();
                 uiManager.SetOrderButtonActive(true);
                 break;
         }

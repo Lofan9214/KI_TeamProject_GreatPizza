@@ -107,8 +107,9 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         {
             if (CurrentState == State.AddingTopping)
             {
-                var targetSocket = tempSlot.GetComponent<OvenEnter>();
+                var targetSocket = tempSlot.GetComponent<IPizzaSlot>();
                 if (targetSocket != null
+                    && (targetSocket is OvenEnter || targetSocket is TrashBin)
                     && targetSocket.IsSettable
                     && targetSocket.IsEmpty)
                 {
