@@ -49,9 +49,10 @@ public class IngameGameManager : MonoBehaviour
 
     public void SetPizzaCommand(IngredientVat tub, string command, IngredientTable.Type type)
     {
-        if (tub != null)
+        if (currentTub != null
+            && currentTub != tub)
         {
-            tub.SetSelected(false);
+            currentTub.SetSelected(false);
         }
         currentTub = tub;
         PizzaCommand = command;

@@ -41,30 +41,6 @@ public class IngredientTable : DataTable
                 return Resources.Load<Sprite>(string.Format(spriteFormat, image));
             }
         }
-
-        public Sprite SpriteLoaf
-        {
-            get
-            {
-                if (type == Type.Dough)
-                {
-                    return Resources.Load<Sprite>(string.Format(loafFormat, image));
-                }
-                return null;
-            }
-        }
-
-        public Sprite SpriteTub
-        {
-            get
-            {
-                if (type == Type.Source || type == Type.Cheese || type == Type.Ingredient)
-                {
-                    return Resources.Load<Sprite>(string.Format(tubFormat, image));
-                }
-                return null;
-            }
-        }
     }
 
     private const string spriteFormat = "Sprite/Pizza/{0}";

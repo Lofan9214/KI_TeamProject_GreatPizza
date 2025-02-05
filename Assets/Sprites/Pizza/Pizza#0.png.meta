@@ -648,7 +648,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pizza#0_30
+      name: pimento0
       rect:
         serializedVersion: 2
         x: 12
@@ -921,7 +921,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pizza#0_47
+      name: pimento1
       rect:
         serializedVersion: 2
         x: 12
@@ -942,7 +942,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pizza#0_49
+      name: pimento2
       rect:
         serializedVersion: 2
         x: 110
@@ -1446,7 +1446,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pizza#0_75
+      name: shrimp0
       rect:
         serializedVersion: 2
         x: 156
@@ -1488,7 +1488,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pizza#0_80
+      name: shrimp1
       rect:
         serializedVersion: 2
         x: 179
@@ -1509,7 +1509,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pizza#0_81
+      name: shrimp2
       rect:
         serializedVersion: 2
         x: 225
@@ -1593,7 +1593,6 @@ TextureImporter:
       Pizza#0_25: 715447832
       Pizza#0_26: -412092850
       Pizza#0_29: 876883988
-      Pizza#0_30: -1996329015
       Pizza#0_32: -19639628
       Pizza#0_34: 860571382
       Pizza#0_35: -482072419
@@ -1606,9 +1605,7 @@ TextureImporter:
       Pizza#0_43: -1828470075
       Pizza#0_45: 182523417
       Pizza#0_46: -1686234083
-      Pizza#0_47: 534785621
       Pizza#0_48: 1793352214
-      Pizza#0_49: 812739861
       Pizza#0_52: -463901073
       Pizza#0_54: 250022825
       Pizza#0_59: 468011508
@@ -1622,13 +1619,10 @@ TextureImporter:
       Pizza#0_69: 803468379
       Pizza#0_72: 350946369
       Pizza#0_74: 178949776
-      Pizza#0_75: 2130851577
       Pizza#0_76: -2074951897
       Pizza#0_77: 1911053297
       Pizza#0_78: -2098442748
       Pizza#0_79: -106269198
-      Pizza#0_80: -661032260
-      Pizza#0_81: 723839817
       Pizza#0_82: -556483730
       Pizza#0_83: 328980467
       cheese0: -2118372646
@@ -1656,9 +1650,15 @@ TextureImporter:
       pepperoni2: -1383094408
       pesto0: -867056474
       pesto1: -937488163
+      pimento0: -1996329015
+      pimento1: 534785621
+      pimento2: 812739861
       sausage0: -2038583970
       sausage1: -679854904
       sausage2: 1031755168
+      shrimp0: 2130851577
+      shrimp1: -661032260
+      shrimp2: 723839817
       sourcebrush: 1204276680
       tomato0: 1313589333
       tomato1: -1653030755

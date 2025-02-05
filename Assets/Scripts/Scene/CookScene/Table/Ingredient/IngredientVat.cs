@@ -45,6 +45,6 @@ public class IngredientVat : MonoBehaviour, IClickable
     public void SetSelected(bool isSelected)
     {
         animator.SetBool(selected, isSelected);
-        this.isSelected = false;
+        this.isSelected = isSelected;
     }
 }
