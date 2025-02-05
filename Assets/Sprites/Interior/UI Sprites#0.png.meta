@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -887,16 +887,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI Sprites#0_38
+      name: table
       rect:
         serializedVersion: 2
         x: 1336
         y: 1333
-        width: 115
+        width: 116
         height: 121
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 10, y: 10, z: 10, w: 10}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1268,8 +1268,8 @@ TextureImporter:
       name: UI Sprites#0_56
       rect:
         serializedVersion: 2
-        x: 1445
-        y: 1129
+        x: 1446
+        y: 1128
         width: 107
         height: 101
       alignment: 0
@@ -1517,16 +1517,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI Sprites#0_68
+      name: table_under
       rect:
         serializedVersion: 2
-        x: 1331
+        x: 1421
         y: 1039
-        width: 177
-        height: 95
+        width: 87
+        height: 87
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 9, y: 18, z: 9, w: 11}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -7334,7 +7334,6 @@ TextureImporter:
       UI Sprites#0_35: -222585188
       UI Sprites#0_36: 32174617
       UI Sprites#0_37: -1669838865
-      UI Sprites#0_38: 376250018
       UI Sprites#0_39: -404928501
       UI Sprites#0_4: 346548258
       UI Sprites#0_40: 902832287
@@ -7367,7 +7366,6 @@ TextureImporter:
       UI Sprites#0_65: 691915375
       UI Sprites#0_66: 1195029775
       UI Sprites#0_67: -726436642
-      UI Sprites#0_68: 1122218268
       UI Sprites#0_69: -1301625118
       UI Sprites#0_7: -147689200
       UI Sprites#0_70: -825121086
@@ -7403,6 +7401,8 @@ TextureImporter:
       UI Sprites#0_98: 978131954
       UI Sprites#0_99: -1854126956
       hand: 1073137566
+      table: 376250018
+      table_under: 1122218268
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

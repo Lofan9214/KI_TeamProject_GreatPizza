@@ -900,7 +900,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_60
+      name: cheese
       rect:
         serializedVersion: 2
         x: 1890
@@ -3419,7 +3419,6 @@ TextureImporter:
       Kitchen Sprites#02_58: -516999653
       Kitchen Sprites#02_59: -1434786903
       Kitchen Sprites#02_6: 693137020
-      Kitchen Sprites#02_60: 1760630009
       Kitchen Sprites#02_61: -1139615688
       Kitchen Sprites#02_62: -725484957
       Kitchen Sprites#02_63: 1425506806
@@ -3458,6 +3457,7 @@ TextureImporter:
       Kitchen Sprites#02_97: 919063120
       Kitchen Sprites#02_98: -65703371
       Kitchen Sprites#02_99: -1987801576
+      cheese: 1760630009
       cheese2: 1239741603
       cheese3: -662125916
       cheese4: 1906542800
