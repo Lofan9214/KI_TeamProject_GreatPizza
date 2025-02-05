@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TomatoOff
+  m_Name: SausageOff
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -37,7 +37,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 1999406329, guid: ff8a8bce944b4b44cb56ac6ed261a4ee, type: 3}
+      value: {fileID: 1115934656, guid: ff8a8bce944b4b44cb56ac6ed261a4ee, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -69,7 +69,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 1999406329, guid: ff8a8bce944b4b44cb56ac6ed261a4ee, type: 3}
+    - {fileID: 1115934656, guid: ff8a8bce944b4b44cb56ac6ed261a4ee, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

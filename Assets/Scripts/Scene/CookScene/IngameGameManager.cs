@@ -51,7 +51,10 @@ public class IngameGameManager : MonoBehaviour
 
     public void SetPizzaCommand(IngredientTub tub, string command, IngredientTable.Type type)
     {
-        tub.Off();
+        if (tub != null)
+        {
+            tub.Off();
+        }
         currentTub = tub;
         PizzaCommand = command;
         IngredientType = type;

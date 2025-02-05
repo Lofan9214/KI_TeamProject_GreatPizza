@@ -2276,12 +2276,12 @@ TextureImporter:
       name: pepperoni2
       rect:
         serializedVersion: 2
-        x: 1308
-        y: 144
-        width: 144
-        height: 175
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1311
+        y: 148
+        width: 134
+        height: 170
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2735,15 +2735,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_125
+      name: shrimpoff2
       rect:
         serializedVersion: 2
         x: 1309
-        y: 0
-        width: 173
-        height: 141
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 5
+        width: 168
+        height: 136
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3067,7 +3067,6 @@ TextureImporter:
       Kitchen Sprites#00_122: -1103591502
       Kitchen Sprites#00_123: -1155690332
       Kitchen Sprites#00_124: 1100547836
-      Kitchen Sprites#00_125: -1168481728
       Kitchen Sprites#00_126: -78682410
       Kitchen Sprites#00_127: -756647756
       Kitchen Sprites#00_128: 1358975334
@@ -3178,6 +3177,7 @@ TextureImporter:
       ovenrail1: -458711062
       ovenrail2: -284457129
       pepperoni2: -2095551441
+      shrimpoff2: -1168481728
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

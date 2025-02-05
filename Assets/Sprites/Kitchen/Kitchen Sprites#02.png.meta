@@ -127,9 +127,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 1864
-        width: 357
-        height: 182
+        y: 1865
+        width: 356
+        height: 179
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,13 +144,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_2
+      name: tomato
       rect:
         serializedVersion: 2
         x: 365
-        y: 1864
-        width: 358
-        height: 182
+        y: 1865
+        width: 357
+        height: 179
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -354,13 +354,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_13
+      name: tomatotr
       rect:
         serializedVersion: 2
         x: 347
-        y: 1590
-        width: 337
-        height: 132
+        y: 1593
+        width: 333
+        height: 129
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -480,15 +480,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_19
+      name: oliveoff
       rect:
         serializedVersion: 2
-        x: 537
+        x: 539
         y: 567
-        width: 173
-        height: 122
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 170
+        height: 117
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -819,12 +819,12 @@ TextureImporter:
       name: pepperoni
       rect:
         serializedVersion: 2
-        x: 1398
-        y: 1216
-        width: 210
-        height: 172
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1400
+        y: 1219
+        width: 207
+        height: 168
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -903,12 +903,12 @@ TextureImporter:
       name: cheese
       rect:
         serializedVersion: 2
-        x: 1890
-        y: 1138
-        width: 140
-        height: 171
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1891
+        y: 1140
+        width: 138
+        height: 168
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1089,15 +1089,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_69
+      name: pepperoni10
       rect:
         serializedVersion: 2
-        x: 1175
-        y: 1055
-        width: 207
-        height: 171
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1176
+        y: 1056
+        width: 206
+        height: 168
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1114,11 +1114,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1389
-        y: 1038
-        width: 207
-        height: 170
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 1039
+        width: 206
+        height: 168
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1134,12 +1134,12 @@ TextureImporter:
       name: pepperoni3
       rect:
         serializedVersion: 2
-        x: 1611
-        y: 1071
-        width: 210
-        height: 171
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1612
+        y: 1072
+        width: 207
+        height: 168
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1281,12 +1281,12 @@ TextureImporter:
       name: pepperoni5
       rect:
         serializedVersion: 2
-        x: 1824
-        y: 960
-        width: 209
-        height: 176
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1826
+        y: 962
+        width: 206
+        height: 169
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1449,12 +1449,12 @@ TextureImporter:
       name: pepperoni4
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 889
-        width: 210
-        height: 175
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1601
+        y: 892
+        width: 208
+        height: 170
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1635,15 +1635,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_101
+      name: olivetr
       rect:
         serializedVersion: 2
-        x: 708
-        y: 744
-        width: 132
-        height: 174
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 709
+        y: 745
+        width: 131
+        height: 171
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2034,15 +2034,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_121
+      name: sausage_on
       rect:
         serializedVersion: 2
         x: 359
         y: 568
         width: 170
-        height: 191
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 188
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2310,12 +2310,12 @@ TextureImporter:
       name: sausage0
       rect:
         serializedVersion: 2
-        x: 1891
-        y: 419
-        width: 139
-        height: 169
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1892
+        y: 420
+        width: 137
+        height: 167
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2353,11 +2353,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 533
-        y: 420
-        width: 175
-        height: 138
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 422
+        width: 169
+        height: 135
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2668,11 +2668,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1469
-        y: 174
-        width: 200
-        height: 174
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 176
+        width: 199
+        height: 168
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2689,11 +2689,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1673
-        y: 244
-        width: 200
-        height: 170
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 245
+        width: 199
+        height: 168
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2709,9 +2709,9 @@ TextureImporter:
       name: Kitchen Sprites#02_155
       rect:
         serializedVersion: 2
-        x: 1872
+        x: 1876
         y: 217
-        width: 174
+        width: 170
         height: 196
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2769,15 +2769,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_158
+      name: mushroomon1
       rect:
         serializedVersion: 2
-        x: 357
+        x: 361
         y: 214
-        width: 172
+        width: 168
         height: 199
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2857,11 +2857,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1673
-        y: 66
-        width: 200
-        height: 174
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 69
+        width: 199
+        height: 169
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2979,15 +2979,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_171
+      name: pimentotr
       rect:
         serializedVersion: 2
-        x: 1230
-        y: 4
-        width: 168
-        height: 170
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1234
+        y: 5
+        width: 164
+        height: 163
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3042,15 +3042,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_175
+      name: mushroomon3
       rect:
         serializedVersion: 2
-        x: 5
-        y: 6
-        width: 171
-        height: 200
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 6
+        y: 7
+        width: 169
+        height: 199
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3063,15 +3063,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_176
+      name: mushroomon2
       rect:
         serializedVersion: 2
         x: 180
         y: 6
         width: 172
         height: 200
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3252,15 +3252,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_3
+      name: onionoff
       rect:
         serializedVersion: 2
-        x: 1890
-        y: 1315
-        width: 139
-        height: 170
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1892
+        y: 1316
+        width: 137
+        height: 168
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3287,7 +3287,6 @@ TextureImporter:
       Kitchen Sprites#02_1: -103358392
       Kitchen Sprites#02_10: -779208519
       Kitchen Sprites#02_100: 814904623
-      Kitchen Sprites#02_101: 205425416
       Kitchen Sprites#02_102: -444981318
       Kitchen Sprites#02_103: -664270411
       Kitchen Sprites#02_104: 1978587875
@@ -3309,7 +3308,6 @@ TextureImporter:
       Kitchen Sprites#02_119: -1043191845
       Kitchen Sprites#02_12: -1537264221
       Kitchen Sprites#02_120: 1544715688
-      Kitchen Sprites#02_121: 639703719
       Kitchen Sprites#02_122: -1409161577
       Kitchen Sprites#02_123: 89702838
       Kitchen Sprites#02_124: 1093591624
@@ -3318,7 +3316,6 @@ TextureImporter:
       Kitchen Sprites#02_127: -965804236
       Kitchen Sprites#02_128: 2100691237
       Kitchen Sprites#02_129: 1245361114
-      Kitchen Sprites#02_13: -116235027
       Kitchen Sprites#02_130: 1754688331
       Kitchen Sprites#02_131: 259180701
       Kitchen Sprites#02_132: -165976669
@@ -3346,7 +3343,6 @@ TextureImporter:
       Kitchen Sprites#02_155: -528981406
       Kitchen Sprites#02_156: 133242092
       Kitchen Sprites#02_157: 1092070086
-      Kitchen Sprites#02_158: 114178647
       Kitchen Sprites#02_159: 1355895790
       Kitchen Sprites#02_16: 132787579
       Kitchen Sprites#02_160: 99409161
@@ -3360,12 +3356,9 @@ TextureImporter:
       Kitchen Sprites#02_169: 1607650444
       Kitchen Sprites#02_17: 1259328741
       Kitchen Sprites#02_170: 1541478098
-      Kitchen Sprites#02_171: -1373966738
       Kitchen Sprites#02_172: 792671359
       Kitchen Sprites#02_173: 334123428
       Kitchen Sprites#02_174: 817151393
-      Kitchen Sprites#02_175: 1594561702
-      Kitchen Sprites#02_176: -1916106588
       Kitchen Sprites#02_177: -1283237282
       Kitchen Sprites#02_178: -1984127509
       Kitchen Sprites#02_179: 281804147
@@ -3374,8 +3367,6 @@ TextureImporter:
       Kitchen Sprites#02_181: -1100646600
       Kitchen Sprites#02_182: 1236809086
       Kitchen Sprites#02_183: 1789750333
-      Kitchen Sprites#02_19: 1736065049
-      Kitchen Sprites#02_2: 284453010
       Kitchen Sprites#02_20: 1983989291
       Kitchen Sprites#02_21: -647421515
       Kitchen Sprites#02_22: -1367441042
@@ -3386,7 +3377,6 @@ TextureImporter:
       Kitchen Sprites#02_27: 272201676
       Kitchen Sprites#02_28: -2050926027
       Kitchen Sprites#02_29: 607430951
-      Kitchen Sprites#02_3: 780588328
       Kitchen Sprites#02_30: 135487196
       Kitchen Sprites#02_31: 1650815032
       Kitchen Sprites#02_32: 1927023270
@@ -3427,7 +3417,6 @@ TextureImporter:
       Kitchen Sprites#02_66: -1649611483
       Kitchen Sprites#02_67: 58206584
       Kitchen Sprites#02_68: -1383239925
-      Kitchen Sprites#02_69: -1533850319
       Kitchen Sprites#02_7: 1649330179
       Kitchen Sprites#02_72: 553018827
       Kitchen Sprites#02_73: -2112949106
@@ -3461,13 +3450,24 @@ TextureImporter:
       cheese2: 1239741603
       cheese3: -662125916
       cheese4: 1906542800
+      mushroomon1: 114178647
+      mushroomon2: -1916106588
+      mushroomon3: 1594561702
+      oliveoff: 1736065049
+      olivetr: 205425416
+      onionoff: 780588328
       pepperoni: -2043156627
+      pepperoni10: -1533850319
       pepperoni3: 1179423853
       pepperoni4: 1501353841
       pepperoni5: 30974963
       pepperoni7: 1832091945
+      pimentotr: -1373966738
       sausage0: 144250816
+      sausage_on: 639703719
+      tomato: 284453010
       tomato2: 319731780
+      tomatotr: -116235027
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

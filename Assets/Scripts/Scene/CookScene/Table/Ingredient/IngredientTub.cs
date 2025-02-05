@@ -7,6 +7,7 @@ public class IngredientTub : MonoBehaviour, IClickable
 {
     private IngameGameManager gameManager;
 
+    public Animator animator;
     private string ingredient;
     private IngredientTable.Type type;
     private SpriteRenderer spriteRenderer;
@@ -32,10 +33,13 @@ public class IngredientTub : MonoBehaviour, IClickable
     {
         if (gameManager.PizzaCommand == ingredient)
         {
+            gameManager.SetPizzaCommand(null, string.Empty, IngredientTable.Type.None);
+            animator.SetBool("Selected", false);
             Off();
             return;
         }
         gameManager.SetPizzaCommand(this, ingredient, type);
+            animator.SetBool("Selected", true);
     }
 
     public void Off()
