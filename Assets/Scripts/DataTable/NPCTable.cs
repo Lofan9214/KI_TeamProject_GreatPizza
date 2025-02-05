@@ -11,21 +11,9 @@ public class NPCTable : DataTable
         public int type { get; set; }
         public string Image { get; set; }
 
-        public Sprite Sprite
-        {
-            get
-            {
-                return Resources.Load<Sprite>(string.Format(sprite, Image));
-            }
-        }
+        public Sprite Sprite => Resources.Load<Sprite>(string.Format(sprite, Image));
 
-        public GameObject Prefab
-        {
-            get
-            {
-                return Resources.Load<GameObject>(string.Format(prefab, Image));
-            }
-        }
+        public GameObject Prefab;
     }
 
     private Dictionary<int, Data> dict = new Dictionary<int, Data>();
@@ -44,6 +32,7 @@ public class NPCTable : DataTable
         {
             if (!dict.ContainsKey(item.npcID))
             {
+                item.Prefab = Resources.Load<GameObject>(string.Format(prefab, item.Image));
                 dict.Add(item.npcID, item);
             }
             else

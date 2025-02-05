@@ -5420,9 +5420,9 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4051067762479798850}
   m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 369030381
+  m_SortingLayer: -1
+  m_SortingOrder: -1
   m_SortAtRoot: 0
 --- !u!95 &7866739551540992841
 Animator:
@@ -10291,7 +10291,7 @@ GameObject:
   - component: {fileID: 6805522287413325696}
   - component: {fileID: 2119633619597596092}
   m_Layer: 5
-  m_Name: SPUM_20240921010852933_Backup
+  m_Name: npc_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10306,7 +10306,7 @@ RectTransform:
   m_GameObject: {fileID: 7997525597587618665}
   m_LocalRotation: {x: -0, y: 0.008726557, z: -0, w: 0.9999619}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5845061085034021244}

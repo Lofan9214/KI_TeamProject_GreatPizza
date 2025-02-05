@@ -21,10 +21,11 @@ public class NPC : MonoBehaviour, IPizzaSlot
 
     public Pizza CurrentPizza { get; private set; }
 
-    public SpriteRenderer spriteRenderer;
+    public Transform sprite;
     public ChatWindow chatWindow;
     public IngameGameManager gameManager;
     private float payment;
+    private GameObject prefab;
 
     private void Start()
     {
@@ -83,7 +84,13 @@ public class NPC : MonoBehaviour, IPizzaSlot
 
     public void SetSprite(NPCTable.Data data)
     {
-        spriteRenderer.sprite = data.Sprite;
+        //spriteRenderer.sprite = data.Sprite;
+        if (prefab != null)
+        {
+            Destroy(prefab);
+            prefab = null;
+        }
+        prefab = Instantiate(data.Prefab, sprite);
     }
 
     public JudgeData GetJudgeData(RecipeTable.Data recipe, Pizza.Data pizzaData)

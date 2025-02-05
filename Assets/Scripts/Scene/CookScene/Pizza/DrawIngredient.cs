@@ -32,7 +32,7 @@ public class DrawIngredient : MonoBehaviour
     {
         textureHeight = spriteTexture.height;
         textureWidth = spriteTexture.width;
-
+        
         drawColorMap = spriteTexture.GetPixels();
         spriteAlphaMap = new float[textureHeight * textureWidth];
         drawAlphaMap = new float[textureHeight * textureWidth];
