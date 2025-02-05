@@ -251,7 +251,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     public void SetDough(string doughId)
     {
-        dough.sprite = DataTableManager.IngredientTable.Get(doughId).Sprite;
+        //dough.sprite = DataTableManager.IngredientTable.Get(doughId).Sprite;
     }
 
     public void DrawSource(Vector2 position)

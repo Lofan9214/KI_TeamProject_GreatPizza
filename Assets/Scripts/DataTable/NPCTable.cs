@@ -15,7 +15,6 @@ public class NPCTable : DataTable
     }
 
     private Dictionary<int, Data> dict = new Dictionary<int, Data>();
-    private const string sprite = "Sprite/NPC/{0}";
     private const string prefab = "Prefabs/{0}";
 
     public override void Load(string fileName)
