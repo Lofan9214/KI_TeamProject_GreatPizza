@@ -25,6 +25,7 @@ public class IngameGameManager : MonoBehaviour
 
     public string PizzaCommand { get; private set; }
     public IngredientTable.Type IngredientType { get; private set; }
+    private IngredientTub currentTub;
 
     private void Awake()
     {
@@ -48,8 +49,10 @@ public class IngameGameManager : MonoBehaviour
         StartCoroutine(Spawn());
     }
 
-    public void SetPizzaCommand(string command, IngredientTable.Type type)
+    public void SetPizzaCommand(IngredientTub tub, string command, IngredientTable.Type type)
     {
+        tub.Off();
+        currentTub = tub;
         PizzaCommand = command;
         IngredientType = type;
     }

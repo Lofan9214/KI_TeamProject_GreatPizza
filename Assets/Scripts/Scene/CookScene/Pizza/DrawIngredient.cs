@@ -25,15 +25,50 @@ public class DrawIngredient : MonoBehaviour
 
     private Texture2D drawTexture;
 
+    public float pixelsPerPoint=100f;
+
     public float Ratio => drawAlphaMap.Sum() / spriteAlphaMap.Sum();
 
 
     private void Start()
     {
-        textureHeight = spriteTexture.height;
-        textureWidth = spriteTexture.width;
-        
-        drawColorMap = spriteTexture.GetPixels();
+        //textureHeight = spriteTexture.height;
+        //textureWidth = spriteTexture.width;
+
+        //drawColorMap = spriteTexture.GetPixels();
+        //spriteAlphaMap = new float[textureHeight * textureWidth];
+        //drawAlphaMap = new float[textureHeight * textureWidth];
+
+        //for (int i = 0; i < drawColorMap.Length; ++i)
+        //{
+        //    spriteAlphaMap[i] = drawColorMap[i].a;
+        //    drawColorMap[i].a = 0f;
+        //}
+
+        //drawTexture = new Texture2D(textureWidth, textureHeight, TextureFormat.ARGB32, false);
+
+        //SetTexture();
+        //var renderer = GetComponent<SpriteRenderer>();
+        //renderer.sprite = Sprite.Create(drawTexture, new Rect(0f, 0f, drawTexture.width, drawTexture.height), Vector2.one * 0.5f, textureHeight);
+        //renderer.sprite.name = "DrawLayer";
+
+        //brushHeight = brushTexture.height;
+        //brushWidth = brushTexture.width;
+        //brushColorMap = brushTexture.GetPixels();
+
+        var rect = spriteSprite.textureRect;
+        textureHeight = (int)rect.height;
+        textureWidth = (int)rect.width;
+
+        if (!spriteSprite.texture.isReadable)
+        {
+            var origTexPath = AssetDatabase.GetAssetPath(spriteSprite.texture);
+            var ti = (TextureImporter)AssetImporter.GetAtPath(origTexPath);
+            ti.isReadable = true;
+            ti.SaveAndReimport();
+        }
+
+        drawColorMap = spriteSprite.texture.GetPixels((int)rect.x, (int)rect.y, (int)rect.width, (int)rect.height);
         spriteAlphaMap = new float[textureHeight * textureWidth];
         drawAlphaMap = new float[textureHeight * textureWidth];
 
@@ -47,12 +82,22 @@ public class DrawIngredient : MonoBehaviour
 
         SetTexture();
         var renderer = GetComponent<SpriteRenderer>();
-        renderer.sprite = Sprite.Create(drawTexture, new Rect(0f, 0f, drawTexture.width, drawTexture.height), Vector2.one * 0.5f, textureHeight);
+        renderer.sprite = Sprite.Create(drawTexture, new Rect(0f, 0f, drawTexture.width, drawTexture.height), Vector2.one * 0.5f, pixelsPerPoint);
         renderer.sprite.name = "DrawLayer";
 
-        brushHeight = brushTexture.height;
-        brushWidth = brushTexture.width;
-        brushColorMap = brushTexture.GetPixels();
+        rect = brushSprite.textureRect;
+        brushHeight = (int)rect.height;
+        brushWidth = (int)rect.width;
+
+        if (!brushSprite.texture.isReadable)
+        {
+            var origTexPath = AssetDatabase.GetAssetPath(spriteSprite.texture);
+            var ti = (TextureImporter)AssetImporter.GetAtPath(origTexPath);
+            ti.isReadable = true;
+            ti.SaveAndReimport();
+        }
+
+        brushColorMap = brushSprite.texture.GetPixels((int)rect.x, (int)rect.y, (int)rect.width, (int)rect.height); ;
     }
 
     private void SetTexture()
@@ -63,10 +108,10 @@ public class DrawIngredient : MonoBehaviour
 
     private void DrawBrush(Vector3 pos)
     {
-        int xStart = Mathf.RoundToInt(pos.x * textureWidth - brushWidth * 0.5f);
-        int xEnd = Mathf.RoundToInt(pos.x * textureWidth + brushWidth * 0.5f);
-        int yStart = Mathf.RoundToInt(pos.y * textureHeight - brushHeight * 0.5f);
-        int yEnd = Mathf.RoundToInt(pos.y * textureHeight + brushHeight * 0.5f);
+        int xStart = Mathf.RoundToInt(pos.x * pixelsPerPoint - brushWidth * 0.5f);
+        int xEnd = Mathf.RoundToInt(pos.x * pixelsPerPoint + brushWidth * 0.5f);
+        int yStart = Mathf.RoundToInt(pos.y * pixelsPerPoint - brushHeight * 0.5f);
+        int yEnd = Mathf.RoundToInt(pos.y * pixelsPerPoint + brushHeight * 0.5f);
 
         for (int i = xStart, ii = 0; i < xEnd; ++i, ++ii)
         {
@@ -88,7 +133,7 @@ public class DrawIngredient : MonoBehaviour
     public void DrawPoint(Vector2 point)
     {
         var localpos = transform.InverseTransformPoint(point);
-        localpos += Vector3.one * 0.5f;
+        localpos += Vector3.one * textureWidth * 0.5f / pixelsPerPoint;
         DrawBrush(localpos);
         SetTexture();
     }

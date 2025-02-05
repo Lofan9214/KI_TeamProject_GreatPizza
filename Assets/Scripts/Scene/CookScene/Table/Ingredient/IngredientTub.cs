@@ -10,6 +10,7 @@ public class IngredientTub : MonoBehaviour, IClickable
     private string ingredient;
     private IngredientTable.Type type;
     private SpriteRenderer spriteRenderer;
+    private bool isOn;
 
     private void Start()
     {
@@ -29,6 +30,16 @@ public class IngredientTub : MonoBehaviour, IClickable
 
     public void OnPressObject(Vector2 position)
     {
-        gameManager.SetPizzaCommand(ingredient, type);
+        if (gameManager.PizzaCommand == ingredient)
+        {
+            Off();
+            return;
+        }
+        gameManager.SetPizzaCommand(this, ingredient, type);
+    }
+
+    public void Off()
+    {
+        isOn = false;
     }
 }
