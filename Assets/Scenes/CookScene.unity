@@ -10691,7 +10691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2467119375808962142, guid: e4bf043ea18bcac429cbb70ea61a933b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.87
+      value: 8.67
       objectReference: {fileID: 0}
     - target: {fileID: 2467119375808962142, guid: e4bf043ea18bcac429cbb70ea61a933b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11977,7 +11977,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
-    oldSize: {x: 1.37, y: 2.95}
+    oldSize: {x: 1.34, y: 2.94}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -12050,6 +12050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc2a27c2fcfacb148b530d0c43bf0cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1 &1041157899
 GameObject:
   m_ObjectHideFlags: 0
@@ -13652,7 +13653,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2467119375808962142, guid: e4bf043ea18bcac429cbb70ea61a933b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.3
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 2467119375808962142, guid: e4bf043ea18bcac429cbb70ea61a933b, type: 3}
       propertyPath: m_LocalScale.y
@@ -13660,7 +13661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2467119375808962142, guid: e4bf043ea18bcac429cbb70ea61a933b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.66
+      value: -8.55
       objectReference: {fileID: 0}
     - target: {fileID: 2467119375808962142, guid: e4bf043ea18bcac429cbb70ea61a933b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17904,8 +17905,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 1.71}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 1.38, y: 1.68}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -17978,6 +17979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc2a27c2fcfacb148b530d0c43bf0cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1001 &4428573032595882268
 PrefabInstance:
   m_ObjectHideFlags: 0
