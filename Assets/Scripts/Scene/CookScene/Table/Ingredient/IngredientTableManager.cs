@@ -5,14 +5,17 @@ using UnityEngine;
 
 public class IngredientTableManager : MonoBehaviour
 {
-    public IngredientTub tubPrefab;
+    public IngredientVat tubPrefab;
     public PizzaSlot[] pizzaSlots;
-    public IngredientTub[] sourceTubs;
-    public IngredientTub cheeseTub;
+    public IngredientVat[] sourceTubs;
+    public IngredientVat cheeseTub;
+    public PepperoniVat pepperoniTub;
     public DoughTub doughTub;
     public Transform[] ingredientTubs;
     public SpriteRenderer[] tableSprites;
     public float[] tablesLengthes;
+    public Transform trashCan;
+    public PolygonCollider2D camConfiningCollider;
 
     public void Init()
     {
@@ -46,6 +49,17 @@ public class IngredientTableManager : MonoBehaviour
         int cnt = 0;
         for (int i = 0; i < length; ++i)
         {
+            if (dicttype[IngredientTable.Type.Ingredient][i].ingredientID == "pepperoni")
+            {
+                pepperoniTub.Init(dicttype[IngredientTable.Type.Ingredient][i]);
+                if (!unlockdata.ContainsKey(dicttype[IngredientTable.Type.Ingredient][i].ingredientID)
+                || !unlockdata[dicttype[IngredientTable.Type.Ingredient][i].ingredientID])
+                {
+                    pepperoniTub.SetLocked();
+                }
+                continue;
+            }
+
             if (unlockdata.ContainsKey(dicttype[IngredientTable.Type.Ingredient][i].ingredientID)
                 && unlockdata[dicttype[IngredientTable.Type.Ingredient][i].ingredientID])
             {
@@ -55,17 +69,37 @@ public class IngredientTableManager : MonoBehaviour
             }
         }
 
-        if (cnt < 2)
+        float tableLength = tablesLengthes[0];
+        bool extended = false;
+        if (cnt > 0)
         {
-
+            tableLength = tablesLengthes[1];
+            extended = true;
         }
-        else if (cnt < 5)
+        else if (cnt > 3)
         {
-
+            tableLength = tablesLengthes[2];
         }
-        else if (cnt < 8)
-        {
 
+        for (int i = 0; i < tableSprites.Length; ++i)
+        {
+            var size = tableSprites[i].size;
+            var pos = tableSprites[i].transform.localPosition;
+            size.x = (i == tableSprites.Length - 1) ? tableLength - 0.2f : tableLength;
+            pos.x = tableLength * 0.5f;
+            tableSprites[i].size = size;
+            tableSprites[i].transform.localPosition = pos;
+        }
+
+        if (extended)
+        {
+            var offset = Vector3.left * (tableLength - tablesLengthes[0]);
+            transform.Translate(offset);
+            trashCan.Translate(offset);
+            var path = camConfiningCollider.GetPath(0);
+            path[0] += (Vector2)offset;
+            path[1] += (Vector2)offset;
+            camConfiningCollider.SetPath(0, path);
         }
     }
 }

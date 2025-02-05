@@ -8,7 +8,6 @@ public class Kitchen : MonoBehaviour
     public PackingTable packingTable;
     public Transform cameraStartPosition;
     public IngredientTableManager ingredientTable;
-    public TrashBin trashBin;
     private PolygonCollider2D confineCollider;
 
 
