@@ -11,8 +11,6 @@ public class NPCTable : DataTable
         public int type { get; set; }
         public string Image { get; set; }
 
-        public Sprite Sprite => Resources.Load<Sprite>(string.Format(sprite, Image));
-
         public GameObject Prefab;
     }
 

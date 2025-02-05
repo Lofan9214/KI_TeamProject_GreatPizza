@@ -105,20 +105,41 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         if (tempSlot != null
             && tempSlot != currentSlot)
         {
-            var targetSocket = tempSlot.GetComponent<IPizzaSlot>();
-            if (targetSocket != null
-                && targetSocket.IsSettable
-                && targetSocket.IsEmpty)
+            if (CurrentState == State.AddingTopping)
             {
-                currentSlot?.GetComponent<IPizzaSlot>()?.ClearPizza();
-                targetSocket.SetPizza(this);
-                SetCurrentSlot(tempSlot);
-                if (pizzaBoard.activeSelf)
+                var targetSocket = tempSlot.GetComponent<OvenEnter>();
+                if (targetSocket != null
+                    && targetSocket.IsSettable
+                    && targetSocket.IsEmpty)
                 {
-                    pizzaBoard.SetActive(false);
+                    currentSlot?.GetComponent<IPizzaSlot>()?.ClearPizza();
+                    targetSocket.SetPizza(this);
+                    SetCurrentSlot(tempSlot);
+                    if (pizzaBoard.activeSelf)
+                    {
+                        pizzaBoard.SetActive(false);
+                    }
+                    tempSlot = null;
+                    return;
                 }
-                tempSlot = null;
-                return;
+            }
+            else
+            {
+                var targetSocket = tempSlot.GetComponent<IPizzaSlot>();
+                if (targetSocket != null
+                    && targetSocket.IsSettable
+                    && targetSocket.IsEmpty)
+                {
+                    currentSlot?.GetComponent<IPizzaSlot>()?.ClearPizza();
+                    targetSocket.SetPizza(this);
+                    SetCurrentSlot(tempSlot);
+                    if (pizzaBoard.activeSelf)
+                    {
+                        pizzaBoard.SetActive(false);
+                    }
+                    tempSlot = null;
+                    return;
+                }
             }
         }
         transform.position = currentSlot.position;
