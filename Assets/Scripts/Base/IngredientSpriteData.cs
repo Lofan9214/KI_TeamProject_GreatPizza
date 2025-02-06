@@ -7,4 +7,5 @@ public class IngredientSpriteData : ScriptableObject
 {
     public Sprite[] toppingSprites;
     public Sprite storeSprite;
+    public Sprite storeTray;
 }
