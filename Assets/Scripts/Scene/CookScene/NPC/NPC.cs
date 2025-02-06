@@ -11,7 +11,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         Story,
         Random,
     }
-    
+
     private const string cheese = "cheese";
     private WaitForSeconds wait = new WaitForSeconds(2f);
     private WaitUntil waitChatEnd;
@@ -85,6 +85,9 @@ public class NPC : MonoBehaviour, IPizzaSlot
         }
     }
 
+
+
+
     public void Order(RecipeTable.Data recipe)
     {
         Recipe = recipe;
@@ -93,6 +96,8 @@ public class NPC : MonoBehaviour, IPizzaSlot
     public void SetData(NPCTable.Data data)
     {
         //spriteRenderer.sprite = data.Sprite;
+
+        state = State.Random;
         if (prefab != null)
         {
             Destroy(prefab);
@@ -100,10 +105,30 @@ public class NPC : MonoBehaviour, IPizzaSlot
         }
         prefab = Instantiate(data.Prefab, sprite);
     }
+
     public void SetData(StoryTable.Data data)
     {
+        state = State.Story;
 
+        if (prefab != null)
+        {
+            Destroy(prefab);
+            prefab = null;
+        }
+        prefab = Instantiate(Resources.Load<GameObject>("npc_1"), sprite);
     }
+
+    public void ClearPizza()
+    {
+    }
+
+    public void SetPizza(Pizza go)
+    {
+        CurrentPizza = go;
+        CurrentPizza.gameObject.SetActive(false);
+        StartCoroutine(EndOrder());
+    }
+
 
     public JudgeData GetJudgeData(RecipeTable.Data recipe, Pizza.Data pizzaData)
     {
@@ -195,17 +220,6 @@ public class NPC : MonoBehaviour, IPizzaSlot
         return judgeData;
     }
 
-    public void ClearPizza()
-    {
-    }
-
-    public void SetPizza(Pizza go)
-    {
-        CurrentPizza = go;
-        CurrentPizza.gameObject.SetActive(false);
-        StartCoroutine(EndOrder());
-    }
-
     private IEnumerator EndOrder()
     {
         gameManager.timeManager.SetState(IngameTimeManager.State.OrderEnd);
@@ -229,30 +243,42 @@ public class NPC : MonoBehaviour, IPizzaSlot
                 chatWindow.NextTalk(ChatWindow.Talks.Success);
                 break;
         }
-        if (satisfaction > 50 && judgeData.FinalJudge == JudgeData.Judge.Success)
+
+        if (state == State.Random
+            || storyNPCData.price < 0)
         {
-            tip += GoodTip();
+            if (satisfaction > 50 && judgeData.FinalJudge == JudgeData.Judge.Success)
+            {
+                tip += GoodTip();
+            }
+            else if ((satisfaction > 50 && judgeData.FinalJudge == JudgeData.Judge.Normal)
+                     || (satisfaction <= 50 && satisfaction > 20 && judgeData.FinalJudge == JudgeData.Judge.Success))
+            {
+                tip += NormalTip();
+            }
+            else if ((judgeData.FinalJudge == JudgeData.Judge.Success && satisfaction <= 20)
+                    || (judgeData.FinalJudge == JudgeData.Judge.Normal && satisfaction >= 50 && satisfaction > 20))
+            {
+                tip += Random.Range(0.2f, 0.7f);
+            }
+            else if (judgeData.FinalJudge == JudgeData.Judge.Normal && satisfaction <= 20)
+            {
+                tip += Random.Range(0f, 0.05f);
+            }
+            if (tip > 0f)
+            {
+                gameManager.AddBudget(tip);
+                tipText.text = tip.ToString("F2");
+                tipText.gameObject.SetActive(true);
+            }
         }
-        else if ((satisfaction > 50 && judgeData.FinalJudge == JudgeData.Judge.Normal)
-                 || (satisfaction <= 50 && satisfaction > 20 && judgeData.FinalJudge == JudgeData.Judge.Success))
-        {
-            tip += NormalTip();
-        }
-        else if ((judgeData.FinalJudge == JudgeData.Judge.Success && satisfaction <= 20)
-                || (judgeData.FinalJudge == JudgeData.Judge.Normal && satisfaction >= 50 && satisfaction > 20))
-        {
-            tip += Random.Range(0.2f, 0.7f);
-        }
-        else if (judgeData.FinalJudge == JudgeData.Judge.Normal && satisfaction <= 20)
-        {
-            tip += Random.Range(0f, 0.05f);
-        }
-        if (tip > 0f)
+        else if (state == State.Story && storyNPCData.price > 0)
         {
             gameManager.AddBudget(tip);
             tipText.text = tip.ToString("F2");
             tipText.gameObject.SetActive(true);
         }
+
         yield return waitChatEnd;
         yield return wait;
         chatWindow.gameObject.SetActive(false);

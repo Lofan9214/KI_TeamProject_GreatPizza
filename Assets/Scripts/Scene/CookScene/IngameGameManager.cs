@@ -1,11 +1,19 @@
 using Cinemachine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using SaveDataVC = SaveDataV1;
 
 public class IngameGameManager : MonoBehaviour
 {
+    public enum State
+    {
+        Story,
+        Random,
+    }
+
     public PointerManager pointerManager { get; private set; }
     public IngameTimeManager timeManager { get; private set; }
     public NPC npc;
@@ -25,6 +33,9 @@ public class IngameGameManager : MonoBehaviour
     public IngredientTable.Type IngredientType { get; private set; }
     private IngredientVat currentTub;
 
+    private State state;
+    private TutorialData tutorialManager;
+
     private void Awake()
     {
         pointerManager = GetComponent<PointerManager>();
@@ -32,6 +43,16 @@ public class IngameGameManager : MonoBehaviour
 
         tempSaveData = SaveLoadManager.Data.DeepCopy();
         ++tempSaveData.days;
+        if (DataTableManager.StoryTable.IsExistData(tempSaveData.days))
+        {
+            state = State.Story;
+            tutorialManager = new TutorialData();
+            tutorialManager.storyData = DataTableManager.StoryTable.GetAtDay(tempSaveData.days);
+        }
+        else
+        {
+            state = State.Random;
+        }
     }
 
     private void Start()
@@ -94,17 +115,34 @@ public class IngameGameManager : MonoBehaviour
     public IEnumerator Spawn()
     {
         yield return new WaitForSeconds(2f);
-        if (timeManager.CurrentState != IngameTimeManager.State.DayEnd)
+        if (state == State.Random)
         {
-            var data = DataTableManager.RecipeTable.RandomGet();
+            if (timeManager.CurrentState != IngameTimeManager.State.DayEnd)
+            {
+                var data = DataTableManager.RecipeTable.RandomGet();
 
+                npc.gameObject.SetActive(true);
+                npc.SetData(DataTableManager.NPCTable.GetRandom(1));
+                npc.Order(data);
+
+                timeManager.ResetSatisfaction();
+
+                uiManager.ShowChatWindow(DataTableManager.TalkTable.GetRandomData(data.recipeID));
+            }
+        }
+        else if (state == State.Story)
+        {
+            var found = tutorialManager.storyData.FindAll(p => ((p.timestart / 100 - 12) * 4 + (p.timestart % 100 / 15)) == timeManager.WatchTime);
+            yield return new WaitUntil(() => found.Count > 0);
             npc.gameObject.SetActive(true);
-            npc.SetData(DataTableManager.NPCTable.GetRandom(1));
-            npc.Order(data);
-
+            npc.SetData(found[0]);
+            npc.Order(DataTableManager.RecipeTable.Get(found[0].recipeID));
+            
             timeManager.ResetSatisfaction();
 
-            uiManager.ShowChatWindow(DataTableManager.TalkTable.GetRandomData(data.recipeID));
+            
+
+            //uiManager.ShowChatWindow();
         }
     }
 

@@ -24,6 +24,7 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
         Success,
         Normal,
         Fail,
+        Additional,
     }
 
     public enum ButtonText
@@ -97,6 +98,11 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
 
     public void NextTalk(Talks index)
     {
+        if ((int)index >= stringIds.Length)
+        {
+            return;
+        }
+
         talkIndex = index;
         switch (talkIndex)
         {
@@ -116,6 +122,7 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
             case Talks.Success:
             case Talks.Normal:
             case Talks.Fail:
+            case Talks.Additional:
                 yesButton.gameObject.SetActive(false);
                 hintButton.gameObject.SetActive(false);
                 break;
