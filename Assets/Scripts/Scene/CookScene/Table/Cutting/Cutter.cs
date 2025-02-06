@@ -9,11 +9,11 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
     public Transform cutterObject;
 
     private bool isCutting = false;
-    private SpriteRenderer renderer;
+    private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
-        renderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public void OnPressObject(Vector2 position)
@@ -27,7 +27,7 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
         Vector2 offset = position - (Vector2)cutterObject.transform.position;
         var dir = offset.normalized;
         cutterObject.transform.up = dir;
-        renderer.enabled = false;
+        spriteRenderer.enabled = false;
     }
 
     public void OnDrag(Vector3 pos, Vector3 deltaPos)
@@ -57,6 +57,6 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
         currentTable.CurrentPizza.Cut(cutterObject.rotation * Quaternion.Euler(0f, 0f, 90f));
         isCutting = false;
         cutterObject.gameObject.SetActive(false);
-        renderer.enabled = true;
+        spriteRenderer.enabled = true;
     }
 }

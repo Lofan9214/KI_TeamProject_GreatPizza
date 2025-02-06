@@ -271,7 +271,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
 
         foreach (var ing in Recipe.ingredientIds)
         {
-            if (string.IsNullOrEmpty(ing))
+            if (string.IsNullOrEmpty(ing) || ing == "0")
             {
                 break;
             }
@@ -295,16 +295,18 @@ public class NPC : MonoBehaviour, IPizzaSlot
     {
         float result = 0f;
         var data = DataTableManager.IngredientTable.Get(Recipe.dough);
-        result += Random.Range(data.happy_min, data.happy_max);
+        if (data != null)
+            result += Random.Range(data.happy_min, data.happy_max);
 
         foreach (var ing in Recipe.ingredientIds)
         {
-            if (string.IsNullOrEmpty(ing))
+            if (string.IsNullOrEmpty(ing) || ing == "0")
             {
                 break;
             }
             data = DataTableManager.IngredientTable.Get(ing);
-            result += Random.Range(data.happy_min, data.happy_max);
+            if (data != null)
+                result += Random.Range(data.happy_min, data.happy_max);
         }
         return result;
     }
@@ -312,16 +314,20 @@ public class NPC : MonoBehaviour, IPizzaSlot
     {
         float result = 0f;
         var data = DataTableManager.IngredientTable.Get(Recipe.dough);
-        result += Random.Range(data.normal_min, data.normal_max);
+        if (data != null)
+        {
+            result += Random.Range(data.normal_min, data.normal_max);
+        }
 
         foreach (var ing in Recipe.ingredientIds)
         {
-            if (string.IsNullOrEmpty(ing))
+            if (string.IsNullOrEmpty(ing) || ing == "0")
             {
                 break;
             }
             data = DataTableManager.IngredientTable.Get(ing);
-            result += Random.Range(data.normal_min, data.normal_max);
+            if (data != null)
+                result += Random.Range(data.normal_min, data.normal_max);
         }
         return result;
     }

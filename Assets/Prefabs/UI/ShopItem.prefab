@@ -755,6 +755,9 @@ MonoBehaviour:
   itemDescription: {fileID: 6175923478257099705}
   price: {fileID: 1471940606271314182}
   toggle: {fileID: 1744882679784123016}
+  OnBought:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4300539482604432658
 GameObject:
   m_ObjectHideFlags: 0

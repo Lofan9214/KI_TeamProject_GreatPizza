@@ -1,5 +1,5 @@
 recipeID,stringID,roastcutting,dough,ingredientID
-0301,110201,10,dough,
+0301,110201,10,dough,0
 0302,110202,13,dough,tomato_cheese
 0303,110203,13,dough,cheese
 0304,110204,13,dough,tomato_cheese_pepperoni
@@ -17,16 +17,16 @@ recipeID,stringID,roastcutting,dough,ingredientID
 0316,110215,13,dough,tomato_cheese_pimento
 0317,110216,13,dough,tomato_cheese_shrimp
 0318,110217,13,dough,tomato_cheese_shrimp_pimento
-0319,110218,23,dough,tomato_cheese_shrimp
+0319,110218,13,dough,tomato_cheese_shrimp
 0320,110219,13,dough,tomato_cheese_pepperoni_onion
 0321,110220,13,dough,tomato_cheese_sausage_mushroom
 0322,110221,13,dough,tomato_olive_onion_piment
 0323,110222,13,dough,tomato_cheese_mushroom_olive_onion
 0324,110223,13,dough,tomato_cheese_mushrrom_shrimp
-0325,110224,23,dough,tomato_cheese_pepperoni_sausage_shrimp
+0325,110224,13,dough,tomato_cheese_pepperoni_sausage_shrimp
 0326,110225,13,dough,cheese_mushroom
 0327,110226,13,dough,tomato_sausage
-0328,110227,13,dough,tomato_cheese_sausage_onion
+0328,110227,23,dough,tomato_cheese_sausage_onion
 0329,110228,13,dough,tomato_cheese_sausage_olive_onion
-0330,110229,23,dough,tomato_cheese_pepperoni_olive
+0330,110229,13,dough,tomato_cheese_pepperoni_olive
 0331,110230,13,dough,tomato_cheese_pepperoni_sausage_mushroom_olive_onion_pimento_shrimp

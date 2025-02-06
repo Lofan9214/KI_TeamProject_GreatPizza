@@ -61,7 +61,7 @@ public class RecipeTable : DataTable
                 bool contains = true;
                 foreach (var id in p.ingredientIds)
                 {
-                    if (string.IsNullOrEmpty(id))
+                    if (string.IsNullOrEmpty(id) || id == "0")
                     {
                         continue;
                     }

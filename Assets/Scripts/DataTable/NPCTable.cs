@@ -51,8 +51,13 @@ public class NPCTable : DataTable
 
     public Data GetRandom(int type)
     {
-        var list = dict.Values.Where(p => p.type == type).ToList();
+        var list = GetListByType(type);
 
         return list[Random.Range(0, list.Count)];
+    }
+
+    public List<Data> GetListByType(int type)
+    {
+        return dict.Values.Where(p => p.type == type).ToList();
     }
 }
