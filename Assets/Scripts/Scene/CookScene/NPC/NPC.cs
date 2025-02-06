@@ -144,14 +144,28 @@ public class NPC : MonoBehaviour, IPizzaSlot
         {
             ratio = 100 - Mathf.RoundToInt(pizzaData.cheeseRatio * 100f);
             var datum = DataTableManager.IngredientTable.Get(cheese);
-            judgeData.cheese = JudgeValue(ratio, datum.fail, datum.success);
+            if (datum != null)
+            {
+                judgeData.cheese = JudgeValue(ratio, datum.fail, datum.success);
+            }
+            else
+            {
+                judgeData.cheese = JudgeValue(ratio, 50, 90);
+            }
         }
 
         if (!sourceExists)
         {
             ratio = 100 - Mathf.RoundToInt(pizzaData.sourceRatio * 100f);
             var datum = DataTableManager.IngredientTable.Get(pizzaData.sourceId);
-            judgeData.source = JudgeValue(ratio, datum.fail, datum.success);
+            if (datum != null)
+            {
+                judgeData.source = JudgeValue(ratio, datum.fail, datum.success);
+            }
+            else
+            {
+                judgeData.source = JudgeValue(ratio, 50, 90);
+            }
         }
 
         if (pizzaData.roastCount >= 3 || diffRoast > 1)

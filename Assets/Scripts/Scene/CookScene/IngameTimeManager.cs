@@ -11,7 +11,9 @@ public class IngameTimeManager : MonoBehaviour
         Ordering,
         OrderEnd,
         DayEnd,
-        Pause
+        Pause,
+        WatchStop,
+        AllStop,
     }
 
     public TextMeshProUGUI dayText;

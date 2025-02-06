@@ -195,6 +195,7 @@ MonoBehaviour:
   yesButton: {fileID: 8543510132705186477}
   hintButton: {fileID: 1669022816747130944}
   chatSpeed: 45
+  yesText: {fileID: 2359224682857726682}
   hintText: {fileID: 4685023455273959479}
   OnYes:
     m_PersistentCalls:
@@ -566,6 +567,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
+--- !u!114 &2359224682857726682 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6070638747589269613, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
+  m_PrefabInstance: {fileID: 8395443765037652663}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 369142374f6ae224ba5afc5769298901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2794480951999115425 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5928256639677688342, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}

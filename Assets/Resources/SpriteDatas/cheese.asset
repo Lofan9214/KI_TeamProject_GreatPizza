@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaf5104bf949d644e951416db1abbbad, type: 3}
-  m_Name: pepperoni
+  m_Name: cheese
   m_EditorClassIdentifier: 
   toppingSprites:
-  - {fileID: -1025198701, guid: da0ea0697b913df4bb84117d6e635a60, type: 3}
-  - {fileID: 1916711985, guid: da0ea0697b913df4bb84117d6e635a60, type: 3}
-  - {fileID: -1383094408, guid: da0ea0697b913df4bb84117d6e635a60, type: 3}
+  - {fileID: -2118372646, guid: da0ea0697b913df4bb84117d6e635a60, type: 3}
+  - {fileID: -1459760882, guid: da0ea0697b913df4bb84117d6e635a60, type: 3}
   storeSprite: {fileID: 0}
