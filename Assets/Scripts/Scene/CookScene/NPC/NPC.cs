@@ -6,26 +6,34 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour, IPizzaSlot
 {
+    public enum State
+    {
+        Story,
+        Random,
+    }
+    
     private const string cheese = "cheese";
     private WaitForSeconds wait = new WaitForSeconds(2f);
     private WaitUntil waitChatEnd;
 
+    public Transform sprite;
+    public ChatWindow chatWindow;
+    public IngameGameManager gameManager;
+
     public TextMeshProUGUI tipText;
     public Transform tipTextPosition;
-
-    public RecipeTable.Data Recipe { get; private set; }
 
     public bool IsSettable => true;
 
     public bool IsEmpty => true;
 
     public Pizza CurrentPizza { get; private set; }
+    public State state { get; private set; }
+    public RecipeTable.Data Recipe { get; private set; }
 
-    public Transform sprite;
-    public ChatWindow chatWindow;
-    public IngameGameManager gameManager;
     private float payment;
     private GameObject prefab;
+    private StoryTable.Data storyNPCData;
 
     private void Start()
     {
@@ -82,7 +90,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         Recipe = recipe;
     }
 
-    public void SetSprite(NPCTable.Data data)
+    public void SetData(NPCTable.Data data)
     {
         //spriteRenderer.sprite = data.Sprite;
         if (prefab != null)
@@ -91,6 +99,10 @@ public class NPC : MonoBehaviour, IPizzaSlot
             prefab = null;
         }
         prefab = Instantiate(data.Prefab, sprite);
+    }
+    public void SetData(StoryTable.Data data)
+    {
+
     }
 
     public JudgeData GetJudgeData(RecipeTable.Data recipe, Pizza.Data pizzaData)

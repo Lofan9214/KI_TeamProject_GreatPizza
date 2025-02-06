@@ -99,7 +99,7 @@ public class IngameGameManager : MonoBehaviour
             var data = DataTableManager.RecipeTable.RandomGet();
 
             npc.gameObject.SetActive(true);
-            npc.SetSprite(DataTableManager.NPCTable.GetRandom(1));
+            npc.SetData(DataTableManager.NPCTable.GetRandom(1));
             npc.Order(data);
 
             timeManager.ResetSatisfaction();
