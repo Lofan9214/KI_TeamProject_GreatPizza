@@ -26,12 +26,20 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
         Fail,
     }
 
+    public enum ButtonText
+    {
+        Okay = 110901,
+        Pardon = 110902,
+        Hint = 110903,
+    }
+
     public int[] stringIds;
     public TextMeshProUGUI text;
     public Button yesButton;
     public Button hintButton;
     public float chatSpeed = 45f;
 
+    public LocalizationText yesText;
     public LocalizationText hintText;
 
     public State TalkingState { get; private set; }
@@ -62,13 +70,15 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
         stringIds = Ids.ToArray();
         yesButton.gameObject.SetActive(true);
         hintButton.gameObject.SetActive(true);
+        yesText.SetString(((int)ButtonText.Okay).ToString());
+        hintText.SetString(((int)ButtonText.Pardon).ToString());
         NextTalk(0);
     }
 
     public IEnumerator Talk()
     {
         TalkingState = State.Talking;
-        while (TalkingState == State.Talking && charLength <= script.Length)
+        while (TalkingState == State.Talking && (int)charLength < script.Length)
         {
             charLength += Time.deltaTime * chatSpeed;
             text.text = script.Substring(0, (int)charLength);
@@ -134,12 +144,25 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
         {
             case Talks.Order:
                 NextTalk((Talks)((int)talkIndex + 1));
-                hintText.stringId = 110903.ToString();
+                yesText.SetString(((int)ButtonText.Okay).ToString());
+                hintText.SetString(((int)ButtonText.Hint).ToString());
                 break;
             case Talks.Hint1:
                 NextTalk((Talks)((int)talkIndex + 1));
                 hintButton.gameObject.SetActive(false);
                 break;
+        }
+    }
+
+    public void SetActiveButton(Talks talk, bool active)
+    {
+        if (talk == Talks.Order)
+        {
+            yesButton.gameObject.SetActive(active);
+        }
+        else if (talk == Talks.Hint1)
+        {
+            hintButton.gameObject.SetActive(active);
         }
     }
 

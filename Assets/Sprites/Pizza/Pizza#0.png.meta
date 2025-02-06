@@ -207,27 +207,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pizza#0_4
-      rect:
-        serializedVersion: 2
-        x: 1507
-        y: 985
-        width: 9
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ced17091deeb8d41b4caba24095bcc8
-      internalID: -1770003543
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: tomato1
       rect:
         serializedVersion: 2
@@ -244,27 +223,6 @@ TextureImporter:
       bones: []
       spriteID: b965ea345c9ab2b46b2a1b4f98ae7ca0
       internalID: -1653030755
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pizza#0_6
-      rect:
-        serializedVersion: 2
-        x: 1886
-        y: 985
-        width: 9
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 969ca3cb2d1390e40ba3394cba5b5953
-      internalID: 1335102020
       vertices: []
       indices: 
       edges: []
@@ -338,7 +296,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1142
         y: 369
-        width: 368
+        width: 369
         height: 376
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -354,33 +312,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pizza#0_11
-      rect:
-        serializedVersion: 2
-        x: 1507
-        y: 606
-        width: 9
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04acc00ab5fb1e347bb9b11b23140732
-      internalID: -390643590
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: tomato0
       rect:
         serializedVersion: 2
         x: 1521
         y: 369
-        width: 372
+        width: 369
         height: 376
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -391,27 +328,6 @@ TextureImporter:
       bones: []
       spriteID: bf13bd2709f32634a94767f1076e9f38
       internalID: 1313589333
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pizza#0_13
-      rect:
-        serializedVersion: 2
-        x: 1886
-        y: 606
-        width: 9
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3d87bf147c23f2419338cb1392afe6e
-      internalID: 303123627
       vertices: []
       indices: 
       edges: []

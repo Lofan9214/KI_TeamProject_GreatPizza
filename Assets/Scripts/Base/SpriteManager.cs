@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class SpriteManager : MonoBehaviour
@@ -12,7 +13,7 @@ public class SpriteManager : MonoBehaviour
         for (int i = 0; i < atlases.Length; ++i)
         {
             Sprite[] atlassprites = Resources.LoadAll<Sprite>(atlases[i].name);
-
+            
             for (int j = 0; j < atlassprites.Length; ++j)
             {
                 

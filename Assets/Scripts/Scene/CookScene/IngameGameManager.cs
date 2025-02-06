@@ -57,6 +57,11 @@ public class IngameGameManager : MonoBehaviour
         currentTub = tub;
         PizzaCommand = command;
         IngredientType = type;
+
+        foreach (var slot in kitchen.ingredientTable.pizzaSlots)
+        {
+            slot.CurrentPizza.ingredientGuide.SetActive(IngredientType == IngredientTable.Type.Ingredient);
+        }
     }
 
     public void ChangePlace(InGamePlace place)

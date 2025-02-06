@@ -76,7 +76,7 @@ public class IngredientTableManager : MonoBehaviour
             tableLength = tablesLengthes[1];
             extended = true;
         }
-        else if (cnt > 3)
+        if (cnt > 3)
         {
             tableLength = tablesLengthes[2];
         }

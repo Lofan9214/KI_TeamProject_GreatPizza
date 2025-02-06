@@ -37,7 +37,7 @@ public class ShopItem : MonoBehaviour
     public void Init(IngredientTable.Data data, bool bought, int day)
     {
         ingdata = data;
-        itemImage.sprite = ingdata.Sprite;
+        itemImage.sprite = ingdata.spriteDatas.storeSprite;
         itemName.SetString(ingdata.stringID.ToString());
         itemDescription.SetString(ingdata.stringID.ToString());
         toggle.isOn = bought;

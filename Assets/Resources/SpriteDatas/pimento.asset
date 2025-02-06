@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaf5104bf949d644e951416db1abbbad, type: 3}
   m_Name: pimento
   m_EditorClassIdentifier: 
-  sprites:
+  toppingSprites:
   - {fileID: -1996329015, guid: da0ea0697b913df4bb84117d6e635a60, type: 3}
   - {fileID: 534785621, guid: da0ea0697b913df4bb84117d6e635a60, type: 3}
   - {fileID: 812739861, guid: da0ea0697b913df4bb84117d6e635a60, type: 3}
+  storeSprite: {fileID: 0}

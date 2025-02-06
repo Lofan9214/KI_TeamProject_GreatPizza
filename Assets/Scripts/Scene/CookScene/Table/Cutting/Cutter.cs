@@ -18,7 +18,7 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
 
     public void OnPressObject(Vector2 position)
     {
-        if(currentTable.IsEmpty)
+        if (currentTable.IsEmpty)
         {
             return;
         }
@@ -34,7 +34,7 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
     {
         if (isCutting)
         {
-            Vector2 offset = pos - cutterObject.transform.position;
+            Vector2 offset = cutterObject.transform.position - pos;
 
             if (offset.sqrMagnitude < 1f)
             {
@@ -54,7 +54,7 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
             return;
         }
 
-        currentTable.CurrentPizza.Cut(cutterObject.rotation);
+        currentTable.CurrentPizza.Cut(cutterObject.rotation * Quaternion.Euler(0f, 0f, 90f));
         isCutting = false;
         cutterObject.gameObject.SetActive(false);
         renderer.enabled = true;

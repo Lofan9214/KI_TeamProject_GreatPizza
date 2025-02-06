@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Unity.Mathematics;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Pizza : MonoBehaviour, IClickable, IDragable
@@ -13,12 +14,12 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     public class Data
     {
-        public string doughID = "dough";
+        public string doughID = string.Empty;
         public int roastCount = 0;
         public List<quaternion> cutData = new List<quaternion>();
         public List<string> toppingData = new List<string>();
         public float sourceRatio = 0f;
-        public string sourceId = "tomato";
+        public string sourceId = string.Empty;
         public float cheeseRatio = 0f;
     }
 
@@ -26,12 +27,14 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     public Data PizzaData { get; private set; } = new Data();
 
-    public SpriteRenderer dough;
+    public Dough dough;
     public GameObject pizzaBoard;
     public DrawIngredient sourceLayer;
     public DrawIngredient cheeseLayer;
     public ToppingLayer toppingLayer;
     public SpriteRenderer roastLayer;
+    public GameObject ingredientGuide;
+    public GameObject cutGuide;
     public Cut cutLayer;
 
     private Transform currentSlot;
@@ -119,6 +122,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                     if (pizzaBoard.activeSelf)
                     {
                         pizzaBoard.SetActive(false);
+                        ingredientGuide.SetActive(false);
                     }
                     tempSlot = null;
                     return;
@@ -137,6 +141,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                     if (pizzaBoard.activeSelf)
                     {
                         pizzaBoard.SetActive(false);
+                        ingredientGuide.SetActive(false);
                     }
                     tempSlot = null;
                     return;
@@ -151,19 +156,32 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         if (CurrentState == State.AddingTopping
             && Vector2.Distance(position, transform.position) < circleCollider.radius)
         {
-            if (gameManager.IngredientType == IngredientTable.Type.Source
-                || gameManager.IngredientType == IngredientTable.Type.Cheese)
+            if (gameManager.IngredientType == IngredientTable.Type.Source)
             {
-                switch (gameManager.PizzaCommand)
+                if (string.IsNullOrEmpty(sourceLayer.IngredientId)
+                    && string.IsNullOrEmpty(PizzaData.sourceId))
                 {
-                    case "tomato":
-                        DrawSource(position);
-                        addingTopping = true;
-                        break;
-                    case "cheese":
-                        DrawCheese(position);
-                        addingTopping = true;
-                        break;
+                    sourceLayer.Init(gameManager.PizzaCommand);
+                    PizzaData.sourceId = gameManager.PizzaCommand;
+                }
+                if (gameManager.PizzaCommand == PizzaData.sourceId)
+                {
+                    DrawSource(position);
+                    addingTopping = true;
+                }
+                lastDrawPos = position;
+            }
+            else if (gameManager.IngredientType == IngredientTable.Type.Cheese)
+            {
+
+                if (string.IsNullOrEmpty(cheeseLayer.IngredientId))
+                {
+                    cheeseLayer.Init(gameManager.PizzaCommand);
+                }
+                if (gameManager.PizzaCommand == cheeseLayer.IngredientId)
+                {
+                    DrawCheese(position);
+                    addingTopping = true;
                 }
                 lastDrawPos = position;
             }
@@ -174,7 +192,6 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                 toppingLayer.AddTopping(position, gameManager.PizzaCommand);
             }
         }
-
     }
 
     public void Move(Vector3 Pos)
@@ -234,9 +251,17 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     public void Roast()
     {
         PizzaData.roastCount++;
-        Color color = roastLayer.color;
-        color.a += (1f - color.a) * 0.2f;
-        roastLayer.color = color;
+
+        dough.Roast();
+        sourceLayer.Roast();
+        cheeseLayer.Roast();
+
+        if (PizzaData.roastCount > 2)
+        {
+            Color color = roastLayer.color;
+            color.a += (1f - color.a) * 0.2f;
+            roastLayer.color = color;
+        }
     }
 
     public void Cut(quaternion rotation)
@@ -252,7 +277,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     public void SetDough(string doughId)
     {
-        //dough.sprite = DataTableManager.IngredientTable.Get(doughId).Sprite;
+        dough.Init(doughId);
     }
 
     public void DrawSource(Vector2 position)

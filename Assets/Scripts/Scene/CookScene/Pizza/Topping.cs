@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Topping : MonoBehaviour
 {
-    private const string dataFormat = "SpriteDatas/{0}";
     public IngredientTable.Data toppingData;
     private SpriteRenderer spriteRenderer;
 
@@ -16,8 +15,7 @@ public class Topping : MonoBehaviour
     public void SetData(string dataId)
     {
         toppingData = DataTableManager.IngredientTable.Get(dataId);
-        var spriteData = Resources.Load<IngredientSpriteData>(string.Format(dataFormat, dataId));
-        spriteRenderer.sprite = spriteData.sprites[Random.Range(0,spriteData.sprites.Length)];
+        spriteRenderer.sprite = toppingData.spriteDatas.toppingSprites[Random.Range(0, toppingData.spriteDatas.toppingSprites.Length)];
         transform.Rotate(0f, 0f, Random.Range(0, 360f));
     }
 
