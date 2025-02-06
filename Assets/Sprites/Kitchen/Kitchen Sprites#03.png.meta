@@ -123,15 +123,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cheese1
+      name: cheeseon1
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1846
-        width: 174
-        height: 198
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5
+        y: 1847
+        width: 168
+        height: 197
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -375,15 +375,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cheese2
+      name: cheeseon2
       rect:
         serializedVersion: 2
-        x: 3
-        y: 1640
-        width: 171
-        height: 203
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5
+        y: 1643
+        width: 168
+        height: 200
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -438,7 +438,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cheese5
+      name: cheesetr
       rect:
         serializedVersion: 2
         x: 378
@@ -627,15 +627,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cheese3
+      name: cheeseon3
       rect:
         serializedVersion: 2
-        x: 3
-        y: 1438
-        width: 171
-        height: 200
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5
+        y: 1439
+        width: 168
+        height: 199
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1236,15 +1236,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cheese4
+      name: cheeseon4
       rect:
         serializedVersion: 2
-        x: 4
-        y: 1233
-        width: 170
-        height: 202
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5
+        y: 1234
+        width: 168
+        height: 201
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2216,11 +2216,11 @@ TextureImporter:
       Kitchen Sprites#03_94: 550872619
       Kitchen Sprites#03_96: 1608563120
       Kitchen Sprites#03_99: -677859130
-      cheese1: 1208935797
-      cheese2: -1212685499
-      cheese3: -775937475
-      cheese4: 952930154
-      cheese5: 1076342565
+      cheeseon1: 1208935797
+      cheeseon2: -1212685499
+      cheeseon3: -775937475
+      cheeseon4: 952930154
+      cheesetr: 1076342565
       mushroomtr: 377474713
       olive1: 1838916728
       olive2: -391907204
