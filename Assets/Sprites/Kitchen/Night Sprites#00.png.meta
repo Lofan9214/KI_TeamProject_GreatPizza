@@ -128,11 +128,11 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 1694
-        width: 876
+        width: 873
         height: 352
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 111, y: 96, z: 116, w: 62}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -207,16 +207,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Night Sprites#00_5
+      name: Night_UI2
       rect:
         serializedVersion: 2
-        x: 877
-        y: 1788
-        width: 871
-        height: 114
+        x: 878
+        y: 1789
+        width: 869
+        height: 113
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 12, y: 13, z: 40, w: 52}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -333,16 +333,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Night Sprites#00_11
+      name: Night_UI3
       rect:
         serializedVersion: 2
-        x: 876
+        x: 878
         y: 1730
-        width: 873
+        width: 869
         height: 56
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 15, y: 13, z: 18, w: 7}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -459,16 +459,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Night Sprites#00_19
+      name: Night_UI1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1340
-        width: 874
-        height: 352
+        x: 3
+        y: 1343
+        width: 870
+        height: 348
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 104, y: 81, z: 80, w: 54}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -837,7 +837,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Night Sprites#00_41
+      name: Night_Time
       rect:
         serializedVersion: 2
         x: 819
@@ -3212,7 +3212,6 @@ TextureImporter:
       Night Sprites#00_107: -1802304721
       Night Sprites#00_108: -286928177
       Night Sprites#00_109: 180549379
-      Night Sprites#00_11: -1587309523
       Night Sprites#00_110: -673728826
       Night Sprites#00_111: -1109976933
       Night Sprites#00_112: -1766861186
@@ -3299,7 +3298,6 @@ TextureImporter:
       Night Sprites#00_187: -1624021486
       Night Sprites#00_188: -1322657012
       Night Sprites#00_189: -1315510077
-      Night Sprites#00_19: 256928853
       Night Sprites#00_190: -1483732325
       Night Sprites#00_191: 2140225605
       Night Sprites#00_192: 624074518
@@ -3344,7 +3342,6 @@ TextureImporter:
       Night Sprites#00_39: -2019817767
       Night Sprites#00_4: -1217487915
       Night Sprites#00_40: -1584582545
-      Night Sprites#00_41: -124631266
       Night Sprites#00_42: -1313120363
       Night Sprites#00_43: 971827194
       Night Sprites#00_44: 31042078
@@ -3353,7 +3350,6 @@ TextureImporter:
       Night Sprites#00_47: -456893360
       Night Sprites#00_48: -525549329
       Night Sprites#00_49: 1739987260
-      Night Sprites#00_5: -1334840472
       Night Sprites#00_50: -1357046810
       Night Sprites#00_51: -1383516670
       Night Sprites#00_52: -1628091663
@@ -3408,6 +3404,10 @@ TextureImporter:
       Night Sprites#00_97: 2074240582
       Night Sprites#00_98: -54149833
       Night Sprites#00_99: -2071439938
+      Night_Time: -124631266
+      Night_UI1: 256928853
+      Night_UI2: -1334840472
+      Night_UI3: -1587309523
       storeTray: 1116689484
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

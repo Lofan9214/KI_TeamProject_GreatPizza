@@ -1614,13 +1614,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI Sprites#0_72
+      name: Tutorial
       rect:
         serializedVersion: 2
         x: 529
-        y: 930
-        width: 179
-        height: 156
+        y: 929
+        width: 175
+        height: 155
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2202,16 +2202,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI Sprites#0_100
+      name: night_ui4
       rect:
         serializedVersion: 2
         x: 1308
         y: 876
-        width: 87
-        height: 85
+        width: 86
+        height: 84
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 9, y: 12, z: 10, w: 7}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -4134,16 +4134,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI Sprites#0_193
+      name: night_ui5
       rect:
         serializedVersion: 2
-        x: 1159
-        y: 438
-        width: 266
-        height: 120
+        x: 1263
+        y: 462
+        width: 73
+        height: 95
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 18, y: 35, z: 20, w: 35}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -7045,9 +7045,9 @@ TextureImporter:
       Home: 1156710056
       Stop: -813957629
       Sun_fill: 389061714
+      Tutorial: 400425358
       UI Sprites#0_1: -1104941682
       UI Sprites#0_10: -873381619
-      UI Sprites#0_100: 1503292082
       UI Sprites#0_101: -1945334559
       UI Sprites#0_102: -813713847
       UI Sprites#0_103: -277036965
@@ -7142,7 +7142,6 @@ TextureImporter:
       UI Sprites#0_190: 2114469858
       UI Sprites#0_191: -829359693
       UI Sprites#0_192: 985426675
-      UI Sprites#0_193: 1805881602
       UI Sprites#0_194: -224797880
       UI Sprites#0_195: -1869328653
       UI Sprites#0_196: -1051462679
@@ -7326,7 +7325,6 @@ TextureImporter:
       UI Sprites#0_7: -147689200
       UI Sprites#0_70: -825121086
       UI Sprites#0_71: -1516269558
-      UI Sprites#0_72: 400425358
       UI Sprites#0_73: 1502145557
       UI Sprites#0_74: 1055146789
       UI Sprites#0_75: -23621118
@@ -7363,6 +7361,8 @@ TextureImporter:
       hand: 1073137566
       menu: -808191827
       money: -671269744
+      night_ui4: 1503292082
+      night_ui5: 1805881602
       start: 1553290154
       store1: -1469819957
       store10: 484759030
