@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ShopItem : MonoBehaviour
 {
+    public Image trayImage;
     public Image itemImage;
     public LocalizationText itemName;
     public LocalizationText itemDescription;
@@ -37,6 +38,7 @@ public class ShopItem : MonoBehaviour
     public void Init(IngredientTable.Data data, bool bought, int day)
     {
         ingdata = data;
+        trayImage.sprite = ingdata.spriteDatas.storeTray;
         itemImage.sprite = ingdata.spriteDatas.storeSprite;
         itemName.SetString(ingdata.stringID.ToString());
         itemDescription.SetString(ingdata.stringID.ToString());

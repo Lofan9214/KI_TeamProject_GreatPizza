@@ -24,7 +24,6 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
         Success,
         Normal,
         Fail,
-        Additional,
     }
 
     public enum ButtonText
@@ -32,6 +31,8 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
         Okay = 110901,
         Pardon = 110902,
         Hint = 110903,
+        Yes = 110934,
+        No = 110935,
     }
 
     public int[] stringIds;
@@ -123,7 +124,6 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
             case Talks.Success:
             case Talks.Normal:
             case Talks.Fail:
-            case Talks.Additional:
                 yesButton.gameObject.SetActive(false);
                 hintButton.gameObject.SetActive(false);
                 break;

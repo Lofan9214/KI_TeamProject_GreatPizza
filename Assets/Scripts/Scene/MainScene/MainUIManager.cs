@@ -1,22 +1,17 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainUIManager : MonoBehaviour
 {
-    public Transform ShopWindow;
-
+    public FormattedLocalizationText startButtonText;
     public void StartGame()
     {
         SceneManager.LoadScene(1);
     }
 
-    public void OpenShop()
+    private void Start()
     {
-        ShopWindow.gameObject.SetActive(true);
-    }
-
-    public void CloseShop()
-    {
-        ShopWindow.gameObject.SetActive(false);
+        startButtonText.SetString((SaveLoadManager.Data.days+1).ToString());
     }
 }

@@ -82,7 +82,10 @@ public class IngameGameManager : MonoBehaviour
 
         foreach (var slot in kitchen.ingredientTable.pizzaSlots)
         {
-            slot.CurrentPizza.ingredientGuide.SetActive(IngredientType == IngredientTable.Type.Ingredient);
+            if (slot.CurrentPizza != null)
+            {
+                slot.CurrentPizza.ingredientGuide.SetActive(IngredientType == IngredientTable.Type.Ingredient);
+            }
         }
     }
 
@@ -152,7 +155,7 @@ public class IngameGameManager : MonoBehaviour
             }
 
             var chats = DataTableManager.TalkTable.GetByGroupId(found[0].groupID).Select(p => p.stringID).ToList();
-            if(chats.Count == 3)
+            if (chats.Count == 3)
             {
                 chats.AddRange(DataTableManager.TalkTable.GetResultTalk());
             }

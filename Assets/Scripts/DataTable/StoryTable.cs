@@ -17,7 +17,7 @@ public class StoryTable : DataTable
         public int day { get; set; }
         public int recipeID { get; set; }
         public string groupID { get; set; }
-        public string prefabId { get; set; }
+        public string image { get; set; }
 
         public GameObject Prefab;
     }
@@ -37,7 +37,7 @@ public class StoryTable : DataTable
         {
             if (!dict.ContainsKey(item.story_npcID))
             {
-                item.Prefab = Resources.Load<GameObject>(string.Format(prefab, item.prefabId));
+                item.Prefab = Resources.Load<GameObject>(string.Format(prefab, item.image));
                 dict.Add(item.story_npcID, item);
             }
             else

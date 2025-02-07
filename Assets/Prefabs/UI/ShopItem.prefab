@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 9009474951272968472}
   - component: {fileID: 4622441291497008357}
   m_Layer: 5
-  m_Name: ItemImage
+  m_Name: Tray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -752,7 +752,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be852b381ff85c647bb606f0f37d25db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemImage: {fileID: 4622441291497008357}
+  trayImage: {fileID: 4622441291497008357}
+  itemImage: {fileID: 5392360139140096806}
   itemName: {fileID: 605927704417493053}
   itemDescription: {fileID: 6175923478257099705}
   price: {fileID: 1471940606271314182}
@@ -1056,7 +1057,7 @@ GameObject:
   - component: {fileID: 7911881383488146321}
   - component: {fileID: 5392360139140096806}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
