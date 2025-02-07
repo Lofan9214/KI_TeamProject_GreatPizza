@@ -69,7 +69,8 @@ public class IngameTimeManager : MonoBehaviour
             endWindow.Show();
         }
 
-        if (CurrentState != State.Pause
+        if ((CurrentState == State.Ordering
+            || CurrentState == State.OrderEnd) 
             && WatchTime <= WatchTimeEnd)
         {
             watchTimeTimer += Time.deltaTime;
@@ -80,21 +81,21 @@ public class IngameTimeManager : MonoBehaviour
 
                 SetWatchTimeText();
             }
-
-            if (CurrentState == State.Ordering)
+        }
+        if (CurrentState == State.Ordering
+            || CurrentState == State.WatchStop)
+        {
+            satisfactionTimer += Time.deltaTime;
+            if (satisfactionTimer > satisfactionInterval)
             {
-                satisfactionTimer += Time.deltaTime;
-                if (satisfactionTimer > satisfactionInterval)
+                satisfactionTimer -= satisfactionInterval;
+                Satisfaction = Mathf.Max(0, --Satisfaction);
+                if (Satisfaction == 0)
                 {
-                    satisfactionTimer -= satisfactionInterval;
-                    Satisfaction = Mathf.Max(0, --Satisfaction);
-                    if (Satisfaction == 0)
-                    {
-                        CurrentState = State.OrderEnd;
-                        OnUnsatisfied?.Invoke();
-                    }
-                    SetSatisfactionText();
+                    CurrentState = State.OrderEnd;
+                    OnUnsatisfied?.Invoke();
                 }
+                SetSatisfactionText();
             }
         }
     }
@@ -134,5 +135,16 @@ public class IngameTimeManager : MonoBehaviour
     private void SetWatchTimeText()
     {
         watchText.text = $"{12 + WatchTime / 4:D2}:{WatchTime % 4 * 15:D2}";
+    }
+
+    public void SetWatch(int time)
+    {
+        if (time <= WatchTimeEnd)
+        {
+            WatchTime = time;
+            watchTimeTimer = 0f;
+            satisfactionTimer = 0f;
+            SetWatchTimeText();
+        }
     }
 }

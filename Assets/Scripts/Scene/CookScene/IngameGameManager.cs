@@ -2,6 +2,7 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using SaveDataVC = SaveDataV1;
@@ -137,12 +138,25 @@ public class IngameGameManager : MonoBehaviour
             npc.gameObject.SetActive(true);
             npc.SetData(found[0]);
             npc.Order(DataTableManager.RecipeTable.Get(found[0].recipeID));
-            
+
             timeManager.ResetSatisfaction();
+            if (found[0].timelock == 1
+                && found[0].satisfactionlock == 1)
+            {
+                timeManager.SetState(IngameTimeManager.State.AllStop);
+            }
+            if (found[0].timelock == 1
+                && found[0].satisfactionlock == 0)
+            {
+                timeManager.SetState(IngameTimeManager.State.WatchStop);
+            }
 
-            
-
-            //uiManager.ShowChatWindow();
+            var chats = DataTableManager.TalkTable.GetByGroupId(found[0].groupID).Select(p => p.stringID).ToList();
+            if(chats.Count == 3)
+            {
+                chats.AddRange(DataTableManager.TalkTable.GetResultTalk());
+            }
+            uiManager.ShowChatWindow(chats.ToArray());
         }
     }
 

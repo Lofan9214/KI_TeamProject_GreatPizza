@@ -16,10 +16,14 @@ public class StoryTable : DataTable
         public int price { get; set; }
         public int day { get; set; }
         public int recipeID { get; set; }
-        public int groupID { get; set; }
+        public string groupID { get; set; }
+        public string prefabId { get; set; }
+
+        public GameObject Prefab;
     }
 
     private Dictionary<int, Data> dict = new Dictionary<int, Data>();
+    private const string prefab = "Prefabs/{0}";
 
     public override void Load(string fileName)
     {
@@ -33,6 +37,7 @@ public class StoryTable : DataTable
         {
             if (!dict.ContainsKey(item.story_npcID))
             {
+                item.Prefab = Resources.Load<GameObject>(string.Format(prefab, item.prefabId));
                 dict.Add(item.story_npcID, item);
             }
             else
@@ -56,11 +61,12 @@ public class StoryTable : DataTable
 
     public List<Data> GetAtDay(int day)
     {
-        if (!dict.ContainsKey(day))
+        var list = dict.Values.Where(p => p.day == day).ToList();
+        if (list.Count == 0)
         {
             return null;
         }
 
-        return dict.Values.Where(p => p.day == day).ToList();
+        return list;
     }
 }

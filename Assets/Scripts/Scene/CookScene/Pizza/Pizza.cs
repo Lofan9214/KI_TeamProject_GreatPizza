@@ -239,13 +239,16 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     public void OnDragFromBoard(Vector3 position, Vector3 deltaPos)
     {
+        if (lastDrawPos == null)
+        {
+            Move(position);
+            return;
+        }
         if (Vector2.Distance(position, transform.position) < circleCollider.radius)
         {
             OnDrag(position, deltaPos);
             return;
         }
-        if (lastDrawPos == null)
-            Move(position);
     }
 
     public void Roast()

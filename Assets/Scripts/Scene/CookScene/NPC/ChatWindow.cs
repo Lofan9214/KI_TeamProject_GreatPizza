@@ -79,11 +79,12 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
     public IEnumerator Talk()
     {
         TalkingState = State.Talking;
-        while (TalkingState == State.Talking && (int)charLength < script.Length)
+        while (TalkingState == State.Talking && (int)charLength <= script.Length)
         {
             charLength += Time.deltaTime * chatSpeed;
-            text.text = script.Substring(0, (int)charLength);
-            if ((int)charLength == script.Length)
+            int leng = Mathf.Min(script.Length, (int)charLength);
+            text.text = script.Substring(0, leng);
+            if (leng == script.Length)
             {
                 TalkingState = State.Talkend;
                 break;
@@ -141,6 +142,8 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
         OnYes?.Invoke();
         yield return new WaitForSeconds(0.75f);
         gm.ChangePlace(InGamePlace.Kitchen);
+        if(gm.timeManager.CurrentState != IngameTimeManager.State.WatchStop
+            && gm.timeManager.CurrentState != IngameTimeManager.State.AllStop)
         gm.timeManager.SetState(IngameTimeManager.State.Ordering);
         gameObject.SetActive(false);
     }

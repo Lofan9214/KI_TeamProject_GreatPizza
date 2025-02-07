@@ -108,6 +108,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
 
     public void SetData(StoryTable.Data data)
     {
+        storyNPCData = data;
         state = State.Story;
 
         if (prefab != null)
@@ -115,7 +116,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
             Destroy(prefab);
             prefab = null;
         }
-        prefab = Instantiate(Resources.Load<GameObject>("npc_1"), sprite);
+        prefab = Instantiate(data.Prefab, sprite);
     }
 
     public void ClearPizza()
@@ -274,8 +275,8 @@ public class NPC : MonoBehaviour, IPizzaSlot
         }
         else if (state == State.Story && storyNPCData.price > 0)
         {
-            gameManager.AddBudget(tip);
-            tipText.text = tip.ToString("F2");
+            gameManager.AddBudget(storyNPCData.price);
+            tipText.text = storyNPCData.price.ToString("F2");
             tipText.gameObject.SetActive(true);
         }
 
@@ -283,6 +284,10 @@ public class NPC : MonoBehaviour, IPizzaSlot
         yield return wait;
         chatWindow.gameObject.SetActive(false);
         tipText.gameObject.SetActive(false);
+        if (state == State.Story)
+        {
+            gameManager.timeManager.SetWatch((storyNPCData.timeend / 100 - 12) * 4 + (storyNPCData.timeend % 100 / 15));
+        }
         gameObject.SetActive(false);
         gameManager.StartSpawn();
     }
