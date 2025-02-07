@@ -5,7 +5,7 @@ using static UnityEditor.PlayerSettings;
 
 public class Cutter : MonoBehaviour, IClickable, IDragable
 {
-    public PizzaSlot currentTable;
+    public CuttingSlot currentTable;
     public Transform cutterObject;
 
     private bool isCutting = false;
