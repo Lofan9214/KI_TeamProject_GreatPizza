@@ -1236,7 +1236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cheeseon4
+      name: cheeseon4_store
       rect:
         serializedVersion: 2
         x: 5
@@ -1614,7 +1614,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shrimpotr
+      name: shrimpotr_store
       rect:
         serializedVersion: 2
         x: 916
@@ -1698,7 +1698,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pepperoni0
+      name: pepperoni0_store
       rect:
         serializedVersion: 2
         x: 1712
@@ -1803,7 +1803,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oniontr
+      name: oniontr_store
       rect:
         serializedVersion: 2
         x: 1467
@@ -2219,7 +2219,7 @@ TextureImporter:
       cheeseon1: 1208935797
       cheeseon2: -1212685499
       cheeseon3: -775937475
-      cheeseon4: 952930154
+      cheeseon4_store: 952930154
       cheesetr: 1076342565
       mushroomtr: 377474713
       olive1: 1838916728
@@ -2236,8 +2236,8 @@ TextureImporter:
       onion5: -1795193061
       onion6: 561740622
       onion7: -1130416650
-      oniontr: 24934141
-      pepperoni0: -851108025
+      oniontr_store: 24934141
+      pepperoni0_store: -851108025
       pimento3: 842693773
       pimentoon1: -1793525099
       pimentoon2: -1211275919
@@ -2245,7 +2245,7 @@ TextureImporter:
       shrimpon2: -372939565
       shrimpon3: 1146049025
       shrimpon4: -1895020493
-      shrimpotr: 868093786
+      shrimpotr_store: 868093786
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

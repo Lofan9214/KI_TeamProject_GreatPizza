@@ -2748,7 +2748,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shrimpoff2
+      name: shrimpoff2_store
       rect:
         serializedVersion: 2
         x: 1309
@@ -3190,7 +3190,7 @@ TextureImporter:
       ovenrail1: -458711062
       ovenrail2: -284457129
       pepperoni2: -2095551441
-      shrimpoff2: -1168481728
+      shrimpoff2_store: -1168481728
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

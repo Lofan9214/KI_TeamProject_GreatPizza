@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Counter Sprites#0_0
+      name: order1
       rect:
         serializedVersion: 2
         x: 3
@@ -132,7 +132,7 @@ TextureImporter:
         height: 553
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 22, z: 11, w: 13}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Counter Sprites#0_2
+      name: order2
       rect:
         serializedVersion: 2
         x: 297
@@ -174,7 +174,7 @@ TextureImporter:
         height: 553
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 10, y: 14, z: 7, w: 12}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -186,13 +186,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Counter Sprites#0_3
+      name: order3
       rect:
         serializedVersion: 2
         x: 390
-        y: 274
+        y: 277
         width: 70
-        height: 553
+        height: 550
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Counter Sprites#0_4
+      name: Time1
       rect:
         serializedVersion: 2
         x: 3
@@ -216,7 +216,7 @@ TextureImporter:
         height: 248
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 18, y: 40, z: 21, w: 19}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -249,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Counter Sprites#0_6
+      name: satisfaction
       rect:
         serializedVersion: 2
         x: 177
@@ -258,7 +258,7 @@ TextureImporter:
         height: 182
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 21, y: 28, z: 17, w: 27}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -291,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Counter Sprites#0_10
+      name: Sun_on
       rect:
         serializedVersion: 2
         x: 385
@@ -312,12 +312,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Counter Sprites#0_18
+      name: happy
       rect:
         serializedVersion: 2
         x: 385
         y: 134
-        width: 59
+        width: 58
         height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -354,7 +354,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Counter Sprites#0_20
+      name: Sun_off
       rect:
         serializedVersion: 2
         x: 316
@@ -375,7 +375,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Counter Sprites#0_22
+      name: angry
       rect:
         serializedVersion: 2
         x: 393
@@ -396,10 +396,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Counter Sprites#0_23
+      name: Moon
       rect:
         serializedVersion: 2
-        x: 254
+        x: 255
         y: 4
         width: 58
         height: 52
@@ -417,7 +417,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Counter Sprites#0_25
+      name: normal
       rect:
         serializedVersion: 2
         x: 393
@@ -448,9 +448,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Counter Sprites#0_0: -1592300361
       Counter Sprites#0_1: -904582105
-      Counter Sprites#0_10: -1591009377
       Counter Sprites#0_11: -1177566481
       Counter Sprites#0_12: 1977852811
       Counter Sprites#0_13: -1537498552
@@ -458,22 +456,24 @@ TextureImporter:
       Counter Sprites#0_15: 1817136747
       Counter Sprites#0_16: 540792018
       Counter Sprites#0_17: -921880168
-      Counter Sprites#0_18: 551246612
       Counter Sprites#0_19: 62746797
-      Counter Sprites#0_2: 622089676
-      Counter Sprites#0_20: 992360179
       Counter Sprites#0_21: -710588486
-      Counter Sprites#0_22: 1467360122
-      Counter Sprites#0_23: 878312900
       Counter Sprites#0_24: -1367646500
-      Counter Sprites#0_25: -2118614805
-      Counter Sprites#0_3: -1866276366
-      Counter Sprites#0_4: 1664869604
       Counter Sprites#0_5: 751919324
-      Counter Sprites#0_6: -2146801321
       Counter Sprites#0_7: -24218358
       Counter Sprites#0_8: -1338562317
       Counter Sprites#0_9: -885410881
+      Moon: 878312900
+      Sun_off: 992360179
+      Sun_on: -1591009377
+      Time1: 1664869604
+      angry: 1467360122
+      happy: 551246612
+      normal: -2118614805
+      order1: -1592300361
+      order2: 622089676
+      order3: -1866276366
+      satisfaction: -2146801321
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
