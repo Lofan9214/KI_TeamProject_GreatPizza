@@ -24,6 +24,7 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
         Success,
         Normal,
         Fail,
+        Additional,
     }
 
     public enum ButtonText
@@ -78,11 +79,12 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
     public IEnumerator Talk()
     {
         TalkingState = State.Talking;
-        while (TalkingState == State.Talking && (int)charLength < script.Length)
+        while (TalkingState == State.Talking && (int)charLength <= script.Length)
         {
             charLength += Time.deltaTime * chatSpeed;
-            text.text = script.Substring(0, (int)charLength);
-            if ((int)charLength == script.Length)
+            int leng = Mathf.Min(script.Length, (int)charLength);
+            text.text = script.Substring(0, leng);
+            if (leng == script.Length)
             {
                 TalkingState = State.Talkend;
                 break;
@@ -97,6 +99,11 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
 
     public void NextTalk(Talks index)
     {
+        if ((int)index >= stringIds.Length)
+        {
+            return;
+        }
+
         talkIndex = index;
         switch (talkIndex)
         {
@@ -116,6 +123,7 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
             case Talks.Success:
             case Talks.Normal:
             case Talks.Fail:
+            case Talks.Additional:
                 yesButton.gameObject.SetActive(false);
                 hintButton.gameObject.SetActive(false);
                 break;
@@ -134,6 +142,8 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
         OnYes?.Invoke();
         yield return new WaitForSeconds(0.75f);
         gm.ChangePlace(InGamePlace.Kitchen);
+        if(gm.timeManager.CurrentState != IngameTimeManager.State.WatchStop
+            && gm.timeManager.CurrentState != IngameTimeManager.State.AllStop)
         gm.timeManager.SetState(IngameTimeManager.State.Ordering);
         gameObject.SetActive(false);
     }

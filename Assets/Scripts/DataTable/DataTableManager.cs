@@ -14,7 +14,7 @@ public static class DataTableManager
             var table = new StringTable();
             table.Load(id);
             tables.Add(id, table);
-        } 
+        }
 #else
         var table = new StringTable();
         var stringTableId = DataTableIds.String[(int)Variables.currentLanguage];
@@ -37,6 +37,10 @@ public static class DataTableManager
         var npcTable = new NPCTable();
         npcTable.Load(DataTableIds.NPC);
         tables.Add(DataTableIds.NPC, npcTable);
+
+        var storyTable = new StoryTable();
+        storyTable.Load(DataTableIds.Story);
+        tables.Add(DataTableIds.Story, storyTable);
     }
 
     public static T Get<T>(string id) where T : DataTable
@@ -86,6 +90,14 @@ public static class DataTableManager
         get
         {
             return Get<NPCTable>(DataTableIds.NPC);
+        }
+    }
+
+    public static StoryTable StoryTable
+    {
+        get
+        {
+            return Get<StoryTable>(DataTableIds.Story);
         }
     }
 }

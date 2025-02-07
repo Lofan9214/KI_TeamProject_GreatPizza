@@ -52,6 +52,11 @@ public class TalkTable : DataTable
         return dict.Values.Where(p => p.recipeID == recipeID).GroupBy(p => p.groupID).ToList();
     }
 
+    public List<Data> GetByGroupId(string groupId)
+    {
+        return dict.Values.Where(p => p.groupID == groupId).ToList();
+    }
+
     public int[] GetRandomData(int recipeID)
     {
         var list = GetByRecipeId(recipeID);
