@@ -1425,7 +1425,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sausage
+      name: sausage_store
       rect:
         serializedVersion: 2
         x: 1890
@@ -4497,10 +4497,10 @@ TextureImporter:
       pizzaTableLine: -745667556
       pizzaboard: 2088680497
       pizzaboxtable: 222716624
-      sausage: 1115934656
       sausage1: 1798651245
       sausage2: 1611747045
       sausage3: 36658521
+      sausage_store: 1115934656
       tomato1: 706152621
       tomato2: 996510008
       tomato3: -652447799

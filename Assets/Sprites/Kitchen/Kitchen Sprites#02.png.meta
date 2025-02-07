@@ -480,7 +480,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oliveoff
+      name: oliveoff_store
       rect:
         serializedVersion: 2
         x: 539
@@ -505,9 +505,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1464
-        y: 1392
-        width: 215
-        height: 210
+        y: 1394
+        width: 214
+        height: 205
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2034,7 +2034,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sausage_on
+      name: sausage_on_store
       rect:
         serializedVersion: 2
         x: 359
@@ -2050,27 +2050,6 @@ TextureImporter:
       bones: []
       spriteID: f63f169055e55bd4b931ec74602f1a43
       internalID: 639703719
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen Sprites#02_122
-      rect:
-        serializedVersion: 2
-        x: 912
-        y: 552
-        width: 108
-        height: 90
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25dae24eb2db77343bedbb1d1baf5668
-      internalID: -1409161577
       vertices: []
       indices: 
       edges: []
@@ -2349,7 +2328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_136
+      name: mushroom_store
       rect:
         serializedVersion: 2
         x: 533
@@ -2370,13 +2349,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#02_137
+      name: pimento_store
       rect:
         serializedVersion: 2
-        x: 888
-        y: 444
-        width: 168
-        height: 115
+        x: 889
+        y: 446
+        width: 165
+        height: 191
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3042,7 +3021,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mushroomon3
+      name: mushroomon3_store
       rect:
         serializedVersion: 2
         x: 6
@@ -3321,8 +3300,6 @@ TextureImporter:
       Kitchen Sprites#02_132: -165976669
       Kitchen Sprites#02_133: -971947585
       Kitchen Sprites#02_135: 1413250980
-      Kitchen Sprites#02_136: -1749196830
-      Kitchen Sprites#02_137: -1561478567
       Kitchen Sprites#02_138: 501046980
       Kitchen Sprites#02_139: -1835757769
       Kitchen Sprites#02_14: -693100707
@@ -3450,10 +3427,11 @@ TextureImporter:
       cheese2: 1239741603
       cheese3: -662125916
       cheese4: 1906542800
+      mushroom_store: -1749196830
       mushroomon1: 114178647
       mushroomon2: -1916106588
-      mushroomon3: 1594561702
-      oliveoff: 1736065049
+      mushroomon3_store: 1594561702
+      oliveoff_store: 1736065049
       olivetr: 205425416
       onionoff: 780588328
       pepperoni: -2043156627
@@ -3462,9 +3440,10 @@ TextureImporter:
       pepperoni4: 1501353841
       pepperoni5: 30974963
       pepperoni7: 1832091945
+      pimento_store: -1561478567
       pimentotr: -1373966738
       sausage0: 144250816
-      sausage_on: 639703719
+      sausage_on_store: 639703719
       tomato: 284453010
       tomato2: 319731780
       tomatotr: -116235027

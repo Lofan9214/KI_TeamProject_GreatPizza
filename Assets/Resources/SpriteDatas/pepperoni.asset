@@ -16,4 +16,5 @@ MonoBehaviour:
   - {fileID: -1025198701, guid: da0ea0697b913df4bb84117d6e635a60, type: 3}
   - {fileID: 1916711985, guid: da0ea0697b913df4bb84117d6e635a60, type: 3}
   - {fileID: -1383094408, guid: da0ea0697b913df4bb84117d6e635a60, type: 3}
-  storeSprite: {fileID: 0}
+  storeSprite: {fileID: -851108025, guid: ad2e725188795c14abbdd189842c8491, type: 3}
+  storeTray: {fileID: 1116689484, guid: 6728e35a3195968478b75fc979ea38d7, type: 3}
