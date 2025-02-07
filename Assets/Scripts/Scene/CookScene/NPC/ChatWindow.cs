@@ -55,25 +55,49 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
 
     public UnityEvent OnYes;
 
+    private bool setStoryChat = true;
+
     private void Awake()
     {
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<IngameGameManager>();
         wait = new WaitForEndOfFrame();
     }
 
-    private void Start()
-    {
-        yesButton.onClick.AddListener(() => StartCoroutine(YesCoroutine()));
-        hintButton.onClick.AddListener(NeedHint);
-    }
-
     public void SetStrings(int[] Ids)
     {
-        stringIds = Ids.ToArray();
+        stringIds = Ids;
         yesButton.gameObject.SetActive(true);
         hintButton.gameObject.SetActive(true);
+
+        if (setStoryChat)
+        {
+            setStoryChat = false;
+            yesButton.onClick.RemoveAllListeners();
+            hintButton.onClick.RemoveAllListeners();
+            yesButton.onClick.AddListener(() => StartCoroutine(YesCoroutine()));
+            hintButton.onClick.AddListener(NeedHint);
+        }
+
         yesText.SetString(((int)ButtonText.Okay).ToString());
         hintText.SetString(((int)ButtonText.Pardon).ToString());
+        NextTalk(0);
+    }
+
+    public void SetStoryStrings(int[] Ids)
+    {
+        setStoryChat = true;
+        stringIds = Ids;
+        yesButton.onClick.RemoveAllListeners();
+        hintButton.onClick.RemoveAllListeners();
+
+        yesButton.onClick.AddListener(() => StoryHint(1));
+        hintButton.onClick.AddListener(() => StoryHint(2));
+
+        yesButton.gameObject.SetActive(true);
+        hintButton.gameObject.SetActive(true);
+
+        yesText.SetString(((int)ButtonText.Yes).ToString());
+        hintText.SetString(((int)ButtonText.No).ToString());
         NextTalk(0);
     }
 
@@ -142,8 +166,6 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
         OnYes?.Invoke();
         yield return new WaitForSeconds(0.75f);
         gm.ChangePlace(InGamePlace.Kitchen);
-        if(gm.timeManager.CurrentState != IngameTimeManager.State.WatchStop
-            && gm.timeManager.CurrentState != IngameTimeManager.State.AllStop)
         gm.timeManager.SetState(IngameTimeManager.State.Ordering);
         gameObject.SetActive(false);
     }
@@ -160,6 +182,22 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
             case Talks.Hint1:
                 NextTalk((Talks)((int)talkIndex + 1));
                 hintButton.gameObject.SetActive(false);
+                break;
+        }
+    }
+
+    public void StoryHint(int state)
+    {
+        switch (talkIndex)
+        {
+            case Talks.Order:
+                NextTalk((Talks)state);
+                yesText.SetString(((int)ButtonText.Okay).ToString());
+                hintButton.gameObject.SetActive(false);
+                break;
+            case Talks.Hint1:
+            case Talks.Hint2:
+                StartCoroutine(YesCoroutine());
                 break;
         }
     }

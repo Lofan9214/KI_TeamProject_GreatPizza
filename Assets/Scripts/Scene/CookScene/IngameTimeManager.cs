@@ -12,6 +12,11 @@ public class IngameTimeManager : MonoBehaviour
         OrderEnd,
         DayEnd,
         Pause,
+    }
+
+    public enum TimeState
+    {
+        None,
         WatchStop,
         AllStop,
     }
@@ -26,6 +31,7 @@ public class IngameTimeManager : MonoBehaviour
     public float satisfactionInterval = 3f;
 
     public State CurrentState { get; private set; }
+    public TimeState CurrentTimeState { get; private set; } = TimeState.None;
 
     public int WatchTime { get; private set; }
     private float watchTimeTimer;
@@ -69,8 +75,8 @@ public class IngameTimeManager : MonoBehaviour
             endWindow.Show();
         }
 
-        if ((CurrentState == State.Ordering
-            || CurrentState == State.OrderEnd) 
+        if ((CurrentState == State.Ordering || CurrentState == State.OrderEnd)
+            && (CurrentTimeState == TimeState.WatchStop || CurrentTimeState == TimeState.AllStop)
             && WatchTime <= WatchTimeEnd)
         {
             watchTimeTimer += Time.deltaTime;
@@ -83,7 +89,7 @@ public class IngameTimeManager : MonoBehaviour
             }
         }
         if (CurrentState == State.Ordering
-            || CurrentState == State.WatchStop)
+            && CurrentTimeState != TimeState.AllStop)
         {
             satisfactionTimer += Time.deltaTime;
             if (satisfactionTimer > satisfactionInterval)
@@ -109,6 +115,11 @@ public class IngameTimeManager : MonoBehaviour
 
     public void UsedHint(ChatWindow.Talks talks)
     {
+        if (CurrentTimeState == TimeState.AllStop)
+        {
+            return;
+        }
+
         switch (talks)
         {
             case ChatWindow.Talks.Hint1:
@@ -125,6 +136,11 @@ public class IngameTimeManager : MonoBehaviour
     public void SetState(State state)
     {
         CurrentState = state;
+    }
+
+    public void SetTimeState(TimeState state)
+    {
+        CurrentTimeState = state;
     }
 
     private void SetSatisfactionText()

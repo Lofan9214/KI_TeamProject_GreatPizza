@@ -12,9 +12,14 @@ public class IngameUIManager : MonoBehaviour
     public OrderWindow orderWindow;
     public Button orderShowButton;
 
-    public void ShowChatWindow(int[] Ids)
+    public void ShowChatWindow(int[] Ids, bool story = false)
     {
         chatWindow.gameObject.SetActive(true);
+        if (story)
+        {
+            chatWindow.SetStoryStrings(Ids);
+            return;
+        }
         chatWindow.SetStrings(Ids);
     }
 

@@ -123,42 +123,67 @@ public class IngameGameManager : MonoBehaviour
         {
             if (timeManager.CurrentState != IngameTimeManager.State.DayEnd)
             {
-                var data = DataTableManager.RecipeTable.RandomGet();
-
-                npc.gameObject.SetActive(true);
-                npc.SetData(DataTableManager.NPCTable.GetRandom(1));
-                npc.Order(data);
-
-                timeManager.ResetSatisfaction();
-
-                uiManager.ShowChatWindow(DataTableManager.TalkTable.GetRandomData(data.recipeID));
+                RandomSpawn();
             }
         }
         else if (state == State.Story)
         {
             var found = tutorialManager.storyData.FindAll(p => ((p.timestart / 100 - 12) * 4 + (p.timestart % 100 / 15)) == timeManager.WatchTime);
-            yield return new WaitUntil(() => found.Count > 0);
-            npc.gameObject.SetActive(true);
-            npc.SetData(found[0]);
-            npc.Order(DataTableManager.RecipeTable.Get(found[0].recipeID));
+            if (found.Count > 0)
+            {
+                StorySpawn(found[0]);
+            }
+            else
+            {
+                RandomSpawn();
+            }
+        }
+    }
 
-            timeManager.ResetSatisfaction();
-            if (found[0].timelock == 1
-                && found[0].satisfactionlock == 1)
-            {
-                timeManager.SetState(IngameTimeManager.State.AllStop);
-            }
-            if (found[0].timelock == 1
-                && found[0].satisfactionlock == 0)
-            {
-                timeManager.SetState(IngameTimeManager.State.WatchStop);
-            }
+    private void RandomSpawn()
+    {
+        var data = DataTableManager.RecipeTable.RandomGet();
 
-            var chats = DataTableManager.TalkTable.GetByGroupId(found[0].groupID).Select(p => p.stringID).ToList();
-            if (chats.Count == 3)
-            {
-                chats.AddRange(DataTableManager.TalkTable.GetResultTalk());
-            }
+        npc.gameObject.SetActive(true);
+        npc.SetData(DataTableManager.NPCTable.GetRandom(1));
+        npc.Order(data);
+
+        timeManager.ResetSatisfaction();
+
+        uiManager.ShowChatWindow(DataTableManager.TalkTable.GetRandomData(data.recipeID));
+    }
+
+    private void StorySpawn(StoryTable.Data data)
+    {
+
+        npc.gameObject.SetActive(true);
+        npc.SetData(data);
+        npc.Order(DataTableManager.RecipeTable.Get(data.recipeID));
+
+        timeManager.ResetSatisfaction();
+        if (data.timelock == 1
+            && data.satisfactionlock == 1)
+        {
+            timeManager.SetTimeState(IngameTimeManager.TimeState.AllStop);
+        }
+        if (data.timelock == 1
+            && data.satisfactionlock == 0)
+        {
+            timeManager.SetTimeState(IngameTimeManager.TimeState.WatchStop);
+        }
+
+        var chats = DataTableManager.TalkTable.GetByGroupId(data.groupID).Select(p => p.stringID).ToList();
+        if (chats.Count == 3)
+        {
+            chats.AddRange(DataTableManager.TalkTable.GetResultTalk());
+        }
+
+        if (data.startState == 2)
+        {
+            uiManager.ShowChatWindow(chats.ToArray(), true);
+        }
+        else
+        {
             uiManager.ShowChatWindow(chats.ToArray());
         }
     }
