@@ -732,7 +732,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI Sprites#0_30
+      name: Tutorial1
       rect:
         serializedVersion: 2
         x: 3
@@ -741,7 +741,7 @@ TextureImporter:
         height: 563
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 20, y: 32, z: 39, w: 21}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -858,16 +858,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI Sprites#0_36
+      name: ui1
       rect:
         serializedVersion: 2
         x: 1079
         y: 1261
         width: 194
-        height: 185
+        height: 183
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 52, y: 52, z: 61, w: 54}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2706,16 +2706,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI Sprites#0_124
+      name: end
       rect:
         serializedVersion: 2
-        x: 1072
+        x: 1182
         y: 749
-        width: 217
-        height: 102
+        width: 107
+        height: 101
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 19, y: 28, z: 33, w: 18}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -7046,6 +7046,7 @@ TextureImporter:
       Stop: -813957629
       Sun_fill: 389061714
       Tutorial: 400425358
+      Tutorial1: 1193112274
       UI Sprites#0_1: -1104941682
       UI Sprites#0_10: -873381619
       UI Sprites#0_101: -1945334559
@@ -7072,7 +7073,6 @@ TextureImporter:
       UI Sprites#0_121: -2112809183
       UI Sprites#0_122: 1416318316
       UI Sprites#0_123: -1439731496
-      UI Sprites#0_124: 672611891
       UI Sprites#0_125: 1136427342
       UI Sprites#0_126: -1200000965
       UI Sprites#0_127: 513325333
@@ -7253,7 +7253,6 @@ TextureImporter:
       UI Sprites#0_298: -2112332847
       UI Sprites#0_299: -1603231004
       UI Sprites#0_3: -1241177032
-      UI Sprites#0_30: 1193112274
       UI Sprites#0_300: 2076831253
       UI Sprites#0_301: -276044944
       UI Sprites#0_302: 1150904725
@@ -7290,7 +7289,6 @@ TextureImporter:
       UI Sprites#0_331: 1221313742
       UI Sprites#0_34: -648714322
       UI Sprites#0_35: -222585188
-      UI Sprites#0_36: 32174617
       UI Sprites#0_37: -1669838865
       UI Sprites#0_39: -404928501
       UI Sprites#0_4: 346548258
@@ -7358,6 +7356,7 @@ TextureImporter:
       back: -303975749
       button: 1056027137
       button2: -1301625118
+      end: 672611891
       hand: 1073137566
       menu: -808191827
       money: -671269744
@@ -7374,6 +7373,7 @@ TextureImporter:
       table: 376250018
       table_under: 1122218268
       talk: -1868202297
+      ui1: 32174617
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
