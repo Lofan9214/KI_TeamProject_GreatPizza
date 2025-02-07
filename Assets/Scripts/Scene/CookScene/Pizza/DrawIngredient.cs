@@ -38,6 +38,7 @@ public class DrawIngredient : MonoBehaviour
         textureHeight = (int)rect.height;
         textureWidth = (int)rect.width;
 
+#if UNITY_EDITOR
         if (!layerSprites[0].texture.isReadable)
         {
             var origTexPath = AssetDatabase.GetAssetPath(layerSprites[0].texture);
@@ -45,6 +46,7 @@ public class DrawIngredient : MonoBehaviour
             ti.isReadable = true;
             ti.SaveAndReimport();
         }
+#endif
 
         drawColorMap = new Color[layerSprites.Length][];
         for (int i = 0; i < layerSprites.Length; ++i)
@@ -75,6 +77,7 @@ public class DrawIngredient : MonoBehaviour
         brushHeight = (int)rect.height;
         brushWidth = (int)rect.width;
 
+#if UNITY_EDITOR
         if (!brushSprite.texture.isReadable)
         {
             var origTexPath = AssetDatabase.GetAssetPath(brushSprite.texture);
@@ -82,6 +85,7 @@ public class DrawIngredient : MonoBehaviour
             ti.isReadable = true;
             ti.SaveAndReimport();
         }
+#endif
 
         brushColorMap = brushSprite.texture.GetPixels((int)rect.x, (int)rect.y, (int)rect.width, (int)rect.height);
     }
