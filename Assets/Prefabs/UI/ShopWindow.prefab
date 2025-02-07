@@ -760,7 +760,6 @@ GameObject:
   - component: {fileID: 6913795152063725513}
   - component: {fileID: 437893148842310782}
   - component: {fileID: 8649863469977581824}
-  - component: {fileID: 2308036835685773940}
   m_Layer: 5
   m_Name: ShopWindow
   m_TagString: Untagged
@@ -826,21 +825,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2308036835685773940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7234829648156169391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dd1a21cf4d7ec040ba12b7c1f1def77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shopContent: {fileID: 8489844564000179174}
-  budgetText: {fileID: 0}
-  itemPrefab: {fileID: 1675107286188644472, guid: 7e8cb9b16fbf1734392d770e8a5ab79f, type: 3}
 --- !u!1 &7804634735823373995
 GameObject:
   m_ObjectHideFlags: 0

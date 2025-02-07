@@ -134,10 +134,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopWindow
       objectReference: {fileID: 0}
-    - target: {fileID: 2308036835685773940, guid: 54afe9e0a844a1947b1f2cf31f57dfbc, type: 3}
-      propertyPath: budgetText
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3279985264318262471, guid: 54afe9e0a844a1947b1f2cf31f57dfbc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
