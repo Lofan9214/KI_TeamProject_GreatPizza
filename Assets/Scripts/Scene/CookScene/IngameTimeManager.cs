@@ -11,7 +11,14 @@ public class IngameTimeManager : MonoBehaviour
         Ordering,
         OrderEnd,
         DayEnd,
-        Pause
+        Pause,
+    }
+
+    public enum TimeState
+    {
+        None,
+        WatchStop,
+        AllStop,
     }
 
     public TextMeshProUGUI dayText;
@@ -24,6 +31,7 @@ public class IngameTimeManager : MonoBehaviour
     public float satisfactionInterval = 3f;
 
     public State CurrentState { get; private set; }
+    public TimeState CurrentTimeState { get; private set; } = TimeState.None;
 
     public int WatchTime { get; private set; }
     private float watchTimeTimer;
@@ -67,7 +75,8 @@ public class IngameTimeManager : MonoBehaviour
             endWindow.Show();
         }
 
-        if (CurrentState != State.Pause
+        if ((CurrentState == State.Ordering || CurrentState == State.OrderEnd)
+            && (CurrentTimeState == TimeState.WatchStop || CurrentTimeState == TimeState.AllStop)
             && WatchTime <= WatchTimeEnd)
         {
             watchTimeTimer += Time.deltaTime;
@@ -78,21 +87,21 @@ public class IngameTimeManager : MonoBehaviour
 
                 SetWatchTimeText();
             }
-
-            if (CurrentState == State.Ordering)
+        }
+        if (CurrentState == State.Ordering
+            && CurrentTimeState != TimeState.AllStop)
+        {
+            satisfactionTimer += Time.deltaTime;
+            if (satisfactionTimer > satisfactionInterval)
             {
-                satisfactionTimer += Time.deltaTime;
-                if (satisfactionTimer > satisfactionInterval)
+                satisfactionTimer -= satisfactionInterval;
+                Satisfaction = Mathf.Max(0, --Satisfaction);
+                if (Satisfaction == 0)
                 {
-                    satisfactionTimer -= satisfactionInterval;
-                    Satisfaction = Mathf.Max(0, --Satisfaction);
-                    if (Satisfaction == 0)
-                    {
-                        CurrentState = State.OrderEnd;
-                        OnUnsatisfied?.Invoke();
-                    }
-                    SetSatisfactionText();
+                    CurrentState = State.OrderEnd;
+                    OnUnsatisfied?.Invoke();
                 }
+                SetSatisfactionText();
             }
         }
     }
@@ -106,6 +115,11 @@ public class IngameTimeManager : MonoBehaviour
 
     public void UsedHint(ChatWindow.Talks talks)
     {
+        if (CurrentTimeState == TimeState.AllStop)
+        {
+            return;
+        }
+
         switch (talks)
         {
             case ChatWindow.Talks.Hint1:
@@ -124,6 +138,11 @@ public class IngameTimeManager : MonoBehaviour
         CurrentState = state;
     }
 
+    public void SetTimeState(TimeState state)
+    {
+        CurrentTimeState = state;
+    }
+
     private void SetSatisfactionText()
     {
         satisfactionText.text = $"{Satisfaction}%";
@@ -132,5 +151,16 @@ public class IngameTimeManager : MonoBehaviour
     private void SetWatchTimeText()
     {
         watchText.text = $"{12 + WatchTime / 4:D2}:{WatchTime % 4 * 15:D2}";
+    }
+
+    public void SetWatch(int time)
+    {
+        if (time <= WatchTimeEnd)
+        {
+            WatchTime = time;
+            watchTimeTimer = 0f;
+            satisfactionTimer = 0f;
+            SetWatchTimeText();
+        }
     }
 }

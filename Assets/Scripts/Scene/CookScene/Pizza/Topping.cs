@@ -15,7 +15,8 @@ public class Topping : MonoBehaviour
     public void SetData(string dataId)
     {
         toppingData = DataTableManager.IngredientTable.Get(dataId);
-        spriteRenderer.sprite = toppingData.Sprite;
+        spriteRenderer.sprite = toppingData.spriteDatas.toppingSprites[Random.Range(0, toppingData.spriteDatas.toppingSprites.Length)];
+        transform.Rotate(0f, 0f, Random.Range(0, 360f));
     }
 
     public void AddOrderOffset(int offset)

@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -27,53 +26,90 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
         Fail,
     }
 
+    public enum ButtonText
+    {
+        Okay = 110901,
+        Pardon = 110902,
+        Hint = 110903,
+        Yes = 110934,
+        No = 110935,
+    }
+
     public int[] stringIds;
     public TextMeshProUGUI text;
     public Button yesButton;
     public Button hintButton;
-    public float chatSpeed = 0.05f;
+    public float chatSpeed = 45f;
 
+    public LocalizationText yesText;
     public LocalizationText hintText;
 
-    public State TalkingState { get;private set; }
-    private Talks talkIndex;
+    public State TalkingState { get; private set; }
+    public Talks talkIndex { get; private set; }
 
-    private int charLength;
+    private float charLength;
     private string script;
-    private WaitForSeconds wait;
+    private WaitForEndOfFrame wait;
 
     private IngameGameManager gm;
 
     public UnityEvent OnYes;
 
+    private bool setStoryChat = true;
+
     private void Awake()
     {
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<IngameGameManager>();
-        wait = new WaitForSeconds(chatSpeed);
-    }
-
-    private void Start()
-    {
-        yesButton.onClick.AddListener(Yes);
-        hintButton.onClick.AddListener(NeedHint);
+        wait = new WaitForEndOfFrame();
     }
 
     public void SetStrings(int[] Ids)
     {
-        stringIds = Ids.ToArray();
+        stringIds = Ids;
         yesButton.gameObject.SetActive(true);
         hintButton.gameObject.SetActive(true);
+
+        if (setStoryChat)
+        {
+            setStoryChat = false;
+            yesButton.onClick.RemoveAllListeners();
+            hintButton.onClick.RemoveAllListeners();
+            yesButton.onClick.AddListener(() => StartCoroutine(YesCoroutine()));
+            hintButton.onClick.AddListener(NeedHint);
+        }
+
+        yesText.SetString(((int)ButtonText.Okay).ToString());
+        hintText.SetString(((int)ButtonText.Pardon).ToString());
+        NextTalk(0);
+    }
+
+    public void SetStoryStrings(int[] Ids)
+    {
+        setStoryChat = true;
+        stringIds = Ids;
+        yesButton.onClick.RemoveAllListeners();
+        hintButton.onClick.RemoveAllListeners();
+
+        yesButton.onClick.AddListener(() => StoryHint(1));
+        hintButton.onClick.AddListener(() => StoryHint(2));
+
+        yesButton.gameObject.SetActive(true);
+        hintButton.gameObject.SetActive(true);
+
+        yesText.SetString(((int)ButtonText.Yes).ToString());
+        hintText.SetString(((int)ButtonText.No).ToString());
         NextTalk(0);
     }
 
     public IEnumerator Talk()
     {
         TalkingState = State.Talking;
-        while (TalkingState == State.Talking && charLength < script.Length)
+        while (TalkingState == State.Talking && (int)charLength <= script.Length)
         {
-            ++charLength;
-            text.text = script.Substring(0, charLength);
-            if (charLength == script.Length)
+            charLength += Time.deltaTime * chatSpeed;
+            int leng = Mathf.Min(script.Length, (int)charLength);
+            text.text = script.Substring(0, leng);
+            if (leng == script.Length)
             {
                 TalkingState = State.Talkend;
                 break;
@@ -88,6 +124,11 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
 
     public void NextTalk(Talks index)
     {
+        if ((int)index >= stringIds.Length)
+        {
+            return;
+        }
+
         talkIndex = index;
         switch (talkIndex)
         {
@@ -116,14 +157,16 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
         charLength = 0;
         TalkingState = State.Talking;
         script = DataTableManager.StringTable.Get(stringIds[(int)index]);
+
         StartCoroutine(Talk());
     }
 
-    public void Yes()
+    private IEnumerator YesCoroutine()
     {
+        OnYes?.Invoke();
+        yield return new WaitForSeconds(0.75f);
         gm.ChangePlace(InGamePlace.Kitchen);
         gm.timeManager.SetState(IngameTimeManager.State.Ordering);
-        OnYes?.Invoke();
         gameObject.SetActive(false);
     }
 
@@ -133,12 +176,41 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
         {
             case Talks.Order:
                 NextTalk((Talks)((int)talkIndex + 1));
-                hintText.stringId = 110903.ToString();
+                yesText.SetString(((int)ButtonText.Okay).ToString());
+                hintText.SetString(((int)ButtonText.Hint).ToString());
                 break;
             case Talks.Hint1:
                 NextTalk((Talks)((int)talkIndex + 1));
                 hintButton.gameObject.SetActive(false);
                 break;
+        }
+    }
+
+    public void StoryHint(int state)
+    {
+        switch (talkIndex)
+        {
+            case Talks.Order:
+                NextTalk((Talks)state);
+                yesText.SetString(((int)ButtonText.Okay).ToString());
+                hintButton.gameObject.SetActive(false);
+                break;
+            case Talks.Hint1:
+            case Talks.Hint2:
+                StartCoroutine(YesCoroutine());
+                break;
+        }
+    }
+
+    public void SetActiveButton(Talks talk, bool active)
+    {
+        if (talk == Talks.Order)
+        {
+            yesButton.gameObject.SetActive(active);
+        }
+        else if (talk == Talks.Hint1)
+        {
+            hintButton.gameObject.SetActive(active);
         }
     }
 

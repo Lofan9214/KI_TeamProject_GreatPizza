@@ -1,0 +1,9 @@
+story_npcID,timelock,satisfactionlock,timestart,timeend,startState,price,day,recipeID,groupID,image
+201001,1,1,1200,1430,2,20,1,0302,day1,SNPC_2
+201002,1,0,1430,1630,1,-1,1,0302,day1_1,story_npc1
+201003,1,0,1630,1845,1,-1,1,0301,day1_2,story_npc2
+201004,1,0,1845,2100,1,-1,1,0302,day1_3,story_npc3
+201005,1,1,1200,1430,2,20,2,0304,day2,SNPC_2
+201006,1,0,1430,1630,1,-1,2,0304,day2_1,story_npc4
+201007,1,0,1630,1845,1,-1,2,0302,day2_2,story_npc5
+201008,1,0,1845,2100,1,-1,2,0304,day2_3,story_npc6

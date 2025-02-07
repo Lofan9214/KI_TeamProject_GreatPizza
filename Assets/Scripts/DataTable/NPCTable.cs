@@ -11,17 +11,11 @@ public class NPCTable : DataTable
         public int type { get; set; }
         public string Image { get; set; }
 
-        public Sprite Sprite
-        {
-            get
-            {
-                return Resources.Load<Sprite>(string.Format(sprite, Image));
-            }
-        }
+        public GameObject Prefab;
     }
 
     private Dictionary<int, Data> dict = new Dictionary<int, Data>();
-    private const string sprite = "Sprite/NPC/{0}";
+    private const string prefab = "Prefabs/{0}";
 
     public override void Load(string fileName)
     {
@@ -35,6 +29,7 @@ public class NPCTable : DataTable
         {
             if (!dict.ContainsKey(item.npcID))
             {
+                item.Prefab = Resources.Load<GameObject>(string.Format(prefab, item.Image));
                 dict.Add(item.npcID, item);
             }
             else
@@ -56,8 +51,13 @@ public class NPCTable : DataTable
 
     public Data GetRandom(int type)
     {
-        var list = dict.Values.Where(p => p.type == type).ToList();
+        var list = GetListByType(type);
 
         return list[Random.Range(0, list.Count)];
+    }
+
+    public List<Data> GetListByType(int type)
+    {
+        return dict.Values.Where(p => p.type == type).ToList();
     }
 }

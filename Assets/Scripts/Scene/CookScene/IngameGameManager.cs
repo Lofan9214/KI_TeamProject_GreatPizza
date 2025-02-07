@@ -1,37 +1,59 @@
 using Cinemachine;
-using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using SaveDataVC = SaveDataV1;
 
 public class IngameGameManager : MonoBehaviour
 {
+    public enum State
+    {
+        Story,
+        Random,
+    }
+
     public PointerManager pointerManager { get; private set; }
     public IngameTimeManager timeManager { get; private set; }
     public NPC npc;
     public IngameUIManager uiManager;
 
     public CinemachineConfiner2D confiner;
-
-    public PackingTable packingTable;
+    public Transform virtualCam;
 
     public Hall hall;
     public Kitchen kitchen;
+
+    public float screenScrollSpeed = 10f;
 
     public SaveDataVC tempSaveData { get; private set; }
 
     public string PizzaCommand { get; private set; }
     public IngredientTable.Type IngredientType { get; private set; }
+    private IngredientVat currentTub;
+
+    private State state;
+    private TutorialData tutorialManager;
 
     private void Awake()
     {
         pointerManager = GetComponent<PointerManager>();
         timeManager = GetComponent<IngameTimeManager>();
-        timeManager.OnUnsatisfied.AddListener(Unsatisfied);
 
         tempSaveData = SaveLoadManager.Data.DeepCopy();
         ++tempSaveData.days;
+        if (DataTableManager.StoryTable.IsExistData(tempSaveData.days))
+        {
+            state = State.Story;
+            tutorialManager = new TutorialData();
+            tutorialManager.storyData = DataTableManager.StoryTable.GetAtDay(tempSaveData.days);
+        }
+        else
+        {
+            state = State.Random;
+        }
     }
 
     private void Start()
@@ -47,10 +69,24 @@ public class IngameGameManager : MonoBehaviour
         StartCoroutine(Spawn());
     }
 
-    public void SetPizzaCommand(string command, IngredientTable.Type type)
+    public void SetPizzaCommand(IngredientVat tub, string command, IngredientTable.Type type)
     {
+        if (currentTub != null
+            && currentTub != tub)
+        {
+            currentTub.SetSelected(false);
+        }
+        currentTub = tub;
         PizzaCommand = command;
         IngredientType = type;
+
+        foreach (var slot in kitchen.ingredientTable.pizzaSlots)
+        {
+            if (slot.CurrentPizza != null)
+            {
+                slot.CurrentPizza.ingredientGuide.SetActive(IngredientType == IngredientTable.Type.Ingredient);
+            }
+        }
     }
 
     public void ChangePlace(InGamePlace place)
@@ -64,11 +100,13 @@ public class IngameGameManager : MonoBehaviour
                 {
                     StartSpawn();
                 }
+                uiManager.SetOrderButtonActive(false);
                 break;
             case InGamePlace.Kitchen:
                 pointerManager.enableCamDrag = true;
                 kitchen.Set(confiner);
-                packingTable.SetPizzaBox(1);
+                kitchen.SetPizzaBox();
+                uiManager.SetOrderButtonActive(true);
                 break;
         }
     }
@@ -81,23 +119,73 @@ public class IngameGameManager : MonoBehaviour
     public IEnumerator Spawn()
     {
         yield return new WaitForSeconds(2f);
-        if (timeManager.CurrentState != IngameTimeManager.State.DayEnd)
+        if (state == State.Random)
         {
-            var data = DataTableManager.RecipeTable.RandomGet();
-
-            npc.gameObject.SetActive(true);
-            npc.SetSprite(DataTableManager.NPCTable.GetRandom(1));
-            npc.Order(data);
-
-            timeManager.ResetSatisfaction();
-
-            uiManager.ShowChatWindow(DataTableManager.TalkTable.GetRandomData(data.recipeID));
+            if (timeManager.CurrentState != IngameTimeManager.State.DayEnd)
+            {
+                RandomSpawn();
+            }
+        }
+        else if (state == State.Story)
+        {
+            var found = tutorialManager.storyData.FindAll(p => ((p.timestart / 100 - 12) * 4 + (p.timestart % 100 / 15)) == timeManager.WatchTime);
+            if (found.Count > 0)
+            {
+                StorySpawn(found[0]);
+            }
+            else
+            {
+                RandomSpawn();
+            }
         }
     }
 
-    public void Unsatisfied()
+    private void RandomSpawn()
     {
-        ChangePlace(InGamePlace.Hall);
+        var data = DataTableManager.RecipeTable.RandomGet();
+
+        npc.gameObject.SetActive(true);
+        npc.SetData(DataTableManager.NPCTable.GetRandom(1));
+        npc.Order(data);
+
+        timeManager.ResetSatisfaction();
+
+        uiManager.ShowChatWindow(DataTableManager.TalkTable.GetRandomData(data.recipeID));
+    }
+
+    private void StorySpawn(StoryTable.Data data)
+    {
+
+        npc.gameObject.SetActive(true);
+        npc.SetData(data);
+        npc.Order(DataTableManager.RecipeTable.Get(data.recipeID));
+
+        timeManager.ResetSatisfaction();
+        if (data.timelock == 1
+            && data.satisfactionlock == 1)
+        {
+            timeManager.SetTimeState(IngameTimeManager.TimeState.AllStop);
+        }
+        if (data.timelock == 1
+            && data.satisfactionlock == 0)
+        {
+            timeManager.SetTimeState(IngameTimeManager.TimeState.WatchStop);
+        }
+
+        var chats = DataTableManager.TalkTable.GetByGroupId(data.groupID).Select(p => p.stringID).ToList();
+        if (chats.Count == 3)
+        {
+            chats.AddRange(DataTableManager.TalkTable.GetResultTalk());
+        }
+
+        if (data.startState == 2)
+        {
+            uiManager.ShowChatWindow(chats.ToArray(), true);
+        }
+        else
+        {
+            uiManager.ShowChatWindow(chats.ToArray());
+        }
     }
 
     public void AddBudget(float add)
@@ -109,5 +197,17 @@ public class IngameGameManager : MonoBehaviour
     public void StopGame()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void ScrollScreen()
+    {
+        Vector3 viewPortPos = Camera.main.ScreenToViewportPoint(MultiTouchManager.Instance.TouchPosition);
+        if (Mathf.Abs(viewPortPos.x - 0.5f) > 0.25f)
+        {
+            float mul = (viewPortPos.x - 0.5f) * 2f;
+            Vector3 cameraPos = Camera.main.transform.position;
+            cameraPos.x += screenScrollSpeed * Time.deltaTime * mul;
+            virtualCam.position = cameraPos;
+        }
     }
 }

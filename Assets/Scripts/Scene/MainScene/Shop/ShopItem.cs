@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ShopItem : MonoBehaviour
 {
+    public Image trayImage;
     public Image itemImage;
     public LocalizationText itemName;
     public LocalizationText itemDescription;
@@ -17,9 +18,9 @@ public class ShopItem : MonoBehaviour
     {
         if (isOn)
         {
-            if (SaveLoadManager.Data.budget > ingdata.shopprice)
+            if (SaveLoadManager.Data.budget > ingdata.store_price)
             {
-                SaveLoadManager.Data.budget -= ingdata.shopprice;
+                SaveLoadManager.Data.budget -= ingdata.store_price;
                 SaveLoadManager.Data.ingredients[ingdata.ingredientID] = true;
                 SaveLoadManager.Save();
                 price.text = "Bought";
@@ -37,7 +38,8 @@ public class ShopItem : MonoBehaviour
     public void Init(IngredientTable.Data data, bool bought, int day)
     {
         ingdata = data;
-        itemImage.sprite = ingdata.Sprite;
+        trayImage.sprite = ingdata.spriteDatas.storeTray;
+        itemImage.sprite = ingdata.spriteDatas.storeSprite;
         itemName.SetString(ingdata.stringID.ToString());
         itemDescription.SetString(ingdata.stringID.ToString());
         toggle.isOn = bought;
@@ -47,14 +49,14 @@ public class ShopItem : MonoBehaviour
             price.text = "Bought";
             toggle.interactable = false;
         }
-        else if (day < ingdata.unlockday)
+        else if (day < ingdata.day)
         {
             price.text = "Can't Buy";
             toggle.interactable = false;
         }
         else
         {
-            price.text = data.shopprice.ToString();
+            price.text = data.store_price.ToString();
         }
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PizzaBox : MonoBehaviour, IPizzaSlot
@@ -11,6 +9,7 @@ public class PizzaBox : MonoBehaviour, IPizzaSlot
     public Transform boxPosition;
     public IngameGameManager gameManager;
     public PizzaBoxTop boxTop;
+    public Transform box;
 
     private Transform currentSlot;
     private Transform tempSlot;
@@ -37,7 +36,7 @@ public class PizzaBox : MonoBehaviour, IPizzaSlot
     public void SetPizza(Pizza go)
     {
         CurrentPizza = go;
-        CurrentPizza.transform.parent = boxPosition;
+        CurrentPizza.transform.parent = box;
         CurrentPizza.transform.localPosition = Vector3.zero;
         animator.SetTrigger(CloseTop);
         CookComplete();

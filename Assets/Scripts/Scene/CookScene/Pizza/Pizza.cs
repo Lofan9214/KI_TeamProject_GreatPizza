@@ -13,25 +13,27 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     public class Data
     {
-        public string doughID = "dough";
+        public string doughID = string.Empty;
         public int roastCount = 0;
         public List<quaternion> cutData = new List<quaternion>();
         public List<string> toppingData = new List<string>();
         public float sourceRatio = 0f;
-        public string sourceId = "tomato";
+        public string sourceId = string.Empty;
         public float cheeseRatio = 0f;
     }
 
-    public State PizzaState { get; set; } = State.AddingTopping;
+    public State CurrentState { get; set; } = State.AddingTopping;
 
     public Data PizzaData { get; private set; } = new Data();
 
-    public SpriteRenderer dough;
+    public Dough dough;
     public GameObject pizzaBoard;
     public DrawIngredient sourceLayer;
     public DrawIngredient cheeseLayer;
     public ToppingLayer toppingLayer;
     public SpriteRenderer roastLayer;
+    public GameObject ingredientGuide;
+    public GameObject cutGuide;
     public Cut cutLayer;
 
     private Transform currentSlot;
@@ -40,6 +42,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     private IngameGameManager gameManager;
 
     private Vector3? lastDrawPos = null;
+    private Vector3? lastMovePos = null;
     private CircleCollider2D circleCollider;
 
     public float sourceMax = 1.5f;
@@ -75,7 +78,8 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     public void OnDragEnd(Vector3 pos, Vector3 deltaPos)
     {
         lastDrawPos = null;
-        if (PizzaState == State.AddingTopping
+        lastMovePos = null;
+        if (CurrentState == State.AddingTopping
             && addingTopping
             && (gameManager.IngredientType == IngredientTable.Type.Source
                 || gameManager.IngredientType == IngredientTable.Type.Cheese))
@@ -95,7 +99,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
             return;
         }
 
-        if (PizzaState == State.Immovable)
+        if (CurrentState == State.Immovable)
         {
             return;
         }
@@ -103,45 +107,80 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         if (tempSlot != null
             && tempSlot != currentSlot)
         {
-            var targetSocket = tempSlot.GetComponent<IPizzaSlot>();
-            if (targetSocket != null
-                && targetSocket.IsSettable
-                && targetSocket.IsEmpty)
+            if (CurrentState == State.AddingTopping)
             {
-                currentSlot?.GetComponent<IPizzaSlot>()?.ClearPizza();
-                targetSocket.SetPizza(this);
-                SetCurrentSlot(tempSlot);
-                tempSlot = null;
-                if (pizzaBoard.activeSelf)
+                var targetSocket = tempSlot.GetComponent<IPizzaSlot>();
+                if (targetSocket != null
+                    && (targetSocket is OvenEnter || targetSocket is TrashBin)
+                    && targetSocket.IsSettable
+                    && targetSocket.IsEmpty)
                 {
-                    pizzaBoard.SetActive(false);
+                    currentSlot?.GetComponent<IPizzaSlot>()?.ClearPizza();
+                    targetSocket.SetPizza(this);
+                    SetCurrentSlot(tempSlot);
+                    if (pizzaBoard.activeSelf)
+                    {
+                        pizzaBoard.SetActive(false);
+                        ingredientGuide.SetActive(false);
+                    }
+                    tempSlot = null;
+                    return;
                 }
-                return;
+            }
+            else
+            {
+                var targetSocket = tempSlot.GetComponent<IPizzaSlot>();
+                if (targetSocket != null
+                    && targetSocket.IsSettable
+                    && targetSocket.IsEmpty)
+                {
+                    currentSlot?.GetComponent<IPizzaSlot>()?.ClearPizza();
+                    targetSocket.SetPizza(this);
+                    SetCurrentSlot(tempSlot);
+                    if (pizzaBoard.activeSelf)
+                    {
+                        pizzaBoard.SetActive(false);
+                        ingredientGuide.SetActive(false);
+                    }
+                    tempSlot = null;
+                    return;
+                }
             }
         }
         transform.position = currentSlot.position;
-
     }
-
 
     public void OnPressObject(Vector2 position)
     {
-        if (PizzaState == State.AddingTopping
+        if (CurrentState == State.AddingTopping
             && Vector2.Distance(position, transform.position) < circleCollider.radius)
         {
-            if (gameManager.IngredientType == IngredientTable.Type.Source
-                || gameManager.IngredientType == IngredientTable.Type.Cheese)
+            if (gameManager.IngredientType == IngredientTable.Type.Source)
             {
-                switch (gameManager.PizzaCommand)
+                if (string.IsNullOrEmpty(sourceLayer.IngredientId)
+                    && string.IsNullOrEmpty(PizzaData.sourceId))
                 {
-                    case "tomato":
-                        DrawSource(position);
-                        addingTopping = true;
-                        break;
-                    case "cheese":
-                        DrawCheese(position);
-                        addingTopping = true;
-                        break;
+                    sourceLayer.Init(gameManager.PizzaCommand);
+                    PizzaData.sourceId = gameManager.PizzaCommand;
+                }
+                if (gameManager.PizzaCommand == PizzaData.sourceId)
+                {
+                    DrawSource(position);
+                    addingTopping = true;
+                }
+                lastDrawPos = position;
+            }
+            else if (gameManager.IngredientType == IngredientTable.Type.Cheese)
+            {
+
+                if (string.IsNullOrEmpty(cheeseLayer.IngredientId))
+                {
+                    cheeseLayer.Init(gameManager.PizzaCommand);
+                }
+                if (gameManager.PizzaCommand == cheeseLayer.IngredientId)
+                {
+                    DrawCheese(position);
+                    addingTopping = true;
                 }
                 lastDrawPos = position;
             }
@@ -152,17 +191,25 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                 toppingLayer.AddTopping(position, gameManager.PizzaCommand);
             }
         }
-
     }
 
-    public void Move(Vector3 deltaPos)
+    public void Move(Vector3 Pos)
     {
-        transform.position += deltaPos;
+        if (lastMovePos == null)
+        {
+            lastMovePos = Pos;
+        }
+        else
+        {
+            gameManager.ScrollScreen();
+            transform.position += Pos - lastMovePos.Value;
+            lastMovePos = Pos;
+        }
     }
 
     public void OnDrag(Vector3 position, Vector3 deltaPos)
     {
-        switch (PizzaState)
+        switch (CurrentState)
         {
             case State.AddingTopping:
                 if (lastDrawPos != null
@@ -184,28 +231,39 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                 lastDrawPos = position;
                 break;
             case State.Movable:
-                Move(deltaPos);
+                Move(position);
                 break;
         }
     }
 
-    public void OnDragFromBoard(Vector3 pos, Vector3 deltaPos)
+    public void OnDragFromBoard(Vector3 position, Vector3 deltaPos)
     {
-        if (Vector2.Distance(pos, transform.position) < circleCollider.radius)
+        if (lastDrawPos == null)
         {
-            OnDrag(pos, deltaPos);
+            Move(position);
             return;
         }
-        if (lastDrawPos == null)
-            Move(deltaPos);
+        if (Vector2.Distance(position, transform.position) < circleCollider.radius)
+        {
+            OnDrag(position, deltaPos);
+            return;
+        }
     }
 
     public void Roast()
     {
         PizzaData.roastCount++;
-        Color color = roastLayer.color;
-        color.a += (1f - color.a) * 0.2f;
-        roastLayer.color = color;
+
+        dough.Roast();
+        sourceLayer.Roast();
+        cheeseLayer.Roast();
+
+        if (PizzaData.roastCount > 2)
+        {
+            Color color = roastLayer.color;
+            color.a += (1f - color.a) * 0.2f;
+            roastLayer.color = color;
+        }
     }
 
     public void Cut(quaternion rotation)
@@ -221,7 +279,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     public void SetDough(string doughId)
     {
-        dough.sprite = DataTableManager.IngredientTable.Get(doughId).Sprite;
+        dough.Init(doughId);
     }
 
     public void DrawSource(Vector2 position)

@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.U2D;
+using static UnityEngine.LightProbeProxyVolume;
 
 //ingredientID, stringID, price, profit, success, fail, image
 //tomato,110101,0.6,1.0,0,0,
@@ -30,46 +32,14 @@ public class IngredientTable : DataTable
         public float happy_max { get; set; }
         public float normal_min { get; set; }
         public float normal_max { get; set; }
-        public string image { get; set; }
-        public float shopprice { get; set; }
-        public int unlockday { get; set; }
+        public float store_price { get; set; }
+        public int day { get; set; }
 
-        public Sprite Sprite
-        {
-            get
-            {
-                return Resources.Load<Sprite>(string.Format(spriteFormat, image));
-            }
-        }
 
-        public Sprite SpriteLoaf
-        {
-            get
-            {
-                if (type == Type.Dough)
-                {
-                    return Resources.Load<Sprite>(string.Format(loafFormat, image));
-                }
-                return null;
-            }
-        }
-
-        public Sprite SpriteTub
-        {
-            get
-            {
-                if (type == Type.Source || type == Type.Cheese || type == Type.Ingredient)
-                {
-                    return Resources.Load<Sprite>(string.Format(tubFormat, image));
-                }
-                return null;
-            }
-        }
+        public IngredientSpriteData spriteDatas;
     }
 
-    private const string spriteFormat = "Sprite/Pizza/{0}";
-    private const string loafFormat = "Sprite/Pizza/Loaf/{0}";
-    private const string tubFormat = "Sprite/Pizza/Tub/{0}";
+    private const string spriteDataFormat = "SpriteDatas/{0}";
 
     private Dictionary<string, Data> dict = new Dictionary<string, Data>();
 
@@ -86,6 +56,8 @@ public class IngredientTable : DataTable
             if (!dict.ContainsKey(item.ingredientID))
             {
                 dict.Add(item.ingredientID, item);
+
+                item.spriteDatas = Resources.Load<IngredientSpriteData>(string.Format(spriteDataFormat, item.ingredientID));
             }
             else
             {

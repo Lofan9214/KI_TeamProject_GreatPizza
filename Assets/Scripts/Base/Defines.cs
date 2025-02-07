@@ -16,12 +16,10 @@ public class DataTableIds
     };
 
     public static readonly string Recipe = "RecipeTable";
-
     public static readonly string Ingredient = "IngredientTable";
-
     public static readonly string Talk = "TalkTable";
-
     public static readonly string NPC = "NPCTable";
+    public static readonly string Story = "StoryTable";
 }
 
 public class Variables

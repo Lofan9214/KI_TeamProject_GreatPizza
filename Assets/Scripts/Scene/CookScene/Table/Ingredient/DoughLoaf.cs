@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -21,7 +19,7 @@ public class DoughLoaf : MonoBehaviour, IClickable
     public void Set(string id)
     {
         DoughId = id;
-        spriteRenderer.sprite = DataTableManager.IngredientTable.Get(id).SpriteLoaf;
+        //spriteRenderer.sprite = DataTableManager.IngredientTable.Get(id).SpriteLoaf;
     }
 
     public void OnPressObject(Vector2 position)
