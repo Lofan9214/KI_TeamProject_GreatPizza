@@ -130,7 +130,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 91d28d6229a2e544d96c3222692f3ad4, type: 3}
+  m_Sprite: {fileID: -1868202297, guid: 7c008df16bfe6414683c5141140c945f, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -347,6 +347,10 @@ PrefabInstance:
       value: "\uB124?"
       objectReference: {fileID: 0}
     - target: {fileID: 5769534426199291997, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1056027137, guid: 7c008df16bfe6414683c5141140c945f, type: 3}
+    - target: {fileID: 5769534426199291997, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
       value: 0.01
       objectReference: {fileID: 0}
@@ -376,7 +380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5928256639677688342, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 549
+      value: 445.2
       objectReference: {fileID: 0}
     - target: {fileID: 5928256639677688342, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
       propertyPath: m_SizeDelta.y
@@ -479,6 +483,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1602681733194161810}
     m_Modifications:
     - target: {fileID: 5769534426199291997, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1056027137, guid: 7c008df16bfe6414683c5141140c945f, type: 3}
+    - target: {fileID: 5769534426199291997, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
       value: 0.01
       objectReference: {fileID: 0}
@@ -508,7 +516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5928256639677688342, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 549
+      value: 445.2
       objectReference: {fileID: 0}
     - target: {fileID: 5928256639677688342, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
       propertyPath: m_SizeDelta.y

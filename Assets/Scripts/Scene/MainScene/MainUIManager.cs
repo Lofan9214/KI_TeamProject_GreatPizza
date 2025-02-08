@@ -14,4 +14,12 @@ public class MainUIManager : MonoBehaviour
     {
         startButtonText.SetString((SaveLoadManager.Data.days+1).ToString());
     }
+
+    public void NewGame()
+    {
+        SaveLoadManager.Data = new SaveDataV1();
+        SaveLoadManager.Save();
+
+        StartGame();
+    }
 }

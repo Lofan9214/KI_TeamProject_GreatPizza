@@ -103,7 +103,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "{0} \uC77C \uC9F8"
+  m_text: NULL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 124855c72da1e3243bdce2b3ca9df81d, type: 2}
   m_sharedMaterial: {fileID: 9067524058666774757, guid: 124855c72da1e3243bdce2b3ca9df81d, type: 2}
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50657e8f2f6a134449950a605096b08f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stringId: 111111
+  stringId: 111027
   editorLang: 0
   unFormatedString: []
 --- !u!1 &2407088784216171994
@@ -344,7 +344,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "{0} \uC624\uD6C4"
+  m_text: NULL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 124855c72da1e3243bdce2b3ca9df81d, type: 2}
   m_sharedMaterial: {fileID: 9067524058666774757, guid: 124855c72da1e3243bdce2b3ca9df81d, type: 2}
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50657e8f2f6a134449950a605096b08f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stringId: 111112
+  stringId: 111030
   editorLang: 0
   unFormatedString: []
 --- !u!1 &4495733980376984958

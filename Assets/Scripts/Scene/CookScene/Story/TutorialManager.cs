@@ -25,13 +25,13 @@ public class TutorialManager : MonoBehaviour
 
     private enum TutorialMessages : int
     {
-        Dough = 111101,
-        SourceCheese1 = 111102,
-        SourceCheese2 = 111103,
-        Source = 111104,
-        Cheese = 111105,
-        Cutting = 111106,
-        Pepperoni = 111107,
+        Dough = 111015,
+        SourceCheese1 = 111016,
+        SourceCheese2 = 111017,
+        Source = 111018,
+        Cheese = 111019,
+        Cutting = 111020,
+        Pepperoni = 111021,
     }
 
     private TutorialState tutorialState = TutorialState.None;
