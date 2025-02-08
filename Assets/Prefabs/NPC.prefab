@@ -141,11 +141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55b01c2e47669d408c4e539b15a5763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipText: {fileID: 0}
-  tipTextPosition: {fileID: 9203402405185321073}
   sprite: {fileID: 4835539999562412235}
   chatWindow: {fileID: 0}
   gameManager: {fileID: 0}
+  tipText: {fileID: 0}
+  tipTextPosition: {fileID: 9203402405185321073}
 --- !u!61 &57178296211892797
 BoxCollider2D:
   m_ObjectHideFlags: 0

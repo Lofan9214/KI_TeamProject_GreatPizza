@@ -134,6 +134,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 1768936740409991619, guid: 54afe9e0a844a1947b1f2cf31f57dfbc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071766924842951402, guid: 54afe9e0a844a1947b1f2cf31f57dfbc, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071766924842951402, guid: 54afe9e0a844a1947b1f2cf31f57dfbc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071766924842951402, guid: 54afe9e0a844a1947b1f2cf31f57dfbc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -17
+      objectReference: {fileID: 0}
     - target: {fileID: 3279985264318262471, guid: 54afe9e0a844a1947b1f2cf31f57dfbc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -222,6 +238,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1034653669}
+    - target: {fileID: 6580261649490433565, guid: 54afe9e0a844a1947b1f2cf31f57dfbc, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580261649490433565, guid: 54afe9e0a844a1947b1f2cf31f57dfbc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489844564000179174, guid: 54afe9e0a844a1947b1f2cf31f57dfbc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -2000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

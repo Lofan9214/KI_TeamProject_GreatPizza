@@ -73,14 +73,15 @@ public class SpriteRotator : MonoBehaviour
                             for (int j = 0; j < rectwidth; ++j)
                             {
                                 rotatedpixels[(rectwidth - j - 1) * rectheight + i] = pixels[i * rectwidth + j];
-
                             }
                         }
                         break;
                 }
+                croppedTexture.wrapMode = TextureWrapMode.Clamp;
                 croppedTexture.SetPixels(rotatedpixels);
                 croppedTexture.Apply();
                 resultSprite = Sprite.Create(croppedTexture, new Rect(0f, 0f, croppedTexture.width, croppedTexture.height), Vector2.one * 0.5f, targetSprite.pixelsPerUnit);
+                resultSprite.name = "RotatedSprite";
                 SetResultSprite();
             }
         }

@@ -110,6 +110,7 @@ public class IngameGameManager : MonoBehaviour
                     StartSpawn();
                 }
                 uiManager.SetOrderButtonActive(false);
+                SetPizzaCommand(null, string.Empty, IngredientTable.Type.None);
                 break;
             case InGamePlace.Kitchen:
                 pointerManager.enableCamDrag = true;

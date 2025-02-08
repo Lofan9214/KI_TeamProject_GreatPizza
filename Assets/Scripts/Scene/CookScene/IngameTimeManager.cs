@@ -21,8 +21,8 @@ public class IngameTimeManager : MonoBehaviour
         AllStop,
     }
 
-    public TextMeshProUGUI dayText;
-    public TextMeshProUGUI watchText;
+    public FormattedLocalizationText dayText;
+    public FormattedLocalizationText watchText;
     public TextMeshProUGUI satisfactionText;
 
     public EndWindow endWindow;
@@ -52,7 +52,7 @@ public class IngameTimeManager : MonoBehaviour
         WatchTimeEnd = 36;
 
         gameManager = GetComponent<IngameGameManager>();
-        dayText.text = gameManager.tempSaveData.days.ToString();
+        dayText.SetString(gameManager.tempSaveData.days.ToString());
 
         //todo 업그레이드 수정 필요
         //if (SaveLoadManager.Data.upgrades.TryGetValue(001, out bool value) && value)
@@ -110,7 +110,7 @@ public class IngameTimeManager : MonoBehaviour
     {
         Satisfaction = 100;
         CurrentState = State.OrderEnd;
-        
+
         SetSatisfactionText();
     }
 
@@ -151,7 +151,7 @@ public class IngameTimeManager : MonoBehaviour
 
     private void SetWatchTimeText()
     {
-        watchText.text = $"{12 + WatchTime / 4:D2}:{WatchTime % 4 * 15:D2}";
+        watchText.SetString($"{12 + WatchTime / 4:D2}:{WatchTime % 4 * 15:D2}");
     }
 
     public void SetWatch(int time)

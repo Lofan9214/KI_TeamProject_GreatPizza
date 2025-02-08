@@ -47,7 +47,7 @@ public class TutorialManager : MonoBehaviour
     private void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<IngameGameManager>();
-        foreach(var trashbin in gameManager.kitchen.trashBins)
+        foreach (var trashbin in gameManager.kitchen.trashBins)
         {
             trashbin.enabled = false;
         }
@@ -131,8 +131,10 @@ public class TutorialManager : MonoBehaviour
                     SetState(TutorialState.None);
                 break;
             case TutorialState.Pickup:
+                if (gameManager.timeManager.CurrentState == IngameTimeManager.State.OrderEnd)
+                    SetState(TutorialState.None);
                 break;
-            
+
         }
     }
 

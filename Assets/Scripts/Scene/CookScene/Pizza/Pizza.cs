@@ -41,6 +41,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     private Transform currentSlot;
 
     private IngameGameManager gameManager;
+    private SpriteMask spriteMask;
 
     private Vector3? lastDrawPos = null;
     private Vector3? lastMovePos = null;
@@ -55,6 +56,8 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     {
         circleCollider = GetComponent<CircleCollider2D>();
         gameManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<IngameGameManager>();
+        spriteMask = GetComponent<SpriteMask>();
+        dough.OnSpriteChanged.AddListener(p => spriteMask.sprite = p);
     }
 
     public void OnDragEnd(Vector3 pos, Vector3 deltaPos)
@@ -126,6 +129,10 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                     if (pizzaBoard.activeSelf)
                     {
                         pizzaBoard.SetActive(false);
+                    }
+                    if (slot is CuttingSlot)
+                    {
+                        cutGuide.SetActive(true);
                     }
                     return;
                 }
