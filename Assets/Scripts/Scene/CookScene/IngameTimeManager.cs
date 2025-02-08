@@ -76,7 +76,7 @@ public class IngameTimeManager : MonoBehaviour
         }
 
         if ((CurrentState == State.Ordering || CurrentState == State.OrderEnd)
-            && (CurrentTimeState == TimeState.WatchStop || CurrentTimeState == TimeState.AllStop)
+            && (CurrentTimeState != TimeState.WatchStop || CurrentTimeState != TimeState.AllStop)
             && WatchTime <= WatchTimeEnd)
         {
             watchTimeTimer += Time.deltaTime;
@@ -110,6 +110,7 @@ public class IngameTimeManager : MonoBehaviour
     {
         Satisfaction = 100;
         CurrentState = State.OrderEnd;
+        
         SetSatisfactionText();
     }
 

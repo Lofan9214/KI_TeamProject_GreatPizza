@@ -35,7 +35,8 @@ public class IngameGameManager : MonoBehaviour
     private IngredientVat currentTub;
 
     private State state;
-    private TutorialData tutorialManager;
+    public TutorialManager tutorialManagerPrefab;
+    public TutorialManager tutorialManager;
 
     private void Awake()
     {
@@ -47,7 +48,7 @@ public class IngameGameManager : MonoBehaviour
         if (DataTableManager.StoryTable.IsExistData(tempSaveData.days))
         {
             state = State.Story;
-            tutorialManager = new TutorialData();
+            tutorialManager = Instantiate(tutorialManagerPrefab);
             tutorialManager.storyData = DataTableManager.StoryTable.GetAtDay(tempSaveData.days);
         }
         else

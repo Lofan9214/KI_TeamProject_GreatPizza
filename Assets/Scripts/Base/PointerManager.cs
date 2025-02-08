@@ -6,6 +6,7 @@ using UnityEngine;
 public class PointerManager : MonoBehaviour
 {
     public LayerMask layerMask;
+    public LayerMask screenMask;
     public Transform virtualCam;
 
     private bool hitPointable;
@@ -31,7 +32,14 @@ public class PointerManager : MonoBehaviour
         if (MultiTouchManager.Instance.IsTouchStart)
         {
             var touchposition = MultiTouchManager.Instance.TouchPosition;
-            hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(touchposition), Vector2.zero, float.PositiveInfinity, layerMask);
+            var screenpoint = Camera.main.ScreenToWorldPoint(touchposition);
+            float minDepth = -Mathf.Infinity;
+            hit = Physics2D.Raycast(screenpoint, Vector2.zero, float.PositiveInfinity, screenMask);
+            if(hit)
+            {
+                minDepth = -0.5f;
+            }
+            hit = Physics2D.Raycast(screenpoint, Vector2.zero, float.PositiveInfinity, layerMask, minDepth);
             hitPointable = hit;
 
             if (hit)
