@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7364654496661463741}
   - component: {fileID: 6272605897171878021}
   - component: {fileID: 1619613602884544849}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trashbin
   m_TagString: Slot
   m_Icon: {fileID: 0}

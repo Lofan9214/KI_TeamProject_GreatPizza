@@ -893,6 +893,9 @@ MonoBehaviour:
   ingredientGuide: {fileID: 1523368770871444102}
   cutGuide: {fileID: 5043358971410863682}
   cutLayer: {fileID: 4359489715482309041}
+  slotMask:
+    serializedVersion: 2
+    m_Bits: 256
   sourceMax: 1.5
 --- !u!58 &6847809133884912937
 CircleCollider2D:

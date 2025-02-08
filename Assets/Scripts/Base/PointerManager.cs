@@ -33,13 +33,7 @@ public class PointerManager : MonoBehaviour
         {
             var touchposition = MultiTouchManager.Instance.TouchPosition;
             var screenpoint = Camera.main.ScreenToWorldPoint(touchposition);
-            float minDepth = -Mathf.Infinity;
-            hit = Physics2D.Raycast(screenpoint, Vector2.zero, float.PositiveInfinity, screenMask);
-            if(hit)
-            {
-                minDepth = -0.5f;
-            }
-            hit = Physics2D.Raycast(screenpoint, Vector2.zero, float.PositiveInfinity, layerMask, minDepth);
+            hit = RaycastScreen(screenpoint);
             hitPointable = hit;
 
             if (hit)
@@ -57,14 +51,20 @@ public class PointerManager : MonoBehaviour
         {
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(MultiTouchManager.Instance.TouchPosition);
             Vector3 deltaWorldPos = worldPos - Camera.main.ScreenToWorldPoint(MultiTouchManager.Instance.TouchPosition - MultiTouchManager.Instance.DeltaPosition);
+
+            hit = RaycastScreen(worldPos);
             worldPos.z = 0f;
             deltaWorldPos.z = 0f;
             if (hitPointable)
             {
-                IDragable dragable = target?.GetComponent<IDragable>();
-                if (dragable != null)
+                if (target != null
+                    && ((hit && hit.collider.transform == target) || !hit))
                 {
-                    dragable.OnDrag(worldPos, deltaWorldPos);
+                    IDragable dragable = target.GetComponent<IDragable>();
+                    if (dragable != null)
+                    {
+                        dragable.OnDrag(worldPos, deltaWorldPos);
+                    }
                 }
             }
             else if (enableCamDrag)
@@ -82,12 +82,27 @@ public class PointerManager : MonoBehaviour
                 Vector3 deltaWorldPos = worldPos - Camera.main.ScreenToWorldPoint(MultiTouchManager.Instance.TouchPosition - MultiTouchManager.Instance.DeltaPosition);
 
                 IDragable dragable = target?.GetComponent<IDragable>();
-                if (dragable != null)
+                hit = RaycastScreen(worldPos);
+                if (dragable != null
+                    && ((hit && hit.collider.transform == target) || !hit))
                 {
                     dragable.OnDragEnd(worldPos, deltaWorldPos);
                 }
             }
         }
 #endif
+    }
+
+
+    private RaycastHit2D RaycastScreen(Vector2 worldPos)
+    {
+        float minDepth = -Mathf.Infinity;
+        var hit = Physics2D.Raycast(worldPos, Vector2.zero, float.PositiveInfinity, screenMask);
+        if (hit)
+        {
+            minDepth = -0.5f;
+        }
+        hit = Physics2D.Raycast(worldPos, Vector2.zero, float.PositiveInfinity, layerMask, minDepth);
+        return hit;
     }
 }

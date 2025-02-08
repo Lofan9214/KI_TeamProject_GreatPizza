@@ -49,7 +49,6 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
 
     private float charLength;
     private string script;
-    private WaitForEndOfFrame wait;
 
     private IngameGameManager gm;
 
@@ -60,7 +59,6 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
     private void Awake()
     {
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<IngameGameManager>();
-        wait = new WaitForEndOfFrame();
     }
 
     public void SetStrings(int[] Ids)
@@ -114,7 +112,7 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
                 TalkingState = State.Talkend;
                 break;
             }
-            yield return wait;
+            yield return null;
         }
         if (TalkingState == State.Talkend && charLength < script.Length)
         {

@@ -11,6 +11,8 @@ public class IngameUIManager : MonoBehaviour
     public TextMeshProUGUI tipText;
     public OrderWindow orderWindow;
     public Button orderShowButton;
+    public GameObject tutorialWindow;
+    public LocalizationText tutorialText;
 
     public void ShowChatWindow(int[] Ids, bool story = false)
     {

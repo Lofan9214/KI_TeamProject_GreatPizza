@@ -267,7 +267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3449679652855210438}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 2417114051942625271}
   - component: {fileID: 6639943872126887824}
   - component: {fileID: -646810586091270920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PizzaBox
   m_TagString: Slot
   m_Icon: {fileID: 0}

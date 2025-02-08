@@ -27,7 +27,7 @@ public class DrawIngredient : MonoBehaviour
 
     private int currentIndex = 0;
 
-    public float Ratio => drawAlphaMap.Sum() / spriteAlphaMap.Sum();
+    public float Ratio => spriteAlphaMap == null ? 0f : drawAlphaMap.Sum() / spriteAlphaMap.Sum();
 
     public void Init(string ingredientId)
     {

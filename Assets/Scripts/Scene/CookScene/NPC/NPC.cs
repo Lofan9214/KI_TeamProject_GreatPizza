@@ -85,9 +85,6 @@ public class NPC : MonoBehaviour, IPizzaSlot
         }
     }
 
-
-
-
     public void Order(RecipeTable.Data recipe)
     {
         Recipe = recipe;
