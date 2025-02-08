@@ -52,9 +52,7 @@ public class SpriteRotator : MonoBehaviour
                 var rect = targetSprite.textureRect;
                 int rectwidth = (int)rect.width;
                 int rectheight = (int)rect.height;
-                int rotatedWidth = rotate == Rotate.None ? rectwidth : rectheight;
-                int rotatedHeight = rotate == Rotate.None ? rectheight : rectwidth;
-                croppedTexture = new Texture2D(rotatedWidth, rotatedHeight);
+                croppedTexture = new Texture2D(rectheight, rectwidth);
                 var pixels = targetSprite.texture.GetPixels((int)rect.x, (int)rect.y, rectwidth, rectheight);
 
                 Color[] rotatedpixels = new Color[pixels.Length];
@@ -65,7 +63,7 @@ public class SpriteRotator : MonoBehaviour
                         {
                             for (int j = 0; j < rectwidth; ++j)
                             {
-                                rotatedpixels[j * rotatedWidth + rectheight - i - 1] = pixels[i * rectwidth + j];
+                                rotatedpixels[j * rectheight + rectheight - i - 1] = pixels[i * rectwidth + j];
                             }
                         }
                         break;
@@ -74,8 +72,7 @@ public class SpriteRotator : MonoBehaviour
                         {
                             for (int j = 0; j < rectwidth; ++j)
                             {
-
-                                rotatedpixels[(rotatedHeight - j - 1) * rotatedWidth + i] = pixels[i * rectwidth + j];
+                                rotatedpixels[(rectwidth - j - 1) * rectheight + i] = pixels[i * rectwidth + j];
 
                             }
                         }
