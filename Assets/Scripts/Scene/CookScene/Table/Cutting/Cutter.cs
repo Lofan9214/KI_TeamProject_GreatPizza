@@ -59,6 +59,6 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
         isCutting = false;
         cutterObject.gameObject.SetActive(false);
         spriteRenderer.enabled = true;
-        currentTable.CurrentPizza.CircleCollider.enabled = false;
+        currentTable.CurrentPizza.CircleCollider.enabled = true;
     }
 }

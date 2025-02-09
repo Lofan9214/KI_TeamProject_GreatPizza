@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 public class MainUIManager : MonoBehaviour
 {
     public FormattedLocalizationText startButtonText;
+    public ShopWindow shopWindow;
+
     public void StartGame()
     {
         SceneManager.LoadScene(1);

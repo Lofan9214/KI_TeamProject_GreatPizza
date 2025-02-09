@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class MainGameManager : MonoBehaviour
 {
+    public MainUIManager uiManager;
+    public ShopTutorialManager tutorialPrefab;
+    public ShopTutorialManager tutorialManager;
+
     public void Awake()
     {
         var ingredientData = DataTableManager.IngredientTable.GetList();
@@ -21,5 +25,12 @@ public class MainGameManager : MonoBehaviour
 
         if (added)
             SaveLoadManager.Save();
+
+        if(SaveLoadManager.Data.days == 1
+            && !SaveLoadManager.Data.ingredients["pepperoni"])
+        {
+            tutorialManager = Instantiate(tutorialPrefab, uiManager.transform);
+            tutorialManager.SetState(ShopTutorialManager.State.StoreSelect);
+        }
     }
 }
