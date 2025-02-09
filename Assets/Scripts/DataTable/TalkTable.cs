@@ -5,6 +5,12 @@ using Random = UnityEngine.Random;
 
 public class TalkTable : DataTable
 {
+    public enum TalkType
+    {
+        Normal = 1,
+        Story = 2,
+    }
+
     public class Data
     {
         public int talkID { get; set; }
@@ -12,6 +18,7 @@ public class TalkTable : DataTable
         public int stringID { get; set; }
         public string groupID { get; set; }
         public int state { get; set; }
+        public TalkType type { get; set; }
     }
 
     private Dictionary<int, Data> dict = new Dictionary<int, Data>();
@@ -49,7 +56,7 @@ public class TalkTable : DataTable
 
     public List<IGrouping<string, Data>> GetByRecipeId(int recipeID)
     {
-        return dict.Values.Where(p => p.recipeID == recipeID).GroupBy(p => p.groupID).ToList();
+        return dict.Values.Where(p => p.recipeID == recipeID && p.type == TalkType.Normal).GroupBy(p => p.groupID).ToList();
     }
 
     public List<Data> GetByGroupId(string groupId)
@@ -70,7 +77,7 @@ public class TalkTable : DataTable
     public int[] GetResultTalk()
     {
         int[] result = new int[3];
-        var talks = GetValueList().GroupBy(p => p.state).ToDictionary(p => p.Key, p => p.ToList());
+        var talks = GetValueList().Where(p => p.type == TalkType.Normal).GroupBy(p => p.state).ToDictionary(p => p.Key, p => p.ToList());
         for (int i = 4, j = 0; j < result.Length; ++i, ++j)
         {
             int sss = talks[i].Count();

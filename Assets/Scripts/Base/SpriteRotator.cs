@@ -20,12 +20,9 @@ public class SpriteRotator : MonoBehaviour
 
     private Texture2D croppedTexture;
 
-    private void OnEnable()
+    private void Start()
     {
-        if (targetSprite != null
-            && (resultSprite == null
-            || targetSprite.textureRect.width != resultSprite.textureRect.height))
-            RotateSprite();
+        RotateSprite();
     }
 
     public void RotateSprite()
@@ -56,6 +53,7 @@ public class SpriteRotator : MonoBehaviour
                 var pixels = targetSprite.texture.GetPixels((int)rect.x, (int)rect.y, rectwidth, rectheight);
 
                 Color[] rotatedpixels = new Color[pixels.Length];
+                Vector4 newborder = Vector4.zero;
                 switch (rotate)
                 {
                     case Rotate.Right:
@@ -66,6 +64,10 @@ public class SpriteRotator : MonoBehaviour
                                 rotatedpixels[j * rectheight + rectheight - i - 1] = pixels[i * rectwidth + j];
                             }
                         }
+                        for (int i = 0; i < 4; ++i)
+                        {
+                            newborder[i] = targetSprite.border[(i + 1) % 4];
+                        }
                         break;
                     case Rotate.Left:
                         for (int i = 0; i < rectheight; ++i)
@@ -75,12 +77,23 @@ public class SpriteRotator : MonoBehaviour
                                 rotatedpixels[(rectwidth - j - 1) * rectheight + i] = pixels[i * rectwidth + j];
                             }
                         }
+                        for (int i = 0; i < 4; ++i)
+                        {
+                            newborder[(i + 1) % 4] = targetSprite.border[i];
+                        }
                         break;
                 }
                 croppedTexture.wrapMode = TextureWrapMode.Clamp;
+
                 croppedTexture.SetPixels(rotatedpixels);
                 croppedTexture.Apply();
-                resultSprite = Sprite.Create(croppedTexture, new Rect(0f, 0f, croppedTexture.width, croppedTexture.height), Vector2.one * 0.5f, targetSprite.pixelsPerUnit);
+                resultSprite = Sprite.Create(croppedTexture,
+                                             new Rect(0f, 0f, croppedTexture.width, croppedTexture.height),
+                                             Vector2.one * 0.5f,
+                                             targetSprite.pixelsPerUnit,
+                                             1,
+                                             SpriteMeshType.FullRect,
+                                             newborder);
                 resultSprite.name = "RotatedSprite";
                 SetResultSprite();
             }

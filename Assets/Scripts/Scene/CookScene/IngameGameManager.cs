@@ -38,6 +38,11 @@ public class IngameGameManager : MonoBehaviour
     public TutorialManager tutorialManager;
     public List<StoryTable.Data> storyData;
 
+    public float tip { get; private set; } = 0f;
+    public float ingredientUsage { get; private set; } = 0f;
+    public float refund { get; private set; } = 0f;
+    public float totalProfit { get; private set; } = 0f;
+
     public InGamePlace gamePlace;
 
     private void Awake()
@@ -126,7 +131,8 @@ public class IngameGameManager : MonoBehaviour
                     }
                     else if (tempSaveData.days == 2)
                     {
-                        tutorialManager.SetState(TutorialManager.TutorialState.Pepperoni);
+                        tutorialManager.SetState(TutorialManager.TutorialState.PepperoniWait);
+                        tutorialManager.ScreenProtector.SetActive(false);
                     }
                 }
                 break;
@@ -214,6 +220,30 @@ public class IngameGameManager : MonoBehaviour
     {
         tempSaveData.budget += add;
         uiManager.UpdateCurrentBudget();
+    }
+
+    public void AddTip(float tip)
+    {
+        this.tip += tip;
+        AddBudget(tip);
+    }
+
+    public void Pay(float pay)
+    {
+        totalProfit += pay;
+        AddBudget(pay);
+    }
+
+    public void IngredientPay(float usage)
+    {
+        ingredientUsage += usage;
+        AddBudget(usage);
+    }
+
+    public void Refund(float refund)
+    {
+        this.refund += refund;
+        AddBudget(refund);
     }
 
     public void StopGame()

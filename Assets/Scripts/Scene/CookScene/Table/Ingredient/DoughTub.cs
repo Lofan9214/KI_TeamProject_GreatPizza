@@ -82,7 +82,7 @@ public class DoughTub : MonoBehaviour
         {
             var ps = Instantiate(pizzaPrefab);
             ps.SetDough(sender.DoughId);
-            gameManager.tempSaveData.budget -= DataTableManager.IngredientTable.Get(sender.DoughId).price;
+            gameManager.IngredientPay(-DataTableManager.IngredientTable.Get(sender.DoughId).price);
             gameManager.uiManager.UpdateCurrentBudget();
             ps.SetCurrentSlot(target.transform);
             target.SetPizza(ps);

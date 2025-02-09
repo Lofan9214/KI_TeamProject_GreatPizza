@@ -19,6 +19,7 @@ public class TutorialManager : MonoBehaviour
         Cutting,
         Boxing,
         Pickup,
+        PepperoniWait,
         Pepperoni,
         None,
     }
@@ -123,6 +124,13 @@ public class TutorialManager : MonoBehaviour
                 if (gameManager.gamePlace == InGamePlace.Hall)
                 {
                     SetState(TutorialState.Pickup);
+                }
+                break;
+            case TutorialState.PepperoniWait:
+                if (gameManager.PizzaCommand == "pepperoni")
+                {
+                    SetState(TutorialState.Pepperoni);
+                    ScreenProtector.SetActive(true);
                 }
                 break;
             case TutorialState.Pepperoni:

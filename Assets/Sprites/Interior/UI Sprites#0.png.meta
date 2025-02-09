@@ -2832,7 +2832,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI Sprites#0_131
+      name: PlusIcon
       rect:
         serializedVersion: 2
         x: 1768
@@ -4122,7 +4122,7 @@ TextureImporter:
         height: 95
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 18, y: 35, z: 20, w: 35}
+      border: {x: 0, y: 35, z: 0, w: 35}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -4365,7 +4365,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI Sprites#0_205
+      name: moneystack
       rect:
         serializedVersion: 2
         x: 1728
@@ -7022,6 +7022,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Home: 1156710056
+      PlusIcon: -1220166316
       Stop: -813957629
       Sun_fill: 389061714
       Tutorial: 400425358
@@ -7059,7 +7060,6 @@ TextureImporter:
       UI Sprites#0_129: 768226221
       UI Sprites#0_13: 366257937
       UI Sprites#0_130: -1758374651
-      UI Sprites#0_131: -1220166316
       UI Sprites#0_132: -1975225049
       UI Sprites#0_133: -755806149
       UI Sprites#0_134: -1331892932
@@ -7132,7 +7132,6 @@ TextureImporter:
       UI Sprites#0_202: 1149109732
       UI Sprites#0_203: 1305989744
       UI Sprites#0_204: 1388348435
-      UI Sprites#0_205: 1276239271
       UI Sprites#0_206: 2124794455
       UI Sprites#0_207: 1606666824
       UI Sprites#0_208: -1067660290
@@ -7338,6 +7337,7 @@ TextureImporter:
       hand: 1073137566
       menu: -808191827
       money: -671269744
+      moneystack: 1276239271
       night_ui4: 1503292082
       night_ui5: 1805881602
       nightmoney: 77887853

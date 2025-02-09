@@ -5,18 +5,28 @@ using UnityEngine.SceneManagement;
 public class EndWindow : MonoBehaviour
 {
     private IngameGameManager gameManager;
+    public FormattedLocalizationText dateText;
+    public FormattedLocalizationText watchdateText;
 
-    public TextMeshProUGUI dayName;
-    public TextMeshProUGUI dayStart;
-    public TextMeshProUGUI dayEnd;
+    public TextMeshProUGUI totalProfitText;
+    public TextMeshProUGUI tipText;
+    public TextMeshProUGUI refundText;
+    public TextMeshProUGUI ingredientUsageText;
+    public TextMeshProUGUI netProfitText;
+    public TextMeshProUGUI budgetText;
 
-    public void Show()
+
+    private void Start()
     {
-        gameObject.SetActive(true);
         gameManager ??= GameObject.FindGameObjectWithTag("GameController").GetComponent<IngameGameManager>();
-        dayName.text = $"Days : {gameManager.tempSaveData.days}";
-        dayStart.text = $"day start : {SaveLoadManager.Data.budget:F2}";
-        dayEnd.text = $"day end : {gameManager.tempSaveData.budget:F2}";
+        dateText.SetString(gameManager.tempSaveData.days.ToString());
+        watchdateText.SetString(gameManager.tempSaveData.days.ToString());
+        totalProfitText.text = gameManager.totalProfit.ToString("F2");
+        tipText.text = gameManager.tip.ToString("F2");
+        refundText.text = gameManager.refund.ToString("F2");
+        ingredientUsageText.text = gameManager.ingredientUsage.ToString("F2");
+        netProfitText.text = (gameManager.tempSaveData.budget - SaveLoadManager.Data.budget).ToString("F2");
+        budgetText.text = gameManager.tempSaveData.budget.ToString("F2");
     }
 
     public void Exit()

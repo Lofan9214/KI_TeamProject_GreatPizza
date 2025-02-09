@@ -188,7 +188,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
             }
             else if (gameManager.IngredientType == IngredientTable.Type.Ingredient)
             {
-                gameManager.AddBudget(-DataTableManager.IngredientTable.Get(gameManager.PizzaCommand).price);
+                gameManager.IngredientPay(-DataTableManager.IngredientTable.Get(gameManager.PizzaCommand).price);
                 PizzaData.toppingData.Add(gameManager.PizzaCommand);
                 toppingLayer.AddTopping(position, gameManager.PizzaCommand);
             }
@@ -300,7 +300,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         if (sourceCurrent < 1.5f)
         {
             sourceCurrent += 0.01f;
-            gameManager.AddBudget(-0.01f);
+            gameManager.IngredientPay(-0.01f);
         }
     }
 
@@ -310,7 +310,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         if (cheeseCurrent < 1.5f)
         {
             cheeseCurrent += 0.01f;
-            gameManager.AddBudget(-0.01f);
+            gameManager.IngredientPay(-0.01f);
         }
     }
 }

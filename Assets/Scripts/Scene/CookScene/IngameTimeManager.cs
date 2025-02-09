@@ -72,7 +72,7 @@ public class IngameTimeManager : MonoBehaviour
             WatchTime = WatchTimeEnd + 4;
             SetWatchTimeText();
 
-            endWindow.Show();
+            endWindow.gameObject.SetActive(true);
         }
 
         if ((CurrentState == State.Ordering || CurrentState == State.OrderEnd)

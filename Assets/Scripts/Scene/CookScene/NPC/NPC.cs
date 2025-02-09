@@ -229,7 +229,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         {
             case JudgeData.Judge.Fail:
                 chatWindow.NextTalk(ChatWindow.Talks.Fail);
-                gameManager.AddBudget(-payment);
+                gameManager.Refund(-payment);
                 gameManager.uiManager.ShowTipMessage(-payment, 1f);
                 StartCoroutine(TipShow(-payment));
                 break;
@@ -265,14 +265,14 @@ public class NPC : MonoBehaviour, IPizzaSlot
             }
             if (tip > 0f)
             {
-                gameManager.AddBudget(tip);
+                gameManager.AddTip(tip);
                 tipText.text = tip.ToString("F2");
                 tipText.gameObject.SetActive(true);
             }
         }
         else if (state == State.Story && storyNPCData.price > 0)
         {
-            gameManager.AddBudget(storyNPCData.price);
+            gameManager.AddTip(storyNPCData.price);
             tipText.text = storyNPCData.price.ToString("F2");
             tipText.gameObject.SetActive(true);
         }
@@ -294,7 +294,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         gameManager.ChangePlace(InGamePlace.Hall);
         chatWindow.NextTalk(ChatWindow.Talks.Fail);
         gameManager.uiManager.ShowTipMessage(-payment, 1f);
-        gameManager.AddBudget(-payment);
+        gameManager.Refund(-payment);
         gameManager.kitchen.packingTable.DestroyPizzaBox();
         yield return waitChatEnd;
         yield return new WaitForSeconds(0.5f);
@@ -318,7 +318,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
             payment += DataTableManager.IngredientTable.Get(ing).profit;
         }
 
-        gameManager.AddBudget(payment);
+        gameManager.Pay(payment);
 
         StartCoroutine(TipShow(payment));
     }
