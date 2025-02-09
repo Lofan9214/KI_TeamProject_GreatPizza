@@ -882,7 +882,7 @@ TextureImporter:
       name: sausage1
       rect:
         serializedVersion: 2
-        x: 1332
+        x: 1330
         y: 1666
         width: 190
         height: 168
@@ -1134,8 +1134,8 @@ TextureImporter:
       name: sausage2
       rect:
         serializedVersion: 2
-        x: 1332
-        y: 1489
+        x: 1330
+        y: 1488
         width: 190
         height: 168
       alignment: 6
@@ -1365,10 +1365,10 @@ TextureImporter:
       name: sausage3
       rect:
         serializedVersion: 2
-        x: 1332
-        y: 1313
-        width: 189
-        height: 167
+        x: 1330
+        y: 1315
+        width: 190
+        height: 168
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1430,7 +1430,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1890
         y: 1260
-        width: 148
+        width: 150
         height: 168
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -1596,10 +1596,10 @@ TextureImporter:
       name: tomato1
       rect:
         serializedVersion: 2
-        x: 1526
-        y: 1119
-        width: 359
-        height: 183
+        x: 1522
+        y: 1121
+        width: 360
+        height: 180
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1659,10 +1659,10 @@ TextureImporter:
       name: tomato2
       rect:
         serializedVersion: 2
-        x: 1524
-        y: 933
+        x: 1522
+        y: 935
         width: 360
-        height: 182
+        height: 180
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1764,10 +1764,10 @@ TextureImporter:
       name: Kitchen Sprites#01_124
       rect:
         serializedVersion: 2
-        x: 1328
+        x: 1330
         y: 858
-        width: 194
-        height: 174
+        width: 190
+        height: 168
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2079,10 +2079,10 @@ TextureImporter:
       name: tomato3
       rect:
         serializedVersion: 2
-        x: 1526
-        y: 747
+        x: 1522
+        y: 749
         width: 360
-        height: 184
+        height: 180
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2606,7 +2606,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1893
         y: 650
-        width: 139
+        width: 140
         height: 168
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -3045,10 +3045,10 @@ TextureImporter:
       name: tomato4
       rect:
         serializedVersion: 2
-        x: 1524
-        y: 561
-        width: 363
-        height: 182
+        x: 1522
+        y: 563
+        width: 360
+        height: 180
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4053,9 +4053,9 @@ TextureImporter:
       name: tomatooff
       rect:
         serializedVersion: 2
-        x: 968
+        x: 969
         y: 5
-        width: 134
+        width: 133
         height: 294
       alignment: 6
       pivot: {x: 0, y: 0}
