@@ -2416,7 +2416,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 89
-        y: 567
+        y: 568
         width: 83
         height: 295
       alignment: 0
@@ -3966,7 +3966,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI Sprites#0_186
+      name: nightmoney
       rect:
         serializedVersion: 2
         x: 89
@@ -7113,7 +7113,6 @@ TextureImporter:
       UI Sprites#0_183: -1654502889
       UI Sprites#0_184: -1410787176
       UI Sprites#0_185: -1495857878
-      UI Sprites#0_186: 77887853
       UI Sprites#0_187: 1363977962
       UI Sprites#0_188: -57838423
       UI Sprites#0_189: 1489459823
@@ -7341,6 +7340,7 @@ TextureImporter:
       money: -671269744
       night_ui4: 1503292082
       night_ui5: 1805881602
+      nightmoney: 77887853
       start: 1553290154
       store1: -1469819957
       store10: 484759030

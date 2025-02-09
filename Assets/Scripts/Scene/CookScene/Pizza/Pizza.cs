@@ -62,6 +62,15 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     public void OnDragEnd(Vector3 pos, Vector3 deltaPos)
     {
+        if (CurrentState == State.Immovable)
+        {
+            return;
+        }
+        DragEndSlot(pos, deltaPos);
+    }
+
+    public void DragEndSlot(Vector3 pos, Vector3 deltaPos)
+    {
         if (CurrentState == State.AddingTopping
             && addingTopping
             && (gameManager.IngredientType == IngredientTable.Type.Source
@@ -82,15 +91,6 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
             return;
         }
 
-        if (CurrentState == State.Immovable)
-        {
-            return;
-        }
-        DragEndSlot();
-    }
-
-    public void DragEndSlot()
-    {
         var slots = Physics2D.OverlapCircleAll(transform.position, circleCollider.radius, slotMask);
 
         if (slots.Length > 0)
@@ -154,6 +154,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     {
         lastDrawPos = null;
         lastMovePos = null;
+        addingTopping = false;
         if (CurrentState == State.AddingTopping
             && Vector2.Distance(position, transform.position) < circleCollider.radius)
         {
@@ -289,6 +290,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     public void SetDough(string doughId)
     {
+        PizzaData.doughID = doughId;
         dough.Init(doughId);
     }
 
