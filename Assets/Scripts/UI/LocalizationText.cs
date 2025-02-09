@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -14,6 +12,12 @@ public class LocalizationText : MonoBehaviour
 #endif
 
     protected TextMeshProUGUI text;
+
+    public bool TextEnabled
+    {
+        get => text.enabled;
+        set => text.enabled = value;
+    }
 
     private void Awake()
     {

@@ -10,28 +10,24 @@ public class ShopItem : MonoBehaviour
     public LocalizationText itemName;
     public LocalizationText itemDescription;
     public TextMeshProUGUI price;
-    public Toggle toggle;
     private IngredientTable.Data ingdata;
     public UnityEvent OnBought;
 
-    public void OnToggleChanged(bool isOn)
-    {
-        if (isOn)
-        {
-            if (SaveLoadManager.Data.budget > ingdata.store_price)
-            {
-                SaveLoadManager.Data.budget -= ingdata.store_price;
-                SaveLoadManager.Data.ingredients[ingdata.ingredientID] = true;
-                SaveLoadManager.Save();
-                price.text = "Bought";
-                OnBought?.Invoke();
+    public GameObject buyButton;
+    public GameObject boughtMark;
 
-                toggle.interactable = false;
-            }
-            else
-            {
-                toggle.isOn = false;
-            }
+    public GameObject lockMask;
+    public FormattedLocalizationText lockText;
+
+    public void OnBuyButtonClick()
+    {
+        if (SaveLoadManager.Data.budget > ingdata.store_price)
+        {
+            SaveLoadManager.Data.budget -= ingdata.store_price;
+            SaveLoadManager.Data.ingredients[ingdata.ingredientID] = true;
+            SaveLoadManager.Save();
+            SetBought();
+            OnBought?.Invoke();
         }
     }
 
@@ -41,22 +37,24 @@ public class ShopItem : MonoBehaviour
         trayImage.sprite = ingdata.spriteDatas.storeTray;
         itemImage.sprite = ingdata.spriteDatas.storeSprite;
         itemName.SetString(ingdata.stringID.ToString());
-        itemDescription.SetString(ingdata.stringID.ToString());
-        toggle.isOn = bought;
+        //itemDescription.SetString(ingdata.stringID.ToString());
+        price.text = data.store_price.ToString();
 
         if (bought)
         {
-            price.text = "Bought";
-            toggle.interactable = false;
+            SetBought();
         }
         else if (day < ingdata.day)
         {
-            price.text = "Can't Buy";
-            toggle.interactable = false;
+            lockMask.SetActive(true);
+            lockText.SetString(ingdata.day.ToString());
         }
-        else
-        {
-            price.text = data.store_price.ToString();
-        }
+    }
+
+    public void SetBought()
+    {
+        itemDescription.TextEnabled = false;
+        buyButton.SetActive(false);
+        boughtMark.SetActive(true);
     }
 }
