@@ -126,10 +126,10 @@ TextureImporter:
       name: tomato2
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 1865
-        width: 356
-        height: 179
+        width: 360
+        height: 180
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: tomato
       rect:
         serializedVersion: 2
-        x: 365
+        x: 362
         y: 1865
-        width: 357
-        height: 179
+        width: 360
+        height: 180
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: tomatotr
       rect:
         serializedVersion: 2
-        x: 347
+        x: 346
         y: 1593
-        width: 333
-        height: 129
+        width: 335
+        height: 130
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -486,7 +486,7 @@ TextureImporter:
         x: 539
         y: 567
         width: 170
-        height: 117
+        height: 120
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -821,7 +821,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1400
         y: 1219
-        width: 207
+        width: 205
         height: 168
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -1115,7 +1115,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1389
         y: 1039
-        width: 206
+        width: 205
         height: 168
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -1136,7 +1136,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1612
         y: 1072
-        width: 207
+        width: 205
         height: 168
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -1282,9 +1282,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1826
-        y: 962
-        width: 206
-        height: 169
+        y: 963
+        width: 205
+        height: 168
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1450,9 +1450,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1601
-        y: 892
-        width: 208
-        height: 170
+        y: 893
+        width: 205
+        height: 168
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1640,8 +1640,8 @@ TextureImporter:
         serializedVersion: 2
         x: 709
         y: 745
-        width: 131
-        height: 171
+        width: 135
+        height: 170
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2037,10 +2037,10 @@ TextureImporter:
       name: sausage_on_store
       rect:
         serializedVersion: 2
-        x: 359
-        y: 568
-        width: 170
-        height: 188
+        x: 360
+        y: 569
+        width: 168
+        height: 190
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2291,7 +2291,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1892
         y: 420
-        width: 137
+        width: 140
         height: 167
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -2649,7 +2649,7 @@ TextureImporter:
         x: 1469
         y: 176
         width: 199
-        height: 168
+        height: 169
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2670,7 +2670,7 @@ TextureImporter:
         x: 1673
         y: 245
         width: 199
-        height: 168
+        height: 169
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2753,8 +2753,8 @@ TextureImporter:
         serializedVersion: 2
         x: 361
         y: 214
-        width: 168
-        height: 199
+        width: 169
+        height: 200
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2835,7 +2835,7 @@ TextureImporter:
       name: cheese4
       rect:
         serializedVersion: 2
-        x: 1673
+        x: 1674
         y: 69
         width: 199
         height: 169
@@ -3024,10 +3024,10 @@ TextureImporter:
       name: mushroomon3_store
       rect:
         serializedVersion: 2
-        x: 6
+        x: 7
         y: 7
-        width: 169
-        height: 199
+        width: 168
+        height: 200
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3045,9 +3045,9 @@ TextureImporter:
       name: mushroomon2
       rect:
         serializedVersion: 2
-        x: 180
-        y: 6
-        width: 172
+        x: 183
+        y: 7
+        width: 169
         height: 200
       alignment: 8
       pivot: {x: 1, y: 0}
