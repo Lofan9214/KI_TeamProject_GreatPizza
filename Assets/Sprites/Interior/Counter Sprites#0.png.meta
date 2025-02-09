@@ -228,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Counter Sprites#0_5
+      name: nighttime
       rect:
         serializedVersion: 2
         x: 90
@@ -237,7 +237,7 @@ TextureImporter:
         height: 248
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 18, y: 40, z: 21, w: 19}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -459,7 +459,6 @@ TextureImporter:
       Counter Sprites#0_19: 62746797
       Counter Sprites#0_21: -710588486
       Counter Sprites#0_24: -1367646500
-      Counter Sprites#0_5: 751919324
       Counter Sprites#0_7: -24218358
       Counter Sprites#0_8: -1338562317
       Counter Sprites#0_9: -885410881
@@ -469,6 +468,7 @@ TextureImporter:
       Time1: 1664869604
       angry: 1467360122
       happy: 551246612
+      nighttime: 751919324
       normal: -2118614805
       order1: -1592300361
       order2: 622089676

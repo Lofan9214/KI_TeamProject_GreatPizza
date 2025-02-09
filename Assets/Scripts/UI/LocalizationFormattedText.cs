@@ -9,11 +9,31 @@ public class FormattedLocalizationText : LocalizationText
 {
     public string[] unFormatedString;
 
+    private void Awake()
+    {
+        text = GetComponent<TextMeshProUGUI>();
+    }
+
+    private void OnEnable()
+    {
+        if (Application.isPlaying)
+        {
+            OnChangedLanguage(Variables.currentLanguage);
+        }
+#if UNITY_EDITOR
+        else
+        {
+            OnChangedLanguage(editorLang);
+        }
+#endif
+    }
+
     new public void OnChangedLanguage(Languages lang)
     {
         var stringTableId = DataTableIds.String[(int)lang];
         var stringTable = DataTableManager.Get<StringTable>(stringTableId);
-        if (int.TryParse(stringId, out int id))
+        if (int.TryParse(stringId, out int id)
+            && unFormatedString.Length > 0)
         {
             text.text = string.Format(stringTable.Get(id), unFormatedString);
         }

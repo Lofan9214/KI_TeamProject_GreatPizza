@@ -15,12 +15,12 @@ public class LocalizationText : MonoBehaviour
 
     protected TextMeshProUGUI text;
 
-    protected void Awake()
+    private void Awake()
     {
         text = GetComponent<TextMeshProUGUI>();
     }
 
-    protected void OnEnable()
+    private void OnEnable()
     {
         if (Application.isPlaying)
         {
