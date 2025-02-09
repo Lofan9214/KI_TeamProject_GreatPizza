@@ -11,6 +11,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         Story,
         Random,
     }
+    private readonly int disappearHash = Animator.StringToHash("Disappear");
 
     private const string cheese = "cheese";
     private WaitForSeconds wait = new WaitForSeconds(2f);
@@ -34,6 +35,13 @@ public class NPC : MonoBehaviour, IPizzaSlot
     private float payment;
     private GameObject prefab;
     private StoryTable.Data storyNPCData;
+    private Animator animator;
+    private Animator spumAnimator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     private void Start()
     {
@@ -92,15 +100,10 @@ public class NPC : MonoBehaviour, IPizzaSlot
 
     public void SetData(NPCTable.Data data)
     {
-        //spriteRenderer.sprite = data.Sprite;
-
+        storyNPCData = null;
         state = State.Random;
-        if (prefab != null)
-        {
-            Destroy(prefab);
-            prefab = null;
-        }
-        prefab = Instantiate(data.Prefab, sprite);
+
+        SetPrefab(data.Prefab);
     }
 
     public void SetData(StoryTable.Data data)
@@ -108,12 +111,19 @@ public class NPC : MonoBehaviour, IPizzaSlot
         storyNPCData = data;
         state = State.Story;
 
+        SetPrefab(data.Prefab);
+    }
+
+    private void SetPrefab(GameObject iprefab)
+    {
         if (prefab != null)
         {
             Destroy(prefab);
             prefab = null;
         }
-        prefab = Instantiate(data.Prefab, sprite);
+        prefab = Instantiate(iprefab, sprite);
+        spumAnimator = prefab.GetComponent<SPUM_Prefabs>()._anim;
+        animator.SetBool(disappearHash, false);
     }
 
     public void ClearPizza()
@@ -281,6 +291,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         yield return wait;
         chatWindow.gameObject.SetActive(false);
         tipText.gameObject.SetActive(false);
+        animator.SetBool(disappearHash, true);
         if (state == State.Story)
         {
             gameManager.timeManager.SetWatch((storyNPCData.timeend / 100 - 12) * 4 + (storyNPCData.timeend % 100 / 15));
@@ -370,5 +381,13 @@ public class NPC : MonoBehaviour, IPizzaSlot
                 result += Random.Range(data.normal_min, data.normal_max);
         }
         return result;
+    }
+
+    public void SetSpumPause(bool pause)
+    {
+        if (pause)
+            spumAnimator.speed = 0f;
+        else
+            spumAnimator.speed = 1f;
     }
 }

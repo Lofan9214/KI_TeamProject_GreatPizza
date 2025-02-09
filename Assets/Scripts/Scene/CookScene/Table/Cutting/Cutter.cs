@@ -27,6 +27,7 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
         var dir = offset.normalized;
         cutterObject.transform.up = dir;
         spriteRenderer.enabled = false;
+        currentTable.CurrentPizza.CircleCollider.enabled = false;
     }
 
     public void OnDrag(Vector3 pos, Vector3 deltaPos)
@@ -39,6 +40,7 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
             {
                 isCutting = false;
                 cutterObject.gameObject.SetActive(false);
+                spriteRenderer.enabled = true;
                 return;
             }
             var dir = offset.normalized;
@@ -57,5 +59,6 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
         isCutting = false;
         cutterObject.gameObject.SetActive(false);
         spriteRenderer.enabled = true;
+        currentTable.CurrentPizza.CircleCollider.enabled = false;
     }
 }

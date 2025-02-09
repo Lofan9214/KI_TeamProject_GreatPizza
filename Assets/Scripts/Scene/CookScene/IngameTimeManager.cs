@@ -68,11 +68,7 @@ public class IngameTimeManager : MonoBehaviour
         if (CurrentState == State.OrderEnd
             && WatchTime == WatchTimeEnd)
         {
-            SetState(State.DayEnd);
-            WatchTime = WatchTimeEnd + 4;
-            SetWatchTimeText();
-
-            endWindow.gameObject.SetActive(true);
+            StartCoroutine(DayEnd());
         }
 
         if ((CurrentState == State.Ordering || CurrentState == State.OrderEnd)
@@ -152,6 +148,13 @@ public class IngameTimeManager : MonoBehaviour
     private void SetWatchTimeText()
     {
         watchText.SetString($"{12 + WatchTime / 4:D2}:{WatchTime % 4 * 15:D2}");
+    }
+
+    private IEnumerator DayEnd()
+    {
+        SetState(State.DayEnd);
+        yield return new WaitForSeconds(1f);
+        endWindow.gameObject.SetActive(true);
     }
 
     public void SetWatch(int time)

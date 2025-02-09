@@ -45,7 +45,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     private Vector3? lastDrawPos = null;
     private Vector3? lastMovePos = null;
-    private CircleCollider2D circleCollider;
+    public CircleCollider2D CircleCollider { get; private set; }
 
     public float sourceMax = 1.5f;
     private float cheeseCurrent = 0f;
@@ -54,7 +54,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     private void Start()
     {
-        circleCollider = GetComponent<CircleCollider2D>();
+        CircleCollider = GetComponent<CircleCollider2D>();
         gameManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<IngameGameManager>();
         spriteMask = GetComponent<SpriteMask>();
         dough.OnSpriteChanged.AddListener(p => spriteMask.sprite = p);
@@ -91,7 +91,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
             return;
         }
 
-        var slots = Physics2D.OverlapCircleAll(transform.position, circleCollider.radius, slotMask);
+        var slots = Physics2D.OverlapCircleAll(transform.position, CircleCollider.radius, slotMask);
 
         if (slots.Length > 0)
         {
@@ -156,7 +156,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         lastMovePos = null;
         addingTopping = false;
         if (CurrentState == State.AddingTopping
-            && Vector2.Distance(position, transform.position) < circleCollider.radius)
+            && Vector2.Distance(position, transform.position) < CircleCollider.radius)
         {
             if (gameManager.IngredientType == IngredientTable.Type.Source)
             {
@@ -222,7 +222,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                 }
                 if (lastDrawPos != null
                    && (Vector2.Distance(position, (Vector2)lastDrawPos) < 0.25f
-                      || Vector2.Distance(position, transform.position) > circleCollider.radius))
+                      || Vector2.Distance(position, transform.position) > CircleCollider.radius))
                 {
                     break;
                 }
@@ -246,7 +246,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     public void OnDragFromBoard(Vector3 position, Vector3 deltaPos)
     {
-        if (Vector2.Distance(position, transform.position) < circleCollider.radius)
+        if (Vector2.Distance(position, transform.position) < CircleCollider.radius)
         {
             OnDrag(position, deltaPos);
             return;
