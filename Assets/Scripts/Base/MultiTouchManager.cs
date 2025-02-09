@@ -150,6 +150,7 @@ public class MultiTouchManager : Singleton<MultiTouchManager>
                 case TouchPhase.Canceled:
                     IsTouchEnd = true;
                     isTouching = false;
+                    TouchPosition = touch.position;
                     if (touch.phase == TouchPhase.Ended)
                     {
                         float touchDuration = Time.time - touchStartTime;

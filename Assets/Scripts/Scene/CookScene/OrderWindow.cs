@@ -13,7 +13,7 @@ public class OrderWindow : MonoBehaviour, IPointerDownHandler
         for (int i = 0; i < texts.Length; ++i)
         {
             texts[i].text = DataTableManager.StringTable.Get(stringIds[i]);
-            texts[i].enabled = i <= (int)talks;
+            texts[i].gameObject.SetActive(i <= (int)talks);
         }
     }
 

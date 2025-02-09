@@ -1,6 +1,3 @@
-using Newtonsoft.Json.Linq;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
@@ -27,13 +24,26 @@ public class DrawIngredient : MonoBehaviour
 
     private int currentIndex = 0;
 
-    public float Ratio => drawAlphaMap.Sum() / spriteAlphaMap.Sum();
+    public float Ratio => spriteAlphaMap == null ? 0f : drawAlphaMap.Sum() / spriteAlphaMap.Sum();
+
+    private void Start()
+    {
+        if (layerSprites.Length > 0)
+        {
+            SetSprite();
+        }
+    }
 
     public void Init(string ingredientId)
     {
         IngredientId = ingredientId;
         layerSprites = DataTableManager.IngredientTable.Get(ingredientId).spriteDatas.toppingSprites;
 
+        SetSprite();
+    }
+
+    public void SetSprite()
+    {
         var rect = layerSprites[0].textureRect;
         textureHeight = (int)rect.height;
         textureWidth = (int)rect.width;
@@ -125,6 +135,16 @@ public class DrawIngredient : MonoBehaviour
         var localpos = transform.InverseTransformPoint(point);
         localpos += Vector3.one * textureWidth * 0.5f / pixelsPerPoint;
         DrawBrush(localpos);
+        SetTexture();
+    }
+
+    public void ClearLayer()
+    {
+        for (int i = 0; i < drawAlphaMap.Length; ++i)
+        {
+            drawColorMap[currentIndex][i].a = 0f;
+            drawAlphaMap[i] = 0f;
+        }
         SetTexture();
     }
 

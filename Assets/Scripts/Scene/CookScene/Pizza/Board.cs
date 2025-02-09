@@ -13,7 +13,7 @@ public class Board : MonoBehaviour, IClickable, IDragable
 
     public void OnDragEnd(Vector3 pos, Vector3 deltaPos)
     {
-        parent.OnDragEnd(pos, deltaPos);
+        parent.DragEndSlot();
     }
 
     public void OnPressObject(Vector2 position)

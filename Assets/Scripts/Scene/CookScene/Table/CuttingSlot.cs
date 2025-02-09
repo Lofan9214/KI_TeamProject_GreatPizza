@@ -14,7 +14,6 @@ public class CuttingSlot : MonoBehaviour , IPizzaSlot
 
     public void ClearPizza()
     {
-        CurrentPizza.cutGuide.SetActive(false);
         CurrentPizza = null;
     }
 
@@ -22,7 +21,6 @@ public class CuttingSlot : MonoBehaviour , IPizzaSlot
     {
         Debug.Log($"SetPizzaToSocket{name}");
         CurrentPizza = go;
-        CurrentPizza.cutGuide.SetActive(true);
         CurrentPizza.transform.position = transform.position;
 
         if (Settable && go.CurrentState == Pizza.State.AddingTopping)

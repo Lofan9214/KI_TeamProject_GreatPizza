@@ -2,7 +2,6 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using SaveDataVC = SaveDataV1;
@@ -35,7 +34,11 @@ public class IngameGameManager : MonoBehaviour
     private IngredientVat currentTub;
 
     private State state;
-    private TutorialData tutorialManager;
+    public TutorialManager tutorialManagerPrefab;
+    public TutorialManager tutorialManager;
+    public List<StoryTable.Data> storyData;
+
+    public InGamePlace gamePlace;
 
     private void Awake()
     {
@@ -47,8 +50,13 @@ public class IngameGameManager : MonoBehaviour
         if (DataTableManager.StoryTable.IsExistData(tempSaveData.days))
         {
             state = State.Story;
-            tutorialManager = new TutorialData();
-            tutorialManager.storyData = DataTableManager.StoryTable.GetAtDay(tempSaveData.days);
+
+            if (tempSaveData.days == 1 || tempSaveData.days == 2)
+            {
+                tutorialManager = Instantiate(tutorialManagerPrefab);
+            }
+
+            storyData = DataTableManager.StoryTable.GetAtDay(tempSaveData.days);
         }
         else
         {
@@ -91,6 +99,7 @@ public class IngameGameManager : MonoBehaviour
 
     public void ChangePlace(InGamePlace place)
     {
+        gamePlace = place;
         switch (place)
         {
             case InGamePlace.Hall:
@@ -101,12 +110,25 @@ public class IngameGameManager : MonoBehaviour
                     StartSpawn();
                 }
                 uiManager.SetOrderButtonActive(false);
+                SetPizzaCommand(null, string.Empty, IngredientTable.Type.None);
                 break;
             case InGamePlace.Kitchen:
                 pointerManager.enableCamDrag = true;
                 kitchen.Set(confiner);
                 kitchen.SetPizzaBox();
                 uiManager.SetOrderButtonActive(true);
+
+                if (timeManager.WatchTime == 0)
+                {
+                    if (tempSaveData.days == 1)
+                    {
+                        tutorialManager.SetState(TutorialManager.TutorialState.Dough);
+                    }
+                    else if (tempSaveData.days == 2)
+                    {
+                        tutorialManager.SetState(TutorialManager.TutorialState.Pepperoni);
+                    }
+                }
                 break;
         }
     }
@@ -128,7 +150,8 @@ public class IngameGameManager : MonoBehaviour
         }
         else if (state == State.Story)
         {
-            var found = tutorialManager.storyData.FindAll(p => ((p.timestart / 100 - 12) * 4 + (p.timestart % 100 / 15)) == timeManager.WatchTime);
+            var found = storyData.FindAll(p => ((p.timestart / 100 - 12) * 4 + (p.timestart % 100 / 15)) == timeManager.WatchTime);
+
             if (found.Count > 0)
             {
                 StorySpawn(found[0]);
@@ -155,7 +178,6 @@ public class IngameGameManager : MonoBehaviour
 
     private void StorySpawn(StoryTable.Data data)
     {
-
         npc.gameObject.SetActive(true);
         npc.SetData(data);
         npc.Order(DataTableManager.RecipeTable.Get(data.recipeID));
@@ -201,6 +223,10 @@ public class IngameGameManager : MonoBehaviour
 
     public void ScrollScreen()
     {
+        if (!pointerManager.enableCamDrag)
+        {
+            return;
+        }
         Vector3 viewPortPos = Camera.main.ScreenToViewportPoint(MultiTouchManager.Instance.TouchPosition);
         if (Mathf.Abs(viewPortPos.x - 0.5f) > 0.25f)
         {

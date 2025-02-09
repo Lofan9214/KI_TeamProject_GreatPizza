@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class OvenEnter : MonoBehaviour, IPizzaSlot
 {
@@ -28,15 +30,13 @@ public class OvenEnter : MonoBehaviour, IPizzaSlot
         CurrentPizza.CurrentState = Pizza.State.Immovable;
         yield return new WaitUntil(() => nextTarget.IsEmpty);
 
-        WaitForEndOfFrame waitframe = new WaitForEndOfFrame();
-
         float timer = 0f;
 
         while (timer < 5f)
         {
             timer += Time.deltaTime;
             CurrentPizza.transform.position = Vector3.Lerp(transform.position, nextTarget.transform.position, timer * 0.2f);
-            yield return waitframe;
+            yield return null;
         }
 
         CurrentPizza.Roast();

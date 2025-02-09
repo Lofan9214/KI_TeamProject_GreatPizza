@@ -8,7 +8,7 @@ public static class SaveLoadManager
     // 세이브데이터 버전 변경 시 수정해야될 곳    
     public static int CurrentSaveDataVersion { get; private set; } = 1;
 
-    public static SaveDataVC Data { get; private set; }
+    public static SaveDataVC Data { get; set; }
 
     private static JsonSerializerSettings setting = new JsonSerializerSettings
     {

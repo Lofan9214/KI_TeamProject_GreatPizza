@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Dough : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Dough : MonoBehaviour
     public Sprite[] layerSprites;
 
     private SpriteRenderer spriteRenderer;
+    public UnityEvent<Sprite> OnSpriteChanged;
     private int currentIndex = 0;
 
     private void Awake()
@@ -21,6 +23,7 @@ public class Dough : MonoBehaviour
         IngredientId = ingredientId;
         layerSprites = DataTableManager.IngredientTable.Get(ingredientId).spriteDatas.toppingSprites;
         spriteRenderer.sprite = layerSprites[currentIndex];
+        OnSpriteChanged?.Invoke(layerSprites[currentIndex]);
     }
 
     public void Roast()
@@ -29,6 +32,7 @@ public class Dough : MonoBehaviour
         {
             ++currentIndex;
             spriteRenderer.sprite = layerSprites[currentIndex];
+            OnSpriteChanged?.Invoke(layerSprites[currentIndex]);
         }
     }
 }
