@@ -41,6 +41,7 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
                 isCutting = false;
                 cutterObject.gameObject.SetActive(false);
                 spriteRenderer.enabled = true;
+                currentTable.CurrentPizza.CircleCollider.enabled = true;
                 return;
             }
             var dir = offset.normalized;
