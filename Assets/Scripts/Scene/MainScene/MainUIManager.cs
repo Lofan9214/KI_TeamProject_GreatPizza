@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class MainUIManager : MonoBehaviour
 {
+    public GameObject newGameButton;
     public FormattedLocalizationText startButtonText;
     public ShopWindow shopWindow;
 
@@ -15,7 +16,11 @@ public class MainUIManager : MonoBehaviour
 
     private void Start()
     {
-        startButtonText.SetString((SaveLoadManager.Data.days+1).ToString());
+        if (SaveLoadManager.Data.days > 0)
+        {
+            newGameButton.SetActive(true);
+        }
+        startButtonText.SetString((SaveLoadManager.Data.days + 1).ToString());
     }
 
     public void NewGame()

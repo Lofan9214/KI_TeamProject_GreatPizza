@@ -81,11 +81,9 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
             {
                 case "tomato":
                     DrawSource(pos);
-                    PizzaData.sourceRatio = sourceLayer.Ratio;
                     break;
                 case "cheese":
                     DrawCheese(pos);
-                    PizzaData.cheeseRatio = cheeseLayer.Ratio;
                     break;
             }
             return;
@@ -221,7 +219,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                     break;
                 }
                 if (lastDrawPos != null
-                   && (Vector2.Distance(position, (Vector2)lastDrawPos) < 0.25f
+                   && (Vector2.Distance(position, (Vector2)lastDrawPos) < 0.125f
                       || Vector2.Distance(position, transform.position) > CircleCollider.radius))
                 {
                     break;
@@ -299,9 +297,10 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         sourceLayer.DrawPoint(position);
         if (sourceCurrent < 1.5f)
         {
-            sourceCurrent += 0.01f;
-            gameManager.IngredientPay(-0.01f);
+            sourceCurrent += 0.005f;
+            gameManager.IngredientPay(-0.005f);
         }
+        PizzaData.sourceRatio = sourceLayer.Ratio;
     }
 
     public void DrawCheese(Vector2 position)
@@ -309,8 +308,9 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         cheeseLayer.DrawPoint(position);
         if (cheeseCurrent < 1.5f)
         {
-            cheeseCurrent += 0.01f;
-            gameManager.IngredientPay(-0.01f);
+            cheeseCurrent += 0.005f;
+            gameManager.IngredientPay(-0.005f);
         }
+        PizzaData.cheeseRatio = cheeseLayer.Ratio;
     }
 }

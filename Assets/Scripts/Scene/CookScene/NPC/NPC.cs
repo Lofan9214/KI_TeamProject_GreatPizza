@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour, IPizzaSlot
 {
-    public enum State
+    public enum StoryState
     {
         Story,
         Random,
@@ -31,7 +31,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
     public bool IsPause => spumAnimator.speed < 0.5f;
 
     public Pizza CurrentPizza { get; private set; }
-    public State state { get; private set; }
+    public StoryState state { get; private set; }
     public RecipeTable.Data Recipe { get; private set; }
 
     private float payment;
@@ -103,7 +103,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
     public void SetData(NPCTable.Data data)
     {
         storyNPCData = null;
-        state = State.Random;
+        state = StoryState.Random;
 
         SetPrefab(data.Prefab);
     }
@@ -111,7 +111,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
     public void SetData(StoryTable.Data data)
     {
         storyNPCData = data;
-        state = State.Story;
+        state = StoryState.Story;
 
         SetPrefab(data.Prefab);
     }
@@ -138,7 +138,6 @@ public class NPC : MonoBehaviour, IPizzaSlot
         CurrentPizza.gameObject.SetActive(false);
         StartCoroutine(EndOrder());
     }
-
 
     public JudgeData GetJudgeData(RecipeTable.Data recipe, Pizza.Data pizzaData)
     {
@@ -191,14 +190,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         {
             ratio = 100 - Mathf.RoundToInt(pizzaData.cheeseRatio * 100f);
             var datum = DataTableManager.IngredientTable.Get(cheese);
-            if (datum != null)
-            {
-                judgeData.cheese = JudgeValue(ratio, datum.fail, datum.success);
-            }
-            else
-            {
-                judgeData.cheese = JudgeValue(ratio, 50, 90);
-            }
+            judgeData.cheese = JudgeValue(ratio, datum.fail, datum.success);
         }
 
         if (!sourceExists)
@@ -211,7 +203,8 @@ public class NPC : MonoBehaviour, IPizzaSlot
             }
             else
             {
-                judgeData.source = JudgeValue(ratio, 50, 90);
+                datum = DataTableManager.IngredientTable.Get("tomato");
+                judgeData.source = JudgeValue(ratio, datum.fail, datum.success);
             }
         }
 
@@ -254,7 +247,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
                 break;
         }
 
-        if (state == State.Random
+        if (state == StoryState.Random
             || storyNPCData.price < 0)
         {
             if (satisfaction > 50 && judgeData.FinalJudge == JudgeData.Judge.Success)
@@ -282,7 +275,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
                 tipText.gameObject.SetActive(true);
             }
         }
-        else if (state == State.Story && storyNPCData.price > 0)
+        else if (state == StoryState.Story && storyNPCData.price > 0)
         {
             gameManager.AddTip(storyNPCData.price);
             tipText.text = storyNPCData.price.ToString("F2");
@@ -294,7 +287,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         chatWindow.gameObject.SetActive(false);
         tipText.gameObject.SetActive(false);
         animator.SetBool(disappearHash, true);
-        if (state == State.Story)
+        if (state == StoryState.Story)
         {
             gameManager.timeManager.SetWatch((storyNPCData.timeend / 100 - 12) * 4 + (storyNPCData.timeend % 100 / 15));
         }

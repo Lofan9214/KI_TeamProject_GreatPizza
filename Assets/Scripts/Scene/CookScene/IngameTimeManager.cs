@@ -152,6 +152,7 @@ public class IngameTimeManager : MonoBehaviour
 
     private IEnumerator DayEnd()
     {
+        yield return new WaitUntil(() => gameManager.npc.gameObject.activeSelf);
         SetState(State.DayEnd);
         yield return new WaitForSeconds(1f);
         endWindow.gameObject.SetActive(true);
