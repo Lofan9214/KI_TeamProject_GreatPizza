@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.U2D;
-using static UnityEngine.LightProbeProxyVolume;
 
 //ingredientID, stringID, price, profit, success, fail, image
 //tomato,110101,0.6,1.0,0,0,

@@ -167,4 +167,12 @@ public class IngameTimeManager : MonoBehaviour
             SetWatchTimeText();
         }
     }
+
+    public void SetPause(bool pause)
+    {
+        if (pause)
+            Time.timeScale = 0f;
+        else
+            Time.timeScale = 1f;
+    }
 }

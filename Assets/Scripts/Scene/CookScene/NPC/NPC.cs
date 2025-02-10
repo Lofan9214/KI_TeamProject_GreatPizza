@@ -28,6 +28,8 @@ public class NPC : MonoBehaviour, IPizzaSlot
 
     public bool IsEmpty => true;
 
+    public bool IsPause => spumAnimator.speed < 0.5f;
+
     public Pizza CurrentPizza { get; private set; }
     public State state { get; private set; }
     public RecipeTable.Data Recipe { get; private set; }

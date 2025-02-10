@@ -1843,7 +1843,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5007215720020185287}
-  - component: {fileID: 8167873805996369896}
+  - component: {fileID: 4308111157627050280}
   m_Layer: 0
   m_Name: Tutorial
   m_TagString: Untagged
@@ -1880,7 +1880,7 @@ Transform:
   - {fileID: 6407547817620047972}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8167873805996369896
+--- !u!114 &4308111157627050280
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1889,7 +1889,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4533376241792091782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9b8f0d3761e154489f5a856299911a, type: 3}
+  m_Script: {fileID: 11500000, guid: 50813eaeb50eb3e4991eb3ffba946413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ScreenProtector: {fileID: 2616880262283801310}

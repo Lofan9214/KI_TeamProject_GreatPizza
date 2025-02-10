@@ -17,7 +17,7 @@ public class TutorialManager : MonoBehaviour
         OvenCooking,
         OvenExit,
         Cutting,
-        Boxing,
+        Packing,
         Pickup,
         PepperoniWait,
         Pepperoni,
@@ -116,11 +116,11 @@ public class TutorialManager : MonoBehaviour
             case TutorialState.Cutting:
                 if (pizza.PizzaData.cutData.Count == 3)
                 {
-                    SetState(TutorialState.Boxing);
+                    SetState(TutorialState.Packing);
                     StartCoroutine(CamMove(Operations[(int)tutorialState].transform.position, 0.3f));
                 }
                 break;
-            case TutorialState.Boxing:
+            case TutorialState.Packing:
                 if (gameManager.gamePlace == InGamePlace.Hall)
                 {
                     SetState(TutorialState.Pickup);

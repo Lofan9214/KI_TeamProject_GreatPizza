@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static TutorialManager;
-using static UnityEngine.Rendering.HDROutputUtils;
 
 public class ShopTutorialManager : MonoBehaviour
 {

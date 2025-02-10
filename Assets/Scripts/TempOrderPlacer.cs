@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using TMPro;
 using UnityEngine;
-using static NPC.JudgeData;
 using Random = UnityEngine.Random;
 
 public class TempOrderPlacer : MonoBehaviour
