@@ -9,8 +9,9 @@ public class PointerManager : MonoBehaviour
     public LayerMask screenMask;
     public Transform virtualCam;
 
-    private bool hitPointable;
+    private bool hitDragable;
     private Transform target;
+    private IDragable targetDragable;
 
     private IngameGameManager gameManager;
 
@@ -27,27 +28,22 @@ public class PointerManager : MonoBehaviour
 
     private void Update()
     {
-#if UNITY_EDITOR
-
-#endif
 #if UNITY_ANDROID || UNITY_IOS
         RaycastHit2D hit;
         if (MultiTouchManager.Instance.IsTouchStart)
         {
+            hitDragable = false;
             var touchposition = MultiTouchManager.Instance.TouchPosition;
             var screenpoint = Camera.main.ScreenToWorldPoint(touchposition);
             hit = RaycastScreen(screenpoint);
-            hitPointable = hit;
 
             if (hit)
             {
                 IClickable pointable = hit.collider.GetComponent<IClickable>();
                 pointable?.OnPressObject(hit.point);
                 target = hit.collider.transform;
-                //if(hit.collider.CompareTag("PizzaBoard"))
-                //{
-                //    gameManager.PizzaCommand = PizzaCommand.Drag;
-                //}
+                targetDragable = target.GetComponent<IDragable>();
+                hitDragable = targetDragable != null;
             }
         }
         else if (MultiTouchManager.Instance.IsMoving)
@@ -59,20 +55,12 @@ public class PointerManager : MonoBehaviour
 
             worldPos.z = 0f;
             deltaWorldPos.z = 0f;
-            if (hitPointable)
+            if (hitDragable)
             {
-                if (target != null)
-                {
-                    IDragable dragable = target.GetComponent<IDragable>();
-                    if (dragable != null
-                        && hit)
-                    {
-                        if (hit.collider.transform == target || !hit)
-                            dragable.OnDrag(worldPos, deltaWorldPos);
-                        else if (hit.collider.gameObject.layer == screenLockLayer)
-                            dragable.OnDragEnd(worldPos, deltaWorldPos);
-                    }
-                }
+                if ((hit && (hit.collider.transform == target)) || !hit)
+                    targetDragable.OnDrag(worldPos, deltaWorldPos);
+                else if (hit && hit.collider.gameObject.layer == screenLockLayer)
+                    targetDragable.OnDragEnd(worldPos, deltaWorldPos);
             }
             else if (enableCamDrag)
             {
@@ -83,23 +71,20 @@ public class PointerManager : MonoBehaviour
         }
         else if (MultiTouchManager.Instance.IsTouchEnd)
         {
-            if (hitPointable)
+            if (hitDragable)
             {
                 Vector3 worldPos = Camera.main.ScreenToWorldPoint(MultiTouchManager.Instance.TouchPosition);
                 Vector3 deltaWorldPos = worldPos - Camera.main.ScreenToWorldPoint(MultiTouchManager.Instance.TouchPosition - MultiTouchManager.Instance.DeltaPosition);
 
-                IDragable dragable = target?.GetComponent<IDragable>();
                 hit = RaycastScreen(worldPos);
-                if (dragable != null
-                    && ((hit && hit.collider.transform == target) || !hit))
+                if ((hit && hit.collider.transform == target) || !hit)
                 {
-                    dragable.OnDragEnd(worldPos, deltaWorldPos);
+                    targetDragable.OnDragEnd(worldPos, deltaWorldPos);
                 }
             }
         }
 #endif
     }
-
 
     private RaycastHit2D RaycastScreen(Vector2 worldPos)
     {

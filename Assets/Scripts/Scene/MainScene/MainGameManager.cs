@@ -10,6 +10,8 @@ public class MainGameManager : MonoBehaviour
 
     public void Awake()
     {
+        Application.targetFrameRate = 60;
+
         var ingredientData = DataTableManager.IngredientTable.GetList();
 
         bool added = false;

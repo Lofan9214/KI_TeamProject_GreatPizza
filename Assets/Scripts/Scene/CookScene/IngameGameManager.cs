@@ -49,6 +49,8 @@ public class IngameGameManager : MonoBehaviour
 
     private void Awake()
     {
+        Application.targetFrameRate = 60;
+
         pointerManager = GetComponent<PointerManager>();
         timeManager = GetComponent<IngameTimeManager>();
 
