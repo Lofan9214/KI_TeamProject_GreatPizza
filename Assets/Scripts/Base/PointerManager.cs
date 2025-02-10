@@ -16,10 +16,13 @@ public class PointerManager : MonoBehaviour
 
     public bool enableCamDrag;
 
+    private int screenLockLayer;
+
     private void Awake()
     {
         enableCamDrag = false;
         gameManager = GetComponent<IngameGameManager>();
+        screenLockLayer = LayerMask.NameToLayer("ScreenLock");
     }
 
     private void Update()
@@ -53,17 +56,21 @@ public class PointerManager : MonoBehaviour
             Vector3 deltaWorldPos = worldPos - Camera.main.ScreenToWorldPoint(MultiTouchManager.Instance.TouchPosition - MultiTouchManager.Instance.DeltaPosition);
 
             hit = RaycastScreen(worldPos);
+
             worldPos.z = 0f;
             deltaWorldPos.z = 0f;
             if (hitPointable)
             {
-                if (target != null
-                    && ((hit && hit.collider.transform == target) || !hit))
+                if (target != null)
                 {
                     IDragable dragable = target.GetComponent<IDragable>();
-                    if (dragable != null)
+                    if (dragable != null
+                        && hit)
                     {
-                        dragable.OnDrag(worldPos, deltaWorldPos);
+                        if (hit.collider.transform == target || !hit)
+                            dragable.OnDrag(worldPos, deltaWorldPos);
+                        else if (hit.collider.gameObject.layer == screenLockLayer)
+                            dragable.OnDragEnd(worldPos, deltaWorldPos);
                     }
                 }
             }

@@ -22,10 +22,5 @@ public class CuttingSlot : MonoBehaviour , IPizzaSlot
         Debug.Log($"SetPizzaToSocket{name}");
         CurrentPizza = go;
         CurrentPizza.transform.position = transform.position;
-
-        if (Settable && go.CurrentState == Pizza.State.AddingTopping)
-        {
-            go.CurrentState = Pizza.State.Movable;
-        }
     }
 }

@@ -292,8 +292,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -445,14 +445,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8118403008011036709, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4125602582380007510}
   m_SourcePrefab: {fileID: 100100000, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
 --- !u!114 &1669022816747130944 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 149250649601706010, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
   m_PrefabInstance: {fileID: 1530011955442325594}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 7318891735730909311}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -474,6 +477,31 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5928256639677688342, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
   m_PrefabInstance: {fileID: 1530011955442325594}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7318891735730909311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8118403008011036709, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
+  m_PrefabInstance: {fileID: 1530011955442325594}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4125602582380007510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7318891735730909311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: 450
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1001 &8395443765037652663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -581,8 +609,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8118403008011036709, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1161321220550123301}
   m_SourcePrefab: {fileID: 100100000, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
+--- !u!1 &299708291198726802 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8118403008011036709, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
+  m_PrefabInstance: {fileID: 8395443765037652663}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1161321220550123301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299708291198726802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: 450
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &2359224682857726682 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6070638747589269613, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
@@ -604,7 +660,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 149250649601706010, guid: 8297179c4da939842ac53e0cbc637a09, type: 3}
   m_PrefabInstance: {fileID: 8395443765037652663}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 299708291198726802}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}

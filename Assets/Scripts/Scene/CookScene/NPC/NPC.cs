@@ -28,8 +28,6 @@ public class NPC : MonoBehaviour, IPizzaSlot
 
     public bool IsEmpty => true;
 
-    public bool IsPause => spumAnimator.speed < 0.5f;
-
     public Pizza CurrentPizza { get; private set; }
     public StoryState state { get; private set; }
     public RecipeTable.Data Recipe { get; private set; }
@@ -38,7 +36,8 @@ public class NPC : MonoBehaviour, IPizzaSlot
     private GameObject prefab;
     private StoryTable.Data storyNPCData;
     private Animator animator;
-    private Animator spumAnimator;
+
+    public bool Disappeared { get; private set; }
 
     private void Awake()
     {
@@ -51,6 +50,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         chatWindow.OnYes.AddListener(Pay);
         gameManager.timeManager.OnUnsatisfied.AddListener(() => StartCoroutine(CutOrder()));
         tipText.transform.position = Camera.main.WorldToScreenPoint(tipTextPosition.position);
+        Disappeared = false;
     }
 
     public class JudgeData
@@ -124,7 +124,6 @@ public class NPC : MonoBehaviour, IPizzaSlot
             prefab = null;
         }
         prefab = Instantiate(iprefab, sprite);
-        spumAnimator = prefab.GetComponent<SPUM_Prefabs>()._anim;
         animator.SetBool(disappearHash, false);
     }
 
@@ -287,12 +286,6 @@ public class NPC : MonoBehaviour, IPizzaSlot
         chatWindow.gameObject.SetActive(false);
         tipText.gameObject.SetActive(false);
         animator.SetBool(disappearHash, true);
-        if (state == StoryState.Story)
-        {
-            gameManager.timeManager.SetWatch((storyNPCData.timeend / 100 - 12) * 4 + (storyNPCData.timeend % 100 / 15));
-        }
-        gameObject.SetActive(false);
-        gameManager.StartSpawn();
     }
 
     public IEnumerator CutOrder()
@@ -306,7 +299,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         yield return new WaitForSeconds(0.5f);
         chatWindow.gameObject.SetActive(false);
         gameObject.SetActive(false);
-        gameManager.StartSpawn();
+        gameManager.StartCoroutine(gameManager.Spawn());
     }
 
     public void Pay()
@@ -378,11 +371,19 @@ public class NPC : MonoBehaviour, IPizzaSlot
         return result;
     }
 
-    public void SetSpumPause(bool pause)
+    public void Appeared()
     {
-        if (pause)
-            spumAnimator.speed = 0f;
-        else
-            spumAnimator.speed = 1f;
+        Disappeared = false;
+    }
+
+    public void SetDisappeard()
+    {
+        Disappeared = true;
+        if (state == StoryState.Story)
+        {
+            gameManager.timeManager.SetWatch((storyNPCData.timeend / 100 - 12) * 4 + (storyNPCData.timeend % 100 / 15));
+        }
+        gameObject.SetActive(false);
+        gameManager.StartCoroutine(gameManager.Spawn());
     }
 }

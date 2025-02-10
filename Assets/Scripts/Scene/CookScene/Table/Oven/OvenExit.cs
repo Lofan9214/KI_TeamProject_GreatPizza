@@ -19,7 +19,8 @@ public class OvenExit : MonoBehaviour, IPizzaSlot
     {
         go.SetCurrentSlot(transform);
         CurrentPizza = go;
-        CurrentPizza.CurrentState = Pizza.State.Movable;
+        CurrentPizza.CurrentState = Pizza.State.Roasted;
+        CurrentPizza.Movable = true;
         CurrentPizza.transform.position = transform.position;
     }
 }

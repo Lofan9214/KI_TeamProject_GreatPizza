@@ -13,6 +13,7 @@ public class IngameUIManager : MonoBehaviour
     public Button orderShowButton;
     public GameObject tutorialWindow;
     public LocalizationText tutorialText;
+    public GameObject tutorialArrow;
 
     public void ShowChatWindow(int[] Ids, bool story = false)
     {

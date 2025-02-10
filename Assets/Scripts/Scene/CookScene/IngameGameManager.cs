@@ -25,6 +25,8 @@ public class IngameGameManager : MonoBehaviour
     public Hall hall;
     public Kitchen kitchen;
 
+    private WaitForSeconds spawnWait = new WaitForSeconds(1f);
+
     public float screenScrollSpeed = 10f;
 
     public SaveDataVC tempSaveData { get; private set; }
@@ -112,7 +114,7 @@ public class IngameGameManager : MonoBehaviour
                 hall.Set(confiner);
                 if (!npc.gameObject.activeSelf)
                 {
-                    StartSpawn();
+                    StartCoroutine(Spawn());
                 }
                 uiManager.SetOrderButtonActive(false);
                 SetPizzaCommand(null, string.Empty, IngredientTable.Type.None);
@@ -139,14 +141,9 @@ public class IngameGameManager : MonoBehaviour
         }
     }
 
-    public void StartSpawn()
-    {
-        StartCoroutine(Spawn());
-    }
-
     public IEnumerator Spawn()
     {
-        yield return new WaitForSeconds(2f);
+        yield return spawnWait;
         if (state == State.Random)
         {
             if (timeManager.CurrentState != IngameTimeManager.State.DayEnd)

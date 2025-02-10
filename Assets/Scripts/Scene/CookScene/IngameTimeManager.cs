@@ -68,6 +68,7 @@ public class IngameTimeManager : MonoBehaviour
         if (CurrentState == State.OrderEnd
             && WatchTime == WatchTimeEnd)
         {
+            SetState(State.DayEnd);
             StartCoroutine(DayEnd());
         }
 
@@ -152,9 +153,8 @@ public class IngameTimeManager : MonoBehaviour
 
     private IEnumerator DayEnd()
     {
-        yield return new WaitUntil(() => gameManager.npc.gameObject.activeSelf);
-        SetState(State.DayEnd);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitUntil(() => gameManager.npc.Disappeared);
+        yield return new WaitForSeconds(0.5f);
         endWindow.gameObject.SetActive(true);
     }
 

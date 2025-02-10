@@ -8,8 +8,8 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     public enum State
     {
         AddingTopping,
-        Movable,
-        Immovable,
+        Roasting,
+        Roasted,
     }
 
     public class Data
@@ -52,6 +52,8 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     private float sourceCurrent = 0f;
     private bool addingTopping = false;
 
+    public bool Movable { get; set; } = true;
+
     private void Start()
     {
         CircleCollider = GetComponent<CircleCollider2D>();
@@ -62,10 +64,6 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     public void OnDragEnd(Vector3 pos, Vector3 deltaPos)
     {
-        if (CurrentState == State.Immovable)
-        {
-            return;
-        }
         DragEndSlot(pos, deltaPos);
     }
 
@@ -97,7 +95,6 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
             if (CurrentState == State.AddingTopping)
             {
-
                 var slot = closest.GetComponent<IPizzaSlot>();
                 if (slot != null
                     && (slot is OvenEnter || slot is TrashBin)
@@ -195,6 +192,9 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     public void Move(Vector3 Pos)
     {
+        if (!Movable)
+            return;
+
         ingredientGuide.SetActive(false);
         cutGuide.SetActive(false);
         if (lastMovePos == null)
@@ -236,7 +236,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                 }
                 lastDrawPos = position;
                 break;
-            case State.Movable:
+            case State.Roasted:
                 Move(position);
                 break;
         }
@@ -295,7 +295,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     public void DrawSource(Vector2 position)
     {
         sourceLayer.DrawPoint(position);
-        if (sourceCurrent < 1.5f)
+        if (sourceCurrent < sourceMax)
         {
             sourceCurrent += 0.005f;
             gameManager.IngredientPay(-0.005f);
@@ -306,7 +306,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     public void DrawCheese(Vector2 position)
     {
         cheeseLayer.DrawPoint(position);
-        if (cheeseCurrent < 1.5f)
+        if (cheeseCurrent < sourceMax)
         {
             cheeseCurrent += 0.005f;
             gameManager.IngredientPay(-0.005f);
