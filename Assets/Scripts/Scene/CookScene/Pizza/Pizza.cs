@@ -66,6 +66,10 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     private float sourceCurrent = 0f;
     private bool addingTopping = false;
 
+    private IngredientTable.Data sourceData;
+    private IngredientTable.Data cheeseData;
+    private AudioSource audioSource;
+
     public bool Movable { get; set; } = true;
 
     private void Start()
@@ -73,6 +77,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         CircleCollider = GetComponent<CircleCollider2D>();
         gameManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<IngameGameManager>();
         spriteMask = GetComponent<SpriteMask>();
+        audioSource = GetComponent<AudioSource>();
         dough.OnSpriteChanged.AddListener(p => spriteMask.sprite = p);
     }
 
@@ -172,7 +177,8 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                 if (string.IsNullOrEmpty(sourceLayer.IngredientId)
                     && string.IsNullOrEmpty(PizzaData.sourceId))
                 {
-                    sourceLayer.Init(gameManager.PizzaCommand);
+                    sourceData = DataTableManager.IngredientTable.Get(gameManager.PizzaCommand);
+                    sourceLayer.Init(sourceData);
                     PizzaData.sourceId = gameManager.PizzaCommand;
                 }
                 if (gameManager.PizzaCommand == PizzaData.sourceId)
@@ -186,7 +192,8 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
             {
                 if (string.IsNullOrEmpty(cheeseLayer.IngredientId))
                 {
-                    cheeseLayer.Init(gameManager.PizzaCommand);
+                    cheeseData = DataTableManager.IngredientTable.Get(gameManager.PizzaCommand);
+                    cheeseLayer.Init(cheeseData);
                 }
                 if (gameManager.PizzaCommand == cheeseLayer.IngredientId)
                 {
@@ -312,6 +319,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         if (sourceCurrent < sourceMax)
         {
             sourceCurrent += 0.005f;
+            audioSource.PlayOneShot(sourceData.spriteDatas.soundEffect);
             gameManager.IngredientPay(-0.005f);
         }
     }
@@ -322,6 +330,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         if (cheeseCurrent < sourceMax)
         {
             cheeseCurrent += 0.005f;
+            audioSource.PlayOneShot(cheeseData.spriteDatas.soundEffect);
             gameManager.IngredientPay(-0.005f);
         }
     }

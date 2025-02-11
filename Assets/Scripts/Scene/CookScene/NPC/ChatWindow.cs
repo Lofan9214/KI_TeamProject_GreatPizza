@@ -126,7 +126,7 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
         {
             return;
         }
-
+        gm.npc.PlayAudio();
         talkIndex = index;
         switch (talkIndex)
         {

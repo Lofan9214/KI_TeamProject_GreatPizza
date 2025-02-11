@@ -146,12 +146,13 @@ public class IngameGameManager : MonoBehaviour
     public IEnumerator Spawn()
     {
         yield return spawnWait;
+        if (timeManager.CurrentState == IngameTimeManager.State.DayEnd)
+        {
+            yield break;
+        }
         if (state == State.Random)
         {
-            if (timeManager.CurrentState != IngameTimeManager.State.DayEnd)
-            {
-                RandomSpawn();
-            }
+            RandomSpawn();
         }
         else if (state == State.Story)
         {

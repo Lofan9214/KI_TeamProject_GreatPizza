@@ -34,10 +34,10 @@ public class DrawIngredient : MonoBehaviour
         }
     }
 
-    public void Init(string ingredientId)
+    public void Init(IngredientTable.Data data)
     {
-        IngredientId = ingredientId;
-        layerSprites = DataTableManager.IngredientTable.Get(ingredientId).spriteDatas.toppingSprites;
+        IngredientId = data.ingredientID;
+        layerSprites = data.spriteDatas.toppingSprites;
 
         SetSprite();
     }
