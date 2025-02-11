@@ -20,6 +20,7 @@ public class DataTableIds
     public static readonly string Talk = "TalkTable";
     public static readonly string NPC = "NPCTable";
     public static readonly string Story = "StoryTable";
+    public static readonly string Store = "StoreTable";
 }
 
 public class Variables

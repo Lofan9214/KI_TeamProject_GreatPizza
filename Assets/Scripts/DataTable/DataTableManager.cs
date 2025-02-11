@@ -41,6 +41,10 @@ public static class DataTableManager
         var storyTable = new StoryTable();
         storyTable.Load(DataTableIds.Story);
         tables.Add(DataTableIds.Story, storyTable);
+
+        var storeTable = new StoreTable();
+        storeTable.Load(DataTableIds.Store);
+        tables.Add(DataTableIds.Store, storeTable);
     }
 
     public static T Get<T>(string id) where T : DataTable
@@ -98,6 +102,14 @@ public static class DataTableManager
         get
         {
             return Get<StoryTable>(DataTableIds.Story);
+        }
+    }
+
+    public static StoreTable StoreTable
+    {
+        get
+        {
+            return Get<StoreTable>(DataTableIds.Store);
         }
     }
 }

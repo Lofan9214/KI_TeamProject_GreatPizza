@@ -1,0 +1,13 @@
+storeID,NameID,descriptionID,type,atribute,price
+longerDay,110910,110911,1,1,150
+speedyOven,110912,110913,2,5,150
+sauceBuddy,110914,110915,3,tomato,200
+cheeseBuddy,110916,110917,3,cheese,200
+cuttingBuddy,110918,110919,4,-1,200
+pepperoniBuddy,110920,110921,5,pepperoni,200
+sausageBuddy,110922,110923,5,sausage,200
+mushroomBuddy,110924,110925,5,mushroom,200
+oliveBuddy,110926,110927,5,olive,200
+onionBuddy,110928,110929,5,onion,200
+pimentoBuddy,110930,110931,5,pimento,200
+shrimpBuddy,110932,110933,5,shrimp,200

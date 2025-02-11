@@ -305,7 +305,6 @@ public class NPC : MonoBehaviour, IPizzaSlot
     public void Pay()
     {
         payment = 0f;
-
         payment += DataTableManager.IngredientTable.Get(Recipe.dough).profit;
 
         foreach (var ing in Recipe.ingredientIds)

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 
 public class MainGameManager : MonoBehaviour
@@ -25,10 +26,21 @@ public class MainGameManager : MonoBehaviour
             }
         }
 
+        var storeData = DataTableManager.StoreTable.GetList();
+
+        foreach (var upgrade in storeData)
+        {
+            if (!SaveLoadManager.Data.upgrades.ContainsKey(upgrade.storeID))
+            {
+                SaveLoadManager.Data.upgrades.Add(upgrade.storeID, false);
+                added = true;
+            }
+        }
+
         if (added)
             SaveLoadManager.Save();
 
-        if(SaveLoadManager.Data.days == 1
+        if (SaveLoadManager.Data.days == 1
             && !SaveLoadManager.Data.ingredients["pepperoni"])
         {
             tutorialManager = Instantiate(tutorialPrefab, uiManager.transform);

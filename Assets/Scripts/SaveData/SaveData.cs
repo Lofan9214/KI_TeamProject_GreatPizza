@@ -14,7 +14,7 @@ public class SaveDataV1 : SaveData
     public int slotusage = 1;
     public int days = 0;
     public Dictionary<string, bool> ingredients = new Dictionary<string, bool>();
-    public Dictionary<int, bool> upgrades = new Dictionary<int, bool>();
+    public Dictionary<string, bool> upgrades = new Dictionary<string, bool>();
 
     public SaveDataV1()
     {

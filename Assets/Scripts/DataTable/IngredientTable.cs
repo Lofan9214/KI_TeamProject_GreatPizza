@@ -37,7 +37,7 @@ public class IngredientTable : DataTable
         public IngredientSpriteData spriteDatas;
     }
 
-    private const string spriteDataFormat = "SpriteDatas/{0}";
+    private const string spriteDataFormat = "SpriteDatas/Ingredients/{0}";
 
     private Dictionary<string, Data> dict = new Dictionary<string, Data>();
 

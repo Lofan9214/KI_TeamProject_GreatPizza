@@ -5,26 +5,39 @@ using UnityEngine.UI;
 
 public class ShopItem : MonoBehaviour
 {
+    private enum DataType
+    {
+        Ingredient,
+        Upgrade,
+    }
+
     public Image trayImage;
     public Image itemImage;
     public LocalizationText itemName;
     public LocalizationText itemDescription;
     public TextMeshProUGUI price;
-    private IngredientTable.Data ingdata;
     public UnityEvent OnBought;
 
     public GameObject buyButton;
     public GameObject boughtMark;
+
+    private DataType dataType;
+
+    private float storePrice;
+    private string itemId;
 
     public GameObject lockMask;
     public FormattedLocalizationText lockText;
 
     public void OnBuyButtonClick()
     {
-        if (SaveLoadManager.Data.budget > ingdata.store_price)
+        if (SaveLoadManager.Data.budget > storePrice)
         {
-            SaveLoadManager.Data.budget -= ingdata.store_price;
-            SaveLoadManager.Data.ingredients[ingdata.ingredientID] = true;
+            SaveLoadManager.Data.budget -= storePrice;
+            if (dataType == DataType.Ingredient)
+                SaveLoadManager.Data.ingredients[itemId] = true;
+            else if (dataType == DataType.Upgrade)
+                SaveLoadManager.Data.upgrades[itemId] = true;
             SaveLoadManager.Save();
             SetBought();
             OnBought?.Invoke();
@@ -33,10 +46,12 @@ public class ShopItem : MonoBehaviour
 
     public void Init(IngredientTable.Data data, bool bought, int day)
     {
-        ingdata = data;
-        trayImage.sprite = ingdata.spriteDatas.storeTray;
-        itemImage.sprite = ingdata.spriteDatas.storeSprite;
-        itemName.SetString(ingdata.stringID.ToString());
+        dataType = DataType.Ingredient;
+        storePrice = data.store_price;
+        itemId = data.ingredientID;
+        trayImage.sprite = data.spriteDatas.storeTray;
+        itemImage.sprite = data.spriteDatas.storeSprite;
+        itemName.SetString(data.stringID.ToString());
         //itemDescription.SetString(ingdata.stringID.ToString());
         price.text = data.store_price.ToString();
 
@@ -44,10 +59,29 @@ public class ShopItem : MonoBehaviour
         {
             SetBought();
         }
-        else if (day < ingdata.day)
+        else if (day < data.day)
         {
             lockMask.SetActive(true);
-            lockText.SetString(ingdata.day.ToString());
+            lockText.SetString(data.day.ToString());
+        }
+    }
+
+    public void Init(StoreTable.Data data, bool bought)
+    {
+        dataType = DataType.Upgrade;
+
+        storePrice = data.price;
+        itemId = data.storeID;
+
+        trayImage.sprite = null;
+        itemImage.sprite = data.upgradeSpriteData.storeSprite;
+        itemName.SetString(data.NameID.ToString());
+        itemDescription.SetString(data.descriptionID.ToString());
+        price.text = data.price.ToString();
+
+        if (bought)
+        {
+            SetBought();
         }
     }
 
