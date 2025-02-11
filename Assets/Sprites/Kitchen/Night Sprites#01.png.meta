@@ -2585,7 +2585,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1399
         y: 1010
-        width: 149
+        width: 138
         height: 142
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2601,13 +2601,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Night Sprites#01_139
+      name: MushroomBuddy
       rect:
         serializedVersion: 2
-        x: 1596
-        y: 1092
-        width: 82
-        height: 72
+        x: 1569
+        y: 1035
+        width: 150
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2622,28 +2622,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Night Sprites#01_140
-      rect:
-        serializedVersion: 2
-        x: 1663
-        y: 1068
-        width: 55
-        height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a046841fc1910aa4baf7b97cca160b98
-      internalID: 959358437
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Night Sprites#01_141
+      name: sauceBuddy
       rect:
         serializedVersion: 2
         x: 1740
@@ -2832,27 +2811,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Night Sprites#01_150
-      rect:
-        serializedVersion: 2
-        x: 1572
-        y: 1032
-        width: 72
-        height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c94eaf2d0df46d4b8392785eefc16ec
-      internalID: 320930235
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Night Sprites#01_151
       rect:
         serializedVersion: 2
@@ -2958,33 +2916,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Night Sprites#01_156
+      name: pepperoni_Buddy
       rect:
         serializedVersion: 2
-        x: 1548
-        y: 960
-        width: 66
-        height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f226dcdb83f9e5e49a1cca26cc3ff82e
-      internalID: -837365902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Night Sprites#01_157
-      rect:
-        serializedVersion: 2
-        x: 1596
+        x: 1545
         y: 901
-        width: 102
+        width: 150
         height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -4155,13 +4092,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Night Sprites#01_213
+      name: Shrimp_Buddy
       rect:
         serializedVersion: 2
-        x: 613
+        x: 610
         y: 363
-        width: 123
-        height: 95
+        width: 144
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4171,27 +4108,6 @@ TextureImporter:
       bones: []
       spriteID: db28d116fbb071442997e10299ee8123
       internalID: -1569530795
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Night Sprites#01_214
-      rect:
-        serializedVersion: 2
-        x: 684
-        y: 420
-        width: 66
-        height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f1a05358d9297244e935abc7de292d5f
-      internalID: 1894151525
       vertices: []
       indices: 
       edges: []
@@ -4305,9 +4221,9 @@ TextureImporter:
       name: Night Sprites#01_220
       rect:
         serializedVersion: 2
-        x: 750
+        x: 755
         y: 246
-        width: 138
+        width: 133
         height: 138
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -4575,7 +4491,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Night Sprites#01_234
+      name: oliveBuddy
       rect:
         serializedVersion: 2
         x: 3
@@ -4607,6 +4523,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Divider: 1488320801
+      MushroomBuddy: -1813613517
       Night Sprites#01_1: 415699176
       Night Sprites#01_10: -483384591
       Night Sprites#01_100: -1243394671
@@ -4651,10 +4568,8 @@ TextureImporter:
       Night Sprites#01_136: -1401808587
       Night Sprites#01_137: -1359971845
       Night Sprites#01_138: 1952992337
-      Night Sprites#01_139: -1813613517
       Night Sprites#01_14: 608672712
       Night Sprites#01_140: 959358437
-      Night Sprites#01_141: -438683967
       Night Sprites#01_142: -1607346331
       Night Sprites#01_143: 1818909622
       Night Sprites#01_144: -1524990664
@@ -4671,7 +4586,6 @@ TextureImporter:
       Night Sprites#01_154: -568517105
       Night Sprites#01_155: 620760074
       Night Sprites#01_156: -837365902
-      Night Sprites#01_157: 323672934
       Night Sprites#01_158: 4860921
       Night Sprites#01_159: 894168123
       Night Sprites#01_16: -1407010497
@@ -4734,7 +4648,6 @@ TextureImporter:
       Night Sprites#01_210: 1391962831
       Night Sprites#01_211: 1172113904
       Night Sprites#01_212: 434570521
-      Night Sprites#01_213: -1569530795
       Night Sprites#01_214: 1894151525
       Night Sprites#01_215: -1113536158
       Night Sprites#01_216: -1117422274
@@ -4757,7 +4670,6 @@ TextureImporter:
       Night Sprites#01_231: -2051521061
       Night Sprites#01_232: -1617355332
       Night Sprites#01_233: -1911345389
-      Night Sprites#01_234: 743667527
       Night Sprites#01_24: 11400321
       Night Sprites#01_25: -1528000877
       Night Sprites#01_26: -1860720507
@@ -4841,6 +4753,10 @@ TextureImporter:
       Night Sprites#01_97: 159808554
       Night Sprites#01_98: 254820118
       Night Sprites#01_99: -1427098067
+      Shrimp_Buddy: -1569530795
+      oliveBuddy: 743667527
+      pepperoni_Buddy: 323672934
+      sauceBuddy: -438683967
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

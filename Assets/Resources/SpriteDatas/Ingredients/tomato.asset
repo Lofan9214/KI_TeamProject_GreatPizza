@@ -16,3 +16,5 @@ MonoBehaviour:
   - {fileID: 1313589333, guid: da0ea0697b913df4bb84117d6e635a60, type: 3}
   - {fileID: -1653030755, guid: da0ea0697b913df4bb84117d6e635a60, type: 3}
   storeSprite: {fileID: 0}
+  storeTray: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: b896947137e663b4c8cffaf3d61f624a, type: 3}

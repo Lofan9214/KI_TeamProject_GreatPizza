@@ -1929,7 +1929,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI Sprites#0_88
+      name: ovenBuddy
       rect:
         serializedVersion: 2
         x: 1692
@@ -2019,7 +2019,7 @@ TextureImporter:
         x: 1220
         y: 852
         width: 85
-        height: 146
+        height: 145
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5991,7 +5991,7 @@ TextureImporter:
         height: 88
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 9, y: 23, z: 12, w: 14}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -7338,7 +7338,6 @@ TextureImporter:
       UI Sprites#0_85: 1215698357
       UI Sprites#0_86: 948544877
       UI Sprites#0_87: 98391466
-      UI Sprites#0_88: -141879979
       UI Sprites#0_89: -475984614
       UI Sprites#0_9: -19435326
       UI Sprites#0_90: -1350719315
@@ -7363,6 +7362,7 @@ TextureImporter:
       night_ui4: 1503292082
       night_ui5: 1805881602
       nightmoney: 77887853
+      ovenBuddy: -141879979
       start: 1553290154
       store1: -1469819957
       store10: 484759030
