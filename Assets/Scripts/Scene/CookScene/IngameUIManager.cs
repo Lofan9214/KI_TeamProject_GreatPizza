@@ -14,6 +14,7 @@ public class IngameUIManager : MonoBehaviour
     public GameObject tutorialWindow;
     public LocalizationText tutorialText;
     public GameObject tutorialArrow;
+    public Satisafaction satisafaction;
 
     public void ShowChatWindow(int[] Ids, bool story = false)
     {
