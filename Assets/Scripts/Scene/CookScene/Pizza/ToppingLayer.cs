@@ -8,11 +8,11 @@ public class ToppingLayer : MonoBehaviour
 
     private List<Topping> toppings = new List<Topping>();
 
-    public void AddTopping(Vector2 position, string toppingId)
+    public void AddTopping(Vector2 position, IngredientTable.Data toppingData)
     {
         var topping = Instantiate(toppingPrefab, position, Quaternion.identity, transform);
-
-        topping.SetData(toppingId);
+        
+        topping.SetData(toppingData);
 
         topping.AddOrderOffset(toppings.Count);
         toppings.Add(topping);

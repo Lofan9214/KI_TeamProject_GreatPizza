@@ -240,6 +240,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4572904513525208725}
   m_SourcePrefab: {fileID: 100100000, guid: 74c402ef0e9db0a46837313a4f38bde5, type: 3}
+--- !u!114 &3257160112185868435 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5119794741360849986, guid: 74c402ef0e9db0a46837313a4f38bde5, type: 3}
+  m_PrefabInstance: {fileID: 7655815817146201297}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5720315998426453676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bd5ef8380095434f970f08244ff732f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5720315998426453676 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2692113520289489533, guid: 74c402ef0e9db0a46837313a4f38bde5, type: 3}
@@ -319,6 +330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8327179387014242061}
+  trayRotator: {fileID: 3257160112185868435}
+  trayData: {fileID: 11400000, guid: fbdafae435ea43f45b7f2638d6f28ce0, type: 2}
   lockSprite: {fileID: 5505400405095201040}
 --- !u!95 &8327179387014242061 stripped
 Animator:

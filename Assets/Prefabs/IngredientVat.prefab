@@ -93,6 +93,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1850696202767608796}
+  trayRotator: {fileID: 5119794741360849986}
+  trayData: {fileID: 11400000, guid: fbdafae435ea43f45b7f2638d6f28ce0, type: 2}
 --- !u!1 &2692113520289489533
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,6 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8911382347568958843}
   - component: {fileID: 1433387710162976972}
+  - component: {fileID: 5119794741360849986}
   m_Layer: 0
   m_Name: Tray
   m_TagString: Untagged
@@ -177,6 +180,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5119794741360849986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2692113520289489533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bd5ef8380095434f970f08244ff732f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSprite: {fileID: 0}
+  resultSprite: {fileID: 0}
+  rotate: 0
 --- !u!1 &3236258151255535701
 GameObject:
   m_ObjectHideFlags: 0

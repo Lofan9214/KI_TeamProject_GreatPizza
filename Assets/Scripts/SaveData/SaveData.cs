@@ -10,7 +10,7 @@ public abstract class SaveData
 
 public class SaveDataV1 : SaveData
 {
-    public float budget = 100f;
+    public float budget = 40f;
     public int slotusage = 1;
     public int days = 0;
     public Dictionary<string, bool> ingredients = new Dictionary<string, bool>();
@@ -59,7 +59,7 @@ public class SaveDataV1 : SaveData
 
 public class SaveDataV2 : SaveData
 {
-    public float budget = 100f;
+    public float budget = 40f;
     public int slotusage = 1;
     public int days = 0;
     public Dictionary<string, bool> ingredients = new Dictionary<string, bool>();
