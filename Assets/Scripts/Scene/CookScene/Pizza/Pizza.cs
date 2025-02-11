@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.Mathematics;
@@ -66,6 +67,13 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     private float sourceCurrent = 0f;
     private bool addingTopping = false;
 
+    private IngredientTable.Data sourceData;
+    private IngredientTable.Data cheeseData;
+    private AudioSource audioSource;
+
+    public Transform[] ingredientGuidePosition;
+    private int autoIngredient;
+
     public bool Movable { get; set; } = true;
 
     private void Start()
@@ -73,7 +81,9 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         CircleCollider = GetComponent<CircleCollider2D>();
         gameManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<IngameGameManager>();
         spriteMask = GetComponent<SpriteMask>();
+        audioSource = GetComponent<AudioSource>();
         dough.OnSpriteChanged.AddListener(p => spriteMask.sprite = p);
+        autoIngredient = 0;
     }
 
     public void OnDragEnd(Vector3 pos, Vector3 deltaPos)
@@ -172,7 +182,8 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                 if (string.IsNullOrEmpty(sourceLayer.IngredientId)
                     && string.IsNullOrEmpty(PizzaData.sourceId))
                 {
-                    sourceLayer.Init(gameManager.PizzaCommand);
+                    sourceData = DataTableManager.IngredientTable.Get(gameManager.PizzaCommand);
+                    sourceLayer.Init(sourceData);
                     PizzaData.sourceId = gameManager.PizzaCommand;
                 }
                 if (gameManager.PizzaCommand == PizzaData.sourceId)
@@ -186,7 +197,8 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
             {
                 if (string.IsNullOrEmpty(cheeseLayer.IngredientId))
                 {
-                    cheeseLayer.Init(gameManager.PizzaCommand);
+                    cheeseData = DataTableManager.IngredientTable.Get(gameManager.PizzaCommand);
+                    cheeseLayer.Init(cheeseData);
                 }
                 if (gameManager.PizzaCommand == cheeseLayer.IngredientId)
                 {
@@ -197,16 +209,23 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
             }
             else if (gameManager.IngredientType == IngredientTable.Type.Ingredient)
             {
-                gameManager.IngredientPay(-DataTableManager.IngredientTable.Get(gameManager.PizzaCommand).price);
-                PizzaData.toppingData.Add(gameManager.PizzaCommand);
-                toppingLayer.AddTopping(position, gameManager.PizzaCommand);
+                AddTopping(position, gameManager.PizzaCommand);
             }
         }
     }
 
+    public void AddTopping(Vector2 position, string Id)
+    {
+        var data = DataTableManager.IngredientTable.Get(Id);
+        gameManager.IngredientPay(-data.price);
+        PizzaData.toppingData.Add(Id);
+        audioSource.PlayOneShot(data.spriteDatas.soundEffect);
+        toppingLayer.AddTopping(position, data);
+    }
+
     public void Move(Vector3 Pos)
     {
-        if (!Movable)
+        if (!Movable || autoIngredient > 0)
             return;
 
         ingredientGuide.SetActive(false);
@@ -312,6 +331,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         if (sourceCurrent < sourceMax)
         {
             sourceCurrent += 0.005f;
+            audioSource.PlayOneShot(sourceData.spriteDatas.soundEffect);
             gameManager.IngredientPay(-0.005f);
         }
     }
@@ -322,7 +342,23 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         if (cheeseCurrent < sourceMax)
         {
             cheeseCurrent += 0.005f;
+            audioSource.PlayOneShot(cheeseData.spriteDatas.soundEffect);
             gameManager.IngredientPay(-0.005f);
         }
     }
+
+    public IEnumerator AutoIngredient(string ingredientId)
+    {
+        ++autoIngredient;
+        int halfLength = ingredientGuidePosition.Length / 2;
+        WaitForSeconds wait = new WaitForSeconds(1f / halfLength);
+        for (int i = 0; i < halfLength; ++i)
+        {
+            yield return wait;
+            AddTopping(ingredientGuidePosition[i].position, ingredientId);
+            AddTopping(ingredientGuidePosition[i + halfLength].position, ingredientId);
+        }
+        --autoIngredient;
+    }
+
 }

@@ -65,6 +65,14 @@ public class StoreTable : DataTable
         return dict[key];
     }
 
+    public string GetIdFromIngredientId(string Id)
+    {
+        var found = dict.Values.Where(p => p.atribute == Id).ToArray();
+        if (found.Length > 0)
+            return found[0].storeID;
+        return string.Empty;
+    }
+
     public List<Data> GetList()
     {
         return dict.Values.ToList();

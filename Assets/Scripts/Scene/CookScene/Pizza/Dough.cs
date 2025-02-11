@@ -13,6 +13,8 @@ public class Dough : MonoBehaviour
     public UnityEvent<Sprite> OnSpriteChanged;
     private int currentIndex = 0;
 
+    public Sprite CurrentSprite=>layerSprites[currentIndex];
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();

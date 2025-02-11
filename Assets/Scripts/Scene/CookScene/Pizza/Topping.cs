@@ -12,9 +12,9 @@ public class Topping : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public void SetData(string dataId)
+    public void SetData(IngredientTable.Data toppingData)
     {
-        toppingData = DataTableManager.IngredientTable.Get(dataId);
+        this.toppingData = toppingData;
         spriteRenderer.sprite = toppingData.spriteDatas.toppingSprites[Random.Range(0, toppingData.spriteDatas.toppingSprites.Length)];
         transform.Rotate(0f, 0f, Random.Range(0, 360f));
     }

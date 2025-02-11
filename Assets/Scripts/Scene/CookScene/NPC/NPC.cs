@@ -41,6 +41,8 @@ public class NPC : MonoBehaviour, IPizzaSlot
 
     public bool OrderEnd { get; private set; }
 
+    private AudioSource audioSource;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -127,6 +129,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
             prefab = null;
         }
         prefab = Instantiate(iprefab, sprite);
+        audioSource = prefab.GetComponent<AudioSource>();
         animator.SetBool(disappearHash, false);
     }
 
@@ -242,7 +245,6 @@ public class NPC : MonoBehaviour, IPizzaSlot
                 break;
             case JudgeData.Judge.Normal:
                 chatWindow.NextTalk(ChatWindow.Talks.Normal);
-
                 break;
             case JudgeData.Judge.Success:
                 chatWindow.NextTalk(ChatWindow.Talks.Success);
@@ -280,7 +282,6 @@ public class NPC : MonoBehaviour, IPizzaSlot
         {
             gameManager.AddTip(storyNPCData.price);
             gameManager.uiManager.StartCoroutine(gameManager.uiManager.ShowTipMessage(storyNPCData.price, 1f));
-
         }
 
         yield return waitChatEnd;
@@ -382,5 +383,10 @@ public class NPC : MonoBehaviour, IPizzaSlot
         }
         gameObject.SetActive(false);
         gameManager.StartCoroutine(gameManager.Spawn());
+    }
+
+    public void PlayAudio()
+    {
+        audioSource?.Play();
     }
 }
