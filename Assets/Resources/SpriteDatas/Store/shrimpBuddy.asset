@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a4b34c60d792314cbb3b30d345e1572, type: 3}
+  m_Script: {fileID: 11500000, guid: 6276dee70883e114695638e5da720b0c, type: 3}
   m_Name: shrimpBuddy
   m_EditorClassIdentifier: 
-  storeSprite: {fileID: 0}
+  sprites:
+  - {fileID: -1569530795, guid: 4394d50e823ac9c498544b613c8755c2, type: 3}
+  rotates: 00000000

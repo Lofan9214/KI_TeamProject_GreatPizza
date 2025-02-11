@@ -2349,7 +2349,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cutting knife
+      name: cutting knife(store)
       rect:
         serializedVersion: 2
         x: 1452
@@ -2664,7 +2664,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_121
+      name: cuttingBuddy
       rect:
         serializedVersion: 2
         x: 1839
@@ -3076,7 +3076,6 @@ TextureImporter:
       Kitchen Sprites#00_119: 2053681808
       Kitchen Sprites#00_12: -494099134
       Kitchen Sprites#00_120: -1818413933
-      Kitchen Sprites#00_121: -663710217
       Kitchen Sprites#00_122: -1103591502
       Kitchen Sprites#00_123: -1155690332
       Kitchen Sprites#00_124: 1100547836
@@ -3178,7 +3177,8 @@ TextureImporter:
       Kitchen Sprites#00_99: -1713021852
       bin1: -155014751
       bin2: 723887708
-      cutting knife: 1175489390
+      cutting knife(store): 1175489390
+      cuttingBuddy: -663710217
       dough: 1966798556
       dough1: 1876192828
       dough2: 1082859714
