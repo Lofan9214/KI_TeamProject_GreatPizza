@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using SaveDataVC = SaveDataV1;
+using SaveDataVC = SaveDataV2;
 
 public class IngameGameManager : MonoBehaviour
 {

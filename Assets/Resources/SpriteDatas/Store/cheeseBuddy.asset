@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6276dee70883e114695638e5da720b0c, type: 3}
-  m_Name: speedOven
+  m_Name: cheeseBuddy
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: -141879979, guid: 7c008df16bfe6414683c5141140c945f, type: 3}
+  - {fileID: -36090333, guid: 6728e35a3195968478b75fc979ea38d7, type: 3}
   rotates: 00000000

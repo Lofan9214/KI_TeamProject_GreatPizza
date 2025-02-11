@@ -74,9 +74,11 @@ public class ShopItem : MonoBehaviour
         storePrice = data.price;
         itemId = data.storeID;
 
-        trayImage.sprite = null;
+        trayImage.enabled = false;
+
         itemImageRotator.targetSprite = data.spriteRotatorData.sprites[0];
         itemImageRotator.rotate = data.spriteRotatorData.rotates[0];
+
         itemImageRotator.RotateSprite();
         itemName.SetString(data.NameID.ToString());
         itemDescription.SetString(data.descriptionID.ToString());

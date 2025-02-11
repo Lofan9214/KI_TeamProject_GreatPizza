@@ -25,7 +25,7 @@ public class MainUIManager : MonoBehaviour
 
     public void NewGame()
     {
-        SaveLoadManager.Data = new SaveDataV1();
+        SaveLoadManager.Data = new SaveDataV2();
         SaveLoadManager.Save();
 
         StartGame();

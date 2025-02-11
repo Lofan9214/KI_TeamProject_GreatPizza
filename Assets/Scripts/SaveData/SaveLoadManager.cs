@@ -1,12 +1,12 @@
 using Newtonsoft.Json;
 using System.IO;
 using UnityEngine;
-using SaveDataVC = SaveDataV1; // 세이브데이터 버전 변경 시 수정해야될 곳
+using SaveDataVC = SaveDataV2; // 세이브데이터 버전 변경 시 수정해야될 곳
 
 public static class SaveLoadManager
 {
     // 세이브데이터 버전 변경 시 수정해야될 곳    
-    public static int CurrentSaveDataVersion { get; private set; } = 1;
+    public static int CurrentSaveDataVersion { get; private set; } = 2;
 
     public static SaveDataVC Data { get; set; }
 

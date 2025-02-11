@@ -830,7 +830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trayImage: {fileID: 4622441291497008357}
-  itemImage: {fileID: 5392360139140096806}
+  itemImageRotator: {fileID: 3616489004584419014}
   itemName: {fileID: 605927704417493053}
   itemDescription: {fileID: 6175923478257099705}
   price: {fileID: 8116580153915244574}
