@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 7070845994198783167}
   - component: {fileID: 3558883621933803705}
   - component: {fileID: 401158448243379418}
+  - component: {fileID: 6281512991347882071}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -209,6 +210,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6281512991347882071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3252628921620240119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bd5ef8380095434f970f08244ff732f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSprite: {fileID: 0}
+  resultSprite: {fileID: 0}
+  rotate: 0
 --- !u!1 &4406114525442580403
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4457520788691791735}
+  - component: {fileID: 4814608688201187149}
   m_Layer: 5
   m_Name: Satisfaction
   m_TagString: Untagged
@@ -310,6 +327,21 @@ RectTransform:
   m_AnchoredPosition: {x: 535.99994, y: 0}
   m_SizeDelta: {x: 184, y: 82}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &4814608688201187149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4455370621415983308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a67523f3553e5ee47abd8515d3ad569c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotator: {fileID: 6281512991347882071}
+  spriteRotatorData: {fileID: 11400000, guid: e7f13f32f103e864e84ba379d55dba83, type: 2}
+  thresholds: 3200000014000000ffffffff
 --- !u!1 &5518916693362417739
 GameObject:
   m_ObjectHideFlags: 0

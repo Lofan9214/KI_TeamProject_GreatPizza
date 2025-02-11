@@ -143,6 +143,7 @@ public class IngameTimeManager : MonoBehaviour
 
     private void SetSatisfactionText()
     {
+        gameManager.uiManager.satisafaction.SetSatisfaction(Satisfaction);
         satisfactionText.text = $"{Satisfaction}%";
     }
 
