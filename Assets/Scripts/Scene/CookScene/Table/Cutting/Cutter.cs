@@ -10,9 +10,15 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
     private bool isCutting = false;
     private SpriteRenderer spriteRenderer;
 
+    public bool CuttingLock { get; set; }
+    public bool CuttingCanceled { get; set; }
+
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        CuttingLock = false;
+        CuttingCanceled = false;
     }
 
     public void OnPressObject(Vector2 position)
@@ -22,6 +28,7 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
             return;
         }
         isCutting = true;
+        CuttingCanceled = false;
         cutterObject.gameObject.SetActive(true);
         Vector2 offset = position - (Vector2)cutterObject.transform.position;
         var dir = offset.normalized;
@@ -42,6 +49,7 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
                 cutterObject.gameObject.SetActive(false);
                 spriteRenderer.enabled = true;
                 currentTable.CurrentPizza.CircleCollider.enabled = true;
+                CuttingCanceled = true;
                 return;
             }
             var dir = offset.normalized;
@@ -52,12 +60,12 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
     public void OnDragEnd(Vector3 pos, Vector3 deltaPos)
     {
         if (!isCutting)
-        {
             return;
-        }
-
-        currentTable.CurrentPizza.Cut(cutterObject.rotation * Quaternion.Euler(0f, 0f, 90f));
         isCutting = false;
+
+        if (!CuttingLock)
+            currentTable.CurrentPizza.Cut(cutterObject.rotation * Quaternion.Euler(0f, 0f, 90f));
+
         cutterObject.gameObject.SetActive(false);
         spriteRenderer.enabled = true;
         currentTable.CurrentPizza.CircleCollider.enabled = true;

@@ -25,7 +25,21 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     public State CurrentState { get; set; } = State.AddingTopping;
 
-    public Data PizzaData { get; private set; } = new Data();
+    private Data pizzaData = new Data();
+
+    public Data PizzaData
+    {
+        get
+        {
+            pizzaData.sourceRatio = sourceLayer.Ratio;
+            pizzaData.cheeseRatio = cheeseLayer.Ratio;
+            return pizzaData;
+        }
+        private set
+        {
+            pizzaData = value;
+        }
+    }
 
     public Dough dough;
     public GameObject pizzaBoard;
@@ -300,7 +314,6 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
             sourceCurrent += 0.005f;
             gameManager.IngredientPay(-0.005f);
         }
-        PizzaData.sourceRatio = sourceLayer.Ratio;
     }
 
     public void DrawCheese(Vector2 position)
@@ -311,6 +324,5 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
             cheeseCurrent += 0.005f;
             gameManager.IngredientPay(-0.005f);
         }
-        PizzaData.cheeseRatio = cheeseLayer.Ratio;
     }
 }

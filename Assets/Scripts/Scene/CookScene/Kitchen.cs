@@ -14,6 +14,7 @@ public class Kitchen : MonoBehaviour
     public BoxCollider2D[] trashBins;
     private PolygonCollider2D confineCollider;
 
+    public Cutter cutter;
 
     private void Awake()
     {

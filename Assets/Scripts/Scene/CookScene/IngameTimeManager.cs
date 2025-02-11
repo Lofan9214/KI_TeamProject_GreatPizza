@@ -54,11 +54,10 @@ public class IngameTimeManager : MonoBehaviour
         gameManager = GetComponent<IngameGameManager>();
         dayText.SetString(gameManager.tempSaveData.days.ToString());
 
-        //todo 업그레이드 수정 필요
-        //if (SaveLoadManager.Data.upgrades.TryGetValue(001, out bool value) && value)
-        //{
-        //    WatchTimeEnd += 4;
-        //}
+        if (SaveLoadManager.Data.upgrades.TryGetValue("longerDay", out bool value) && value)
+        {
+            WatchTimeEnd += 4;
+        }
         ResetSatisfaction();
         SetWatchTimeText();
     }
@@ -69,6 +68,7 @@ public class IngameTimeManager : MonoBehaviour
             && WatchTime == WatchTimeEnd)
         {
             SetState(State.DayEnd);
+            WatchTime = WatchTimeEnd + 4;
             StartCoroutine(DayEnd());
         }
 
@@ -154,6 +154,11 @@ public class IngameTimeManager : MonoBehaviour
 
     private IEnumerator DayEnd()
     {
+        if(!gameManager.npc.OrderEnd)
+        {
+            gameManager.npc.Disappear();
+        }
+
         yield return new WaitUntil(() => gameManager.npc.Disappeared);
         yield return new WaitForSeconds(0.5f);
         endWindow.gameObject.SetActive(true);

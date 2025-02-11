@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class OrderWindow : MonoBehaviour
 {
@@ -14,6 +13,11 @@ public class OrderWindow : MonoBehaviour
         {
             texts[i].text = DataTableManager.StringTable.Get(stringIds[i]);
             texts[i].gameObject.SetActive(i <= (int)talks);
+        }
+        if ((talks == ChatWindow.Talks.Hint2)
+            && (stringIds[1] == 111002 || stringIds[1] == 111006))
+        {
+            texts[1].gameObject.SetActive(false);
         }
     }
 }

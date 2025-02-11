@@ -10,6 +10,17 @@ public class OvenMid : MonoBehaviour, IPizzaSlot
     public bool IsEmpty => CurrentPizza == null;
     public Pizza CurrentPizza { get; private set; }
 
+    private float cookTime = 5f;
+
+    private void Start()
+    {
+        var data = DataTableManager.StoreTable.GetTypeList(StoreTable.Type.SpeedyOven)[0];
+        if (SaveLoadManager.Data.upgrades[data.storeID])
+        {
+            cookTime *= 0.5f;
+        }
+    }
+
     public void ClearPizza()
     {
         CurrentPizza = null;
@@ -30,10 +41,10 @@ public class OvenMid : MonoBehaviour, IPizzaSlot
 
         float timer = 0f;
 
-        while (timer < 5f)
+        while (timer < cookTime)
         {
             timer += Time.deltaTime;
-            CurrentPizza.transform.position = Vector3.Lerp(transform.position, nextTarget.transform.position, timer * 0.2f);
+            CurrentPizza.transform.position = Vector3.Lerp(transform.position, nextTarget.transform.position, timer / cookTime);
             yield return null;
         }
 

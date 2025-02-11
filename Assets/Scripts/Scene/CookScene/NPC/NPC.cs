@@ -21,7 +21,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
     public ChatWindow chatWindow;
     public IngameGameManager gameManager;
 
-    public TextMeshProUGUI tipText;
+    public Transform tipText;
     public Transform tipTextPosition;
 
     public bool IsSettable => true;
@@ -39,6 +39,8 @@ public class NPC : MonoBehaviour, IPizzaSlot
 
     public bool Disappeared { get; private set; }
 
+    public bool OrderEnd { get; private set; }
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -49,8 +51,9 @@ public class NPC : MonoBehaviour, IPizzaSlot
         waitChatEnd = new WaitUntil(() => chatWindow.TalkingState == ChatWindow.State.Talkend);
         chatWindow.OnYes.AddListener(Pay);
         gameManager.timeManager.OnUnsatisfied.AddListener(() => StartCoroutine(CutOrder()));
-        tipText.transform.position = Camera.main.WorldToScreenPoint(tipTextPosition.position);
+        tipText.position = Camera.main.WorldToScreenPoint(tipTextPosition.position);
         Disappeared = false;
+        OrderEnd = false;
     }
 
     public class JudgeData
@@ -224,6 +227,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
 
     private IEnumerator EndOrder()
     {
+        OrderEnd = true;
         gameManager.timeManager.SetState(IngameTimeManager.State.OrderEnd);
         int satisfaction = gameManager.timeManager.Satisfaction;
         var judgeData = GetJudgeData(Recipe, CurrentPizza.PizzaData);
@@ -234,8 +238,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
             case JudgeData.Judge.Fail:
                 chatWindow.NextTalk(ChatWindow.Talks.Fail);
                 gameManager.Refund(-payment);
-                gameManager.uiManager.ShowTipMessage(-payment, 1f);
-                StartCoroutine(TipShow(-payment));
+                gameManager.uiManager.StartCoroutine(gameManager.uiManager.ShowTipMessage(-payment, 1f));
                 break;
             case JudgeData.Judge.Normal:
                 chatWindow.NextTalk(ChatWindow.Talks.Normal);
@@ -270,21 +273,25 @@ public class NPC : MonoBehaviour, IPizzaSlot
             if (tip > 0f)
             {
                 gameManager.AddTip(tip);
-                tipText.text = tip.ToString("F2");
-                tipText.gameObject.SetActive(true);
+                gameManager.uiManager.StartCoroutine(gameManager.uiManager.ShowTipMessage(tip, 1f));
             }
         }
         else if (state == StoryState.Story && storyNPCData.price > 0)
         {
             gameManager.AddTip(storyNPCData.price);
-            tipText.text = storyNPCData.price.ToString("F2");
-            tipText.gameObject.SetActive(true);
+            gameManager.uiManager.StartCoroutine(gameManager.uiManager.ShowTipMessage(storyNPCData.price, 1f));
+
         }
 
         yield return waitChatEnd;
         yield return wait;
+        Disappear();
+        OrderEnd = false;
+    }
+
+    public void Disappear()
+    {
         chatWindow.gameObject.SetActive(false);
-        tipText.gameObject.SetActive(false);
         animator.SetBool(disappearHash, true);
     }
 
@@ -292,7 +299,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
     {
         gameManager.ChangePlace(InGamePlace.Hall);
         chatWindow.NextTalk(ChatWindow.Talks.Fail);
-        gameManager.uiManager.ShowTipMessage(-payment, 1f);
+        gameManager.uiManager.StartCoroutine(gameManager.uiManager.ShowTipMessage(-payment, 1f));
         gameManager.Refund(-payment);
         gameManager.kitchen.packingTable.DestroyPizzaBox();
         yield return waitChatEnd;
@@ -317,16 +324,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         }
 
         gameManager.Pay(payment);
-
-        StartCoroutine(TipShow(payment));
-    }
-
-    private IEnumerator TipShow(float amount)
-    {
-        tipText.text = amount.ToString("F2");
-        tipText.gameObject.SetActive(true);
-        yield return new WaitForSeconds(1f);
-        tipText.gameObject.SetActive(false);
+        gameManager.uiManager.StartCoroutine(gameManager.uiManager.ShowTipMessage(payment, 1f));
     }
 
     public float GoodTip()

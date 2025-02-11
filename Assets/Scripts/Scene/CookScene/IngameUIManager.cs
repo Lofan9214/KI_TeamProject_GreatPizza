@@ -5,10 +5,13 @@ using UnityEngine.UI;
 
 public class IngameUIManager : MonoBehaviour
 {
+    private readonly int tipAppearHash = Animator.StringToHash("TipAppear");
+    private readonly int refundAppearHash = Animator.StringToHash("RefundAppear");
     public ChatWindow chatWindow;
     public TextMeshProUGUI budgetText;
     public IngameGameManager gameManager;
     public TextMeshProUGUI tipText;
+    public Animator tipAnimator;
     public OrderWindow orderWindow;
     public Button orderShowButton;
     public GameObject tutorialWindow;
@@ -32,17 +35,16 @@ public class IngameUIManager : MonoBehaviour
         budgetText.text = gameManager.tempSaveData.budget.ToString("F2");
     }
 
-    public void ShowTipMessage(float tip, float time)
+    public IEnumerator ShowTipMessage(float tip, float time)
     {
-        StartCoroutine(ShowTipMessage(tip.ToString("F2"), time));
-    }
-
-    private IEnumerator ShowTipMessage(string tip, float time)
-    {
-        tipText.text = tip;
-        tipText.gameObject.SetActive(true);
+        tipText.text = tip.ToString("F2");
+        tipText.transform.parent.gameObject.SetActive(true);
+        if (tip < 0f)
+            tipAnimator.SetTrigger(refundAppearHash);
+        else
+            tipAnimator.SetTrigger(tipAppearHash);
         yield return new WaitForSeconds(1f);
-        tipText.gameObject.SetActive(false);
+        tipText.transform.parent.gameObject.SetActive(false);
     }
 
     public void OnOrderButtonClick()

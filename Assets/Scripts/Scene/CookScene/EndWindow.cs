@@ -7,6 +7,7 @@ public class EndWindow : MonoBehaviour
     private IngameGameManager gameManager;
     public FormattedLocalizationText dateText;
     public FormattedLocalizationText watchdateText;
+    public FormattedLocalizationText watchTimeText;
 
     public Color[] colors;
 
@@ -23,6 +24,7 @@ public class EndWindow : MonoBehaviour
         gameManager ??= GameObject.FindGameObjectWithTag("GameController").GetComponent<IngameGameManager>();
         dateText.SetString(gameManager.tempSaveData.days.ToString());
         watchdateText.SetString(gameManager.tempSaveData.days.ToString());
+        watchTimeText.SetString($"{12 + gameManager.timeManager.WatchTime / 4:D2}:{gameManager.timeManager.WatchTime % 4 * 15:D2}");
         totalProfitText.text = gameManager.totalProfit.ToString("F2");
         tipText.text = gameManager.tip.ToString("F2");
         refundText.text = gameManager.refund.ToString("F2");

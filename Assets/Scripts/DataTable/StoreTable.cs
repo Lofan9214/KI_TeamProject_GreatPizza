@@ -6,16 +6,26 @@ using UnityEngine;
 
 public class StoreTable : DataTable
 {
+    public enum Type
+    {
+        None,
+        LongerDay,
+        SpeedyOven,
+        LayerBuddy,
+        CuttingBuddy,
+        ToppingBuddy,
+    }
+
     public class Data
     {
         public string storeID { get; set; }
         public int NameID { get; set; }
         public int descriptionID { get; set; }
-        public string type { get; set; }
+        public Type type { get; set; }
         public string atribute { get; set; }
         public int price { get; set; }
 
-        public UpgradeSpriteData upgradeSpriteData;
+        public SpriteRotatorData spriteRotatorData;
     }
 
     private const string spriteDataFormat = "SpriteDatas/Store/{0}";
@@ -36,7 +46,7 @@ public class StoreTable : DataTable
 
                 dict.Add(item.storeID, item);
 
-                item.upgradeSpriteData = Resources.Load<UpgradeSpriteData>(string.Format(spriteDataFormat, item.storeID));
+                item.spriteRotatorData = Resources.Load<SpriteRotatorData>(string.Format(spriteDataFormat, item.storeID));
             }
             else
             {
@@ -58,5 +68,10 @@ public class StoreTable : DataTable
     public List<Data> GetList()
     {
         return dict.Values.ToList();
+    }
+
+    public List<Data> GetTypeList(Type type)
+    {
+        return dict.Values.Where(p => p.type == type).ToList();
     }
 }

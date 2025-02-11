@@ -12,7 +12,7 @@ public class ShopItem : MonoBehaviour
     }
 
     public Image trayImage;
-    public Image itemImage;
+    public SpriteRotator itemImageRotator;
     public LocalizationText itemName;
     public LocalizationText itemDescription;
     public TextMeshProUGUI price;
@@ -50,7 +50,8 @@ public class ShopItem : MonoBehaviour
         storePrice = data.store_price;
         itemId = data.ingredientID;
         trayImage.sprite = data.spriteDatas.storeTray;
-        itemImage.sprite = data.spriteDatas.storeSprite;
+        itemImageRotator.targetSprite = data.spriteDatas.storeSprite;
+        itemImageRotator.RotateSprite();
         itemName.SetString(data.stringID.ToString());
         //itemDescription.SetString(ingdata.stringID.ToString());
         price.text = data.store_price.ToString();
@@ -74,7 +75,9 @@ public class ShopItem : MonoBehaviour
         itemId = data.storeID;
 
         trayImage.sprite = null;
-        itemImage.sprite = data.upgradeSpriteData.storeSprite;
+        itemImageRotator.targetSprite = data.spriteRotatorData.sprites[0];
+        itemImageRotator.rotate = data.spriteRotatorData.rotates[0];
+        itemImageRotator.RotateSprite();
         itemName.SetString(data.NameID.ToString());
         itemDescription.SetString(data.descriptionID.ToString());
         price.text = data.price.ToString();

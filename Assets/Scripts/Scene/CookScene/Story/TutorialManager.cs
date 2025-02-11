@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -16,7 +17,9 @@ public class TutorialManager : MonoBehaviour
         OvenEnter,
         OvenCooking,
         OvenExit,
-        Cutting,
+        Cutting1,
+        Cutting2,
+        Cutting3,
         Packing,
         Pickup,
         PepperoniWait,
@@ -24,7 +27,7 @@ public class TutorialManager : MonoBehaviour
         None,
     }
 
-    private enum TutorialMessages : int
+    private enum TutorialMessages
     {
         Dough = 111015,
         SourceCheese1 = 111016,
@@ -33,6 +36,7 @@ public class TutorialManager : MonoBehaviour
         Cheese = 111019,
         Cutting = 111020,
         Pepperoni = 111021,
+        CuttingCancel = 111040,
     }
 
     private TutorialState tutorialState = TutorialState.None;
@@ -109,11 +113,24 @@ public class TutorialManager : MonoBehaviour
             case TutorialState.OvenExit:
                 if (gameManager.kitchen.cuttingTableSlot.CurrentPizza != null)
                 {
-                    SetState(TutorialState.Cutting);
+                    SetState(TutorialState.Cutting1);
                     StartCoroutine(CamMove(Operations[(int)tutorialState].transform.position, 0.3f));
                 }
                 break;
-            case TutorialState.Cutting:
+            case TutorialState.Cutting1:
+                if (pizza.PizzaData.cutData.Count == 1)
+                {
+                    SetState(TutorialState.Cutting2);
+                }
+                break;
+            case TutorialState.Cutting2:
+                if (gameManager.kitchen.cutter.CuttingCanceled)
+                {
+                    gameManager.kitchen.cutter.CuttingCanceled = false;
+                    SetState(TutorialState.Cutting3);
+                }
+                break;
+            case TutorialState.Cutting3:
                 if (pizza.PizzaData.cutData.Count == 3)
                 {
                     SetState(TutorialState.Packing);
@@ -202,8 +219,16 @@ public class TutorialManager : MonoBehaviour
                 case TutorialState.OvenEnter:
                     pizza.Movable = true;
                     break;
-                case TutorialState.Cutting:
+                case TutorialState.Cutting1:
                     pizza.Movable = false;
+                    break;
+                case TutorialState.Cutting2:
+                    gameManager.kitchen.cutter.CuttingLock = true;
+                    gameManager.uiManager.tutorialWindow.SetActive(true);
+                    gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.CuttingCancel).ToString());
+                    break;
+                case TutorialState.Cutting3:
+                    gameManager.kitchen.cutter.CuttingLock = false;
                     gameManager.uiManager.tutorialWindow.SetActive(true);
                     gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.Cutting).ToString());
                     break;
