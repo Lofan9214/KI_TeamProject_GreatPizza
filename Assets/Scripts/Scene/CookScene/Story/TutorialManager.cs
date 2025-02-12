@@ -170,7 +170,7 @@ public class TutorialManager : MonoBehaviour
             && (int)tutorialState < Operations.Count)
         {
             Operations[(int)tutorialState].SetActive(false);
-            if(tutorialState == TutorialState.SourceCheese2)
+            if (tutorialState == TutorialState.SourceCheese2)
                 gameManager.uiManager.tutorialArrow.SetActive(false);
         }
         tutorialState = state;
@@ -237,6 +237,14 @@ public class TutorialManager : MonoBehaviour
                 case TutorialState.Pepperoni:
                     gameManager.uiManager.tutorialWindow.SetActive(true);
                     gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.Pepperoni).ToString());
+                    break;
+                case TutorialState.PickupEnd:
+                    ScreenProtector.SetActive(false);
+                    gameManager.uiManager.tutorialWindow.SetActive(false);
+                    foreach (var trashbin in gameManager.kitchen.trashBins)
+                    {
+                        trashbin.enabled = true;
+                    }
                     break;
                 default:
                     gameManager.uiManager.tutorialWindow.SetActive(false);
