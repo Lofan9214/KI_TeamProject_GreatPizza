@@ -13,7 +13,7 @@ public class PizzaBox : MonoBehaviour, IPizzaSlot
 
     private Transform currentSlot;
     private Transform tempSlot;
-    private AudioSource audiosource;
+    private AudioSource audioSource;
 
     public bool IsSettable => true;
     public bool IsEmpty => CurrentPizza == null;
@@ -22,7 +22,7 @@ public class PizzaBox : MonoBehaviour, IPizzaSlot
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        audiosource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -41,12 +41,11 @@ public class PizzaBox : MonoBehaviour, IPizzaSlot
         CurrentPizza.transform.parent = box;
         CurrentPizza.transform.localPosition = Vector3.zero;
         animator.SetTrigger(CloseTop);
-        CookComplete();
     }
 
     public void CookComplete()
     {
-        audiosource.Play();
+        audioSource.Play();
         animator.SetTrigger(Complete);
     }
 

@@ -43,6 +43,9 @@ public class IngameTimeManager : MonoBehaviour
     public UnityEvent OnUnsatisfied;
 
     private IngameGameManager gameManager;
+    private IngameSoundManager soundManager;
+    
+    private bool endBellPlayed = false;
 
     private void Start()
     {
@@ -52,6 +55,7 @@ public class IngameTimeManager : MonoBehaviour
         WatchTimeEnd = 36;
 
         gameManager = GetComponent<IngameGameManager>();
+        soundManager = GetComponent<IngameSoundManager>();
         dayText.SetString(gameManager.tempSaveData.days.ToString());
 
         if (SaveLoadManager.Data.upgrades.TryGetValue("longerDay", out bool value) && value)
@@ -64,12 +68,19 @@ public class IngameTimeManager : MonoBehaviour
 
     private void Update()
     {
-        if (CurrentState == State.OrderEnd
-            && WatchTime == WatchTimeEnd)
+        if (WatchTime == WatchTimeEnd)
         {
-            SetState(State.DayEnd);
-            WatchTime = WatchTimeEnd + 4;
-            StartCoroutine(DayEnd());
+            if (CurrentState == State.OrderEnd)
+            {
+                SetState(State.DayEnd);
+                WatchTime = WatchTimeEnd + 4;
+                StartCoroutine(DayEnd());
+            }
+            if(!endBellPlayed)
+            {
+                endBellPlayed=true;
+                soundManager.PlayEndBell();
+            }
         }
 
         if ((CurrentState == State.Ordering || CurrentState == State.OrderEnd)
@@ -154,12 +165,13 @@ public class IngameTimeManager : MonoBehaviour
 
     private IEnumerator DayEnd()
     {
-        if(!gameManager.npc.OrderEnd)
+        if (!gameManager.npc.OrderEnd)
         {
             gameManager.npc.Disappear();
         }
 
         yield return new WaitUntil(() => gameManager.npc.Disappeared);
+        soundManager.PlayDayEnd();
         yield return new WaitForSeconds(0.5f);
         endWindow.gameObject.SetActive(true);
     }

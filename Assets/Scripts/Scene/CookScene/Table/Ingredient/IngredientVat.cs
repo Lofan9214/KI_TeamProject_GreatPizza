@@ -53,7 +53,7 @@ public class IngredientVat : MonoBehaviour, IClickable
         if (isUpgraded && gameManager.npc.Recipe.ingredientIds.Contains(ingredient))
         {
             var pizza = gameManager.kitchen.ingredientTable.pizzaSlots[0].CurrentPizza;
-            if (pizza != null)
+            if (pizza != null && !isSelected)
             {
                 switch (type)
                 {
