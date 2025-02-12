@@ -10,6 +10,13 @@ public class OvenExit : MonoBehaviour, IPizzaSlot
 
     public Pizza CurrentPizza { get; private set; }
 
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     public void ClearPizza()
     {
         CurrentPizza = null;
@@ -22,5 +29,6 @@ public class OvenExit : MonoBehaviour, IPizzaSlot
         CurrentPizza.CurrentState = Pizza.State.Roasted;
         CurrentPizza.Movable = true;
         CurrentPizza.transform.position = transform.position;
+        audioSource.Play();
     }
 }
