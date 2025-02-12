@@ -66,7 +66,7 @@ public class SpriteRotator : MonoBehaviour
                         }
                         for (int i = 0; i < 4; ++i)
                         {
-                            newborder[i] = targetSprite.border[(i + 1) % 4];
+                            newborder[(i + 1) % 4] = targetSprite.border[i];
                         }
                         break;
                     case Rotate.Left:
@@ -79,7 +79,7 @@ public class SpriteRotator : MonoBehaviour
                         }
                         for (int i = 0; i < 4; ++i)
                         {
-                            newborder[(i + 1) % 4] = targetSprite.border[i];
+                            newborder[i] = targetSprite.border[(i + 1) % 4];
                         }
                         break;
                 }

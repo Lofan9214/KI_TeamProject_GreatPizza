@@ -40,4 +40,10 @@ public class ShopWindow : MonoBehaviour
             });
         }
     }
+
+    public void AddBudget()
+    {
+        SaveLoadManager.Data.budget += 1000f;
+        SaveLoadManager.Save();
+    }
 }

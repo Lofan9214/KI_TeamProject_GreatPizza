@@ -3744,7 +3744,7 @@ TextureImporter:
         height: 107
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 25, y: 14, z: 14, w: 14}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -4410,10 +4410,10 @@ TextureImporter:
       name: UI Sprites#0_207
       rect:
         serializedVersion: 2
-        x: 492
-        y: 396
-        width: 42
-        height: 48
+        x: 498
+        y: 261
+        width: 75
+        height: 133
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4683,10 +4683,10 @@ TextureImporter:
       name: UI Sprites#0_220
       rect:
         serializedVersion: 2
-        x: 498
-        y: 258
-        width: 200
-        height: 145
+        x: 575
+        y: 279
+        width: 123
+        height: 124
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
