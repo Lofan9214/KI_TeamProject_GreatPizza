@@ -252,7 +252,7 @@ TextureImporter:
       name: ovenrail2
       rect:
         serializedVersion: 2
-        x: 1570
+        x: 1569
         y: 1978
         width: 468
         height: 21
@@ -270,15 +270,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kitchen Sprites#00_7
+      name: ovenrail2g
       rect:
         serializedVersion: 2
-        x: 1571
-        y: 1952
-        width: 469
-        height: 22
-      alignment: 9
-      pivot: {x: 0.49166095, y: 1.637773}
+        x: 1569
+        y: 1954
+        width: 468
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -675,7 +675,7 @@ TextureImporter:
         x: 1580
         y: 958
         width: 439
-        height: 526
+        height: 532
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1345,9 +1345,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1580
-        y: 321
-        width: 442
-        height: 609
+        y: 400
+        width: 439
+        height: 532
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3143,7 +3143,6 @@ TextureImporter:
       Kitchen Sprites#00_67: -589194262
       Kitchen Sprites#00_68: -1895675329
       Kitchen Sprites#00_69: -496072835
-      Kitchen Sprites#00_7: 1383787810
       Kitchen Sprites#00_70: 31423550
       Kitchen Sprites#00_71: -1678361982
       Kitchen Sprites#00_72: -1786637705
@@ -3189,6 +3188,7 @@ TextureImporter:
       ovenparts2: -1896143636
       ovenrail1: -458711062
       ovenrail2: -284457129
+      ovenrail2g: 1383787810
       pepperoni2: -2095551441
       shrimpoff2_store: -1168481728
   mipmapLimitGroupName: 

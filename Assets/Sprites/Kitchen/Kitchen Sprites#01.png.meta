@@ -21,7 +21,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -3150,8 +3150,8 @@ TextureImporter:
       name: Kitchen Sprites#01_204
       rect:
         serializedVersion: 2
-        x: 0
-        y: 119
+        x: 8
+        y: 120
         width: 418
         height: 596
       alignment: 0
