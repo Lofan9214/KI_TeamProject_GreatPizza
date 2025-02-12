@@ -118,7 +118,8 @@ public class DrawIngredient : MonoBehaviour
             for (int j = yStart, jj = 0; j < yEnd; ++j, ++jj)
             {
                 if (i < 0 || i >= textureWidth
-                    || j < 0 || j >= textureHeight)
+                    || j < 0 || j >= textureHeight
+                    || ii >= brushWidth || jj >= brushHeight)
                 {
                     continue;
                 }
