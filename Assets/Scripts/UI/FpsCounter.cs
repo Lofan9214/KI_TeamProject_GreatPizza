@@ -6,31 +6,24 @@ using UnityEngine.UI;
 
 public class FpsCounter : MonoBehaviour
 {
-    private Toggle toggle;
-    public TextMeshProUGUI text;
-    private const string fpsFormat = "{0:N1} FPS ({1:N1}ms)";
+    private TextMeshProUGUI text;
+    private float timer = 0f;
+    private int counter = 0;
 
     private void Awake()
     {
-        toggle = GetComponent<Toggle>();
-        toggle.onValueChanged.AddListener(OffFps);
+        text = GetComponent<TextMeshProUGUI>();
     }
 
     private void Update()
     {
-        if (toggle.isOn)
+        timer += Time.unscaledDeltaTime;
+        ++counter;
+        if (timer > 1f)
         {
-            float fps = 1.0f / Time.deltaTime;
-            float ms = Time.deltaTime * 1000.0f;
-            text.text = string.Format(fpsFormat, fps, ms);
-        }
-    }
-
-    private void OffFps(bool value)
-    {
-        if (!value)
-        {
-            text.text = "FPS Stat Off";
+            text.text = counter.ToString();
+            timer = 0f;
+            counter = 0;
         }
     }
 }
