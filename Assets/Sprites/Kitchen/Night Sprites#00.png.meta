@@ -1236,7 +1236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Night Sprites#00_62
+      name: neonsign
       rect:
         serializedVersion: 2
         x: 1410
@@ -3296,7 +3296,6 @@ TextureImporter:
       Night Sprites#00_6: -208325884
       Night Sprites#00_60: -1381194833
       Night Sprites#00_61: -1154342473
-      Night Sprites#00_62: 1687513388
       Night Sprites#00_63: -1458378820
       Night Sprites#00_64: -1823211773
       Night Sprites#00_65: 1480404527
@@ -3341,6 +3340,7 @@ TextureImporter:
       Night_UI2: -1334840472
       Night_UI3: -1587309523
       longerDay: 1327003955
+      neonsign: 1687513388
       onionBuddy: 126866740
       pimentoBuddy: -2122874234
       sausage_buddy: 1583183602
