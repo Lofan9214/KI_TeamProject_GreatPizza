@@ -173,7 +173,7 @@ public class IngameTimeManager : MonoBehaviour
 
         yield return new WaitUntil(() => gameManager.npc.Disappeared);
         soundManager.PlayDayEnd();
-        fadeOutEffect.gameObject.SetActive(true);
+        fadeOutEffect.PlayFadeOut();
     }
 
     public void SetWatch(int time)
