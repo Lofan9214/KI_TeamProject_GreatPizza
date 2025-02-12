@@ -55,7 +55,16 @@ public class IngredientVat : MonoBehaviour, IClickable
             var pizza = gameManager.kitchen.ingredientTable.pizzaSlots[0].CurrentPizza;
             if (pizza != null)
             {
-                pizza.StartCoroutine(pizza.AutoIngredient(ingredient));
+                switch (type)
+                {
+                    case IngredientTable.Type.Source:
+                    case IngredientTable.Type.Cheese:
+                        pizza.StartCoroutine(pizza.AutoDraw(ingredient));
+                        break;
+                    case IngredientTable.Type.Ingredient:
+                        pizza.StartCoroutine(pizza.AutoIngredient(ingredient));
+                        break;
+                }
             }
         }
         if (isSelected)
@@ -66,6 +75,8 @@ public class IngredientVat : MonoBehaviour, IClickable
         }
         if (!isUpgraded)
             gameManager.SetPizzaCommand(this, ingredient, type);
+        else
+            gameManager.SetPizzaCommand(this, string.Empty, IngredientTable.Type.None);
         SetSelected(true);
     }
 

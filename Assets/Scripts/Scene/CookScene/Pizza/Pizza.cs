@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 public class Pizza : MonoBehaviour, IClickable, IDragable
 {
@@ -74,6 +76,8 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     public Transform[] ingredientGuidePosition;
     private int autoIngredient;
 
+    private static List<Vector2> sourcePoints = new List<Vector2>();
+
     public bool Movable { get; set; } = true;
 
     private void Start()
@@ -84,6 +88,24 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         audioSource = GetComponent<AudioSource>();
         dough.OnSpriteChanged.AddListener(p => spriteMask.sprite = p);
         autoIngredient = 0;
+
+        if (sourcePoints.Count == 0)
+        {
+            sourcePoints.Add(Vector2.zero);
+            float unit = 0.26f;
+            float radius = unit;
+            float angle = 0f;
+            while (sourcePoints.Count < 120)
+            {
+                angle += unit / radius;
+                if (angle > 2 * Mathf.PI)
+                {
+                    radius += unit;
+                    angle = 0f;
+                }
+                sourcePoints.Add(new Vector2(radius * Mathf.Cos(angle), radius * Mathf.Sin(angle)));
+            }
+        }
     }
 
     public void OnDragEnd(Vector3 pos, Vector3 deltaPos)
@@ -361,4 +383,51 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         --autoIngredient;
     }
 
+    public IEnumerator AutoDraw(string command)
+    {
+        ++autoIngredient;
+        UnityAction<Vector2> draw = null;
+        float timer = 0f;
+        int count = 0;
+        switch (command)
+        {
+            case "tomato":
+                sourceData = DataTableManager.IngredientTable.Get(command);
+                sourceLayer.Init(sourceData);
+                PizzaData.sourceId = command;
+                draw = DrawSource;
+                break;
+            case "cheese":
+                cheeseData = DataTableManager.IngredientTable.Get(command);
+                cheeseLayer.Init(cheeseData);
+                draw = DrawCheese;
+                break;
+        }
+
+        var list = sourcePoints.ToList();
+
+        for (int i = 0; i < list.Count - 1; ++i)
+        {
+            int j = Random.Range(i, list.Count);
+            Vector2 temp = list[i];
+            list[i] = list[j];
+            list[j] = temp;
+        }
+
+        while (timer < 1f)
+        {
+            timer += Time.deltaTime;
+            int timerCount = (int)(list.Count * timer);
+            if (timerCount > list.Count)
+                timerCount = list.Count;
+            while (count < timerCount)
+            {
+                draw.Invoke((Vector2)transform.position + list[count]);
+                ++count;
+            }
+
+            yield return null;
+        }
+        --autoIngredient;
+    }
 }
