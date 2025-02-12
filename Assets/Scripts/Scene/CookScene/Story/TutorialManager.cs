@@ -217,6 +217,7 @@ public class TutorialManager : MonoBehaviour
                     break;
                 case TutorialState.OvenEnter:
                     pizza.Movable = true;
+                    gameManager.uiManager.tutorialWindow.SetActive(false);
                     break;
                 case TutorialState.Cutting1:
                     pizza.Movable = false;
