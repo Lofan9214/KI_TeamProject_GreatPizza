@@ -13,10 +13,12 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
     public bool CuttingLock { get; set; }
     public bool CuttingCanceled { get; set; }
 
+    private AudioSource audioSource;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
         CuttingLock = false;
         CuttingCanceled = false;
     }
@@ -64,7 +66,10 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
         isCutting = false;
 
         if (!CuttingLock)
+        {
+            audioSource.Play();
             currentTable.CurrentPizza.Cut(cutterObject.rotation * Quaternion.Euler(0f, 0f, 90f));
+        }
 
         cutterObject.gameObject.SetActive(false);
         spriteRenderer.enabled = true;

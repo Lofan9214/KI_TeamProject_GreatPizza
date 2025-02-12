@@ -13,6 +13,7 @@ public class PizzaBox : MonoBehaviour, IPizzaSlot
 
     private Transform currentSlot;
     private Transform tempSlot;
+    private AudioSource audiosource;
 
     public bool IsSettable => true;
     public bool IsEmpty => CurrentPizza == null;
@@ -21,6 +22,7 @@ public class PizzaBox : MonoBehaviour, IPizzaSlot
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        audiosource = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -44,15 +46,18 @@ public class PizzaBox : MonoBehaviour, IPizzaSlot
 
     public void CookComplete()
     {
+        audiosource.Play();
         animator.SetTrigger(Complete);
     }
 
 
     private void Hall()
     {
+        
         gameManager.hall.SetSlot(this);
         gameManager.ChangePlace(InGamePlace.Hall);
         boxTop.SetState(PizzaBoxTop.State.Movable);
+        
     }
 
     public void SetCurrentSlot(Transform slot)
