@@ -24,6 +24,7 @@ public class IngameTimeManager : MonoBehaviour
     public FormattedLocalizationText dayText;
     public FormattedLocalizationText watchText;
     public TextMeshProUGUI satisfactionText;
+    public FadeOut fadeOutEffect;
 
     public EndWindow endWindow;
 
@@ -172,8 +173,7 @@ public class IngameTimeManager : MonoBehaviour
 
         yield return new WaitUntil(() => gameManager.npc.Disappeared);
         soundManager.PlayDayEnd();
-        yield return new WaitForSeconds(0.5f);
-        endWindow.gameObject.SetActive(true);
+        fadeOutEffect.gameObject.SetActive(true);
     }
 
     public void SetWatch(int time)

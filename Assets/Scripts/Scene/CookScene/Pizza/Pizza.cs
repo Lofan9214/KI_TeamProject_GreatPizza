@@ -171,7 +171,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                     {
                         pizzaBoard.SetActive(false);
                     }
-                    if (slot is CuttingSlot)
+                    if (slot is CuttingSlot && gameManager.npc.Recipe.cutting > 0)
                     {
                         cutGuide.SetActive(true);
                     }
@@ -179,7 +179,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                 }
             }
         }
-        if (currentSlot.GetComponent<CuttingSlot>())
+        if (currentSlot.GetComponent<CuttingSlot>() && gameManager.npc.Recipe.cutting > 0)
         {
             cutGuide.SetActive(true);
         }
