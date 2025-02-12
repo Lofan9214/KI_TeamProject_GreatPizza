@@ -45,5 +45,6 @@ public class ShopWindow : MonoBehaviour
     {
         SaveLoadManager.Data.budget += 1000f;
         SaveLoadManager.Save();
+        budgetText.text = SaveLoadManager.Data.budget.ToString("F2");
     }
 }

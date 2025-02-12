@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainGameManager : MonoBehaviour
 {
@@ -13,9 +15,9 @@ public class MainGameManager : MonoBehaviour
     {
         Application.targetFrameRate = 60;
 
-        var ingredientData = DataTableManager.IngredientTable.GetList();
 
         bool added = false;
+        var ingredientData = DataTableManager.IngredientTable.GetList();
 
         foreach (var ing in ingredientData)
         {
@@ -46,5 +48,38 @@ public class MainGameManager : MonoBehaviour
             tutorialManager = Instantiate(tutorialPrefab, uiManager.transform);
             tutorialManager.SetState(ShopTutorialManager.State.StoreSelect);
         }
+    }
+
+    public void StartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(1);
+    }
+
+    public void NewGame()
+    {
+        SaveLoadManager.Data = new SaveDataV2();
+
+        var ingredientData = DataTableManager.IngredientTable.GetList();
+        foreach (var ing in ingredientData)
+        {
+            if (!SaveLoadManager.Data.ingredients.ContainsKey(ing.ingredientID))
+            {
+                SaveLoadManager.Data.ingredients.Add(ing.ingredientID, ing.store_price < 0f);
+            }
+        }
+
+        var storeData = DataTableManager.StoreTable.GetList();
+        foreach (var upgrade in storeData)
+        {
+            if (!SaveLoadManager.Data.upgrades.ContainsKey(upgrade.storeID))
+            {
+                SaveLoadManager.Data.upgrades.Add(upgrade.storeID, false);
+            }
+        }
+
+        SaveLoadManager.Save();
+
+        StartGame();
     }
 }

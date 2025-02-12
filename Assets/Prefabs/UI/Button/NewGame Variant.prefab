@@ -10,20 +10,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1230471450715843551, guid: 96c78f57bdd620e4f84e451ef3941065, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1230471450715843551, guid: 96c78f57bdd620e4f84e451ef3941065, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NewGame
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 1230471450715843551, guid: 96c78f57bdd620e4f84e451ef3941065, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainUIManager, Assembly-CSharp
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1230471450715843551, guid: 96c78f57bdd620e4f84e451ef3941065, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2337285629402924369, guid: 96c78f57bdd620e4f84e451ef3941065, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 672611891, guid: 7c008df16bfe6414683c5141140c945f, type: 3}
     - target: {fileID: 2771137718662324803, guid: 96c78f57bdd620e4f84e451ef3941065, type: 3}
       propertyPath: m_Pivot.x
       value: 1

@@ -21,6 +21,7 @@ public class TutorialManager : MonoBehaviour
         Cutting3,
         Packing,
         Pickup,
+        PickupEnd,
         PepperoniWait,
         Pepperoni,
         None,
@@ -156,7 +157,7 @@ public class TutorialManager : MonoBehaviour
                 break;
             case TutorialState.Pickup:
                 if (gameManager.timeManager.CurrentState == IngameTimeManager.State.OrderEnd)
-                    SetState(TutorialState.None);
+                    SetState(TutorialState.PickupEnd);
                 break;
 
         }
@@ -216,6 +217,7 @@ public class TutorialManager : MonoBehaviour
                     gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.Cheese).ToString());
                     break;
                 case TutorialState.OvenEnter:
+                case TutorialState.Packing:
                     pizza.Movable = true;
                     gameManager.uiManager.tutorialWindow.SetActive(false);
                     break;
@@ -231,9 +233,6 @@ public class TutorialManager : MonoBehaviour
                     gameManager.kitchen.cutter.CuttingLock = false;
                     gameManager.uiManager.tutorialWindow.SetActive(true);
                     gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.Cutting).ToString());
-                    break;
-                case TutorialState.Packing:
-                    pizza.Movable = true;
                     break;
                 case TutorialState.Pepperoni:
                     gameManager.uiManager.tutorialWindow.SetActive(true);
