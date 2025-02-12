@@ -5,22 +5,49 @@ using UnityEngine;
 public class Cutter : MonoBehaviour, IClickable, IDragable
 {
     public CuttingSlot currentTable;
-    public Transform cutterObject;
+    public Transform cutterPreview;
 
     private bool isCutting = false;
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer { get; private set; }
+    private SpriteRotator rotator;
+    public SpriteRotatorData spritesData;
+
+    public AutoCutter autoCutter;
+
+    private IngameGameManager gameManager;
 
     public bool CuttingLock { get; set; }
     public bool CuttingCanceled { get; set; }
 
     private AudioSource audioSource;
 
+    private bool upgraded;
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
+        rotator = GetComponent<SpriteRotator>();
         CuttingLock = false;
         CuttingCanceled = false;
+    }
+
+    private void Start()
+    {
+        gameManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<IngameGameManager>();
+        string id = DataTableManager.StoreTable.GetTypeList(StoreTable.Type.CuttingBuddy)[0].storeID;
+        upgraded = SaveLoadManager.Data.upgrades[id];
+        if (upgraded)
+        {
+            rotator.targetSprite = spritesData.sprites[1];
+            rotator.rotate = spritesData.rotates[1];
+        }
+        else
+        {
+            rotator.targetSprite = spritesData.sprites[0];
+            rotator.rotate = spritesData.rotates[0];
+        }
+        rotator.RotateSprite();
     }
 
     public void OnPressObject(Vector2 position)
@@ -29,12 +56,22 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
         {
             return;
         }
-        isCutting = true;
         CuttingCanceled = false;
-        cutterObject.gameObject.SetActive(true);
-        Vector2 offset = position - (Vector2)cutterObject.transform.position;
+        if (upgraded)
+        {
+            if (gameManager.npc.Recipe.cutting == 3)
+            {
+                autoCutter.PlayAnimation();
+                spriteRenderer.enabled = false;
+            }
+            return;
+        }
+
+        isCutting = true;
+        cutterPreview.gameObject.SetActive(true);
+        Vector2 offset = position - (Vector2)cutterPreview.transform.position;
         var dir = offset.normalized;
-        cutterObject.transform.up = dir;
+        cutterPreview.transform.up = dir;
         spriteRenderer.enabled = false;
         currentTable.CurrentPizza.CircleCollider.enabled = false;
     }
@@ -43,19 +80,19 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
     {
         if (isCutting)
         {
-            Vector2 offset = cutterObject.transform.position - pos;
+            Vector2 offset = cutterPreview.transform.position - pos;
 
             if (offset.sqrMagnitude < 1f)
             {
                 isCutting = false;
-                cutterObject.gameObject.SetActive(false);
+                cutterPreview.gameObject.SetActive(false);
                 spriteRenderer.enabled = true;
                 currentTable.CurrentPizza.CircleCollider.enabled = true;
                 CuttingCanceled = true;
                 return;
             }
             var dir = offset.normalized;
-            cutterObject.transform.up = dir;
+            cutterPreview.transform.up = dir;
         }
     }
 
@@ -68,11 +105,16 @@ public class Cutter : MonoBehaviour, IClickable, IDragable
         if (!CuttingLock)
         {
             audioSource.Play();
-            currentTable.CurrentPizza.Cut(cutterObject.rotation * Quaternion.Euler(0f, 0f, 90f));
+            currentTable.CurrentPizza.Cut(cutterPreview.rotation * Quaternion.Euler(0f, 0f, 90f));
         }
 
-        cutterObject.gameObject.SetActive(false);
+        cutterPreview.gameObject.SetActive(false);
         spriteRenderer.enabled = true;
         currentTable.CurrentPizza.CircleCollider.enabled = true;
+    }
+
+    public void PlayCutSound()
+    {
+        audioSource.Play();
     }
 }
