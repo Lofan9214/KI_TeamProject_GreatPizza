@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShopWindow : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class ShopWindow : MonoBehaviour
     public Transform upgradeContent;
     public TextMeshProUGUI budgetText;
     public ShopItem itemPrefab;
+    public GameObject upgrade;
 
     private void Start()
     {
@@ -39,11 +41,14 @@ public class ShopWindow : MonoBehaviour
                 budgetText.text = SaveLoadManager.Data.budget.ToString("F2");
             });
         }
+
+        upgrade.SetActive(false);
     }
 
     public void AddBudget()
     {
         SaveLoadManager.Data.budget += 1000f;
+        SaveLoadManager.Data.days += 20;
         SaveLoadManager.Save();
         budgetText.text = SaveLoadManager.Data.budget.ToString("F2");
     }

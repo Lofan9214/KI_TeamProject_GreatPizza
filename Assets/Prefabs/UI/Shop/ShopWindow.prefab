@@ -505,6 +505,7 @@ MonoBehaviour:
   upgradeContent: {fileID: 3232470447700974090}
   budgetText: {fileID: 2614837893910593747}
   itemPrefab: {fileID: 1675107286188644472, guid: 7e8cb9b16fbf1734392d770e8a5ab79f, type: 3}
+  ingredient: {fileID: 8891907670784120374}
 --- !u!1 &2379605229812485078
 GameObject:
   m_ObjectHideFlags: 0
