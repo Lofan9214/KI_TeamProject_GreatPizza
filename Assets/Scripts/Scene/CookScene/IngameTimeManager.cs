@@ -45,7 +45,7 @@ public class IngameTimeManager : MonoBehaviour
 
     private IngameGameManager gameManager;
     private IngameSoundManager soundManager;
-    
+
     private bool endBellPlayed = false;
 
     private void Start()
@@ -59,7 +59,8 @@ public class IngameTimeManager : MonoBehaviour
         soundManager = GetComponent<IngameSoundManager>();
         dayText.SetString(gameManager.tempSaveData.days.ToString());
 
-        if (SaveLoadManager.Data.upgrades.TryGetValue("longerDay", out bool value) && value)
+        if (SaveLoadManager.Data.upgrades.TryGetValue("longerDay", out bool value) && value
+            && SaveLoadManager.Data.days > 1)
         {
             WatchTimeEnd += 4;
         }
@@ -77,9 +78,9 @@ public class IngameTimeManager : MonoBehaviour
                 WatchTime = WatchTimeEnd + 4;
                 StartCoroutine(DayEnd());
             }
-            if(!endBellPlayed)
+            if (!endBellPlayed)
             {
-                endBellPlayed=true;
+                endBellPlayed = true;
                 soundManager.PlayEndBell();
             }
         }

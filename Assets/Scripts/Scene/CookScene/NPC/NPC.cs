@@ -240,8 +240,11 @@ public class NPC : MonoBehaviour, IPizzaSlot
         {
             case JudgeData.Judge.Fail:
                 chatWindow.NextTalk(ChatWindow.Talks.Fail);
-                gameManager.Refund(-payment);
-                gameManager.uiManager.StartCoroutine(gameManager.uiManager.ShowTipMessage(-payment, 1f));
+                if (state == StoryState.Random || storyNPCData.price < 0)
+                {
+                    gameManager.Refund(-payment);
+                    gameManager.uiManager.StartCoroutine(gameManager.uiManager.ShowTipMessage(-payment, 1f));
+                }
                 break;
             case JudgeData.Judge.Normal:
                 chatWindow.NextTalk(ChatWindow.Talks.Normal);
@@ -278,7 +281,8 @@ public class NPC : MonoBehaviour, IPizzaSlot
                 gameManager.uiManager.StartCoroutine(gameManager.uiManager.ShowTipMessage(tip, 1f));
             }
         }
-        else if (state == StoryState.Story && storyNPCData.price > 0)
+        else if (state == StoryState.Story && storyNPCData.price > 0
+            && judgeData.FinalJudge == JudgeData.Judge.Success)
         {
             gameManager.AddTip(storyNPCData.price);
             gameManager.uiManager.StartCoroutine(gameManager.uiManager.ShowTipMessage(storyNPCData.price, 1f));

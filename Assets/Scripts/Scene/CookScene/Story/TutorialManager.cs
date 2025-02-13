@@ -53,9 +53,7 @@ public class TutorialManager : MonoBehaviour
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<IngameGameManager>();
         foreach (var trashbin in gameManager.kitchen.trashBins)
-        {
             trashbin.enabled = false;
-        }
     }
 
     private void Update()
@@ -191,79 +189,79 @@ public class TutorialManager : MonoBehaviour
             {
                 Operations[(int)tutorialState].SetActive(true);
             }
-
-            switch (tutorialState)
-            {
-                case TutorialState.Dough:
-                    gameManager.uiManager.tutorialWindow.SetActive(true);
-                    gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.Dough).ToString());
-                    break;
-                case TutorialState.SourceCheese1:
-                    pizza.Movable = false;
-                    gameManager.uiManager.tutorialWindow.SetActive(true);
-                    gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.SourceCheese1).ToString());
-                    break;
-                case TutorialState.SourceCheese2:
-                    gameManager.uiManager.tutorialWindow.SetActive(true);
-                    gameManager.uiManager.tutorialArrow.SetActive(true);
-                    gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.SourceCheese2).ToString());
-                    break;
-                case TutorialState.Source:
-                    gameManager.uiManager.tutorialWindow.SetActive(true);
-                    gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.Source).ToString());
-                    break;
-                case TutorialState.Cheese:
-                    gameManager.uiManager.tutorialWindow.SetActive(true);
-                    gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.Cheese).ToString());
-                    break;
-                case TutorialState.OvenEnter:
-                case TutorialState.Packing:
-                    pizza.Movable = true;
-                    gameManager.uiManager.tutorialWindow.SetActive(false);
-                    break;
-                case TutorialState.Cutting1:
-                    pizza.Movable = false;
-                    break;
-                case TutorialState.Cutting2:
-                    gameManager.kitchen.cutter.CuttingLock = true;
-                    gameManager.uiManager.tutorialWindow.SetActive(true);
-                    gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.CuttingCancel).ToString());
-                    break;
-                case TutorialState.Cutting3:
-                    gameManager.kitchen.cutter.CuttingLock = false;
-                    gameManager.uiManager.tutorialWindow.SetActive(true);
-                    gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.Cutting).ToString());
-                    break;
-                case TutorialState.Pepperoni:
-                    gameManager.uiManager.tutorialWindow.SetActive(true);
-                    gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.Pepperoni).ToString());
-                    break;
-                case TutorialState.PickupEnd:
-                    ScreenProtector.SetActive(false);
-                    gameManager.uiManager.tutorialWindow.SetActive(false);
-                    foreach (var trashbin in gameManager.kitchen.trashBins)
-                    {
-                        trashbin.enabled = true;
-                    }
-                    break;
-                default:
-                    gameManager.uiManager.tutorialWindow.SetActive(false);
-                    break;
-            }
-
         }
-        else
+        switch (tutorialState)
         {
-            ScreenProtector.SetActive(false);
-            gameManager.uiManager.tutorialWindow.SetActive(false);
-            gameManager.pointerManager.enableCamDrag = true;
-            foreach (var trashbin in gameManager.kitchen.trashBins)
-            {
-                trashbin.enabled = true;
-            }
+            case TutorialState.Dough:
+                gameManager.uiManager.tutorialWindow.SetActive(true);
+                gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.Dough).ToString());
+                break;
+            case TutorialState.SourceCheese1:
+                pizza.Movable = false;
+                gameManager.uiManager.tutorialWindow.SetActive(true);
+                gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.SourceCheese1).ToString());
+                break;
+            case TutorialState.SourceCheese2:
+                gameManager.uiManager.tutorialWindow.SetActive(true);
+                gameManager.uiManager.tutorialArrow.SetActive(true);
+                gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.SourceCheese2).ToString());
+                break;
+            case TutorialState.Source:
+                gameManager.uiManager.tutorialWindow.SetActive(true);
+                gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.Source).ToString());
+                break;
+            case TutorialState.Cheese:
+                gameManager.uiManager.tutorialWindow.SetActive(true);
+                gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.Cheese).ToString());
+                break;
+            case TutorialState.OvenEnter:
+            case TutorialState.Packing:
+                pizza.Movable = true;
+                gameManager.uiManager.tutorialWindow.SetActive(false);
+                break;
+            case TutorialState.Cutting1:
+                pizza.Movable = false;
+                break;
+            case TutorialState.Cutting2:
+                gameManager.kitchen.cutter.CuttingLock = true;
+                gameManager.uiManager.tutorialWindow.SetActive(true);
+                gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.CuttingCancel).ToString());
+                break;
+            case TutorialState.Cutting3:
+                gameManager.kitchen.cutter.CuttingLock = false;
+                gameManager.uiManager.tutorialWindow.SetActive(true);
+                gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.Cutting).ToString());
+                break;
+            case TutorialState.Pepperoni:
+                gameManager.uiManager.tutorialWindow.SetActive(true);
+                gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.Pepperoni).ToString());
+                break;
+            case TutorialState.PickupEnd:
+                ScreenProtector.SetActive(false);
+                gameManager.uiManager.tutorialWindow.SetActive(false);
+                foreach (var trashbin in gameManager.kitchen.trashBins)
+                    trashbin.enabled = true;
+                break;
+            case TutorialState.PepperoniWait:
+                foreach (var trashbin in gameManager.kitchen.trashBins)
+                    trashbin.enabled = true;
+                break;
+            case TutorialState.None:
+                ScreenProtector.SetActive(false);
+                gameManager.uiManager.tutorialWindow.SetActive(false);
+                gameManager.pointerManager.enableCamDrag = true;
+                foreach (var trashbin in gameManager.kitchen.trashBins)
+                    trashbin.enabled = true;
+                break;
+            case TutorialState.SourceSelect:
+            case TutorialState.CheeseSelect:
+            case TutorialState.OvenCooking:
+            case TutorialState.OvenExit:
+            case TutorialState.Pickup:
+                gameManager.uiManager.tutorialWindow.SetActive(false);
+                break;
         }
     }
-
 
     private IEnumerator CamMove(Vector3 targetPos, float duration)
     {
