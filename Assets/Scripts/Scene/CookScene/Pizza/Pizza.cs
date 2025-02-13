@@ -277,7 +277,8 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         cutGuide.SetActive(false);
 
         if (gameManager.state == IngameGameManager.State.Random
-            || (gameManager.tutorialManager.MaskLock && IsValidMove(deltaPos)))
+            || !gameManager.tutorialManager.MaskLock
+            || IsValidMove(deltaPos))
         {
             gameManager.ScrollScreen();
             //transform.position += Pos - lastMovePos.Value;
@@ -342,9 +343,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
             OnDrag(position, deltaPos);
             return;
         }
-        if (moving
-            && (gameManager.state == IngameGameManager.State.Random
-               || (gameManager.tutorialManager.MaskLock && IsValidMove(deltaPos))))
+        if (moving)
         {
             Move(position, deltaPos);
         }

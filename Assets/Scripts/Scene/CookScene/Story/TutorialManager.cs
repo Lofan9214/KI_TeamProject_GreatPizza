@@ -294,34 +294,4 @@ public class TutorialManager : MonoBehaviour
             yield return null;
         }
     }
-
-    //private void LateUpdate()
-    //{
-    //    if (tutorialState == TutorialState.OvenEnter
-    //        || tutorialState == TutorialState.Packing
-    //        || tutorialState == TutorialState.OvenExit)
-    //    {
-    //        var pizzaBoardBounds = tutorialState == TutorialState.OvenEnter ? pizza.pizzaBoard.boxCollider.bounds : pizza.CircleCollider.bounds;
-    //        var maskBounds = tutorialState == TutorialState.OvenEnter ? masks[0].bounds : masks[1].bounds;
-    //        var pos = pizza.transform.position;
-    //
-    //        if (pizzaBoardBounds.min.x < maskBounds.min.x)
-    //        {
-    //            pos.x += maskBounds.min.x - pizzaBoardBounds.min.x;
-    //        }
-    //        else if (pizzaBoardBounds.max.x > maskBounds.max.x)
-    //        {
-    //            pos.x -= pizzaBoardBounds.max.x - maskBounds.max.x;
-    //        }
-    //        if (pizzaBoardBounds.min.y < maskBounds.min.y)
-    //        {
-    //            pos.y += maskBounds.min.y - pizzaBoardBounds.min.y;
-    //        }
-    //        else if (pizzaBoardBounds.max.y > maskBounds.max.y)
-    //        {
-    //            pos.y -= pizzaBoardBounds.max.y - maskBounds.max.y;
-    //        }
-    //        pizza.transform.position = pos;
-    //    }
-    //}
 }
