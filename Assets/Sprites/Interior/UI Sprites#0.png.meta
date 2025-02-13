@@ -1050,9 +1050,9 @@ TextureImporter:
       name: UI Sprites#0_46
       rect:
         serializedVersion: 2
-        x: 1278
+        x: 1355
         y: 1236
-        width: 174
+        width: 99
         height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1539,7 +1539,7 @@ TextureImporter:
         height: 86
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 11, y: 17, z: 27, w: 11}
+      border: {x: 11, y: 17, z: 11, w: 11}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -4617,7 +4617,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI Sprites#0_217
+      name: OptionWhite
       rect:
         serializedVersion: 2
         x: 1695
@@ -4764,7 +4764,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI Sprites#0_224
+      name: SoundSliderHeader
       rect:
         serializedVersion: 2
         x: 1749
@@ -5083,12 +5083,12 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1742
-        y: 288
+        y: 291
         width: 25
-        height: 30
+        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 6, y: 6, z: 6, w: 6}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -5310,7 +5310,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI Sprites#0_250
+      name: Option
       rect:
         serializedVersion: 2
         x: 1626
@@ -6129,13 +6129,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI Sprites#0_289
+      name: Audio
       rect:
         serializedVersion: 2
         x: 1380
         y: 78
-        width: 42
-        height: 53
+        width: 66
+        height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6145,48 +6145,6 @@ TextureImporter:
       bones: []
       spriteID: b5edf3dca075a5a45ab863f07209b648
       internalID: 2123182979
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI Sprites#0_290
-      rect:
-        serializedVersion: 2
-        x: 1426
-        y: 94
-        width: 7
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f0debe76aad499459f30bd547808d10
-      internalID: 1738635390
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI Sprites#0_291
-      rect:
-        serializedVersion: 2
-        x: 1434
-        y: 83
-        width: 12
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f18d9ae79e3cde4da4b9feebe1066f9
-      internalID: 472548136
       vertices: []
       indices: 
       edges: []
@@ -7031,6 +6989,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Bgm
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 1262
+        width: 60
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb3ac57bd4cb81419fc2fe1fc45de35
+      internalID: 19820648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -7042,8 +7021,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Audio: 2123182979
+      Bgm: -721364696
       Home: 1156710056
+      Option: 913840248
+      OptionWhite: -506881638
       PlusIcon: -1220166316
+      SoundSliderHeader: -972546986
       Stop: -813957629
       Sun_fill: 389061714
       Tutorial: 400425358
@@ -7088,7 +7072,6 @@ TextureImporter:
       UI Sprites#0_135: 2013954460
       UI Sprites#0_136: 1343790588
       UI Sprites#0_137: -1314816722
-      UI Sprites#0_14: -721364696
       UI Sprites#0_140: 1307016540
       UI Sprites#0_141: 1400419910
       UI Sprites#0_142: -1998095577
@@ -7166,7 +7149,6 @@ TextureImporter:
       UI Sprites#0_214: 449079675
       UI Sprites#0_215: -423356429
       UI Sprites#0_216: -1196609606
-      UI Sprites#0_217: -506881638
       UI Sprites#0_218: -1961424904
       UI Sprites#0_219: 2132497633
       UI Sprites#0_22: -1322039925
@@ -7174,7 +7156,6 @@ TextureImporter:
       UI Sprites#0_221: 1311199989
       UI Sprites#0_222: -1688077425
       UI Sprites#0_223: -1361555121
-      UI Sprites#0_224: -972546986
       UI Sprites#0_225: 1026491688
       UI Sprites#0_226: -589787776
       UI Sprites#0_227: 781583204
@@ -7201,7 +7182,6 @@ TextureImporter:
       UI Sprites#0_248: -1317399089
       UI Sprites#0_249: 249036324
       UI Sprites#0_25: 1833085145
-      UI Sprites#0_250: 913840248
       UI Sprites#0_251: 156403465
       UI Sprites#0_252: -2049768125
       UI Sprites#0_253: 492548755
@@ -7239,7 +7219,6 @@ TextureImporter:
       UI Sprites#0_285: -1591205844
       UI Sprites#0_286: 1802609232
       UI Sprites#0_288: 453505716
-      UI Sprites#0_289: 2123182979
       UI Sprites#0_29: -1120572927
       UI Sprites#0_290: 1738635390
       UI Sprites#0_291: 472548136
