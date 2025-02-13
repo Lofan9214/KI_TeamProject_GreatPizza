@@ -63,7 +63,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     private SpriteMask spriteMask;
 
     private Vector3? lastDrawPos = null;
-    private Vector3? lastMovePos = null;
+    private Vector3 lastMovePos;
     public CircleCollider2D CircleCollider { get; private set; }
 
     public float sourceMax = 1.5f;
@@ -191,7 +191,6 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
             return;
         }
         lastDrawPos = null;
-        lastMovePos = null;
         moving = false;
         addingTopping = false;
         if (CurrentState == State.AddingTopping
@@ -265,7 +264,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         toppingLayer.AddTopping(position, data);
     }
 
-    public void Move(Vector3 Pos, Vector3 deltaPos)
+    public void Move(Vector3 Pos)
     {
         if (!Movable || autoIngredient > 0)
         {
@@ -278,13 +277,11 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
         if (gameManager.state == IngameGameManager.State.Random
             || !gameManager.tutorialManager.MaskLock
-            || IsValidMove(deltaPos))
+            || IsValidMove(Pos - lastMovePos))
         {
             gameManager.ScrollScreen();
-            //transform.position += Pos - lastMovePos.Value;
-            //lastMovePos = Pos;
-            transform.position += deltaPos;
-            lastMovePos = transform.position;
+            transform.position += Pos - lastMovePos;
+            lastMovePos = Pos;
         }
     }
 
@@ -300,7 +297,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
             case State.AddingTopping:
                 if (moving)
                 {
-                    Move(position, deltaPos);
+                    Move(position);
                     break;
                 }
                 if (lastDrawPos == null)
@@ -326,7 +323,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                 break;
             case State.Roasted:
             case State.Cut:
-                Move(position, deltaPos);
+                Move(position);
                 break;
         }
     }
@@ -345,7 +342,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         }
         if (moving)
         {
-            Move(position, deltaPos);
+            Move(position);
         }
     }
 

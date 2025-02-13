@@ -85,7 +85,7 @@ public class TutorialManager : MonoBehaviour
                     SetState(TutorialState.SourceSelect);
                 break;
             case TutorialState.SourceSelect:
-                if (gameManager.PizzaCommand == "tomato")
+                if (gameManager.kitchen.ingredientTable.sourceTubs[0].isSelected)
                     SetState(TutorialState.Source);
                 break;
             case TutorialState.Source:
@@ -93,7 +93,7 @@ public class TutorialManager : MonoBehaviour
                     SetState(TutorialState.CheeseSelect);
                 break;
             case TutorialState.CheeseSelect:
-                if (gameManager.PizzaCommand == "cheese")
+                if (gameManager.kitchen.ingredientTable.cheeseTub.isSelected)
                     SetState(TutorialState.Cheese);
                 break;
             case TutorialState.Cheese:

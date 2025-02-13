@@ -14,7 +14,7 @@ public class IngredientVat : MonoBehaviour, IClickable
     protected string ingredient;
     protected IngredientTable.Type type;
     protected SpriteRenderer spriteRenderer;
-    protected bool isSelected;
+    public bool isSelected { get; protected set; }
     protected bool isUpgraded;
     public SpriteRotator trayRotator;
     public SpriteRotatorData trayData;
