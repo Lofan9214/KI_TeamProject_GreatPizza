@@ -35,9 +35,9 @@ public class IngameGameManager : MonoBehaviour
     public IngredientTable.Type IngredientType { get; private set; }
     private IngredientVat currentTub;
 
-    private State state;
+    public State state { get; private set; }
     public TutorialManager tutorialManagerPrefab;
-    public TutorialManager tutorialManager;
+    public TutorialManager tutorialManager { get; private set; }
     public List<StoryTable.Data> storyData;
 
     public float tip { get; private set; } = 0f;
@@ -265,5 +265,10 @@ public class IngameGameManager : MonoBehaviour
             cameraPos.x += screenScrollSpeed * Time.deltaTime * mul;
             virtualCam.position = cameraPos;
         }
+    }
+
+    public void SetTouchEnabled(bool enabled)
+    {
+        pointerManager.enabled = enabled;
     }
 }

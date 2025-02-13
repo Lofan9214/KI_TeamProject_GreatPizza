@@ -57,10 +57,11 @@ public class PointerManager : MonoBehaviour
             deltaWorldPos.z = 0f;
             if (hitDragable)
             {
-                if ((hit && (hit.collider.transform == target)) || !hit)
-                    targetDragable.OnDrag(worldPos, deltaWorldPos);
-                else if (hit && hit.collider.gameObject.layer == screenLockLayer)
+                if (hit && hit.collider.gameObject.layer == screenLockLayer)
                     targetDragable.OnDragEnd(worldPos, deltaWorldPos);
+                //if ((hit && (hit.collider.transform == target)) || !hit)
+                else
+                    targetDragable.OnDrag(worldPos, deltaWorldPos);
             }
             else if (enableCamDrag)
             {
@@ -77,10 +78,8 @@ public class PointerManager : MonoBehaviour
                 Vector3 deltaWorldPos = worldPos - Camera.main.ScreenToWorldPoint(MultiTouchManager.Instance.TouchPosition - MultiTouchManager.Instance.DeltaPosition);
 
                 hit = RaycastScreen(worldPos);
-                if ((hit && hit.collider.transform == target) || !hit)
-                {
-                    targetDragable.OnDragEnd(worldPos, deltaWorldPos);
-                }
+
+                targetDragable.OnDragEnd(worldPos, deltaWorldPos);
             }
         }
 #endif
@@ -96,5 +95,11 @@ public class PointerManager : MonoBehaviour
         }
         hit = Physics2D.Raycast(worldPos, Vector2.zero, float.PositiveInfinity, layerMask, minDepth);
         return hit;
+    }
+
+    public void ClearDrag()
+    {
+        hitDragable = false;
+        targetDragable = null;
     }
 }

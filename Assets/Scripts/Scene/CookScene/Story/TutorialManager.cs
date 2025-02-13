@@ -39,21 +39,27 @@ public class TutorialManager : MonoBehaviour
         CuttingCancel = 111040,
     }
 
-    private TutorialState tutorialState = TutorialState.None;
+    public TutorialState tutorialState { get; private set; } = TutorialState.None;
     public List<StoryTable.Data> storyData;
 
     public GameObject ScreenProtector;
     public List<GameObject> Operations;
 
+    public BoxCollider2D[] masks;
+
     private Pizza pizza;
 
     private IngameGameManager gameManager;
+
+    public bool MaskLock { get; private set; }
+    public Bounds LockBounds { get; private set; }
 
     private void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<IngameGameManager>();
         foreach (var trashbin in gameManager.kitchen.trashBins)
             trashbin.enabled = false;
+        MaskLock = false;
     }
 
     private void Update()
@@ -171,6 +177,7 @@ public class TutorialManager : MonoBehaviour
             if (tutorialState == TutorialState.SourceCheese2)
                 gameManager.uiManager.tutorialArrow.SetActive(false);
         }
+        
         tutorialState = state;
         OnStateChanged();
     }
@@ -181,7 +188,7 @@ public class TutorialManager : MonoBehaviour
         {
             gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<IngameGameManager>();
         }
-
+        MaskLock = false;
         if (tutorialState != TutorialState.None)
         {
             ScreenProtector.SetActive(true);
@@ -215,7 +222,14 @@ public class TutorialManager : MonoBehaviour
                 gameManager.uiManager.tutorialText.SetString(((int)TutorialMessages.Cheese).ToString());
                 break;
             case TutorialState.OvenEnter:
+                MaskLock = true;
+                LockBounds = masks[0].bounds;
+                pizza.Movable = true;
+                gameManager.uiManager.tutorialWindow.SetActive(false);
+                break;
             case TutorialState.Packing:
+                MaskLock = true;
+                LockBounds = masks[2].bounds;
                 pizza.Movable = true;
                 gameManager.uiManager.tutorialWindow.SetActive(false);
                 break;
@@ -256,9 +270,12 @@ public class TutorialManager : MonoBehaviour
             case TutorialState.SourceSelect:
             case TutorialState.CheeseSelect:
             case TutorialState.OvenCooking:
-            case TutorialState.OvenExit:
             case TutorialState.Pickup:
                 gameManager.uiManager.tutorialWindow.SetActive(false);
+                break;
+            case TutorialState.OvenExit:
+                MaskLock = true;
+                LockBounds = masks[1].bounds;
                 break;
         }
     }
@@ -277,4 +294,34 @@ public class TutorialManager : MonoBehaviour
             yield return null;
         }
     }
+
+    //private void LateUpdate()
+    //{
+    //    if (tutorialState == TutorialState.OvenEnter
+    //        || tutorialState == TutorialState.Packing
+    //        || tutorialState == TutorialState.OvenExit)
+    //    {
+    //        var pizzaBoardBounds = tutorialState == TutorialState.OvenEnter ? pizza.pizzaBoard.boxCollider.bounds : pizza.CircleCollider.bounds;
+    //        var maskBounds = tutorialState == TutorialState.OvenEnter ? masks[0].bounds : masks[1].bounds;
+    //        var pos = pizza.transform.position;
+    //
+    //        if (pizzaBoardBounds.min.x < maskBounds.min.x)
+    //        {
+    //            pos.x += maskBounds.min.x - pizzaBoardBounds.min.x;
+    //        }
+    //        else if (pizzaBoardBounds.max.x > maskBounds.max.x)
+    //        {
+    //            pos.x -= pizzaBoardBounds.max.x - maskBounds.max.x;
+    //        }
+    //        if (pizzaBoardBounds.min.y < maskBounds.min.y)
+    //        {
+    //            pos.y += maskBounds.min.y - pizzaBoardBounds.min.y;
+    //        }
+    //        else if (pizzaBoardBounds.max.y > maskBounds.max.y)
+    //        {
+    //            pos.y -= pizzaBoardBounds.max.y - maskBounds.max.y;
+    //        }
+    //        pizza.transform.position = pos;
+    //    }
+    //}
 }

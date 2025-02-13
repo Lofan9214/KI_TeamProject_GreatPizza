@@ -845,6 +845,7 @@ GameObject:
   - component: {fileID: 1915389707191425765}
   - component: {fileID: 6440592744071884725}
   - component: {fileID: -362804968940597828}
+  - component: {fileID: 8533093390337778541}
   m_Layer: 6
   m_Name: Pizza
   m_TagString: Untagged
@@ -889,7 +890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dough: {fileID: 344937322035930310}
-  pizzaBoard: {fileID: 3343134377277053798}
+  pizzaBoard: {fileID: 94875102746674770}
   sourceLayer: {fileID: 7482552253347031963}
   cheeseLayer: {fileID: 7234064688052802793}
   toppingLayer: {fileID: 2203670332768220289}
@@ -1129,6 +1130,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!210 &8533093390337778541
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6623141240904006547}
+  m_Enabled: 1
+  m_SortingLayerID: 369030381
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &7028798598918333572
 GameObject:
   m_ObjectHideFlags: 0

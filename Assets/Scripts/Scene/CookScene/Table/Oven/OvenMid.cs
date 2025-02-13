@@ -47,8 +47,8 @@ public class OvenMid : MonoBehaviour, IPizzaSlot
             CurrentPizza.transform.position = Vector3.Lerp(transform.position, nextTarget.transform.position, timer / cookTime);
             yield return null;
         }
-
         nextTarget.SetPizza(CurrentPizza);
+        CurrentPizza.Movable = true;
         ClearPizza();
     }
 }

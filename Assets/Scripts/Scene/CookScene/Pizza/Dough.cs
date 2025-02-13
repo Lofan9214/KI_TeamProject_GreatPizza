@@ -9,11 +9,11 @@ public class Dough : MonoBehaviour
 
     public Sprite[] layerSprites;
 
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer { get; private set; }
     public UnityEvent<Sprite> OnSpriteChanged;
     private int currentIndex = 0;
 
-    public Sprite CurrentSprite=>layerSprites[currentIndex];
+    public Sprite CurrentSprite => layerSprites[currentIndex];
 
     private void Awake()
     {

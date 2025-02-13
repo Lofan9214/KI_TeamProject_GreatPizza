@@ -52,11 +52,9 @@ public class PizzaBox : MonoBehaviour, IPizzaSlot
 
     private void Hall()
     {
-        
         gameManager.hall.SetSlot(this);
         gameManager.ChangePlace(InGamePlace.Hall);
         boxTop.SetState(PizzaBoxTop.State.Movable);
-        
     }
 
     public void SetCurrentSlot(Transform slot)

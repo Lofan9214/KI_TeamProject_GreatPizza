@@ -39,6 +39,7 @@ public class OvenEnter : MonoBehaviour, IPizzaSlot
     private IEnumerator Cooking()
     {
         CurrentPizza.CurrentState = Pizza.State.Roasting;
+        CurrentPizza.Movable = false;
         yield return new WaitUntil(() => nextTarget.IsEmpty);
 
         float timer = 0f;
