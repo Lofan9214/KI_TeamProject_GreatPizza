@@ -56,6 +56,8 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
 
     private bool setStoryChat = true;
 
+    private bool beingYes = false;
+
     private void Awake()
     {
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<IngameGameManager>();
@@ -161,11 +163,16 @@ public class ChatWindow : MonoBehaviour, IPointerDownHandler
 
     private IEnumerator YesCoroutine()
     {
+        if (beingYes)
+            yield break;
+
+        beingYes = true;
         OnYes?.Invoke();
         yield return new WaitForSeconds(0.75f);
         gm.ChangePlace(InGamePlace.Kitchen);
         gm.timeManager.SetState(IngameTimeManager.State.Ordering);
         gameObject.SetActive(false);
+        beingYes = false;
     }
 
     public void NeedHint()
