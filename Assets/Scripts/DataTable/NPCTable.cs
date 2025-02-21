@@ -11,8 +11,6 @@ public class NPCTable : DataTable
         public int npcID { get; set; }
         public int type { get; set; }
         public string Image { get; set; }
-
-        public GameObject gameObject;
     }
 
     private List<Data> list = new List<Data>();
@@ -56,11 +54,5 @@ public class NPCTable : DataTable
     public List<Data> GetListByType(int type)
     {
         return list.Where(p => p.type == type).ToList();
-    }
-
-    public void ResetGameObject()
-    {
-        foreach (var item in list)
-            item.gameObject = null;
     }
 }

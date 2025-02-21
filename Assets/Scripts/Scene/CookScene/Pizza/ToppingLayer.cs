@@ -10,7 +10,7 @@ public class ToppingLayer : MonoBehaviour
 
     public void AddTopping(GameObject topping, Vector2 position, IngredientTable.Data toppingData)
     {
-        topping.transform.parent = transform;
+        topping.transform.SetParent(transform);
         topping.transform.position = position;
         topping.transform.rotation = Quaternion.Euler(0f, 0f, Random.Range(0, 360f));
 

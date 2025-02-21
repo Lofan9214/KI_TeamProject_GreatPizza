@@ -57,9 +57,6 @@ public class IngameGameManager : MonoBehaviour
         timeManager = GetComponent<IngameTimeManager>();
         objectPoolManager = GetComponent<IngameObjectPoolManager>();
 
-        DataTableManager.NPCTable.ResetGameObject();
-        DataTableManager.StoryTable.ResetGameObject();
-
         tempSaveData = SaveLoadManager.Data.DeepCopy();
         ++tempSaveData.days;
         if (DataTableManager.StoryTable.IsExistData(tempSaveData.days))

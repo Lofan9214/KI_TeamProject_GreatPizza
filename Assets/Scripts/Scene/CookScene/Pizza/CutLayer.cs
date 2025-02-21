@@ -10,7 +10,7 @@ public class CutLayer : MonoBehaviour
 
     public void AddCut(GameObject cutline, quaternion rotation)
     {
-        cutline.transform.parent = transform;
+        cutline.transform.SetParent(transform);
         cutline.transform.position = transform.position;
         cutline.transform.rotation = rotation;
         lines.Add(cutline);
@@ -18,7 +18,7 @@ public class CutLayer : MonoBehaviour
 
     public void Clear()
     {
-        foreach(var line in lines)
+        foreach (var line in lines)
         {
             line.GetComponent<IObjectPoolItem>().Release();
         }

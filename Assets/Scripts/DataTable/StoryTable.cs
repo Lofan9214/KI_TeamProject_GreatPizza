@@ -18,8 +18,6 @@ public class StoryTable : DataTable
         public int recipeID { get; set; }
         public string groupID { get; set; }
         public string image { get; set; }
-
-        public GameObject gameObject;
     }
 
     private Dictionary<int, List<Data>> dict = new Dictionary<int, List<Data>>();
@@ -60,12 +58,5 @@ public class StoryTable : DataTable
         }
 
         return dict[day];
-    }
-
-    public void ResetGameObject()
-    {
-        foreach (var list in dict.Values)
-            foreach (var item in list)
-                item.gameObject = null;
     }
 }

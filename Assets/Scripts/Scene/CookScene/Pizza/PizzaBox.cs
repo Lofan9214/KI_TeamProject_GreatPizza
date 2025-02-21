@@ -39,7 +39,7 @@ public class PizzaBox : MonoBehaviour, IPizzaSlot
     public void SetPizza(Pizza go)
     {
         CurrentPizza = go;
-        CurrentPizza.transform.parent = box;
+        CurrentPizza.transform.SetParent(box);
         CurrentPizza.transform.localPosition = Vector3.zero;
         animator.SetTrigger(closeTopHash);
     }

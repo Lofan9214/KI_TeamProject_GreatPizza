@@ -19,7 +19,7 @@ public class PackingTable : MonoBehaviour
         {
             box.gameObject.SetActive(true);
             box.ResetState();
-            box.transform.parent = transform;
+            box.transform.SetParent(transform);
             box.transform.position = boxPos.position;
         }
     }

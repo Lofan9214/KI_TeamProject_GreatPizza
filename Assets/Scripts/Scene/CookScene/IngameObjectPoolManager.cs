@@ -56,7 +56,7 @@ public class IngameObjectPoolManager : MonoBehaviour
 
     private void OnReturnedToPool(GameObject go)
     {
-        go.transform.parent = transform;
+        go.transform.SetParent(transform);
         go.SetActive(false);
     }
 

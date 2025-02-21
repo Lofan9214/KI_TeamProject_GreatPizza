@@ -47,6 +47,8 @@ public class NPC : MonoBehaviour, IPizzaSlot
 
     private const string prefab = "Prefabs/{0}";
 
+    private Dictionary<string, GameObject> npcs = new Dictionary<string, GameObject>();
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -114,13 +116,13 @@ public class NPC : MonoBehaviour, IPizzaSlot
         storyNPCData = null;
         state = StoryState.Random;
 
-        if (data.gameObject == null)
+        if (!npcs.ContainsKey(data.Image))
         {
-            data.gameObject = Instantiate(Resources.Load<GameObject>(string.Format(prefab, data.Image)), transform);
-            data.gameObject.SetActive(false);
+            var npcgo = Instantiate(Resources.Load<GameObject>(string.Format(prefab, data.Image)), transform);
+            npcs.Add(data.Image, npcgo);
         }
 
-        SetSpum(data.gameObject);
+        SetSpum(npcs[data.Image]);
     }
 
     public void SetData(StoryTable.Data data)
@@ -128,27 +130,28 @@ public class NPC : MonoBehaviour, IPizzaSlot
         storyNPCData = data;
         state = StoryState.Story;
 
-        if (data.gameObject == null)
+        if (!npcs.ContainsKey(data.image))
         {
-            data.gameObject = Instantiate(Resources.Load<GameObject>(string.Format(prefab, data.image)), transform);
-            data.gameObject.SetActive(false);
+            var npcgo = Instantiate(Resources.Load<GameObject>(string.Format(prefab, data.image)), transform);
+            npcs.Add(data.image, npcgo);
         }
 
-        SetSpum(data.gameObject);
+        SetSpum(npcs[data.image]);
     }
 
     private void SetSpum(GameObject spum)
     {
         if (this.spum != null)
         {
-            this.spum.transform.parent = gameManager.transform;
+
+            this.spum.transform.SetParent(gameManager.transform);
             this.spum.SetActive(false);
             this.spum = null;
         }
 
         this.spum = spum;
         spum.SetActive(true);
-        this.spum.transform.parent = sprite;
+        this.spum.transform.SetParent(sprite);
         this.spum.transform.localPosition = Vector3.zero;
         audioSource = this.spum.GetComponent<AudioSource>();
         animator.SetBool(disappearHash, false);
