@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class NPCTable : DataTable
 {
@@ -11,11 +12,10 @@ public class NPCTable : DataTable
         public int type { get; set; }
         public string Image { get; set; }
 
-        public GameObject Prefab;
+        public GameObject gameObject;
     }
 
-    private Dictionary<int, Data> dict = new Dictionary<int, Data>();
-    private const string prefab = "Prefabs/{0}";
+    private List<Data> list = new List<Data>();
 
     public override void Load(string fileName)
     {
@@ -23,14 +23,16 @@ public class NPCTable : DataTable
         var textAsset = Resources.Load<TextAsset>(path);
         var list = LoadCsv<Data>(textAsset.text);
 
-        dict.Clear();
+        this.list.Clear();
+
+        HashSet<int> hashset = new HashSet<int>();
 
         foreach (var item in list)
         {
-            if (!dict.ContainsKey(item.npcID))
+            if (!hashset.Contains(item.npcID))
             {
-                item.Prefab = Resources.Load<GameObject>(string.Format(prefab, item.Image));
-                dict.Add(item.npcID, item);
+                this.list.Add(item);
+                hashset.Add(item.npcID);
             }
             else
             {
@@ -39,14 +41,9 @@ public class NPCTable : DataTable
         }
     }
 
-    public Data Get(int key)
+    public List<Data> GetValues()
     {
-        if (!dict.ContainsKey(key))
-        {
-            return null;
-        }
-
-        return dict[key];
+        return list;
     }
 
     public Data GetRandom(int type)
@@ -58,6 +55,12 @@ public class NPCTable : DataTable
 
     public List<Data> GetListByType(int type)
     {
-        return dict.Values.Where(p => p.type == type).ToList();
+        return list.Where(p => p.type == type).ToList();
+    }
+
+    public void ResetGameObject()
+    {
+        foreach (var item in list)
+            item.gameObject = null;
     }
 }

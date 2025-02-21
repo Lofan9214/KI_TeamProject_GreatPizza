@@ -4,10 +4,10 @@ using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Events;
-using static TutorialManager;
+using UnityEngine.Pool;
 using Random = UnityEngine.Random;
 
-public class Pizza : MonoBehaviour, IClickable, IDragable
+public class Pizza : MonoBehaviour, IClickable, IDragable, IObjectPoolItem
 {
     public enum State
     {
@@ -54,7 +54,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     public SpriteRenderer roastLayer;
     public GameObject ingredientGuide;
     public GameObject cutGuide;
-    public Cut cutLayer;
+    public CutLayer cutLayer;
     public LayerMask slotMask;
 
     private Transform currentSlot;
@@ -62,14 +62,14 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     private IngameGameManager gameManager;
     private SpriteMask spriteMask;
 
-    private Vector3? lastDrawPos = null;
+    private Vector3? lastDrawPos;
     private Vector3 lastMovePos;
     public CircleCollider2D CircleCollider { get; private set; }
 
     public float sourceMax = 1.5f;
-    private float cheeseCurrent = 0f;
-    private float sourceCurrent = 0f;
-    private bool addingTopping = false;
+    private float cheeseCurrent;
+    private float sourceCurrent;
+    private bool addingTopping;
 
     private IngredientTable.Data sourceData;
     private IngredientTable.Data cheeseData;
@@ -78,12 +78,14 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     public Transform[] ingredientGuidePosition;
     private int autoIngredient;
 
-    public bool homeComing { get; private set; } = false;
+    public bool homeComing { get; private set; }
 
     private static List<Vector2> sourcePoints = new List<Vector2>();
 
-    public bool Movable { get; set; } = true;
-    private bool moving = false;
+    public bool Movable { get; set; }
+
+    private bool moving;
+    public IObjectPool<GameObject> ObjPool { get; set; }
 
     private void Start()
     {
@@ -111,6 +113,19 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
                 sourcePoints.Add(new Vector2(radius * Mathf.Cos(angle), radius * Mathf.Sin(angle)));
             }
         }
+    }
+
+    private void OnEnable()
+    {
+        lastDrawPos = null;
+        Movable = true;
+        homeComing = false;
+        moving = false;
+        addingTopping = false;
+        cheeseCurrent = 0f;
+        sourceCurrent = 0f;
+        CurrentState = State.AddingTopping;
+        pizzaBoard.gameObject.SetActive(true);
     }
 
     public void OnDragEnd(Vector3 pos, Vector3 deltaPos)
@@ -247,12 +262,12 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     private void SetPizza(IPizzaSlot slot, Transform closest)
     {
         currentSlot?.GetComponent<IPizzaSlot>()?.ClearPizza();
-        slot.SetPizza(this);
-        SetCurrentSlot(closest);
         if (pizzaBoard.gameObject.activeSelf)
         {
             pizzaBoard.gameObject.SetActive(false);
         }
+        slot.SetPizza(this);
+        SetCurrentSlot(closest);
     }
 
     public void AddTopping(Vector2 position, string Id)
@@ -261,7 +276,8 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
         gameManager.IngredientPay(-data.price);
         PizzaData.toppingData.Add(Id);
         audioSource.PlayOneShot(data.spriteDatas.soundEffect);
-        toppingLayer.AddTopping(position, data);
+        var topping = gameManager.objectPoolManager.toppingPool.Get();
+        toppingLayer.AddTopping(topping, position, data);
     }
 
     public void Move(Vector3 Pos)
@@ -365,7 +381,9 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
     public void Cut(quaternion rotation)
     {
         PizzaData.cutData.Add(rotation);
-        cutLayer.AddCut(rotation);
+
+        var cutline = gameManager.objectPoolManager.cutPool.Get();
+        cutLayer.AddCut(cutline, rotation);
         if (PizzaData.cutData.Count > 2)
         {
             cutGuide.gameObject.SetActive(false);
@@ -481,7 +499,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
 
     private bool IsValidMove(Vector3 deltaPos)
     {
-        var pizzaBoardBounds = gameManager.tutorialManager.tutorialState == TutorialState.OvenEnter ? pizzaBoard.boxCollider.bounds : dough.spriteRenderer.bounds;
+        var pizzaBoardBounds = gameManager.tutorialManager.tutorialState == TutorialManager.TutorialState.OvenEnter ? pizzaBoard.boxCollider.bounds : dough.spriteRenderer.bounds;
         Bounds bounds = gameManager.tutorialManager.LockBounds;
         if (pizzaBoardBounds.min.x + deltaPos.x < bounds.min.x
             || pizzaBoardBounds.max.x + deltaPos.x > bounds.max.x
@@ -491,5 +509,27 @@ public class Pizza : MonoBehaviour, IClickable, IDragable
             return false;
         }
         return true;
+    }
+
+    private void ClearPizza()
+    {
+        pizzaData.doughID = string.Empty;
+        pizzaData.roastCount = 0;
+        pizzaData.cutData.Clear();
+        pizzaData.toppingData.Clear();
+        pizzaData.sourceRatio = 0f;
+        pizzaData.sourceId = string.Empty;
+        pizzaData.cheeseRatio = 0f;
+
+        cheeseLayer.ClearLayer();
+        sourceLayer.ClearLayer();
+        cutLayer.Clear();
+        toppingLayer.Clear();
+    }
+
+    public void Release()
+    {
+        ClearPizza();
+        ObjPool.Release(gameObject);
     }
 }

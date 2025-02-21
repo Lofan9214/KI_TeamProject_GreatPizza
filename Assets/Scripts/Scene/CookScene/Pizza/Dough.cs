@@ -22,6 +22,7 @@ public class Dough : MonoBehaviour
 
     public void Init(string ingredientId)
     {
+        currentIndex = 0;
         IngredientId = ingredientId;
         layerSprites = DataTableManager.IngredientTable.Get(ingredientId).spriteDatas.toppingSprites;
         spriteRenderer.sprite = layerSprites[currentIndex];

@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
-public class Topping : MonoBehaviour
+public class Topping : MonoBehaviour, IObjectPoolItem
 {
     public IngredientTable.Data toppingData;
     private SpriteRenderer spriteRenderer;
+
+    public IObjectPool<GameObject> ObjPool { get; set; }
 
     private void Awake()
     {
@@ -16,11 +19,18 @@ public class Topping : MonoBehaviour
     {
         this.toppingData = toppingData;
         spriteRenderer.sprite = toppingData.spriteDatas.toppingSprites[Random.Range(0, toppingData.spriteDatas.toppingSprites.Length)];
-        transform.Rotate(0f, 0f, Random.Range(0, 360f));
+        
     }
 
     public void AddOrderOffset(int offset)
     {
         spriteRenderer.sortingOrder += offset;
+    }
+
+    public void Release()
+    {
+        toppingData = null;
+        spriteRenderer.sprite = null;
+        ObjPool.Release(gameObject);
     }
 }

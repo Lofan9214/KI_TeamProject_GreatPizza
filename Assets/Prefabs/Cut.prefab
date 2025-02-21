@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6139617846534211870}
   - component: {fileID: 1314297978974995588}
+  - component: {fileID: 7545882962021486877}
   m_Layer: 6
   m_Name: Cut
   m_TagString: Untagged
@@ -84,3 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7545882962021486877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6111008296520063354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f40c8967051d44da553e18783d5d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

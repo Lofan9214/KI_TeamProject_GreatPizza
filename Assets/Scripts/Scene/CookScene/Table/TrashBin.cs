@@ -16,6 +16,7 @@ public class TrashBin : MonoBehaviour, IPizzaSlot
 
     public void SetPizza(Pizza go)
     {
-        Destroy(go.gameObject);
+        go.Release();
+        //Destroy(go.gameObject);
     }
 }

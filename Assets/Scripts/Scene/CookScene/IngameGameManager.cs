@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEditor.Progress;
 using SaveDataVC = SaveDataV2;
 
 public class IngameGameManager : MonoBehaviour
@@ -13,7 +14,6 @@ public class IngameGameManager : MonoBehaviour
         Story,
         Random,
     }
-
     public PointerManager pointerManager { get; private set; }
     public IngameTimeManager timeManager { get; private set; }
     public NPC npc;
@@ -40,6 +40,8 @@ public class IngameGameManager : MonoBehaviour
     public TutorialManager tutorialManager { get; private set; }
     public List<StoryTable.Data> storyData;
 
+    public IngameObjectPoolManager objectPoolManager { get; private set; }
+
     public float tip { get; private set; } = 0f;
     public float ingredientUsage { get; private set; } = 0f;
     public float refund { get; private set; } = 0f;
@@ -53,6 +55,10 @@ public class IngameGameManager : MonoBehaviour
 
         pointerManager = GetComponent<PointerManager>();
         timeManager = GetComponent<IngameTimeManager>();
+        objectPoolManager = GetComponent<IngameObjectPoolManager>();
+
+        DataTableManager.NPCTable.ResetGameObject();
+        DataTableManager.StoryTable.ResetGameObject();
 
         tempSaveData = SaveLoadManager.Data.DeepCopy();
         ++tempSaveData.days;

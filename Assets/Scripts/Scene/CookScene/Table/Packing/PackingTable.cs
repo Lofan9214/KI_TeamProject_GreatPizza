@@ -9,20 +9,18 @@ public class PackingTable : MonoBehaviour
 
     public PizzaBox box { get; private set; }
 
-    public void SetPizzaBox(int count)
+    public void SetPizzaBox()
     {
-        for (int i = 0; i < count; ++i)
+        if (box == null)
         {
             box = Instantiate(prefab, boxPos.position, Quaternion.identity, transform);
         }
-    }
-
-    public void DestroyPizzaBox()
-    {
-        if (box != null)
+        else
         {
-            Destroy(box.gameObject);
-            box = null;
+            box.gameObject.SetActive(true);
+            box.ResetState();
+            box.transform.parent = transform;
+            box.transform.position = boxPos.position;
         }
     }
 }

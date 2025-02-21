@@ -8,13 +8,25 @@ public class ToppingLayer : MonoBehaviour
 
     private List<Topping> toppings = new List<Topping>();
 
-    public void AddTopping(Vector2 position, IngredientTable.Data toppingData)
+    public void AddTopping(GameObject topping, Vector2 position, IngredientTable.Data toppingData)
     {
-        var topping = Instantiate(toppingPrefab, position, Quaternion.identity, transform);
-        
-        topping.SetData(toppingData);
+        topping.transform.parent = transform;
+        topping.transform.position = position;
+        topping.transform.rotation = Quaternion.Euler(0f, 0f, Random.Range(0, 360f));
 
-        topping.AddOrderOffset(toppings.Count);
-        toppings.Add(topping);
+        var toppingcomponent = topping.GetComponent<Topping>();
+        toppingcomponent.SetData(toppingData);
+        toppingcomponent.AddOrderOffset(toppings.Count);
+
+        toppings.Add(toppingcomponent);
+    }
+
+    public void Clear()
+    {
+        foreach (var topping in toppings)
+        {
+            topping.Release();
+        }
+        toppings.Clear();
     }
 }

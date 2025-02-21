@@ -38,7 +38,7 @@ public class DrawIngredient : MonoBehaviour
     {
         IngredientId = data.ingredientID;
         layerSprites = data.spriteDatas.toppingSprites;
-
+        currentIndex = 0;
         SetSprite();
     }
 
@@ -141,6 +141,8 @@ public class DrawIngredient : MonoBehaviour
 
     public void ClearLayer()
     {
+        if (drawAlphaMap == null)
+            return;
         for (int i = 0; i < drawAlphaMap.Length; ++i)
         {
             drawColorMap[currentIndex][i].a = 0f;

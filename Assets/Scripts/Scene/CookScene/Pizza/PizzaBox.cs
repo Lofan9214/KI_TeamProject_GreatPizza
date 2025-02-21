@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class PizzaBox : MonoBehaviour, IPizzaSlot
 {
-    private static readonly int CloseTop = Animator.StringToHash("CloseTop");
-    private static readonly int Complete = Animator.StringToHash("Complete");
+    private static readonly int closeTopHash = Animator.StringToHash("CloseTop");
+    private static readonly int completeHash = Animator.StringToHash("Complete");
+    private static readonly int resetHash = Animator.StringToHash("Reset");
 
     private Animator animator;
     public Transform boxPosition;
@@ -40,15 +41,21 @@ public class PizzaBox : MonoBehaviour, IPizzaSlot
         CurrentPizza = go;
         CurrentPizza.transform.parent = box;
         CurrentPizza.transform.localPosition = Vector3.zero;
-        animator.SetTrigger(CloseTop);
+        animator.SetTrigger(closeTopHash);
     }
 
     public void CookComplete()
     {
         audioSource.Play();
-        animator.SetTrigger(Complete);
+        animator.SetTrigger(completeHash);
     }
 
+    public void ResetState()
+    {
+        CurrentPizza = null;
+        boxTop.SetState(PizzaBoxTop.State.Immovable);
+        animator.SetTrigger(resetHash);
+    }
 
     private void Hall()
     {
@@ -88,7 +95,11 @@ public class PizzaBox : MonoBehaviour, IPizzaSlot
             transform.position = currentSlot.position;
             return;
         }
-        tempSlot.GetComponent<NPC>().SetPizza(CurrentPizza);
-        Destroy(gameObject);
+        var npc = tempSlot.GetComponent<NPC>();
+        if (npc != null)
+        {
+            npc.SetPizza(CurrentPizza);
+            gameObject.SetActive(false);
+        }
     }
 }

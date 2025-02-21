@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class NPC : MonoBehaviour, IPizzaSlot
 {
@@ -24,6 +25,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
     public Transform tipText;
     public Transform tipTextPosition;
 
+
     public bool IsSettable => true;
 
     public bool IsEmpty => true;
@@ -33,7 +35,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
     public RecipeTable.Data Recipe { get; private set; }
 
     private float payment;
-    private GameObject prefab;
+    private GameObject spum;
     private StoryTable.Data storyNPCData;
     private Animator animator;
 
@@ -42,6 +44,8 @@ public class NPC : MonoBehaviour, IPizzaSlot
     public bool OrderEnd { get; private set; }
 
     private AudioSource audioSource;
+
+    private const string prefab = "Prefabs/{0}";
 
     private void Awake()
     {
@@ -110,7 +114,13 @@ public class NPC : MonoBehaviour, IPizzaSlot
         storyNPCData = null;
         state = StoryState.Random;
 
-        SetPrefab(data.Prefab);
+        if (data.gameObject == null)
+        {
+            data.gameObject = Instantiate(Resources.Load<GameObject>(string.Format(prefab, data.Image)), transform);
+            data.gameObject.SetActive(false);
+        }
+
+        SetSpum(data.gameObject);
     }
 
     public void SetData(StoryTable.Data data)
@@ -118,18 +128,29 @@ public class NPC : MonoBehaviour, IPizzaSlot
         storyNPCData = data;
         state = StoryState.Story;
 
-        SetPrefab(data.Prefab);
+        if (data.gameObject == null)
+        {
+            data.gameObject = Instantiate(Resources.Load<GameObject>(string.Format(prefab, data.image)), transform);
+            data.gameObject.SetActive(false);
+        }
+
+        SetSpum(data.gameObject);
     }
 
-    private void SetPrefab(GameObject iprefab)
+    private void SetSpum(GameObject spum)
     {
-        if (prefab != null)
+        if (this.spum != null)
         {
-            Destroy(prefab);
-            prefab = null;
+            this.spum.transform.parent = gameManager.transform;
+            this.spum.SetActive(false);
+            this.spum = null;
         }
-        prefab = Instantiate(iprefab, sprite);
-        audioSource = prefab.GetComponent<AudioSource>();
+
+        this.spum = spum;
+        spum.SetActive(true);
+        this.spum.transform.parent = sprite;
+        this.spum.transform.localPosition = Vector3.zero;
+        audioSource = this.spum.GetComponent<AudioSource>();
         animator.SetBool(disappearHash, false);
     }
 
@@ -140,7 +161,6 @@ public class NPC : MonoBehaviour, IPizzaSlot
     public void SetPizza(Pizza go)
     {
         CurrentPizza = go;
-        CurrentPizza.gameObject.SetActive(false);
         StartCoroutine(EndOrder());
     }
 
@@ -235,6 +255,7 @@ public class NPC : MonoBehaviour, IPizzaSlot
         int satisfaction = gameManager.timeManager.Satisfaction;
         var judgeData = GetJudgeData(Recipe, CurrentPizza.PizzaData);
         float tip = 0f;
+        CurrentPizza.Release();
 
         switch (judgeData.FinalJudge)
         {
@@ -306,7 +327,6 @@ public class NPC : MonoBehaviour, IPizzaSlot
         chatWindow.NextTalk(ChatWindow.Talks.Fail);
         gameManager.uiManager.StartCoroutine(gameManager.uiManager.ShowTipMessage(-payment, 1f));
         gameManager.Refund(-payment);
-        gameManager.kitchen.packingTable.DestroyPizzaBox();
         yield return waitChatEnd;
         yield return new WaitForSeconds(0.5f);
         chatWindow.gameObject.SetActive(false);

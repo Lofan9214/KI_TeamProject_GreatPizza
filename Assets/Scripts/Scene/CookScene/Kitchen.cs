@@ -29,7 +29,7 @@ public class Kitchen : MonoBehaviour
 
     public void SetPizzaBox()
     {
-        packingTable.SetPizzaBox(1);
+        packingTable.SetPizzaBox();
     }
 
     public void Init()

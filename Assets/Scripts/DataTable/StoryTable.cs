@@ -19,11 +19,10 @@ public class StoryTable : DataTable
         public string groupID { get; set; }
         public string image { get; set; }
 
-        public GameObject Prefab;
+        public GameObject gameObject;
     }
 
-    private Dictionary<int, Data> dict = new Dictionary<int, Data>();
-    private const string prefab = "Prefabs/{0}";
+    private Dictionary<int, List<Data>> dict = new Dictionary<int, List<Data>>();
 
     public override void Load(string fileName)
     {
@@ -35,38 +34,38 @@ public class StoryTable : DataTable
 
         foreach (var item in list)
         {
-            if (!dict.ContainsKey(item.story_npcID))
+            if (!dict.ContainsKey(item.day))
             {
-                item.Prefab = Resources.Load<GameObject>(string.Format(prefab, item.image));
-                dict.Add(item.story_npcID, item);
+                dict.Add(item.day, new List<Data>() { item });
             }
             else
             {
-                Debug.Log($"Key Duplicated: {item.story_npcID}");
+                dict[item.day].Add(item);
             }
         }
     }
 
-    public Data Get(int key)
+    public List<Data> GetDatas()
     {
-        if (!dict.ContainsKey(key))
-        {
-            return null;
-        }
-
-        return dict[key];
+        return dict.SelectMany(p => p.Value).ToList();
     }
 
-    public bool IsExistData(int day) => dict.Values.Where(p => p.day == day).Count() > 0;
+    public bool IsExistData(int day) => dict.ContainsKey(day) && dict[day].Count > 0;
 
     public List<Data> GetAtDay(int day)
     {
-        var list = dict.Values.Where(p => p.day == day).ToList();
-        if (list.Count == 0)
+        if (!dict.ContainsKey(day))
         {
             return null;
         }
 
-        return list;
+        return dict[day];
+    }
+
+    public void ResetGameObject()
+    {
+        foreach (var list in dict.Values)
+            foreach (var item in list)
+                item.gameObject = null;
     }
 }

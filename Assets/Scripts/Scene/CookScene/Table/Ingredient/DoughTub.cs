@@ -5,7 +5,6 @@ using UnityEngine;
 public class DoughTub : MonoBehaviour
 {
     public PizzaSlot target;
-    public Pizza pizzaPrefab;
 
     public DoughLoaf[] loafs;
     public Transform tray;
@@ -80,7 +79,9 @@ public class DoughTub : MonoBehaviour
     {
         if (target.IsEmpty)
         {
-            var ps = Instantiate(pizzaPrefab);
+            var psgo = gameManager.objectPoolManager.pizzaPool.Get();
+            psgo.transform.parent = null;
+            var ps = psgo.GetComponent<Pizza>();
             ps.SetDough(sender.DoughId);
             gameManager.IngredientPay(-DataTableManager.IngredientTable.Get(sender.DoughId).price);
             gameManager.uiManager.UpdateCurrentBudget();
