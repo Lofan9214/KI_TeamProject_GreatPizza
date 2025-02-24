@@ -79,14 +79,15 @@ public class DoughTub : MonoBehaviour
     {
         if (target.IsEmpty)
         {
-            var psgo = gameManager.objectPoolManager.pizzaPool.Get();
-            psgo.transform.SetParent(null);
-            var ps = psgo.GetComponent<Pizza>();
-            ps.SetDough(sender.DoughId);
+            var pizzaGameObject = gameManager.objectPoolManager.pizzaPool.Get();
+            pizzaGameObject.transform.SetParent(null);
+            var pizza = pizzaGameObject.GetComponent<Pizza>();
+            pizza.Init();
+            pizza.SetDough(sender.DoughId);
             gameManager.IngredientPay(-DataTableManager.IngredientTable.Get(sender.DoughId).price);
             gameManager.uiManager.UpdateCurrentBudget();
-            ps.SetCurrentSlot(target.transform);
-            target.SetPizza(ps);
+            pizza.SetCurrentSlot(target.transform);
+            target.SetPizza(pizza);
             sender.gameObject.SetActive(false);
         }
 

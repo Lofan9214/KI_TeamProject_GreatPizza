@@ -115,7 +115,7 @@ public class Pizza : MonoBehaviour, IClickable, IDragable, IObjectPoolItem
         }
     }
 
-    private void OnEnable()
+    public void Init()
     {
         lastDrawPos = null;
         Movable = true;
