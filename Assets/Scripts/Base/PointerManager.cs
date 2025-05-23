@@ -19,6 +19,12 @@ public class PointerManager : MonoBehaviour
 
     private int screenLockLayer;
 
+    public float swipeSpeed = 5f;
+
+    private bool swiping;
+    private bool swipeRight;
+    private Vector3 cameraPreviousPos;
+
     private void Awake()
     {
         enableCamDrag = false;
@@ -65,6 +71,7 @@ public class PointerManager : MonoBehaviour
             }
             else if (enableCamDrag)
             {
+                swiping = false;
                 Vector3 cameraPos = Camera.main.transform.position;
                 cameraPos.x -= deltaWorldPos.x;
                 virtualCam.position = cameraPos;
@@ -81,6 +88,41 @@ public class PointerManager : MonoBehaviour
 
                 targetDragable.OnDragEnd(worldPos, deltaWorldPos);
             }
+            else if (enableCamDrag && MultiTouchManager.Instance.CurrentTouchState == MultiTouchManager.TouchState.Swipe)
+            {
+                swiping = true;
+                cameraPreviousPos = virtualCam.position;
+                if (MultiTouchManager.Instance.SwipeDirection.x > 0f)
+                {
+                    swipeRight = false;
+                }
+                else
+                {
+                    swipeRight = true;
+                }
+            }
+        }
+
+        if (swiping)
+        {
+            if ((swipeRight && cameraPreviousPos.x > Camera.main.transform.position.x)
+                || (!swipeRight && cameraPreviousPos.x < Camera.main.transform.position.x))
+            {
+                swiping = false;
+            }
+
+
+            Vector3 cameraPos = Camera.main.transform.position;
+            if (swipeRight)
+            {
+                cameraPos.x += swipeSpeed * Time.deltaTime;
+            }
+            else
+            {
+                cameraPos.x -= swipeSpeed * Time.deltaTime;
+            }
+            virtualCam.position = cameraPos;
+            cameraPreviousPos = cameraPos;
         }
 #endif
     }

@@ -7,7 +7,8 @@ public class MultiTouchManager : Singleton<MultiTouchManager>
         None,
         Tap,
         DoubleTap,
-        LongPress
+        LongPress,
+        Swipe
     }
 
     public TouchState CurrentTouchState { get; private set; }
@@ -160,6 +161,7 @@ public class MultiTouchManager : Singleton<MultiTouchManager>
 
                         if (touchDuration <= swipeTimeThreshold && touchDistanceInches >= swipeMinDistance)
                         {
+                            CurrentTouchState = TouchState.Swipe;
                             SwipeDirection = delta.normalized;
                         }
                         else if (touchDistance < moveThreshold)
